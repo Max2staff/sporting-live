@@ -73,6 +73,7 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             indice["campionati"].append(camp)
     if not indice["campionati"]:
         raise BuildError("nessun girone con classifica: indice vuoto, output precedente mantenuto")
+    indice["generato"] = max(g["aggiornato"] for c in indice["campionati"] for g in c["gironi"])
     files["indice.json"] = indice
     return files
 

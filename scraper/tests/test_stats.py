@@ -50,6 +50,15 @@ def test_partite_squadra_e_forma():
     assert forma(raw_finto(), 99) == []
 
 
+def test_partite_squadra_ordinate_per_data():
+    r = raw_finto()
+    r["partite"].append({"id": 5, "giornata": 2, "data": "2026-10-07", "ora": "20:30", "casaId": 10, "ospiteId": 20,
+                         "golCasa": 2, "golOspite": 0, "giocata": True, "tavolino": False})
+    ps = partite_squadra(r, 10)
+    assert [p["id"] for p in ps] == [1, 2, 3, 5, 4]
+    assert forma(r, 10) == ["V", "N", "P", "V"]
+
+
 def test_stat_squadra():
     s = stat_squadra(raw_finto(), 10)
     assert (s["g"], s["v"], s["n"], s["p"], s["gf"], s["gs"]) == (3, 1, 1, 1, 5, 5)

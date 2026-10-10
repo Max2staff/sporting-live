@@ -17,8 +17,8 @@ export async function render({ indice, rotta, carica }) {
   const [intest, valore] = COLONNE[tab];
   return `<div class="tabs">${lista.map(x => `<button data-slug="${x.slug}" class="${x.slug === slug ? 'attivo' : ''}">${esc(x.nome)}</button>`).join('')}</div>
     <div class="segmenti">${[['marcatori', 'Marcatori'], ['voti', 'Voti'], ['mvp', 'Migliori'], ['fairplay', 'Fair play']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
-    ${righe.length ? `<section class="card piena"><table class="tab"><thead><tr><th>#</th><th class="sx">Giocatore</th><th>Pres.</th><th>${intest}</th></tr></thead>
-      <tbody>${righe.map((r, i) => `<tr class="cliccabile" data-slug="${r.slug}"><td>${i + 1}</td><td class="sx nome">${esc(r.nome)}<small class="sq-sotto">${esc(nomeSquadra(indice, r.squadraId))}</small></td><td>${r.presenze}</td><td><b>${valore(r)}</b></td></tr>`).join('')}</tbody></table></section>
+    ${righe.length ? `<section class="card piena"><div class="scroll-x"><table class="tab"><thead><tr><th>#</th><th class="sx">Giocatore</th><th>Pres.</th><th>${intest}</th></tr></thead>
+      <tbody>${righe.map((r, i) => `<tr class="cliccabile" data-slug="${r.slug}"><td>${i + 1}</td><td class="sx nome">${esc(r.nome)}<small class="sq-sotto">${esc(nomeSquadra(indice, r.squadraId))}</small></td><td>${r.presenze}</td><td><b>${valore(r)}</b></td></tr>`).join('')}</tbody></table></div></section>
       ${NOTE[tab] ? `<p class="muto centro">${NOTE[tab]}</p>` : ''}` : vuoto('Nessun dato: le statistiche compaiono dopo le prime partite con tabellino.')}`;
 }
 

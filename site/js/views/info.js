@@ -12,7 +12,7 @@ export async function render({ indice }) {
     ${card('Fonte dei dati', `<p>I dati sono letti dal sito ufficiale <a href="https://www.campionatisportingclub.it/" rel="noopener">campionatisportingclub.it</a> con il consenso dell'organizzazione. Ultimo aggiornamento: ${esc(formattaData(indice.generato.slice(0, 10)))} alle ${esc(formattaOra(indice.generato))}. Fa fede il sito ufficiale.</p>`)}
     ${card('Aspetto', `<div class="segmenti">${[['auto', 'Automatico'], ['chiaro', 'Chiaro'], ['scuro', 'Scuro']].map(([k, l]) => `<button data-tema="${k}" class="${t === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>`)}
     ${card('Privacy', `<p>L'app non raccoglie dati personali e non usa cookie. Le squadre preferite e il tema restano solo sul tuo dispositivo. I nomi dei giocatori sono quelli pubblicati dall'organizzazione nei tabellini ufficiali.</p>
-      <p>Se sei un giocatore e non vuoi comparire, scrivi a <a href="mailto:${EMAIL}">${EMAIL}</a>: il nome viene oscurato al primo aggiornamento utile.</p>`)}
+      <p>Se sei un giocatore e non vuoi comparire, scrivi a <a href="mailto:${EMAIL}">${EMAIL}</a>: il tuo nome viene rimosso da tutte le pagine dell'app al primo aggiornamento utile. I tabellini originali restano pubblicati sul sito ufficiale dell'organizzazione, che resta la fonte dei dati.</p>`)}
     <p class="muto centro">Sporting Live v${VERSIONE} · fatta a Mestre</p>`;
 }
 

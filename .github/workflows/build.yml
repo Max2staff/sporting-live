@@ -40,6 +40,8 @@ jobs:
       - run: python -m pytest -q
       - run: npm test
       - name: Leggi il sito ufficiale
+        id: fetch
+        continue-on-error: true
         run: python -m scraper.fetch
       - name: Costruisci i dati del sito
         run: python -m scraper.build
@@ -55,3 +57,8 @@ jobs:
           path: site
       - id: deploy
         uses: actions/deploy-pages@v4
+      - name: Segnala il fallimento della lettura
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "::error::python -m scraper.fetch è uscito con errore: vedi i log sopra"
+          exit 1

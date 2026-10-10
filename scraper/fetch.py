@@ -73,6 +73,13 @@ def _cached(fetcher: Fetcher, path: Path, url: str, parse, force: bool = False):
     return risultato
 
 
+_ESCLUSE = ("aggiornato", "errori", "incompleti", "stale")
+
+
+def _contenuto(raw: dict) -> dict:
+    return {k: v for k, v in raw.items() if k not in _ESCLUSE}
+
+
 def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente: dict | None = None,
                     adesso: datetime | None = None, force: bool = False) -> dict:
     adesso = adesso or datetime.now(TZ_ROMA)
@@ -165,7 +172,7 @@ def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente
     if falliti and prec.get("aggiornato"):
         stale["tabellini"] = prec["aggiornato"]
 
-    return {
+    risultato = {
         "aggiornato": adesso.isoformat(timespec="seconds"),
         "idgirone": idgirone,
         "squadre": squadre,
@@ -176,6 +183,9 @@ def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente
         "stale": stale,
         "errori": errori,
     }
+    if prec.get("aggiornato") and _contenuto(risultato) == _contenuto(prec):
+        risultato["aggiornato"] = prec["aggiornato"]
+    return risultato
 
 
 def gironi_attivi(stagioni: dict) -> list[dict]:

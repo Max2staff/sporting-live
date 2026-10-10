@@ -22,7 +22,7 @@ def raw_con_classifica():
 def test_costruisci_tutti_i_file():
     f = costruisci(STAGIONI, {1: raw_con_classifica()}, {"*": {}}, adesso="2026-10-01T21:00:00")
     ind = f["indice.json"]
-    assert ind["stagione"] == "2026/27" and ind["generato"] == "2026-10-01T21:00:00"
+    assert ind["stagione"] == "2026/27" and ind["generato"] == "2026-10-01T07:00:00"
     assert ind["campionati"][0]["gironi"][0] == {"idgirone": 1, "slug": "serie-b", "nome": "Serie B",
                                                  "aggiornato": "2026-10-01T07:00:00", "stale": False}
     assert {s["id"] for s in ind["squadre"]} == {10, 20, 30} and ind["squadre"][0]["girone"] == "serie-b"

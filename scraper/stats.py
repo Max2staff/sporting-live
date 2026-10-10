@@ -32,7 +32,7 @@ def partite_squadra(raw: dict, squadra_id: int) -> list[dict]:
                     "avversarioId": p["ospiteId"] if casa else p["casaId"], "gf": gf, "gs": gs,
                     "esito": _esito(gf, gs) if p["giocata"] else None, "giocata": p["giocata"],
                     "tavolino": p["tavolino"], "tabellino": str(p["id"]) in raw["tabellini"]})
-    return sorted(out, key=lambda x: (x["giornata"], x["id"]))
+    return sorted(out, key=lambda x: (x["data"] or "9999-99-99", x["giornata"], x["id"]))
 
 
 def forma(raw: dict, squadra_id: int, n: int = 5) -> list[str]:

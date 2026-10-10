@@ -158,3 +158,32 @@ def test_main_continua_dopo_girone_che_esplode(fixture, tmp_path, monkeypatch):
     rc = fetch.main(["--stagioni", str(tmp_path / "stagioni.json"), "--out", str(tmp_path / "raw"),
                      "--cache", str(tmp_path / "cache")])
     assert rc == 1 and (tmp_path / "raw" / "390.json").exists()
+
+
+def test_main_fallisce_con_piu_di_10_avvisi(tmp_path, monkeypatch):
+    from scraper import fetch
+    (tmp_path / "stagioni.json").write_text(json.dumps({"stagione": "x", "campionati": [
+        {"id": "c", "nome": "C", "gironi": [{"idgirone": 5, "nome": "G", "slug": "g"}]}]}))
+    monkeypatch.setattr(fetch, "raccogli_girone", lambda *a, **k: {
+        "aggiornato": "x", "idgirone": 5, "partite": [], "tabellini": {}, "incompleti": [], "stale": {},
+        "errori": [f"e{i}" for i in range(11)]})
+    rc = fetch.main(["--stagioni", str(tmp_path / "stagioni.json"), "--out", str(tmp_path / "raw"),
+                     "--cache", str(tmp_path / "cache")])
+    assert rc == 1 and (tmp_path / "raw" / "5.json").exists()
+
+
+def test_aggiornato_invariato_se_contenuto_uguale(fixture, tmp_path):
+    f = Fetcher(get=fake_get_factory(fixture), pausa=0)
+    prima = raccogli_girone(f, tmp_path, G, adesso=datetime(2026, 3, 9, 6, 0))
+    secondo = raccogli_girone(Fetcher(get=fake_get_factory(fixture), pausa=0), tmp_path, G,
+                              precedente=prima, adesso=datetime(2026, 3, 10, 6, 0))
+    assert secondo["aggiornato"] == prima["aggiornato"]
+
+
+def test_aggiornato_cambia_se_contenuto_diverso(fixture, tmp_path):
+    prima = raccogli_girone(Fetcher(get=fake_get_factory(fixture), pausa=0), tmp_path, G, adesso=datetime(2026, 3, 9, 6, 0))
+    base = fake_get_factory(fixture)
+    cal = fixture("calendario_2025_giocato.html").replace("NOVAK C5", "NOVAK CINQUE")
+    f = Fetcher(get=lambda url: cal if "calendario.php" in url else base(url), pausa=0)
+    secondo = raccogli_girone(f, tmp_path, G, precedente=prima, adesso=datetime(2026, 3, 10, 6, 0))
+    assert secondo["aggiornato"] == "2026-03-10T06:00:00"

@@ -18,6 +18,8 @@ const icona = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
 const app = document.getElementById('app');
 let indice = null;
 let renderId = 0;
+let ultimoCaricamento = 0;
+const RICARICA_DOPO_MS = 5 * 60 * 1000;
 
 function testata() {
   const stale = indice.campionati.some(c => c.gironi.some(g => g.stale));
@@ -34,6 +36,7 @@ export async function render() {
   const vista = VISTE[rotta.vista];
   const attiva = SEZIONE[rotta.vista] || rotta.vista;
   app.innerHTML = `${testata()}<main><div class="scheletro"></div></main>
+    <footer class="fonte">Dati: <a href="https://www.campionatisportingclub.it/" rel="noopener">campionatisportingclub.it</a> · Endas Venezia</footer>
     <nav class="tabbar">${TAB.map(([id, nome, d]) => `<a href="#/${id}" class="${id === attiva ? 'attivo' : ''}">${icona(d)}<span>${nome}</span></a>`).join('')}</nav>`;
   const main = app.querySelector('main');
   try {
@@ -50,12 +53,21 @@ export async function render() {
 }
 
 window.addEventListener('hashchange', () => { if (indice) render(); });
-window.addEventListener('online', () => { svuotaCache(); avvia(); });
+async function ricarica() {
+  svuotaCache();
+  try { indice = await caricaIndice(); ultimoCaricamento = Date.now(); await render(); } catch { /* resta sui dati in memoria */ }
+}
+
+window.addEventListener('online', () => { ricarica(); });
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && indice && Date.now() - ultimoCaricamento > RICARICA_DOPO_MS) ricarica();
+});
 
 async function avvia() {
   applicaTema();
   try {
     indice = await caricaIndice();
+    ultimoCaricamento = Date.now();
     await render();
   } catch (e) {
     app.innerHTML = '<p class="vuoto">Dati non disponibili, riprova più tardi.</p>';

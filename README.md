@@ -13,15 +13,18 @@ Spec: `docs/superpowers/specs/2026-10-10-sporting-live-design.md`.
 
 ## Setup su GitHub (una tantum)
 
-1. Crea il repo pubblico `sporting-live` su github.com e fai il push di `main`.
+1. Crea il repo pubblico `sporting-live` su github.com, vuoto (senza fare il push).
 2. Settings → Pages → Source: **GitHub Actions**.
 3. Settings → Actions → General → Workflow permissions: **Read and write**.
-4. Actions → aggiorna-e-pubblica → Run workflow. Al termine il sito è su `https://<utente>.github.io/sporting-live/`.
+4. Fai il push di `main`: il primo run parte da solo.
+5. Verifica l'URL: al termine del run il sito è su `https://<utente>.github.io/sporting-live/`.
+
+Se il primo run fallisce a `configure-pages`, Pages non era ancora abilitato: abilitalo e rilancia il workflow.
 
 ## Operatività
 
 - Il workflow gira ogni mezz'ora nelle serate feriali (dalle 19:00-20:00 fino a mezzanotte e mezza/l'una e mezza, a seconda dell'ora legale) e una volta al mattino presto; i risultati di una serata compaiono entro mezz'ora dalla pubblicazione sul sito ufficiale.
-- Ogni run che trova dati nuovi fa un commit `chore: aggiornamento dati [skip ci]`.
+- Un run fa un commit (`chore: aggiornamento dati [skip ci]`) solo se i dati del sito ufficiale sono cambiati; l'ora in testata all'app è quella dell'ultimo cambiamento.
 - Le schedulazioni si spengono dopo 60 giorni senza commit: in pausa estiva lancia un run manuale ogni due mesi.
 - Nuova stagione: aggiorna `stagioni.json` (sposta i gironi vecchi in `archivio`), svuota `scraper/cache/` e `build/raw/` (lascia i file `.gitkeep`).
 - Un nome giocatore scritto in due modi: aggiungi la variante in `alias.json`; per oscurare un nome usa `"***"`.

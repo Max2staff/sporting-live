@@ -7,13 +7,16 @@ let tab = 'riepilogo';
 const cellaGiocatore = (g, sq, lato) => g ? `<td class="${lato}"><a href="#/giocatore/${slugGiocatore(sq, g.nome)}">${esc(g.nome)}</a>${g.ammonito ? '<i class="cart giallo"></i>' : ''}${g.espulso ? '<i class="cart rosso"></i>' : ''}${g.voto != null ? `<b class="voto">${g.voto}</b>` : ''}</td>` : '<td></td>';
 const numero = (g) => g && g.numero != null ? g.numero : '';
 
+const nomeLink = (t, sq, nome) => (t.formazioni || []).some(f => f.squadraId === sq && f.nome === nome)
+  ? `<a href="#/giocatore/${slugGiocatore(sq, nome)}">${esc(nome)}</a>` : `<span>${esc(nome)}</span>`;
+
 function riepilogo(p) {
   const t = p.tabellino;
   if (!t) return vuoto(p.giocata ? 'Tabellino non ancora pubblicato.' : 'La partita non è ancora stata giocata.');
   const tl = timelineMarcatori(t, p.casa.id);
   return `<section class="card">
-    ${tl.length ? `<ul class="timeline">${tl.map(m => `<li class="${m.lato}"><span class="min">${m.minuto}'</span><a href="#/giocatore/${slugGiocatore(m.lato === 'casa' ? p.casa.id : p.ospite.id, m.nome)}">${esc(m.nome)}</a></li>`).join('')}</ul>` : '<p class="muto">Nessun marcatore registrato.</p>'}
-    ${t.migliore && t.migliore.squadraId != null ? `<p class="mvp">⭐ Migliore in campo: <a href="#/giocatore/${slugGiocatore(t.migliore.squadraId, t.migliore.nome)}">${esc(t.migliore.nome)}</a></p>` : ''}
+    ${tl.length ? `<ul class="timeline">${tl.map(m => `<li class="${m.lato}"><span class="min">${m.minuto}'</span>${nomeLink(t, m.lato === 'casa' ? p.casa.id : p.ospite.id, m.nome)}</li>`).join('')}</ul>` : '<p class="muto">Nessun marcatore registrato.</p>'}
+    ${t.migliore && t.migliore.squadraId != null ? `<p class="mvp">⭐ Migliore in campo: ${nomeLink(t, t.migliore.squadraId, t.migliore.nome)}</p>` : ''}
   </section>`;
 }
 
@@ -28,8 +31,8 @@ function formazioni(p) {
 async function classifica(p, carica) {
   const g = await carica(`girone/${p.girone.slug}.json`);
   const righe = g.classifica.totale;
-  return `<section class="card piena"><table class="tab"><thead><tr><th>#</th><th class="sx">Squadra</th><th>PT</th><th>G</th><th>DR</th></tr></thead>
-    <tbody>${righe.map(r => `<tr class="${[p.casa.id, p.ospite.id].includes(r.squadraId) ? 'evid' : ''}"><td>${r.pos}</td><td class="sx nome"><a href="#/squadra/${r.squadraId}">${esc(r.nome)}</a></td><td><b>${r.pt}</b></td><td>${r.g}</td><td>${segnoDR(r.dr)}</td></tr>`).join('')}</tbody></table></section>
+  return `<section class="card piena"><div class="scroll-x"><table class="tab"><thead><tr><th>#</th><th class="sx">Squadra</th><th>PT</th><th>G</th><th>DR</th></tr></thead>
+    <tbody>${righe.map(r => `<tr class="${[p.casa.id, p.ospite.id].includes(r.squadraId) ? 'evid' : ''}"><td>${r.pos}</td><td class="sx nome"><a href="#/squadra/${r.squadraId}">${esc(r.nome)}</a></td><td><b>${r.pt}</b></td><td>${r.g}</td><td>${segnoDR(r.dr)}</td></tr>`).join('')}</tbody></table></div></section>
     <p class="muto centro"><a href="#/classifiche/${p.girone.slug}">Classifica completa ›</a></p>`;
 }
 

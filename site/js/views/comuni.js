@@ -17,7 +17,7 @@ export function rigaPartita(p, indice, { evidenzia = false, mostraData = false }
   const risultato = p.giocata ? `<span class="ris ${evidenzia ? 'evid' : ''}">${p.golCasa}<i>-</i>${p.golOspite}</span>` : `<span class="ora">${esc(p.ora || '--:--')}</span>`;
   const casaPref = èPreferita(p.casaId), ospPref = èPreferita(p.ospiteId);
   return `<div class="partita ${p.tavolino ? 'tavolino' : ''}">
-    <a class="partita-link" href="#/partita/${p.id}" aria-label="Dettaglio partita"></a>
+    <a class="partita-link" href="#/partita/${p.id}" aria-label="Partita: ${esc(nomeSquadra(indice, p.casaId))} - ${esc(nomeSquadra(indice, p.ospiteId))}"></a>
     <div class="quando">${mostraData ? `<small>${esc(p.data ? p.data.slice(8, 10) + '/' + p.data.slice(5, 7) : 'n.d.')}</small>` : ''}${risultato}</div>
     <div class="squadre">
       <div class="riga ${casaPref ? 'pref' : ''}"><span>${esc(nomeSquadra(indice, p.casaId))}</span>${stellaHTML(p.casaId, nomeSquadra(indice, p.casaId), casaPref)}</div>

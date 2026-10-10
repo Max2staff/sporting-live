@@ -13,3 +13,8 @@ test('rotte', () => {
   assert.deepEqual(analizza('#/partite/2026-09-16'), { vista: 'partite', params: ['2026-09-16'] });
   assert.deepEqual(analizza('#/partita/%E0%A4'), { vista: 'partita', params: ['%E0%A4'] });
 });
+
+test('rotta intro', () => {
+  assert.deepEqual(analizza('#/intro'), { vista: 'intro', params: [] });
+  assert.deepEqual(analizza('#/intro/2'), { vista: 'intro', params: ['2'] });
+});

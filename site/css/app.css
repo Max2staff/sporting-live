@@ -148,3 +148,18 @@ table.tab { width: 100%; border-collapse: collapse; font-size: .9rem; }
 .partita .stella, .partita .squadre span, .partita .quando, .partita .extra { position: relative; z-index: 1; }
 .partita .squadre span, .partita .quando, .partita .extra { pointer-events: none; }
 .stella { pointer-events: auto; }
+
+/* squadra */
+.testa-squadra { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); }
+.testa-squadra h2 { margin: var(--s-2) 0 0; }
+.testa-squadra .meta { color: var(--muto); font-size: .85rem; }
+.testa-squadra .meta a { color: var(--brand); }
+.ris-riga { display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: var(--s-2); padding: 8px 0; border-top: 1px solid var(--bordo); min-height: 44px; }
+.ris-riga:first-child { border-top: 0; }
+.ris-riga .data { color: var(--muto); font-size: .8rem; }
+.ris-riga .avv { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ris-riga .punti { display: inline-flex; align-items: center; gap: 6px; }
+.stat-griglia { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-2) var(--s-4); }
+.stat small { display: block; color: var(--muto); font-size: .72rem; text-transform: uppercase; letter-spacing: .4px; }
+.stat b { font-size: 1.1rem; }
+.tab tr.cliccabile td { height: 44px; }

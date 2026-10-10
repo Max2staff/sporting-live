@@ -12,9 +12,13 @@ cat > "$TMP/apri.html" <<HTML
 <!doctype html><script>localStorage.setItem('sl.intro','$INTRO');localStorage.setItem('sl.girone','$GIRONE');localStorage.setItem('sl.tema','$TEMA');location.replace('/site/#/$ROTTA')</script>
 HTML
 printf '<!doctype html><body style="margin:0;background:#888"><iframe src="http://localhost:8089/apri.html" style="width:390px;height:844px;border:0"></iframe>' > "$TMP/cornice.html"
+OLD=$(lsof -ti tcp:8089 || true)
+if [ -n "$OLD" ]; then
+  if ps -o command= -p $OLD | grep -q "http.server"; then kill $OLD; sleep 0.5; else echo "porta 8089 occupata da un altro processo" >&2; exit 1; fi
+fi
 python3 -m http.server -d "$TMP" 8089 >/dev/null 2>&1 & PID=$!
-sleep 1
+trap 'kill $PID 2>/dev/null || true; rm -rf "$TMP"' EXIT
+for i in $(seq 1 50); do curl -s -o /dev/null http://localhost:8089/apri.html && break; sleep 0.1; done
 mkdir -p "$OUT"; NOME=$(echo "$ROTTA" | tr '/' '_')
-"$CH" --headless=new --disable-gpu --hide-scrollbars --window-size=500,860 --virtual-time-budget=6000 --screenshot="$OUT/${NOME}-${GIRONE}-${TEMA}.png" "file://$TMP/cornice.html" 2>/dev/null || true
-kill $PID 2>/dev/null || true; rm -rf "$TMP"
+"$CH" --headless=new --disable-gpu --hide-scrollbars --window-size=500,860 --virtual-time-budget=9000 --screenshot="$OUT/${NOME}-${GIRONE}-${TEMA}.png" "file://$TMP/cornice.html" 2>/dev/null || true
 echo "$OUT/${NOME}-${GIRONE}-${TEMA}.png"

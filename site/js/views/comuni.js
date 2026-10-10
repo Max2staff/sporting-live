@@ -14,7 +14,7 @@ export function squadraDa(indice, id) {
   return s ? { id: s.id, nome: s.nome, stemma: !!s.stemma } : { id, nome: '?', stemma: false };
 }
 export const heroHTML = ({ foto = 'campo', classe = '', contenuto = '' }) =>
-  `<section class="hero ${classe}" style="--foto:url(img/foto/${foto}.jpg)">${contenuto}</section>`;
+  `<section class="hero ${classe}"><img class="sfondo-foto" src="img/foto/${foto}.jpg" alt="" aria-hidden="true" decoding="async">${contenuto}</section>`;
 export const nomeSquadra = (indice, id) => (indice.squadre.find(s => s.id === id) || { nome: '?' }).nome;
 export const card = (titolo, corpo, cls = '') => `<section class="card ${cls}">${titolo ? `<h3>${esc(titolo)}</h3>` : ''}${corpo}</section>`;
 export const vuoto = (msg) => `<p class="vuoto">${esc(msg)}</p>`;

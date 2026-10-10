@@ -4,7 +4,7 @@ import { gironi, impostaGirone, gironeEffettivo, segnaIntroVista } from '../cont
 import { èPreferita, togglePreferito } from '../preferiti.js';
 
 const punti = (n) => `<div class="punti-avanzamento" aria-label="Passo ${n} di 3">${[1, 2, 3].map(i => `<i class="${i === n ? 'attivo' : ''}"></i>`).join('')}</div>`;
-const schermo = (foto, n, corpo) => `<section class="intro-schermo" style="--foto:url(img/foto/${foto}.jpg)">
+const schermo = (foto, n, corpo) => `<section class="intro-schermo"><img class="sfondo-foto" src="img/foto/${foto}.jpg" alt="" aria-hidden="true" decoding="async">
   <div class="alto">${punti(n)}<a href="#/partite" class="salta" data-fine>Salta</a></div>
   <div class="intro-corpo">${corpo}</div></section>`;
 

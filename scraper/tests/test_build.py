@@ -24,7 +24,7 @@ def test_costruisci_tutti_i_file():
     ind = f["indice.json"]
     assert ind["stagione"] == "2026/27" and ind["generato"] == "2026-10-01T07:00:00"
     assert ind["campionati"][0]["gironi"][0] == {"idgirone": 1, "slug": "serie-b", "nome": "Serie B",
-                                                 "aggiornato": "2026-10-01T07:00:00", "stale": False}
+                                                 "aggiornato": "2026-10-01T07:00:00", "stale": False, "zone": None}
     assert {s["id"] for s in ind["squadre"]} == {10, 20, 30} and ind["squadre"][0]["girone"] == "serie-b"
     assert len(ind["partite"]) == 4 and ind["partite"][0]["tabellino"] is True and ind["partite"][3]["tabellino"] is False
     g = f["girone/serie-b.json"]
@@ -98,3 +98,26 @@ def test_main_non_tocca_out_se_build_fallisce(tmp_path):
     rc = main(["--stagioni", str(tmp_path / "stagioni.json"), "--raw", str(tmp_path / "raw"),
                "--alias", str(tmp_path / "alias.json"), "--out", str(out)])
     assert rc == 0 and (out / "girone" / "serie-b.json").exists()
+
+
+def test_flag_stemma_foto_e_zone(tmp_path):
+    (tmp_path / "stemmi").mkdir()
+    (tmp_path / "squadre").mkdir()
+    (tmp_path / "stemmi" / "10.png").write_bytes(b"x")
+    (tmp_path / "squadre" / "30.jpg").write_bytes(b"x")
+    stagioni = json.loads(json.dumps(STAGIONI))
+    stagioni["campionati"][0]["gironi"][0]["zone"] = {"promozione": 2, "retrocessione": 1}
+    f = costruisci(stagioni, {1: raw_con_classifica()}, {"*": {}}, adesso="x", img_dir=tmp_path)
+    stemmi = {s["id"]: s["stemma"] for s in f["indice.json"]["squadre"]}
+    assert stemmi == {10: True, 20: False, 30: False}
+    assert f["squadra/10.json"]["stemma"] is True and f["squadra/10.json"]["foto"] is False
+    assert f["squadra/30.json"]["foto"] is True
+    assert f["indice.json"]["campionati"][0]["gironi"][0]["zone"] == {"promozione": 2, "retrocessione": 1}
+    assert f["girone/serie-b.json"]["zone"] == {"promozione": 2, "retrocessione": 1}
+
+
+def test_flag_senza_cartella_immagini():
+    f = costruisci(STAGIONI, {1: raw_con_classifica()}, {"*": {}}, adesso="x")
+    assert all(s["stemma"] is False for s in f["indice.json"]["squadre"])
+    assert f["squadra/10.json"]["foto"] is False
+    assert f["girone/serie-b.json"]["zone"] is None

@@ -25,7 +25,10 @@ def _partita_compatta(p: dict, slug: str, raw: dict) -> dict:
             "giocata": p["giocata"], "tavolino": p["tavolino"], "tabellino": str(p["id"]) in raw["tabellini"]}
 
 
-def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso: str) -> dict[str, object]:
+def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso: str, img_dir: Path | None = None) -> dict[str, object]:
+    def ha(sotto: str, nome: str) -> bool:
+        return img_dir is not None and (img_dir / sotto / nome).exists()
+
     files: dict[str, object] = {}
     indice = {"stagione": stagioni["stagione"], "generato": adesso, "campionati": [], "squadre": [], "partite": []}
     for c in stagioni["campionati"]:
@@ -39,14 +42,15 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             nome_sq = {s["id"]: s["nome"] for s in raw["squadre"]}
             nome = lambda i: nome_sq.get(i, "?")  # noqa: E731
             camp["gironi"].append({"idgirone": g["idgirone"], "slug": slug, "nome": g["nome"],
-                                   "aggiornato": raw["aggiornato"], "stale": bool(raw["stale"])})
-            indice["squadre"] += [{"id": s["id"], "nome": s["nome"], "girone": slug} for s in raw["squadre"]]
+                                   "aggiornato": raw["aggiornato"], "stale": bool(raw["stale"]), "zone": g.get("zone")})
+            indice["squadre"] += [{"id": s["id"], "nome": s["nome"], "girone": slug, "stemma": ha("stemmi", f"{s['id']}.png")} for s in raw["squadre"]]
             compatte = [_partita_compatta(p, slug, raw) for p in raw["partite"]]
             indice["partite"] += compatte
             lista = giocatori(raw)
             files[f"girone/{slug}.json"] = {
                 "idgirone": g["idgirone"], "slug": slug, "nome": g["nome"], "campionato": {"id": c["id"], "nome": c["nome"]},
                 "stagione": stagioni["stagione"], "aggiornato": raw["aggiornato"], "stale": raw["stale"],
+                "zone": g.get("zone"),
                 "squadre": [{"id": s["id"], "nome": s["nome"], "forma": forma(raw, s["id"])} for s in raw["squadre"]],
                 "classifica": raw["classifica"], "partite": compatte, "giocatori": classifiche_giocatori(lista)}
             for p in raw["partite"]:
@@ -60,7 +64,8 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             for s in raw["squadre"]:
                 riga = righe.get(s["id"])
                 files[f"squadra/{s['id']}.json"] = {
-                    "id": s["id"], "nome": s["nome"], "girone": ginfo, "pos": riga["pos"] if riga else None,
+                    "id": s["id"], "nome": s["nome"], "girone": ginfo,
+                    "stemma": ha("stemmi", f"{s['id']}.png"), "foto": ha("squadre", f"{s['id']}.jpg"), "pos": riga["pos"] if riga else None,
                     "riga": {k: riga[k] for k in ("pt", "g", "v", "n", "p", "gf", "gs", "dr")} if riga else None,
                     "stat": stat_squadra(raw, s["id"]), "forma": forma(raw, s["id"]),
                     "partite": [{**p, "avversario": nome(p["avversarioId"])} for p in partite_squadra(raw, s["id"])],
@@ -93,6 +98,7 @@ def main(argv=None) -> int:
     ap.add_argument("--raw", default="build/raw")
     ap.add_argument("--alias", default="alias.json")
     ap.add_argument("--out", default="site/data")
+    ap.add_argument("--img", default="site/img")
     a = ap.parse_args(argv)
     stagioni = json.loads(Path(a.stagioni).read_text(encoding="utf-8"))
     raws = {}
@@ -102,7 +108,7 @@ def main(argv=None) -> int:
             raws[g["idgirone"]] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
     try:
         files = costruisci(stagioni, raws, carica_alias(Path(a.alias)),
-                           adesso=datetime.now(TZ_ROMA).isoformat(timespec="seconds"))
+                           adesso=datetime.now(TZ_ROMA).isoformat(timespec="seconds"), img_dir=Path(a.img))
     except BuildError as e:
         print("ERRORE:", e, file=sys.stderr)
         return 1

@@ -36,3 +36,6 @@ Se il primo run fallisce a `configure-pages`, Pages non era ancora abilitato: ab
 
 - `stagioni.json`: campionati e gironi da leggere (idgirone dal sito ufficiale).
 - `alias.json`: varianti di nomi giocatori → nome canonico; `"***"` oscura un nome.
+- `site/img/stemmi/<id>.png`: logo vero di una squadra (quadrato, 256px, sfondo trasparente). Se c'è, sostituisce lo stemma generato. L'id è quello in `site/data/indice.json`.
+- `site/img/squadre/<id>.jpg`: foto di squadra (lato lungo max 1600px, sotto 250 KB), mostrata nella pagina squadra.
+- `stagioni.json`, chiave opzionale `"zone": {"promozione": 2, "retrocessione": 2}` in un girone: colora le zone in classifica.

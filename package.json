@@ -1,0 +1,6 @@
+{
+  "name": "sporting-live",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test site/js/tests/*.test.js" }
+}

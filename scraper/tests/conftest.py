@@ -1,0 +1,11 @@
+from pathlib import Path
+import pytest
+
+FIXTURES = Path(__file__).parent / "fixtures"
+
+
+@pytest.fixture
+def fixture():
+    def _load(nome: str) -> str:
+        return (FIXTURES / nome).read_text(encoding="utf-8")
+    return _load

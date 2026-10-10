@@ -1,0 +1,14 @@
+{
+  "stagione": "2026/27",
+  "campionati": [
+    {"id": "c8", "nome": "Calcio a 8", "gironi": [
+      {"idgirone": 425, "nome": "Serie A", "slug": "serie-a", "attivo": true},
+      {"idgirone": 421, "nome": "Serie B", "slug": "serie-b", "attivo": true},
+      {"idgirone": 422, "nome": "Serie C", "slug": "serie-c", "attivo": true}
+    ]},
+    {"id": "c5", "nome": "Calcio a 5", "gironi": [
+      {"idgirone": 426, "nome": "Super League", "slug": "super-league", "attivo": true}
+    ]}
+  ],
+  "archivio": []
+}

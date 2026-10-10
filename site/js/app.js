@@ -37,6 +37,7 @@ export async function render() {
   const ctx = { indice, rotta, oggi: oggiISO(), naviga: (h) => { location.hash = h; }, carica: caricaJSON };
   const vista = VISTE[rotta.vista];
   const attiva = SEZIONE[rotta.vista] || rotta.vista;
+  if (rotta.vista === 'intro' && !introDaMostrare()) { location.replace('#/partite'); return; }
   if (rotta.vista === 'intro') {
     document.body.classList.add('intro');
     app.innerHTML = '<main class="intro-main"></main>';
@@ -88,7 +89,7 @@ async function avvia() {
   try {
     indice = await caricaIndice();
     ultimoCaricamento = Date.now();
-    if (introDaMostrare() && !location.hash.startsWith('#/intro')) { history.replaceState(null, '', '#/intro'); }
+    if (introDaMostrare() && /^(#\/?|#\/partite\/?)?$/.test(location.hash)) { history.replaceState(null, '', '#/intro'); }
     await render();
   } catch (e) {
     app.innerHTML = '<p class="vuoto">Dati non disponibili, riprova più tardi.</p>';

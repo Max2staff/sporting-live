@@ -23,6 +23,12 @@ export function gironeEffettivo(indice) {
   const g = leggiGirone(indice);
   return g === TUTTI ? (gironi(indice)[0]?.slug ?? null) : g;
 }
+// Girone da mostrare per una rotta con slug opzionale. Con "tutti" salvato lo slug di rotta non viene memorizzato.
+export function risolviGirone(indice, slugRotta) {
+  const salvato = leggiGirone(indice);
+  if (slugRotta && gironi(indice).some(g => g.slug === slugRotta)) return { mostrato: slugRotta, salva: salvato !== TUTTI };
+  return { mostrato: gironeEffettivo(indice), salva: false };
+}
 export function etichettaGirone(indice, slug) {
   const g = gironi(indice).find(x => x.slug === slug);
   return g ? `${g.campionato.nome} · ${g.nome}` : 'Tutti i gironi';

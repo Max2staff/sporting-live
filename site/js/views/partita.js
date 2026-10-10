@@ -36,7 +36,7 @@ async function classifica(p, carica, indice) {
     const righe = g.classifica.totale;
     return `<section class="card piena"><div class="scroll-x"><table class="tab"><thead><tr><th>#</th><th class="sx">Squadra</th><th>PT</th><th>G</th><th>DR</th></tr></thead>
     <tbody>${righe.map(r => `<tr class="${[p.casa.id, p.ospite.id].includes(r.squadraId) ? 'evid' : ''}"><td>${r.pos}</td><td class="sx nome"><a href="#/squadra/${Number(r.squadraId)}">${stemmaHTML(squadraDa(indice, r.squadraId), 24)}${esc(r.nome)}</a></td><td><b>${r.pt}</b></td><td>${r.g}</td><td>${segnoDR(r.dr)}</td></tr>`).join('')}</tbody></table></div></section>
-    <p class="muto centro"><a href="#/classifiche/${p.girone.slug}">Classifica completa ›</a></p>`;
+    <p class="muto centro"><a href="#/classifiche/${esc(p.girone.slug)}">Classifica completa ›</a></p>`;
   } catch { return vuoto('Classifica non disponibile.'); }
 }
 

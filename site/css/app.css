@@ -261,6 +261,9 @@ body.intro { background: #05111c; }
 .camp-card .chip.attivo { background: var(--arancio); border-color: var(--arancio); }
 .camp-card .chip { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.22); color: #fff; }
 .griglia-squadre { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: var(--s-2); }
-.intro-corpo .bottone[data-fine] { position: sticky; bottom: var(--s-3); box-shadow: 0 -10px 16px 4px #05111c; }
+.intro-corpo .bottone[data-fine] { position: sticky; bottom: var(--s-3); box-shadow: 0 -10px 16px 4px #0a0a0a; }
 .squadra-scelta { display: flex; flex-direction: column; align-items: center; gap: var(--s-1); padding: var(--s-2); min-height: 108px; border-radius: var(--r-md); border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.06); color: #fff; font-size: .74rem; font-weight: 700; text-align: center; line-height: 1.15; }
 .squadra-scelta[aria-pressed="true"] { border-color: var(--arancio); background: rgba(255,78,0,.22); }
+
+.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.link-tap { display: inline-flex; align-items: center; min-height: 44px; }

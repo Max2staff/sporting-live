@@ -1,7 +1,7 @@
 import { esc, formaHTML, segnoDR } from '../util.js';
 import { èPreferita } from '../preferiti.js';
 import { stemmaHTML } from '../stemma.js';
-import { gironi, impostaGirone, gironeEffettivo } from '../contesto.js';
+import { gironi, impostaGirone, risolviGirone } from '../contesto.js';
 import { podio } from '../evidenza.js';
 import { vuoto, heroHTML, squadraDa } from './comuni.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
@@ -25,14 +25,14 @@ function classeZona(zone, pos, totale) {
 export async function render({ indice, rotta, carica }) {
   const lista = gironi(indice);
   if (!lista.length) return vuoto('Nessun campionato in corso.');
-  if (rotta.params[0] && lista.some(g => g.slug === rotta.params[0])) impostaGirone(rotta.params[0]);
-  const slug = gironeEffettivo(indice);
+  const { mostrato: slug, salva } = risolviGirone(indice, rotta.params[0]);
+  if (salva) impostaGirone(slug);
   const g = await carica(`girone/${slug}.json`);
   const forma = new Map(g.squadre.map(s => [s.id, s.forma]));
   const righe = g.classifica[tipo] || [];
   const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
   return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
-      <div class="contesto-riga">${barraContesto(indice)}</div>
+      <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
       <h1>Classifica${parziali}</h1><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)} · stagione ${esc(g.stagione)}</p>` })}
     ${tipo === 'totale' ? podioHTML(indice, righe) : ''}
     <div class="segmenti">${[['totale', 'Totale'], ['casa', 'Casa'], ['trasferta', 'Trasferta']].map(([k, l]) => `<button data-tipo="${k}" class="${tipo === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
@@ -46,5 +46,5 @@ export async function render({ indice, rotta, carica }) {
 export function dopo(ctx, root) {
   root.querySelectorAll('.segmenti button').forEach(b => { b.onclick = async () => { tipo = b.dataset.tipo; root.innerHTML = await render(ctx); dopo(ctx, root); }; });
   root.querySelectorAll('tr[data-squadra]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/squadra/${tr.dataset.squadra}`); });
-  collegaContesto(root, ctx.indice, { onCambio: (slug) => ctx.naviga(`#/classifiche/${slug}`) });
+  collegaContesto(root, ctx.indice, { mostrato: risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato, onCambio: (slug) => ctx.naviga(`#/classifiche/${slug}`) });
 }

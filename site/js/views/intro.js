@@ -3,7 +3,7 @@ import { stemmaHTML } from '../stemma.js';
 import { gironi, leggiGirone, impostaGirone, gironeEffettivo, segnaIntroVista } from '../contesto.js';
 import { èPreferita, togglePreferito } from '../preferiti.js';
 
-const punti = (n) => `<div class="punti-avanzamento" aria-label="Passo ${n} di 3">${[1, 2, 3].map(i => `<i class="${i === n ? 'attivo' : ''}"></i>`).join('')}</div>`;
+const punti = (n) => `<div class="punti-avanzamento" role="img" aria-label="Passo ${n} di 3">${[1, 2, 3].map(i => `<i class="${i === n ? 'attivo' : ''}"></i>`).join('')}</div>`;
 const schermo = (foto, n, corpo) => `<section class="intro-schermo"><img class="sfondo-foto" src="img/foto/${foto}.jpg" alt="" aria-hidden="true" decoding="async">
   <div class="alto">${punti(n)}<a href="#/partite" class="salta" data-fine>Salta</a></div>
   <div class="intro-corpo">${corpo}</div></section>`;
@@ -13,7 +13,7 @@ function passo1() {
     <img src="icons/icon.svg" alt="" width="64" height="64">
     <h1>Sporting <b>Live</b></h1>
     <p>Tutti i campionati dello Sporting Club Mestre in tasca: risultati, classifiche, marcatori e statistiche, aggiornati ogni sera.</p>
-    <a class="bottone" href="#/intro/2">Inizia</a>`);
+    <a class="bottone" href="#/intro/2" data-avanti>Inizia</a>`);
 }
 
 function passo2(indice) {
@@ -41,8 +41,9 @@ export async function render({ indice, rotta }) {
 }
 
 export function dopo(ctx, root) {
-  root.querySelectorAll('[data-fine]').forEach(el => { el.onclick = (e) => { e.preventDefault(); segnaIntroVista(); ctx.naviga('#/partite'); }; });
-  root.querySelectorAll('[data-girone]').forEach(b => { b.onclick = () => { impostaGirone(b.dataset.girone); ctx.naviga('#/intro/3'); }; });
+  root.querySelectorAll('[data-fine]').forEach(el => { el.onclick = (e) => { e.preventDefault(); segnaIntroVista(); location.replace('#/partite'); }; });
+  root.querySelectorAll('[data-avanti]').forEach(el => { el.onclick = (e) => { e.preventDefault(); location.replace(el.getAttribute('href')); }; });
+  root.querySelectorAll('[data-girone]').forEach(b => { b.onclick = () => { impostaGirone(b.dataset.girone); location.replace('#/intro/3'); }; });
   root.querySelectorAll('.squadra-scelta').forEach(b => {
     b.onclick = () => { togglePreferito(b.dataset.squadra); b.setAttribute('aria-pressed', String(èPreferita(b.dataset.squadra))); };
   });

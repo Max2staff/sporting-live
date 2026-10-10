@@ -18,7 +18,7 @@ function rosa(s) {
   if (!s.rosa.length) return vuoto('La rosa compare dopo la prima partita con tabellino.');
   const r = [...s.rosa].sort((a, b) => b.presenze - a.presenze || b.gol - a.gol || a.nome.localeCompare(b.nome));
   return `<section class="card piena"><div class="scroll-x"><table class="tab"><thead><tr><th class="sx">Giocatore</th><th>Pres.</th><th>Gol</th><th>Voto</th><th>Cart.</th></tr></thead>
-    <tbody>${r.map(g => `<tr class="cliccabile" data-slug="${g.slug}"><td class="sx nome">${esc(g.nome)}${g.mvp ? ` <span class="badge accento">${g.mvp}★</span>` : ''}</td><td>${g.presenze}</td><td>${g.gol}</td><td>${g.votoMedio ?? '–'}</td><td>${g.ammonizioni ? `${g.ammonizioni}<i class="cart giallo"></i>` : ''}${g.espulsioni ? `${g.espulsioni}<i class="cart rosso"></i>` : ''}</td></tr>`).join('')}</tbody></table></div></section>`;
+    <tbody>${r.map(g => `<tr class="cliccabile" data-slug="${esc(g.slug)}"><td class="sx nome">${esc(g.nome)}${g.mvp ? ` <span class="badge accento">${g.mvp}★</span>` : ''}</td><td>${g.presenze}</td><td>${g.gol}</td><td>${g.votoMedio ?? '–'}</td><td>${g.ammonizioni ? `${g.ammonizioni}<i class="cart giallo"></i>` : ''}${g.espulsioni ? `${g.espulsioni}<i class="cart rosso"></i>` : ''}</td></tr>`).join('')}</tbody></table></div></section>`;
 }
 
 function statistiche(s) {

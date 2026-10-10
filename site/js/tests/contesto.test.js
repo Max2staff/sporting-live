@@ -49,3 +49,16 @@ test('persistenza con storage vero', () => {
     assert.equal(introDaMostrare(), false);
   } finally { delete globalThis.localStorage; }
 });
+
+import { risolviGirone as _risolvi, impostaGirone as _imposta, _reset as _rst } from '../contesto.js';
+test('risolviGirone: con "tutti" salvato lo slug di rotta non si salva', () => {
+  const indice = { campionati: [{ id: 1, nome: 'A', gironi: [{ slug: 'a1', nome: '1' }, { slug: 'b1', nome: '2' }] }] };
+  _rst();
+  assert.deepEqual(_risolvi(indice, 'b1'), { mostrato: 'b1', salva: false });
+  assert.deepEqual(_risolvi(indice, undefined), { mostrato: 'a1', salva: false });
+  assert.deepEqual(_risolvi(indice, 'zz'), { mostrato: 'a1', salva: false });
+  _imposta('a1');
+  assert.deepEqual(_risolvi(indice, 'b1'), { mostrato: 'b1', salva: true });
+  assert.deepEqual(_risolvi(indice, 'zz'), { mostrato: 'a1', salva: false });
+  _rst();
+});

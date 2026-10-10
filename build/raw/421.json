@@ -1,0 +1,8522 @@
+{
+ "aggiornato": "2026-10-10T15:06:39+02:00",
+ "idgirone": 421,
+ "squadre": [
+  {
+   "id": 2479,
+   "nome": "F.C. PELIGROS"
+  },
+  {
+   "id": 2482,
+   "nome": "SEI RESTAURI"
+  },
+  {
+   "id": 2478,
+   "nome": "FORTITUDO HURRICANES"
+  },
+  {
+   "id": 2483,
+   "nome": "F.C. AMICONI"
+  },
+  {
+   "id": 2487,
+   "nome": "F.C. BECK'S"
+  },
+  {
+   "id": 2489,
+   "nome": "GOC FELLAS"
+  },
+  {
+   "id": 2480,
+   "nome": "SOCKS"
+  },
+  {
+   "id": 2481,
+   "nome": "MCONOR PUB"
+  },
+  {
+   "id": 2486,
+   "nome": "EASY M&M"
+  },
+  {
+   "id": 2477,
+   "nome": "REAL GNECA MIAMI"
+  },
+  {
+   "id": 2490,
+   "nome": "DESPERADOS"
+  },
+  {
+   "id": 2484,
+   "nome": "MARCON C8"
+  },
+  {
+   "id": 2485,
+   "nome": "6 GOMME SCORZE"
+  },
+  {
+   "id": 2488,
+   "nome": "BROCCA JUNIORS"
+  }
+ ],
+ "classifica": {
+  "totale": [
+   {
+    "squadraId": 2479,
+    "nome": "F.C. PELIGROS",
+    "pos": 1,
+    "pt": 12,
+    "g": 4,
+    "v": 4,
+    "n": 0,
+    "p": 0,
+    "gf": 23,
+    "gs": 6,
+    "dr": 17
+   },
+   {
+    "squadraId": 2482,
+    "nome": "SEI RESTAURI",
+    "pos": 2,
+    "pt": 12,
+    "g": 4,
+    "v": 4,
+    "n": 0,
+    "p": 0,
+    "gf": 21,
+    "gs": 12,
+    "dr": 9
+   },
+   {
+    "squadraId": 2478,
+    "nome": "FORTITUDO HURRICANES",
+    "pos": 3,
+    "pt": 9,
+    "g": 4,
+    "v": 3,
+    "n": 0,
+    "p": 1,
+    "gf": 15,
+    "gs": 9,
+    "dr": 6
+   },
+   {
+    "squadraId": 2483,
+    "nome": "F.C. AMICONI",
+    "pos": 4,
+    "pt": 7,
+    "g": 4,
+    "v": 2,
+    "n": 1,
+    "p": 1,
+    "gf": 20,
+    "gs": 16,
+    "dr": 4
+   },
+   {
+    "squadraId": 2487,
+    "nome": "F.C. BECK'S",
+    "pos": 5,
+    "pt": 7,
+    "g": 4,
+    "v": 2,
+    "n": 1,
+    "p": 1,
+    "gf": 13,
+    "gs": 10,
+    "dr": 3
+   },
+   {
+    "squadraId": 2489,
+    "nome": "GOC FELLAS",
+    "pos": 6,
+    "pt": 7,
+    "g": 4,
+    "v": 2,
+    "n": 1,
+    "p": 1,
+    "gf": 11,
+    "gs": 12,
+    "dr": -1
+   },
+   {
+    "squadraId": 2480,
+    "nome": "SOCKS",
+    "pos": 7,
+    "pt": 6,
+    "g": 4,
+    "v": 2,
+    "n": 0,
+    "p": 2,
+    "gf": 13,
+    "gs": 10,
+    "dr": 3
+   },
+   {
+    "squadraId": 2481,
+    "nome": "MCONOR PUB",
+    "pos": 8,
+    "pt": 6,
+    "g": 4,
+    "v": 2,
+    "n": 0,
+    "p": 2,
+    "gf": 13,
+    "gs": 10,
+    "dr": 3
+   },
+   {
+    "squadraId": 2486,
+    "nome": "EASY M&M",
+    "pos": 9,
+    "pt": 6,
+    "g": 4,
+    "v": 2,
+    "n": 0,
+    "p": 2,
+    "gf": 9,
+    "gs": 12,
+    "dr": -3
+   },
+   {
+    "squadraId": 2477,
+    "nome": "REAL GNECA MIAMI",
+    "pos": 10,
+    "pt": 3,
+    "g": 4,
+    "v": 1,
+    "n": 0,
+    "p": 3,
+    "gf": 3,
+    "gs": 6,
+    "dr": -3
+   },
+   {
+    "squadraId": 2490,
+    "nome": "DESPERADOS",
+    "pos": 11,
+    "pt": 3,
+    "g": 4,
+    "v": 1,
+    "n": 0,
+    "p": 3,
+    "gf": 11,
+    "gs": 16,
+    "dr": -5
+   },
+   {
+    "squadraId": 2484,
+    "nome": "MARCON C8",
+    "pos": 12,
+    "pt": 3,
+    "g": 4,
+    "v": 1,
+    "n": 0,
+    "p": 3,
+    "gf": 11,
+    "gs": 18,
+    "dr": -7
+   },
+   {
+    "squadraId": 2485,
+    "nome": "6 GOMME SCORZE",
+    "pos": 13,
+    "pt": 1,
+    "g": 4,
+    "v": 0,
+    "n": 1,
+    "p": 3,
+    "gf": 5,
+    "gs": 12,
+    "dr": -7
+   },
+   {
+    "squadraId": 2488,
+    "nome": "BROCCA JUNIORS",
+    "pos": 14,
+    "pt": 0,
+    "g": 4,
+    "v": 0,
+    "n": 0,
+    "p": 4,
+    "gf": 5,
+    "gs": 24,
+    "dr": -19
+   }
+  ],
+  "casa": [
+   {
+    "squadraId": 2482,
+    "nome": "SEI RESTAURI",
+    "pos": 1,
+    "pt": 6,
+    "g": 2,
+    "v": 2,
+    "n": 0,
+    "p": 0,
+    "gf": 12,
+    "gs": 6,
+    "dr": 6
+   },
+   {
+    "squadraId": 2479,
+    "nome": "F.C. PELIGROS",
+    "pos": 2,
+    "pt": 6,
+    "g": 2,
+    "v": 2,
+    "n": 0,
+    "p": 0,
+    "gf": 8,
+    "gs": 3,
+    "dr": 5
+   },
+   {
+    "squadraId": 2478,
+    "nome": "FORTITUDO HURRICANES",
+    "pos": 3,
+    "pt": 6,
+    "g": 3,
+    "v": 2,
+    "n": 0,
+    "p": 1,
+    "gf": 8,
+    "gs": 7,
+    "dr": 1
+   },
+   {
+    "squadraId": 2487,
+    "nome": "F.C. BECK'S",
+    "pos": 4,
+    "pt": 4,
+    "g": 2,
+    "v": 1,
+    "n": 1,
+    "p": 0,
+    "gf": 5,
+    "gs": 3,
+    "dr": 2
+   },
+   {
+    "squadraId": 2483,
+    "nome": "F.C. AMICONI",
+    "pos": 5,
+    "pt": 4,
+    "g": 3,
+    "v": 1,
+    "n": 1,
+    "p": 1,
+    "gf": 10,
+    "gs": 14,
+    "dr": -4
+   },
+   {
+    "squadraId": 2481,
+    "nome": "MCONOR PUB",
+    "pos": 6,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 10,
+    "gs": 7,
+    "dr": 3
+   },
+   {
+    "squadraId": 2480,
+    "nome": "SOCKS",
+    "pos": 7,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 8,
+    "gs": 7,
+    "dr": 1
+   },
+   {
+    "squadraId": 2477,
+    "nome": "REAL GNECA MIAMI",
+    "pos": 8,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 2,
+    "gs": 2,
+    "dr": 0
+   },
+   {
+    "squadraId": 2489,
+    "nome": "GOC FELLAS",
+    "pos": 9,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 5,
+    "gs": 7,
+    "dr": -2
+   },
+   {
+    "squadraId": 2484,
+    "nome": "MARCON C8",
+    "pos": 10,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 5,
+    "gs": 8,
+    "dr": -3
+   },
+   {
+    "squadraId": 2486,
+    "nome": "EASY M&M",
+    "pos": 11,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 3,
+    "gs": 6,
+    "dr": -3
+   },
+   {
+    "squadraId": 2490,
+    "nome": "DESPERADOS",
+    "pos": 12,
+    "pt": 0,
+    "g": 0,
+    "v": 0,
+    "n": 0,
+    "p": 0,
+    "gf": 0,
+    "gs": 0,
+    "dr": 0
+   },
+   {
+    "squadraId": 2485,
+    "nome": "6 GOMME SCORZE",
+    "pos": 13,
+    "pt": 0,
+    "g": 2,
+    "v": 0,
+    "n": 0,
+    "p": 2,
+    "gf": 2,
+    "gs": 8,
+    "dr": -6
+   },
+   {
+    "squadraId": 2488,
+    "nome": "BROCCA JUNIORS",
+    "pos": 14,
+    "pt": 0,
+    "g": 2,
+    "v": 0,
+    "n": 0,
+    "p": 2,
+    "gf": 3,
+    "gs": 14,
+    "dr": -11
+   }
+  ],
+  "trasferta": [
+   {
+    "squadraId": 2479,
+    "nome": "F.C. PELIGROS",
+    "pos": 1,
+    "pt": 6,
+    "g": 2,
+    "v": 2,
+    "n": 0,
+    "p": 0,
+    "gf": 15,
+    "gs": 3,
+    "dr": 12
+   },
+   {
+    "squadraId": 2482,
+    "nome": "SEI RESTAURI",
+    "pos": 2,
+    "pt": 6,
+    "g": 2,
+    "v": 2,
+    "n": 0,
+    "p": 0,
+    "gf": 9,
+    "gs": 6,
+    "dr": 3
+   },
+   {
+    "squadraId": 2489,
+    "nome": "GOC FELLAS",
+    "pos": 3,
+    "pt": 4,
+    "g": 2,
+    "v": 1,
+    "n": 1,
+    "p": 0,
+    "gf": 6,
+    "gs": 5,
+    "dr": 1
+   },
+   {
+    "squadraId": 2483,
+    "nome": "F.C. AMICONI",
+    "pos": 4,
+    "pt": 3,
+    "g": 1,
+    "v": 1,
+    "n": 0,
+    "p": 0,
+    "gf": 10,
+    "gs": 2,
+    "dr": 8
+   },
+   {
+    "squadraId": 2478,
+    "nome": "FORTITUDO HURRICANES",
+    "pos": 5,
+    "pt": 3,
+    "g": 1,
+    "v": 1,
+    "n": 0,
+    "p": 0,
+    "gf": 7,
+    "gs": 2,
+    "dr": 5
+   },
+   {
+    "squadraId": 2480,
+    "nome": "SOCKS",
+    "pos": 6,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 5,
+    "gs": 3,
+    "dr": 2
+   },
+   {
+    "squadraId": 2487,
+    "nome": "F.C. BECK'S",
+    "pos": 7,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 8,
+    "gs": 7,
+    "dr": 1
+   },
+   {
+    "squadraId": 2486,
+    "nome": "EASY M&M",
+    "pos": 8,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 6,
+    "gs": 6,
+    "dr": 0
+   },
+   {
+    "squadraId": 2481,
+    "nome": "MCONOR PUB",
+    "pos": 9,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 3,
+    "gs": 3,
+    "dr": 0
+   },
+   {
+    "squadraId": 2490,
+    "nome": "DESPERADOS",
+    "pos": 10,
+    "pt": 3,
+    "g": 4,
+    "v": 1,
+    "n": 0,
+    "p": 3,
+    "gf": 11,
+    "gs": 16,
+    "dr": -5
+   },
+   {
+    "squadraId": 2485,
+    "nome": "6 GOMME SCORZE",
+    "pos": 11,
+    "pt": 1,
+    "g": 2,
+    "v": 0,
+    "n": 1,
+    "p": 1,
+    "gf": 3,
+    "gs": 4,
+    "dr": -1
+   },
+   {
+    "squadraId": 2477,
+    "nome": "REAL GNECA MIAMI",
+    "pos": 12,
+    "pt": 0,
+    "g": 2,
+    "v": 0,
+    "n": 0,
+    "p": 2,
+    "gf": 1,
+    "gs": 4,
+    "dr": -3
+   },
+   {
+    "squadraId": 2484,
+    "nome": "MARCON C8",
+    "pos": 13,
+    "pt": 0,
+    "g": 2,
+    "v": 0,
+    "n": 0,
+    "p": 2,
+    "gf": 6,
+    "gs": 10,
+    "dr": -4
+   },
+   {
+    "squadraId": 2488,
+    "nome": "BROCCA JUNIORS",
+    "pos": 14,
+    "pt": 0,
+    "g": 2,
+    "v": 0,
+    "n": 0,
+    "p": 2,
+    "gf": 2,
+    "gs": 10,
+    "dr": -8
+   }
+  ]
+ },
+ "partite": [
+  {
+   "id": 14083,
+   "giornata": 1,
+   "data": "2026-09-16",
+   "ora": "20:30",
+   "casaId": 2480,
+   "ospiteId": 2486,
+   "golCasa": 3,
+   "golOspite": 5,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14085,
+   "giornata": 1,
+   "data": "2026-09-16",
+   "ora": "21:00",
+   "casaId": 2478,
+   "ospiteId": 2481,
+   "golCasa": 2,
+   "golOspite": 1,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14087,
+   "giornata": 1,
+   "data": "2026-09-16",
+   "ora": "22:00",
+   "casaId": 2483,
+   "ospiteId": 2489,
+   "golCasa": 3,
+   "golOspite": 3,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14089,
+   "giornata": 1,
+   "data": "2026-09-17",
+   "ora": "20:30",
+   "casaId": 2479,
+   "ospiteId": 2487,
+   "golCasa": 5,
+   "golOspite": 2,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14091,
+   "giornata": 1,
+   "data": "2026-09-17",
+   "ora": "20:30",
+   "casaId": 2477,
+   "ospiteId": 2485,
+   "golCasa": 1,
+   "golOspite": 0,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14093,
+   "giornata": 1,
+   "data": "2026-09-17",
+   "ora": "21:30",
+   "casaId": 2482,
+   "ospiteId": 2484,
+   "golCasa": 5,
+   "golOspite": 4,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14095,
+   "giornata": 1,
+   "data": "2026-09-18",
+   "ora": "21:30",
+   "casaId": 2488,
+   "ospiteId": 2490,
+   "golCasa": 1,
+   "golOspite": 4,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14097,
+   "giornata": 2,
+   "data": "2026-09-21",
+   "ora": "20:00",
+   "casaId": 2485,
+   "ospiteId": 2482,
+   "golCasa": 1,
+   "golOspite": 3,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14099,
+   "giornata": 2,
+   "data": "2026-09-21",
+   "ora": "21:00",
+   "casaId": 2483,
+   "ospiteId": 2490,
+   "golCasa": 4,
+   "golOspite": 2,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14101,
+   "giornata": 2,
+   "data": "2026-09-23",
+   "ora": "20:30",
+   "casaId": 2487,
+   "ospiteId": 2480,
+   "golCasa": 2,
+   "golOspite": 0,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14103,
+   "giornata": 2,
+   "data": "2026-09-23",
+   "ora": "21:30",
+   "casaId": 2481,
+   "ospiteId": 2488,
+   "golCasa": 5,
+   "golOspite": 1,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14105,
+   "giornata": 2,
+   "data": "2026-09-23",
+   "ora": "21:30",
+   "casaId": 2484,
+   "ospiteId": 2478,
+   "golCasa": 2,
+   "golOspite": 7,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14107,
+   "giornata": 2,
+   "data": "2026-09-24",
+   "ora": "20:00",
+   "casaId": 2486,
+   "ospiteId": 2477,
+   "golCasa": 1,
+   "golOspite": 0,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14109,
+   "giornata": 2,
+   "data": "2026-09-24",
+   "ora": "20:30",
+   "casaId": 2489,
+   "ospiteId": 2479,
+   "golCasa": 0,
+   "golOspite": 6,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14111,
+   "giornata": 3,
+   "data": "2026-09-28",
+   "ora": "21:30",
+   "casaId": 2483,
+   "ospiteId": 2479,
+   "golCasa": 3,
+   "golOspite": 9,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14113,
+   "giornata": 3,
+   "data": "2026-09-29",
+   "ora": "20:30",
+   "casaId": 2478,
+   "ospiteId": 2490,
+   "golCasa": 4,
+   "golOspite": 3,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14115,
+   "giornata": 3,
+   "data": "2026-09-30",
+   "ora": "22:00",
+   "casaId": 2489,
+   "ospiteId": 2488,
+   "golCasa": 5,
+   "golOspite": 1,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14117,
+   "giornata": 3,
+   "data": "2026-10-01",
+   "ora": "20:30",
+   "casaId": 2484,
+   "ospiteId": 2477,
+   "golCasa": 3,
+   "golOspite": 1,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14119,
+   "giornata": 3,
+   "data": "2026-10-01",
+   "ora": "21:30",
+   "casaId": 2485,
+   "ospiteId": 2480,
+   "golCasa": 1,
+   "golOspite": 5,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14121,
+   "giornata": 3,
+   "data": "2026-10-01",
+   "ora": "21:30",
+   "casaId": 2486,
+   "ospiteId": 2487,
+   "golCasa": 2,
+   "golOspite": 6,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14123,
+   "giornata": 3,
+   "data": "2026-10-02",
+   "ora": "21:30",
+   "casaId": 2481,
+   "ospiteId": 2482,
+   "golCasa": 5,
+   "golOspite": 6,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14125,
+   "giornata": 4,
+   "data": "2026-10-05",
+   "ora": "21:30",
+   "casaId": 2477,
+   "ospiteId": 2481,
+   "golCasa": 1,
+   "golOspite": 2,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14127,
+   "giornata": 4,
+   "data": "2026-10-06",
+   "ora": "21:30",
+   "casaId": 2479,
+   "ospiteId": 2486,
+   "golCasa": 3,
+   "golOspite": 1,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14129,
+   "giornata": 4,
+   "data": "2026-10-07",
+   "ora": "21:30",
+   "casaId": 2487,
+   "ospiteId": 2485,
+   "golCasa": 3,
+   "golOspite": 3,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14131,
+   "giornata": 4,
+   "data": "2026-10-07",
+   "ora": "21:30",
+   "casaId": 2478,
+   "ospiteId": 2489,
+   "golCasa": 2,
+   "golOspite": 3,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14133,
+   "giornata": 4,
+   "data": "2026-10-08",
+   "ora": "21:00",
+   "casaId": 2488,
+   "ospiteId": 2483,
+   "golCasa": 2,
+   "golOspite": 10,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14135,
+   "giornata": 4,
+   "data": "2026-10-08",
+   "ora": "22:00",
+   "casaId": 2480,
+   "ospiteId": 2484,
+   "golCasa": 5,
+   "golOspite": 2,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14137,
+   "giornata": 4,
+   "data": "2026-10-09",
+   "ora": "20:30",
+   "casaId": 2482,
+   "ospiteId": 2490,
+   "golCasa": 7,
+   "golOspite": 2,
+   "giocata": true,
+   "tavolino": false
+  },
+  {
+   "id": 14139,
+   "giornata": 5,
+   "data": "2026-10-13",
+   "ora": "20:30",
+   "casaId": 2485,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14141,
+   "giornata": 5,
+   "data": "2026-10-13",
+   "ora": "20:30",
+   "casaId": 2483,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14143,
+   "giornata": 5,
+   "data": "2026-10-14",
+   "ora": "20:30",
+   "casaId": 2489,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14145,
+   "giornata": 5,
+   "data": "2026-10-14",
+   "ora": "20:30",
+   "casaId": 2484,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14147,
+   "giornata": 5,
+   "data": "2026-10-15",
+   "ora": "20:00",
+   "casaId": 2477,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14149,
+   "giornata": 5,
+   "data": "2026-10-15",
+   "ora": "20:30",
+   "casaId": 2488,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14151,
+   "giornata": 5,
+   "data": "2026-10-16",
+   "ora": "21:30",
+   "casaId": 2481,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14153,
+   "giornata": 6,
+   "data": "2026-10-20",
+   "ora": "20:30",
+   "casaId": 2479,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14155,
+   "giornata": 6,
+   "data": "2026-10-21",
+   "ora": "20:30",
+   "casaId": 2478,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14157,
+   "giornata": 6,
+   "data": "2026-10-21",
+   "ora": "21:30",
+   "casaId": 2486,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14159,
+   "giornata": 6,
+   "data": "2026-10-22",
+   "ora": "21:00",
+   "casaId": 2477,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14161,
+   "giornata": 6,
+   "data": "2026-10-22",
+   "ora": "21:30",
+   "casaId": 2480,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14163,
+   "giornata": 6,
+   "data": "2026-10-22",
+   "ora": "22:00",
+   "casaId": 2482,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14165,
+   "giornata": 6,
+   "data": "2026-10-23",
+   "ora": "20:30",
+   "casaId": 2487,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14167,
+   "giornata": 7,
+   "data": "2026-10-27",
+   "ora": "20:30",
+   "casaId": 2483,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14169,
+   "giornata": 7,
+   "data": "2026-10-28",
+   "ora": "21:30",
+   "casaId": 2478,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14171,
+   "giornata": 7,
+   "data": "2026-10-28",
+   "ora": "21:30",
+   "casaId": 2489,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14173,
+   "giornata": 7,
+   "data": "2026-10-29",
+   "ora": "20:30",
+   "casaId": 2488,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14175,
+   "giornata": 7,
+   "data": "2026-10-29",
+   "ora": "21:30",
+   "casaId": 2484,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14177,
+   "giornata": 7,
+   "data": "2026-10-29",
+   "ora": "22:00",
+   "casaId": 2487,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14179,
+   "giornata": 7,
+   "data": "2026-10-30",
+   "ora": "20:30",
+   "casaId": 2481,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14181,
+   "giornata": 8,
+   "data": "2026-11-03",
+   "ora": "20:30",
+   "casaId": 2482,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14183,
+   "giornata": 8,
+   "data": "2026-11-03",
+   "ora": "21:30",
+   "casaId": 2486,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14185,
+   "giornata": 8,
+   "data": "2026-11-04",
+   "ora": "20:30",
+   "casaId": 2477,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14187,
+   "giornata": 8,
+   "data": "2026-11-04",
+   "ora": "21:30",
+   "casaId": 2487,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14189,
+   "giornata": 8,
+   "data": "2026-11-04",
+   "ora": "21:30",
+   "casaId": 2480,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14191,
+   "giornata": 8,
+   "data": "2026-11-05",
+   "ora": "22:00",
+   "casaId": 2479,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14193,
+   "giornata": 8,
+   "data": "2026-11-06",
+   "ora": "21:30",
+   "casaId": 2485,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14195,
+   "giornata": 9,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14197,
+   "giornata": 9,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14199,
+   "giornata": 9,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14201,
+   "giornata": 9,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14203,
+   "giornata": 9,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14205,
+   "giornata": 9,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14207,
+   "giornata": 9,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14209,
+   "giornata": 10,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14211,
+   "giornata": 10,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14213,
+   "giornata": 10,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14215,
+   "giornata": 10,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14217,
+   "giornata": 10,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14219,
+   "giornata": 10,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14221,
+   "giornata": 10,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14223,
+   "giornata": 11,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14225,
+   "giornata": 11,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14227,
+   "giornata": 11,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14229,
+   "giornata": 11,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14231,
+   "giornata": 11,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14233,
+   "giornata": 11,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14235,
+   "giornata": 11,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14237,
+   "giornata": 12,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14239,
+   "giornata": 12,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14241,
+   "giornata": 12,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14243,
+   "giornata": 12,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14245,
+   "giornata": 12,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14247,
+   "giornata": 12,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14249,
+   "giornata": 12,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14251,
+   "giornata": 13,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14253,
+   "giornata": 13,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14255,
+   "giornata": 13,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14257,
+   "giornata": 13,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14259,
+   "giornata": 13,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14261,
+   "giornata": 13,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14263,
+   "giornata": 13,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14084,
+   "giornata": 14,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14086,
+   "giornata": 14,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14088,
+   "giornata": 14,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14090,
+   "giornata": 14,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14092,
+   "giornata": 14,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14094,
+   "giornata": 14,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14096,
+   "giornata": 14,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14098,
+   "giornata": 15,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14100,
+   "giornata": 15,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14102,
+   "giornata": 15,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14104,
+   "giornata": 15,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14106,
+   "giornata": 15,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14108,
+   "giornata": 15,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14110,
+   "giornata": 15,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14112,
+   "giornata": 16,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14114,
+   "giornata": 16,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14116,
+   "giornata": 16,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14118,
+   "giornata": 16,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14120,
+   "giornata": 16,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14122,
+   "giornata": 16,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14124,
+   "giornata": 16,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14126,
+   "giornata": 17,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14128,
+   "giornata": 17,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14130,
+   "giornata": 17,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14132,
+   "giornata": 17,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14134,
+   "giornata": 17,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14136,
+   "giornata": 17,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14138,
+   "giornata": 17,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14140,
+   "giornata": 18,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14142,
+   "giornata": 18,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14144,
+   "giornata": 18,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14146,
+   "giornata": 18,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14148,
+   "giornata": 18,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14150,
+   "giornata": 18,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14152,
+   "giornata": 18,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14154,
+   "giornata": 19,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14156,
+   "giornata": 19,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14158,
+   "giornata": 19,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14160,
+   "giornata": 19,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14162,
+   "giornata": 19,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14164,
+   "giornata": 19,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14166,
+   "giornata": 19,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14168,
+   "giornata": 20,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14170,
+   "giornata": 20,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14172,
+   "giornata": 20,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14174,
+   "giornata": 20,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14176,
+   "giornata": 20,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14178,
+   "giornata": 20,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14180,
+   "giornata": 20,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14182,
+   "giornata": 21,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14184,
+   "giornata": 21,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14186,
+   "giornata": 21,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14188,
+   "giornata": 21,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14190,
+   "giornata": 21,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14192,
+   "giornata": 21,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14194,
+   "giornata": 21,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14196,
+   "giornata": 22,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14198,
+   "giornata": 22,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14200,
+   "giornata": 22,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14202,
+   "giornata": 22,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14204,
+   "giornata": 22,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14206,
+   "giornata": 22,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14208,
+   "giornata": 22,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14210,
+   "giornata": 23,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14212,
+   "giornata": 23,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14214,
+   "giornata": 23,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14216,
+   "giornata": 23,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14218,
+   "giornata": 23,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14220,
+   "giornata": 23,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14222,
+   "giornata": 23,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14224,
+   "giornata": 24,
+   "data": null,
+   "ora": null,
+   "casaId": 2479,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14226,
+   "giornata": 24,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14228,
+   "giornata": 24,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14230,
+   "giornata": 24,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14232,
+   "giornata": 24,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14234,
+   "giornata": 24,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14236,
+   "giornata": 24,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14238,
+   "giornata": 25,
+   "data": null,
+   "ora": null,
+   "casaId": 2482,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14240,
+   "giornata": 25,
+   "data": null,
+   "ora": null,
+   "casaId": 2477,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14242,
+   "giornata": 25,
+   "data": null,
+   "ora": null,
+   "casaId": 2489,
+   "ospiteId": 2481,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14244,
+   "giornata": 25,
+   "data": null,
+   "ora": null,
+   "casaId": 2483,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14246,
+   "giornata": 25,
+   "data": null,
+   "ora": null,
+   "casaId": 2488,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14248,
+   "giornata": 25,
+   "data": null,
+   "ora": null,
+   "casaId": 2478,
+   "ospiteId": 2486,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14250,
+   "giornata": 25,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14252,
+   "giornata": 26,
+   "data": null,
+   "ora": null,
+   "casaId": 2487,
+   "ospiteId": 2477,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14254,
+   "giornata": 26,
+   "data": null,
+   "ora": null,
+   "casaId": 2485,
+   "ospiteId": 2478,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14256,
+   "giornata": 26,
+   "data": null,
+   "ora": null,
+   "casaId": 2484,
+   "ospiteId": 2488,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14258,
+   "giornata": 26,
+   "data": null,
+   "ora": null,
+   "casaId": 2480,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14260,
+   "giornata": 26,
+   "data": null,
+   "ora": null,
+   "casaId": 2486,
+   "ospiteId": 2482,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14262,
+   "giornata": 26,
+   "data": null,
+   "ora": null,
+   "casaId": 2481,
+   "ospiteId": 2483,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14264,
+   "giornata": 26,
+   "data": null,
+   "ora": null,
+   "casaId": 2490,
+   "ospiteId": 2489,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  }
+ ],
+ "tabellini": {
+  "14083": {
+   "marcatori": [
+    {
+     "squadraId": 2480,
+     "nome": "MICHELETTO DENIS",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO MARCO",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BUSO MATTIA",
+     "minuto": 31
+    },
+    {
+     "squadraId": 2486,
+     "nome": "LA TERZA GIANMARCO",
+     "minuto": 6
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA ALVISE",
+     "minuto": 18
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BERARDI MARCO",
+     "minuto": 38
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "minuto": 42
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2480,
+     "nome": "SEMENZATO NICOLO´",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA MATTIA",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "GILIBERTI ANTONIO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DANTELLI ANDREA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BUSO MATTIA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TRABUCCO MARCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO MARCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BENVENUTI FRANCESCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ZERLOTTIN ALVISE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BERARDI MARCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO LUCA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "LA TERZA GIANMARCO",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "DE CHECCHI CLAUDIO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DE MATTEO ELYA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ORLER MARCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA ALVISE",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BESAZZA MATTEO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CARRARO MARK",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BOLLANI MICHAEL",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "numero": 10,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "MICHELETTO DENIS",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "COLLI MATTIA",
+     "numero": 11,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2486,
+    "nome": "LA TERZA GIANMARCO"
+   },
+   "completo": true
+  },
+  "14085": {
+   "marcatori": [
+    {
+     "squadraId": 2478,
+     "nome": "SALZANO ALESSANDRO",
+     "minuto": 17
+    },
+    {
+     "squadraId": 2478,
+     "nome": "TONETTO FRANCESCO",
+     "minuto": 36
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "minuto": 33
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2478,
+     "nome": "BONDI GIANMARCO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "AGOSTINI ANDREA",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "TUDORACHE RADU",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVANI JACOPO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "CECCHINATO LUCA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BON ALBERTO",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "DALLA VALENTINA JACOPO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "VIDAL GIOVANNI",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ORSENO DOMENICO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "SALZANO ALESSANDRO",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ZITO NICOLO'",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "OLIVIERI NICOLA",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BROVEDANI THOMAS",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "TONETTO FRANCESCO",
+     "numero": 9,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "LA ROSA ALESSANDRO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "PALADE EMANUEL",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVAN ANDREA",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "RODELLI FRANCESCO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POLO GIOVANNI",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2478,
+    "nome": "SALZANO ALESSANDRO"
+   },
+   "completo": true
+  },
+  "14087": {
+   "marcatori": [
+    {
+     "squadraId": 2483,
+     "nome": "LOMBARDINO FRANCESCO",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2483,
+     "nome": "DE PAOLI NICOLAS",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PENZO ANDREA",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CALCHIERA LUCA",
+     "minuto": 42
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2483,
+     "nome": "FONTANA ALESSANDRO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CAMPAGNARO ANDREA",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PRANDIN GIOVANNI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "VIVIAN RICCARDO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "LOMBARDINO FRANCESCO",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PENZO ANDREA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PADULA GABRIELE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CALCHIERA LUCA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CANCIANI GIACOMO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "MINATI RICCARDO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "numero": 7,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "TRIBOLI MATTEO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "DE PAOLI NICOLAS",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "SCORZATO TOMMASO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "VINCHIERUTI ANDREA",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CAMPAGNARO LUCA",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2483,
+    "nome": "LOMBARDINO FRANCESCO"
+   },
+   "completo": true
+  },
+  "14089": {
+   "marcatori": [
+    {
+     "squadraId": 2479,
+     "nome": "PETTENO' ANDRES",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2479,
+     "nome": "RAPISARDA MARCO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2479,
+     "nome": "ANESIN ALEX",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CASANO JACOPO",
+     "minuto": 14
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2479,
+     "nome": "VIDAL GIACOMO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MORON DAVDE",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VEDOVA ALBERTO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "VIANELLO GIACOMO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CITTON FILIPPO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "ONGARO GABRIEL",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CASANO JACOPO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PRESTI MATTEO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CAUSHAJ XHULJANO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "BARCHITTA FRANCESCO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MARINELLO LUCA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BALDIN ALVISE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "ANESIN ALEX",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "POMIATO LEONARDO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PETTENO' ANDRES",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "GIUMAN FILIPPO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "RAPISARDA MARCO",
+     "numero": 10,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BETTIN THOMAS",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "MORESCO FILIPPO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2479,
+    "nome": "VIDAL GIACOMO"
+   },
+   "completo": true
+  },
+  "14091": {
+   "marcatori": [
+    {
+     "squadraId": 2477,
+     "nome": "BUSATO LEONARDO",
+     "minuto": 17
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2477,
+     "nome": "AFFABRIS ALEX",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "SCATTOLIN DAVIDE",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PERZOLLA DANIELE",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "MERCANZIN MARCO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PENNESI FILIPPO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GASPARINI FABIO",
+     "numero": 3,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PENZO MICHELE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "FORZA DANIELE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE GRANDIS THOMAS",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "D'ANTONIO FELICE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE MARZI GIOVANNI",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "ABOUBACAR SIDIKI DANTE",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "BUSATO LEONARDO",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "ROSINA LORIS",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "FUIN CHRISTIAN",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GIUSTO MATTEO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2477,
+    "nome": "AFFABRIS ALEX"
+   },
+   "completo": true
+  },
+  "14093": {
+   "marcatori": [
+    {
+     "squadraId": 2482,
+     "nome": "OSMAN HAKAN",
+     "minuto": 17
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2482,
+     "nome": "OSMAN HAKAN",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2482,
+     "nome": "OSMAN HAKAN",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 50
+    },
+    {
+     "squadraId": 2484,
+     "nome": "BUSATO ANDREA",
+     "minuto": 28
+    },
+    {
+     "squadraId": 2484,
+     "nome": "GIANNI FILIPPO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO VINCENZO",
+     "minuto": 39
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "minuto": 48
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2482,
+     "nome": "BAYRAM ILYAS",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "MAZZOLIN FRANCESCO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "ADEM FURKAN",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "MARTON MASSIMILIANO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DZIHAN OSMAN",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "DE BERNARDIS ANDREA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "MAHMUTOGO JUSUF",
+     "numero": 4,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "HAJDAR ALPAJ",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO VINCENZO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "OSMAN HAKAN",
+     "numero": 6,
+     "voto": 8.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LAMPITELLI MATTEO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DOGUS SEZAIR",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "BUSATO ANDREA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "GIANNI FILIPPO",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO GIANMARIA",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2482,
+    "nome": "OSMAN HAKAN"
+   },
+   "completo": true
+  },
+  "14095": {
+   "marcatori": [
+    {
+     "squadraId": 2488,
+     "nome": "ZAMATTIO FILIPPO",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LEONE FRANCESCO",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA ANTONIO",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2490,
+     "nome": "NEVATE MICHELE",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2490,
+     "nome": "COMPOSTO ANTONINO",
+     "minuto": 45
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2488,
+     "nome": "TENDERINI LORENZO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "KUTI MERIGNEL",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANGELETTI NICOLA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA LUIGI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "AGOSTINI DIEGO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "MACERA ALESSIO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "TREVISAN JACOPO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LA RAGIONE HABTAMU",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "HUDOROVIC SAMUEL",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LEONE FRANCESCO",
+     "numero": 5,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ZAMATTIO FILIPPO",
+     "numero": 6,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "OLIMPO MARCO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' STEFANO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "OLIMPO MARCO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' FRANCESCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "NEVATE MICHELE",
+     "numero": 8,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "CAMARA MAMADY",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "SCOLETTA GAETANO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "LEVAK ALESSANDRO AMEDEO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "COMPOSTO ANTONINO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "FERRARI NICOLA",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA ANTONIO",
+     "numero": 12,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "SOLFERINO SIMONE",
+     "numero": 13,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "TARZARIOL GUIDO",
+     "numero": 14,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "BUGIN GABRIEL",
+     "numero": 15,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2488,
+    "nome": "ZAMATTIO FILIPPO"
+   },
+   "completo": true
+  },
+  "14097": {
+   "marcatori": [
+    {
+     "squadraId": 2485,
+     "nome": "VISENTIN MATTIA",
+     "minuto": 2
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CEYHUN",
+     "minuto": 10
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 45
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2485,
+     "nome": "SCATTOLIN DAVIDE",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "BAJRAM ILJAS",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "MERCANZIN MARCO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "ADEM FURKAN",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "ROSINA LORIS",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DZIHAN OSMAN",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GIUSTO MATTEO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GASPARINI FABIO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CEYHUN",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "FORZA DANIELE",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "HAJDAR ALPAJ",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "D'ANTONIO FELICE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DOGUS SEZAIR",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "SERENA MATTEO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "OSMAN HAKAN",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GENOVESI MATTEO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CIHAN",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "VISENTIN MATTIA",
+     "numero": 10,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2485,
+    "nome": "SCATTOLIN DAVIDE"
+   },
+   "completo": true
+  },
+  "14099": {
+   "marcatori": [
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "minuto": 19
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PERON FEDERICO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LA RAGIONE HABTAMU",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2490,
+     "nome": "FERRARI NICOLA",
+     "minuto": 28
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2483,
+     "nome": "DI NATALE PAOLO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "KUTI MERIGNEL",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PRANDIN GIOVANNI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "FERRARI NICOLA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "LOMBARDINO FRANCESCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA LUIGI",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "FONTANA ALESSANDRO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "SOLFERINO SIMONE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PADULA GABRIELE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "MACERA ALESSIO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LA RAGIONE HABTAMU",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "TARZARIOL GUIDO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PERON FEDERICO",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LEONE FRANCESCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAVANELLO ALESSANDRO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA ANTONIO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "NEVATE MICHELE",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2483,
+    "nome": "PAGAN DAVIDE"
+   },
+   "completo": true
+  },
+  "14101": {
+   "marcatori": [
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "minuto": 23
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2487,
+     "nome": "MORON DAVDE",
+     "numero": 1,
+     "voto": 9.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "SEMENZATO NICOLO´",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "VIANELLO GIACOMO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "GRILETTI MASSIMILIANO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MARINELLO LUCA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BUSO MATTIA",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CAUSHAJ XHULJANO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO MARCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ZERLOTTIN ALVISE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "POMIATO LEONARDO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "STIZZOLI SIMONE",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BETTIN THOMAS",
+     "numero": 7,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "DE PIERI ALVISE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "GIUMAN FILIPPO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BESAZZA MATTEO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "ABIDAR NASSIM",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BOLLANI MICHAEL",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "ZAMARA FILIPPO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "MICHELETTO ALESSIO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "CORCIULLO ALESSANDRO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2487,
+    "nome": "MORON DAVDE"
+   },
+   "completo": true
+  },
+  "14103": {
+   "marcatori": [
+    {
+     "squadraId": 2481,
+     "nome": "PREZIOSI VITTORIO",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2481,
+     "nome": "CALZA MATTEO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ORSENO DOMENICO",
+     "minuto": 29
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2481,
+     "nome": "CALZA MATTEO",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2488,
+     "nome": "DE NAT JACOPO",
+     "minuto": 22
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2481,
+     "nome": "AGOSTINI ANDREA",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "TENDERINI LORENZO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVANI JACOPO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANGELETTI NICOLA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "HUDOROVIC SAMUEL",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ZAMATTIO FILIPPO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ORSENO DOMENICO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' FRANCESCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POLO GIOVANNI",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' STEFANO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "VECCHIATO LUCA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "DE NAT JACOPO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "CALZA MATTEO",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "CAMARA MAMADY",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PREZIOSI VITTORIO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "PERISINOTTO ALESSIO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2481,
+    "nome": "POSSAMAI MATTEO"
+   },
+   "completo": true
+  },
+  "14105": {
+   "marcatori": [
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO VINCENZO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2478,
+     "nome": "SALZANO ALESSANDRO",
+     "minuto": 6
+    },
+    {
+     "squadraId": 2478,
+     "nome": "DALLA VALENTINA JACOPO",
+     "minuto": 10
+    },
+    {
+     "squadraId": 2478,
+     "nome": "PICCA FEDERICO",
+     "minuto": 13
+    },
+    {
+     "squadraId": 2478,
+     "nome": "RODELLI FRANCESCO",
+     "minuto": 18
+    },
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2478,
+     "nome": "OLIVIERI NICOLA",
+     "minuto": 41
+    },
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "minuto": 44
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2484,
+     "nome": "MAZZOLIN FRANCESCO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "PALADE EMANUEL",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "MARTON MASSIMILIANO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "SCHIOPPA PIERFRANCESCO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "DE BERNARDIS ANDREA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "TUDORACHE RADU",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "CECCHINATO LUCA",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LAMPITELLI MATTEO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "BUSATO ANDREA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "DALLA VALENTINA JACOPO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO GIANMARIA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "SALZANO ALESSANDRO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "OLIVIERI NICOLA",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO VINCENZO",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "VIO NICOLO'",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SORRENTINO RICCARDO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "RODELLI FRANCESCO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "PICCA FEDERICO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2484,
+    "nome": "CIMMINO VINCENZO"
+   },
+   "completo": true
+  },
+  "14107": {
+   "marcatori": [
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "minuto": 33
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2486,
+     "nome": "LAZZARI FILIPPO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "AFFABRIS ALEX",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TRABUCCO MARCO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PERZOLLA DANIELE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CAORLINI STEFANO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "D'ESTE SIMONE",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "LA TERZA GIANMARCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "FEMIO CRISTIANO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BERARDI MARCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PENZO MICHELE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DARLANTE ANDREA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE GRANDIS THOMAS",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CARRARO MARK",
+     "numero": 7,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "BUSATO LEONARDO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "COLLI MATTIA",
+     "numero": 8,
+     "voto": 6.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "FUIN CHRISTIAN",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "BERNARDIS NICOLO'",
+     "numero": 9,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CROSERA ANDREA",
+     "numero": 10,
+     "voto": 6.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PENNESI FILIPPO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "SIMIONATO ALEX",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2486,
+    "nome": "PANFILO BARNABA"
+   },
+   "completo": true
+  },
+  "14109": {
+   "marcatori": [
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "minuto": 16
+    },
+    {
+     "squadraId": 2489,
+     "nome": "TRIBOLI MATTEO",
+     "minuto": 17
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "minuto": 5
+    },
+    {
+     "squadraId": 2479,
+     "nome": "ANESIN ALEX",
+     "minuto": 32
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2489,
+     "nome": "CAMPAGNARO LUCA",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VIDAL GIACOMO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "VIVIAN RICCARDO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VEDOVA ALBERTO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "FRANCHIN MATTEO",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CITTON FILIPPO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PENZO ANDREA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CALCHIERA LUCA",
+     "numero": 5,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CASTELLAN DAVIDE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CRESCENTINI MARCO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PRESTI MATTEO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CANCIANI GIACOMO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": true,
+     "espulso": true
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "numero": 7,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "ANESIN ALEX",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "TRIBOLI MATTEO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PETTENO' ANDRES",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PISELLI ALESSANDRO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CEOLIN MATTIA",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "SCORZATO TOMMASO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "GRIGOLETTO CARLOS FABRIZIO",
+     "numero": 11,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "RAPISARDA MARCO",
+     "numero": 12,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "MORESCO FILIPPO",
+     "numero": 13,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2489,
+    "nome": "FRANCHIN MATTEO"
+   },
+   "completo": true
+  },
+  "14111": {
+   "marcatori": [
+    {
+     "squadraId": 2483,
+     "nome": "PADULA GABRIELE",
+     "minuto": 4
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAVANELLO ALESSANDRO",
+     "minuto": 16
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAVANELLO ALESSANDRO",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2479,
+     "nome": "BARCHITTA FRANCESCO",
+     "minuto": 9
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "minuto": 17
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PETTENO' ANDRES",
+     "minuto": 17
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CASARIN FEDERICO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2479,
+     "nome": "GRIGOLETTO CARLOS FABRIZIO",
+     "minuto": 28
+    },
+    {
+     "squadraId": 2479,
+     "nome": "BARONE MANUEL",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CASARIN FEDERICO",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "minuto": 45
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2483,
+     "nome": "TIDIANE MBAYE CHEJKH",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VIDAL GIACOMO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PRANDIN GIOVANNI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VEDOVA ALBERTO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "FILIPPI LEONARDO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CITTON FILIPPO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PADULA GABRIELE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PRESTI MATTEO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "MINATI RICCARDO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "BARCHITTA FRANCESCO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAVANELLO ALESSANDRO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PETTENO' ANDRES",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "DE PAOLI NICOLAS",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CASARIN FEDERICO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "GRIGOLETTO CARLOS FABRIZIO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "RAPISARDA MARCO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "BARONE MANUEL",
+     "numero": 12,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2479,
+    "nome": "VIDAL GIACOMO"
+   },
+   "completo": true
+  },
+  "14113": {
+   "marcatori": [
+    {
+     "squadraId": 2478,
+     "nome": "TONETTO FRANCESCO",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2478,
+     "nome": "SALZANO ALESSANDRO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2478,
+     "nome": "PALADE EMANUEL",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2490,
+     "nome": "TARZARIOL GUIDO",
+     "minuto": 3
+    },
+    {
+     "squadraId": 2490,
+     "nome": "TARZARIOL GUIDO",
+     "minuto": 25
+    },
+    {
+     "squadraId": 2490,
+     "nome": "NEVATE MICHELE",
+     "minuto": 29
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2478,
+     "nome": "BONDI GIANMARCO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": true
+    },
+    {
+     "squadraId": 2490,
+     "nome": "ORLANDO FRANCESCO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "TUDORACHE RADU",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA LUIGI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "CECCHINATO LUCA",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "SOLFERINO SIMONE",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "SCOLETTA GAETANO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "SALZANO ALESSANDRO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "MACERA ALESSIO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "VIO NICOLO'",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LA RAGIONE HABTAMU",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "TONETTO FRANCESCO",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "TARZARIOL GUIDO",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "PALADE EMANUEL",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LEONE FRANCESCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "RODELLI FRANCESCO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "OLIMPO MARCO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA ANTONIO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "NEVATE MICHELE",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "COMPOSTO ANTONINO",
+     "numero": 12,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2478,
+    "nome": "CECCHINATO LUCA"
+   },
+   "completo": true
+  },
+  "14115": {
+   "marcatori": [
+    {
+     "squadraId": 2489,
+     "nome": "VINCHIERUTI ANDREA",
+     "minuto": 7
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GASPARELLO FRANCESCO",
+     "minuto": 13
+    },
+    {
+     "squadraId": 2489,
+     "nome": "MEZZATO LORENZO",
+     "minuto": 29
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "minuto": 34
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GASPARELLO FRANCESCO",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ZAMATTIO FILIPPO",
+     "minuto": 35
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2489,
+     "nome": "CAMPAGNARO ANDREA",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "TENDERINI LORENZO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "VIVIAN RICCARDO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANGELETTI NICOLA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PENZO ANDREA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "AGOSTINI DIEGO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CALCHIERA LUCA",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "TREVISAN JACOPO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CRESCENTINI MARCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "LEVAK ALESSANDRO AMEDEO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "HUDOROVIC SAMUEL",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "TRIBOLI MATTEO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ZAMATTIO FILIPPO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CAMPAGNARO LUCA",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' FRANCESCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "VINCHIERUTI ANDREA",
+     "numero": 9,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' STEFANO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GASPARELLO FRANCESCO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "DE NAT JACOPO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "MEZZATO LORENZO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "CAMARA MAMADY",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2489,
+    "nome": "CALCHIERA LUCA"
+   },
+   "completo": true
+  },
+  "14117": {
+   "marcatori": [
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO MASSIMILIANO",
+     "minuto": 6
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SHADI ROBERTO",
+     "minuto": 34
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "minuto": 43
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE GRANDIS THOMAS",
+     "minuto": 32
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2484,
+     "nome": "MAZZOLIN FRANCESCO",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "BUSATO LEONARDO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "MARTON MASSIMILIANO",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PERZOLLA DANIELE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PENNESI FILIPPO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LAMPITELLI MATTEO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE GRANDIS THOMAS",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "BUSATO ANDREA",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE MARZI GIOVANNI",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "GIANNI FILIPPO",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "ZENNARO ALVISE",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO GIANMARIA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DEI ROSSI LUCA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "SIMIONATO ALEX",
+     "numero": 8,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO MASSIMILIANO",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "FRIZZARIN TOMMASO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "COSSU ALESSANDRO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SHADI ROBERTO",
+     "numero": 12,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "NDREKA NIKOLIN",
+     "numero": 13,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2484,
+    "nome": "MARTON MASSIMILIANO"
+   },
+   "completo": true
+  },
+  "14119": {
+   "marcatori": [
+    {
+     "squadraId": 2485,
+     "nome": "GASPARINI FABIO",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2480,
+     "nome": "CABIANCA ANDREA",
+     "minuto": 7
+    },
+    {
+     "squadraId": 2480,
+     "nome": "DE CHECCHI CLAUDIO",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BOLLANI MICHAEL",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ORLER MARCO",
+     "minuto": 28
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ORLER MARCO",
+     "minuto": 42
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2485,
+     "nome": "SCATTOLIN DAVIDE",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "SEMENZATO NICOLO´",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "MERCANZIN MARCO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "GRILETTI MASSIMILIANO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "ROSINA LORIS",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "PERALE RICCARDO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GIUSTO MATTEO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BUSO MATTIA",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GASPARINI FABIO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "STIZZOLI SIMONE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "FORZA DANIELE",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO LUCA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "DANTE ABOUBACAR SIDIKI",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "CABIANCA ANDREA",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "D'ANTONIO FELICE",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "DE CHECCHI CLAUDIO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "SERENA MATTEO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ORLER MARCO",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "MAURO PIERGIORGIO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BESAZZA MATTEO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "VISENTINI MATTIA",
+     "numero": 11,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BOLLANI MICHAEL",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "MICHELETTO DENIS",
+     "numero": 12,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2480,
+    "nome": "SEMENZATO NICOLO´"
+   },
+   "completo": true
+  },
+  "14121": {
+   "marcatori": [
+    {
+     "squadraId": 2486,
+     "nome": "CAORLINI STEFANO",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CARRARO MARK",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CASANO JACOPO",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "minuto": 16
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BANCI MARCO",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CASANO JACOPO",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CASANO JACOPO",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2487,
+     "nome": "GIUMAN FILIPPO",
+     "minuto": 44
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2486,
+     "nome": "LAZZARI FILIPPO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MORON DAVDE",
+     "numero": 1,
+     "voto": 8.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TRABUCCO MARCO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BANCI MARCO",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BENVENUTI FRANCESCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CALCE FRANCESCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CAORLINI STEFANO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MARINELLO LUCA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "LA TERZA GIANMARCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BALDIN ALVISE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BERARDI MARCO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CASANO JACOPO",
+     "numero": 6,
+     "voto": 8.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA ALVISE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CAUSHAJ XHULJANO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CROSERA ANDREA",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CARRARO MARK",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BETTIN THOMAS",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "RIGHETTI GABRIELE",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "GIUMAN FILIPPO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2487,
+    "nome": "CASANO JACOPO"
+   },
+   "completo": true
+  },
+  "14123": {
+   "marcatori": [
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2482,
+     "nome": "HAJDAR ALPAJ",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2482,
+     "nome": "ADEM FURKAN",
+     "minuto": 13
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CEYHUN",
+     "minuto": 13
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CEYHUN",
+     "minuto": 31
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 41
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2481,
+     "nome": "CALLEGARO MATTEO",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "MAHMUTOGO JUSUF",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVANI JACOPO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "ADEM FURKAN",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BROVEDANI THOMAS",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DZIHAN OSMAN",
+     "numero": 3,
+     "voto": 6.5,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "LA ROSA ALESSANDRO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CEYHUN",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BRIKI ANIS",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "HAJDAR ALPAJ",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DOGUS SEZAIR",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "numero": 7,
+     "voto": 9.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVAN ANDREA",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CIHAN",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POLO GIOVANNI",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "GIAMMARCO NICOLO'",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2481,
+    "nome": "POSSAMAI MATTEO"
+   },
+   "completo": true
+  },
+  "14125": {
+   "marcatori": [
+    {
+     "squadraId": 2477,
+     "nome": "SIMIONATO ALEX",
+     "minuto": 25
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ORSENO DOMENICO",
+     "minuto": 42
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2477,
+     "nome": "AFFABRIS ALEX",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "AGOSTINI ANDREA",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PERZOLLA DANIELE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVANI JACOPO",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "PENNESI FILIPPO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BON ALBERTO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE GRANDIS THOMAS",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BRIKI ANIS",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "DE MARZI GIOVANNI",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "BUSATO LEONARDO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "FUIN CHRISTIAN",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ORSENO DOMENICO",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "FIDO GIACOMO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POLO GIOVANNI",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2477,
+     "nome": "SIMIONATO ALEX",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "GIAMMARCO NICOLO'",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2477,
+    "nome": "SIMIONATO ALEX"
+   },
+   "completo": true
+  },
+  "14127": {
+   "marcatori": [
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "minuto": 25
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "minuto": 38
+    },
+    {
+     "squadraId": 2479,
+     "nome": "ANESIN ALEX",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA ALVISE",
+     "minuto": 27
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2479,
+     "nome": "VIDAL GIACOMO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA MATTIA",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VEDOVA ALBERTO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DANTELLI ANDREA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CITTON FILIPPO",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DE MATTEO ELYA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "numero": 4,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BIASUTI DANIELE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BERARDI MARCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "ANESIN ALEX",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "LA TERZA GIANMARCO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PETTENO' ANDRES",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DARLANTE ANDREA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "GRIGOLETTO CARLOS FABRIZIO",
+     "numero": 8,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "COLLI MATTIA",
+     "numero": 8,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "SPONGA BRANDO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA ALVISE",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2479,
+    "nome": "CITTON FILIPPO"
+   },
+   "completo": true
+  },
+  "14129": {
+   "marcatori": [
+    {
+     "squadraId": 2487,
+     "nome": "BATTISTIN MICHAEL",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BETTIN THOMAS",
+     "minuto": 48
+    },
+    {
+     "squadraId": 2485,
+     "nome": "VISENTIN MATTIA",
+     "minuto": 17
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GASPARINI FABIO",
+     "minuto": 36
+    },
+    {
+     "squadraId": 2485,
+     "nome": "D'ANTONIO FELICE",
+     "minuto": 42
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2487,
+     "nome": "MORON DAVDE",
+     "numero": 1,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "DINU SERGIO",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "VIANELLO GIACOMO",
+     "numero": 2,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "VIANELLO JACOPO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CALCE FRANCESCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "FORZA DANIELE",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MARINELLO LUCA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "VISENTIN MATTIA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BALDIN ALVISE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "VERDE MICHELE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CAUSHAJ XHULJANO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "TRAPANI ANTONIO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GASPARINI FABIO",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BETTIN THOMAS",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "ROSINA LORIS",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "ZORZETTO ALESSANDRO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "GENOVESI MATTEO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "ONGARO GABRIEL",
+     "numero": 10,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2485,
+     "nome": "D'ANTONIO FELICE",
+     "numero": 10,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BATTISTIN MICHAEL",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2487,
+    "nome": "VIANELLO GIACOMO"
+   },
+   "completo": true
+  },
+  "14131": {
+   "marcatori": [
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2478,
+     "nome": "DALLA VALENTINA JACOPO",
+     "minuto": 31
+    },
+    {
+     "squadraId": 2489,
+     "nome": "MEZZATO LORENZO",
+     "minuto": 16
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GASPARINELLO FRANCESCO",
+     "minuto": 32
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2478,
+     "nome": "PALADE EMANUEL",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CAMPAGNARO LUCA",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "TUDORACHE RADU",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PENZO ANDREA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "ZIAINI PIERO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CALCHIERA LUCA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "CECCHINATO LUCA",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CRESCENTINI MARCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "DALLA VALENTINA JACOPO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "CANCIANI GIACOMO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "VIDAL GIOVANNI",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GALLO ALESSANDRO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "SALZANO ALESSANDRO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "TRIBOLI MATTEO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2478,
+     "nome": "RODELLI FRANCESCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PISELLI ALESSANDRO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "GASPARINELLO FRANCESCO",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "MEZZATO LORENZO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2489,
+     "nome": "PAVAN ENRICO",
+     "numero": 11,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2478,
+    "nome": "CECCHINATO LUCA"
+   },
+   "completo": true
+  },
+  "14133": {
+   "marcatori": [
+    {
+     "squadraId": 2488,
+     "nome": "AGOSTINI DIEGO",
+     "minuto": 26
+    },
+    {
+     "squadraId": 2488,
+     "nome": "NARDEN MARCO",
+     "minuto": 36
+    },
+    {
+     "squadraId": 2483,
+     "nome": "DE PAOLI NICOLAS",
+     "minuto": 7
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2483,
+     "nome": "LOMBARDINO FRANCESCO",
+     "minuto": 12
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PADULA GABRIELE",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PADULA GABRIELE",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2483,
+     "nome": "DE PAOLI NICOLAS",
+     "minuto": 44
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2488,
+     "nome": "ESPOSITO FRANCESCO PAOLO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "CAMMOZZO DENIS",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "TENDERINI LORENZO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PRANDIN GIOVANNI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "AGNOLIN MARCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "LOMBARDINO FRANCESCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "AGOSTINI DIEGO",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "FONTANA ALESSANDRO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "HUDOROVIC SAMUEL",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PADULA GABRIELE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' STEFANO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PINZON TOMMASO",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "ANATRA' FRANCESCO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "PAGAN DAVIDE",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "PASQUALETTO LORENZO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "DE PAOLI NICOLAS",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "NARDEN MARCO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2483,
+     "nome": "DI PALMO FRANCESCO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2488,
+     "nome": "DE NAT JACOPO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2488,
+    "nome": "AGOSTINI DIEGO"
+   },
+   "completo": true
+  },
+  "14135": {
+   "marcatori": [
+    {
+     "squadraId": 2480,
+     "nome": "CORCIULLO ALESSANDRO",
+     "minuto": 16
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO LUCA",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ORLER MARCO",
+     "minuto": 29
+    },
+    {
+     "squadraId": 2480,
+     "nome": "CABIANCA ANDREA",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO LUCA",
+     "minuto": 41
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "minuto": 31
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2480,
+     "nome": "SEMENZATO NICOLO´",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "GENOVESI SERGIO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "GRILETTI MASSIMILIANO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "MARTON MASSIMILIANO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "PERALE RICCARDO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BUSO MATTIA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LAMPITELLI MATTEO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "FAVARETTO LUCA",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "BUSATTO ANDREA",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "CABIANCA ANDREA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "GIANNI FILIPPO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "DE CHECCHI CLAUDIO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO GIANMARIA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "ORLER MARCO",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BESAZZA MATTEO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO VINCENZO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "BOLLANI MICHAEL",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "MICHELETTO DENIS",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2480,
+     "nome": "CORCIULLO ALESSANDRO",
+     "numero": 12,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2480,
+    "nome": "SEMENZATO NICOLO´"
+   },
+   "completo": true
+  },
+  "14137": {
+   "marcatori": [
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DZIHAN OSMAN",
+     "minuto": 15
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DZIHAN OSMAN",
+     "minuto": 25
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CEYHUN",
+     "minuto": 25
+    },
+    {
+     "squadraId": 2482,
+     "nome": "CACCIA LUIGI",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LEONE FRANCESCO",
+     "minuto": 12
+    },
+    {
+     "squadraId": 2490,
+     "nome": "TARZARIOL GUIDO",
+     "minuto": 21
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2482,
+     "nome": "MAHMUTOGO JUSUF",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "ORLANDO FRANCESCO",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "ADEM FURKAN",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA LUIGI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DZIHAN OSMAN",
+     "numero": 3,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "SOLFERINO SIMONE",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CEYHUN",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "SCOLETTA GAETANO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "HAJDAR ALPAJ",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LA RAGIONE HABTAMU",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "DOGUS SEZAIR",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "TARZARIOL GUIDO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "EMRO GJOKKAN",
+     "numero": 7,
+     "voto": 7.5,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "BUGIN GABRIEL",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "OSMAN HAKAN",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "LEONE FRANCESCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2482,
+     "nome": "SIDI CIHAN",
+     "numero": 9,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "OLIMPO MARCO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "CACCIA ANTONIO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2490,
+     "nome": "NEVATE MICHELE",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2482,
+    "nome": "HAJDAR ALPAJ"
+   },
+   "completo": true
+  }
+ },
+ "incompleti": [],
+ "stale": {},
+ "errori": []
+}

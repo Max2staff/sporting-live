@@ -1,14 +1,17 @@
 import { esc, formaHTML, formattaData, pallinoForma } from '../util.js';
-import { stellaHTML, collegaStelle, card, vuoto } from './comuni.js';
+import { stemmaHTML } from '../stemma.js';
+import { stellaHTML, collegaStelle, card, vuoto, heroHTML, squadraDa } from './comuni.js';
 
 let tab = 'risultati';
+let ultimaId = null;
 
-const rigaRis = (p) => `<a class="ris-riga" href="#/partita/${p.id}"><span class="data">${esc(formattaData(p.data))}</span><span class="avv">${p.casa ? '' : '@ '}${esc(p.avversario)}</span><span class="punti">${p.esito ? `${pallinoForma(p.esito)} <b>${p.gf}-${p.gs}</b>` : `<small>${esc(p.ora || '')}</small>`}</span></a>`;
+const rigaRis = (p, indice) => `<a class="ris-riga" href="#/partita/${p.id}"><span class="data">${esc(formattaData(p.data))}</span><span class="avv">${stemmaHTML(squadraDa(indice, p.avversarioId), 22)}<span>${p.casa ? '' : '@ '}${esc(p.avversario)}</span></span><span class="punti">${p.esito ? `${pallinoForma(p.esito)} <b>${p.gf}-${p.gs}</b>` : `<small>${esc(p.ora || '')}</small>`}</span></a>`;
 
-function risultati(s) {
+function risultati(s, indice) {
   const prossima = s.partite.find(p => !p.giocata);
-  return `${prossima ? card('Prossima partita', rigaRis(prossima)) : ''}
-    ${card('Tutte le partite', s.partite.length ? s.partite.map(rigaRis).join('') : '<p class="muto">Nessuna partita.</p>')}`;
+  return `${s.foto ? `<img class="foto-squadra" src="img/squadre/${Number(s.id)}.jpg" alt="Foto di squadra: ${esc(s.nome)}" loading="lazy">` : ''}
+    ${prossima ? card('Prossima partita', rigaRis(prossima, indice)) : ''}
+    ${card('Tutte le partite', s.partite.length ? s.partite.map(p => rigaRis(p, indice)).join('') : '<p class="muto">Nessuna partita.</p>')}`;
 }
 
 function rosa(s) {
@@ -30,13 +33,15 @@ function statistiche(s) {
     ${card('Forma e serie', `<p>Ultime partite: ${formaHTML(s.forma)}</p>${st.serie ? `<p class="muto">Serie in corso: ${st.serie.n} ${({ V: 'vittorie', N: 'pareggi', P: 'sconfitte' })[st.serie.tipo]} di fila</p>` : ''}`)}`;
 }
 
-export async function render({ rotta, carica }) {
+export async function render({ indice, rotta, carica }) {
   const s = await carica(`squadra/${rotta.params[0]}.json`);
-  const corpo = tab === 'rosa' ? rosa(s) : tab === 'statistiche' ? statistiche(s) : risultati(s);
-  return `<section class="testa-squadra">
-      <div><h2>${esc(s.nome)}</h2><div class="meta"><a href="#/classifiche/${s.girone.slug}">${esc(s.girone.nome)}</a>${s.pos ? ` · ${s.pos}º posto · ${s.riga.pt} pt` : ''}</div></div>
-      ${stellaHTML(s.id, s.nome)}
-    </section>
+  if (s.id !== ultimaId) { tab = 'risultati'; ultimaId = s.id; }
+  const corpo = tab === 'rosa' ? rosa(s) : tab === 'statistiche' ? statistiche(s) : risultati(s, indice);
+  return `${heroHTML({ foto: 'campo', classe: 'hero-squadra-box', contenuto: `
+      <div class="hero-squadra">${stemmaHTML({ id: s.id, nome: s.nome, stemma: s.stemma }, 72)}
+        <div><h1>${esc(s.nome)}</h1><p class="sotto"><a href="#/classifiche/${esc(s.girone.slug)}">${esc(s.girone.nome)}</a>${s.pos ? ` · ${s.pos}º posto · ${s.riga.pt} pt` : ''}</p>
+        <p class="sotto">${formaHTML(s.forma)}</p></div>
+        ${stellaHTML(s.id, s.nome)}</div>` })}
     <div class="tabs">${[['risultati', 'Risultati'], ['rosa', 'Rosa'], ['statistiche', 'Statistiche']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
     ${corpo}`;
 }

@@ -1,6 +1,7 @@
 import { esc, formattaOra, formattaData } from '../util.js';
 import { leggiTema, impostaTema } from '../tema.js';
 import { card } from './comuni.js';
+import { riattivaIntro } from '../contesto.js';
 
 export const VERSIONE = '1.0.0';
 const EMAIL = 'massimiliano.griletti@gmail.com';   // da confermare con l'utente prima della pubblicazione
@@ -13,9 +14,11 @@ export async function render({ indice }) {
     ${card('Aspetto', `<div class="segmenti">${[['auto', 'Automatico'], ['chiaro', 'Chiaro'], ['scuro', 'Scuro']].map(([k, l]) => `<button data-tema="${k}" class="${t === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>`)}
     ${card('Privacy', `<p>L'app non raccoglie dati personali e non usa cookie. Le squadre preferite e il tema restano solo sul tuo dispositivo. I nomi dei giocatori sono quelli pubblicati dall'organizzazione nei tabellini ufficiali.</p>
       <p>Se sei un giocatore e non vuoi comparire, scrivi a <a href="mailto:${EMAIL}">${EMAIL}</a>: il tuo nome viene rimosso da tutte le pagine dell'app al primo aggiornamento utile. I tabellini originali restano pubblicati sul sito ufficiale dell'organizzazione, che resta la fonte dei dati.</p>`)}
+    <p class="centro"><a href="#/intro" data-rivedi>Rivedi l'introduzione</a></p>
     <p class="muto centro">Sporting Live v${VERSIONE} · fatta a Mestre</p>`;
 }
 
 export function dopo(ctx, root) {
+  root.querySelector('[data-rivedi]').onclick = () => riattivaIntro();
   root.querySelectorAll('[data-tema]').forEach(b => { b.onclick = async () => { impostaTema(b.dataset.tema); root.innerHTML = await render(ctx); dopo(ctx, root); }; });
 }

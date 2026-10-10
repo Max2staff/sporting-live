@@ -212,7 +212,8 @@ img.stemma { object-fit: contain; border-radius: 6px; }
 
 /* squadra e giocatore */
 .hero-squadra { display: flex; align-items: center; gap: var(--s-4); }
-.hero-squadra h1 { margin: 0; }
+.hero-squadra > div { min-width: 0; }
+.hero-squadra h1 { margin: 0; overflow-wrap: anywhere; }
 .hero-squadra .stella { color: var(--on-hero-muto); margin-left: auto; }
 .hero-squadra .stella.attiva { color: var(--accento); }
 .foto-squadra { width: 100%; border-radius: var(--r-md); display: block; margin-bottom: var(--s-3); }

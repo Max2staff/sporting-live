@@ -1,8 +1,10 @@
-const VERSIONE = 'sl-1';   // incrementare a ogni rilascio di codice (non di dati)
+const VERSIONE = 'sl-2';   // incrementare a ogni rilascio di codice (non di dati)
 const SHELL = ['./', 'index.html', 'css/app.css', 'manifest.webmanifest', 'icons/icon.svg',
   'js/app.js', 'js/router.js', 'js/data.js', 'js/util.js', 'js/tema.js', 'js/giorni.js', 'js/preferiti.js', 'js/tabellino.js',
   'js/views/comuni.js', 'js/views/partite.js', 'js/views/partita.js', 'js/views/classifiche.js', 'js/views/squadra.js',
-  'js/views/giocatori.js', 'js/views/giocatore.js', 'js/views/info.js'];
+  'js/views/giocatori.js', 'js/views/giocatore.js', 'js/views/info.js',
+  'js/stemma.js', 'js/contesto.js', 'js/evidenza.js', 'js/views/contesto-ui.js', 'js/views/intro.js',
+  'img/foto/campo.jpg', 'img/foto/premiazione.jpg', 'img/loghi/endas.png', 'img/loghi/sporting-club-mestre.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(VERSIONE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

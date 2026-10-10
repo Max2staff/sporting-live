@@ -88,3 +88,35 @@ table.tab { width: 100%; border-collapse: collapse; font-size: .9rem; }
 .stella { border: 0; background: none; color: var(--n-400); min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
 .stella svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; }
 .stella.attiva { color: var(--accento); } .stella.attiva svg { fill: currentColor; }
+
+/* home: selettore giorno */
+.giorno { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); margin: var(--s-2) 0 var(--s-3); }
+.giorno .freccia { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: var(--r-full); background: var(--carta); border: 1px solid var(--bordo); font-size: 1.4rem; }
+.giorno .freccia.off { opacity: .3; pointer-events: none; }
+.giorno .titolo { flex: 1; position: relative; text-align: center; font-weight: 600; line-height: 1.2; }
+.giorno .titolo small { display: block; color: var(--muto); font-weight: 400; }
+.giorno .titolo select { position: absolute; inset: 0; opacity: 0; width: 100%; }
+.intest-girone { display: flex; justify-content: space-between; padding: var(--s-2) var(--s-4); background: var(--carta-alt); font-size: .82rem; color: var(--muto); }
+.intest-girone b { color: var(--testo); }
+.freccia-piccola { color: var(--brand); font-weight: 600; }
+
+/* riga partita */
+.partita { display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: var(--s-2); padding: var(--s-2) var(--s-3); border-top: 1px solid var(--bordo); min-height: 64px; }
+.partita.tavolino .ris { color: var(--muto); }
+.quando { text-align: center; line-height: 1.1; }
+.quando small { display: block; color: var(--muto); font-size: .68rem; }
+.ris { font-weight: 700; font-size: 1.05rem; }
+.ris i { font-style: normal; color: var(--muto); padding: 0 2px; }
+.ris.evid { color: var(--accento-forte); }
+.ora { color: var(--muto); font-size: .9rem; }
+.squadre .riga { display: flex; align-items: center; justify-content: space-between; gap: var(--s-2); min-width: 0; }
+.squadre .riga span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.squadre .riga.pref span { font-weight: 600; }
+.extra { display: flex; flex-direction: column; gap: 3px; align-items: flex-end; }
+.muto { color: var(--muto); font-size: .9rem; margin: 0; }
+.mia { padding: var(--s-2) 0; border-top: 1px solid var(--bordo); }
+.mia:first-of-type { border-top: 0; }
+.mia-nome { font-weight: 700; display: block; margin-bottom: var(--s-1); }
+.mia-riga small { color: var(--muto); font-size: .7rem; text-transform: uppercase; letter-spacing: .4px; }
+.mia-riga .partita { border-top: 0; padding-left: 0; padding-right: 0; min-height: 52px; }
+.card h3 { margin: 0 0 var(--s-2); font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; color: var(--muto); }

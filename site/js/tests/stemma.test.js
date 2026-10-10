@@ -32,3 +32,11 @@ test('stemma generato o immagine', () => {
   assert.equal(stemmaHTML(null), '');
   assert.ok(!stemmaHTML({ id: 1, nome: '<b>x</b>' }).includes('<b>'));
 });
+
+test('contrasto: tinte chiare più scure', () => {
+  for (let id = 1; id < 400; id++) {
+    const { primario } = coloriStemma(id);
+    const [, h, , l] = primario.match(/^hsl\((\d+) (\d+)% (\d+)%\)$/).map(Number);
+    assert.ok(h >= 40 && h <= 200 ? l === 30 : l === 40, `id ${id}: ${primario}`);
+  }
+});

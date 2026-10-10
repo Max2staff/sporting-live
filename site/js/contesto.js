@@ -13,7 +13,7 @@ function scrivi(k, v) {
 }
 
 export const TUTTI = 'tutti';
-export const gironi = (indice) => (indice.campionati || []).flatMap(c => c.gironi.map(g => ({ ...g, campionato: { id: c.id, nome: c.nome } })));
+export const gironi = (indice) => (indice.campionati || []).flatMap(c => (c.gironi || []).map(g => ({ ...g, campionato: { id: c.id, nome: c.nome } })));
 export function leggiGirone(indice) {
   const v = leggi(K_GIRONE);
   return v && v !== TUTTI && gironi(indice).some(g => g.slug === v) ? v : TUTTI;

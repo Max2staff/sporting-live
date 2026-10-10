@@ -24,7 +24,12 @@ export function coloriStemma(id) {
   const h = hash(id);
   const tinta = h % 360;
   const tinta2 = (tinta + 140 + ((h >>> 9) % 80)) % 360;
-  return { primario: `hsl(${tinta} 68% 42%)`, secondario: `hsl(${tinta2} 78% 56%)`, motivo: (h >>> 17) % 3 };
+  const chiaro = (t) => t >= 40 && t <= 200;               // gialli/verdi/ciani: serve più scuro per il bianco
+  return {
+    primario: `hsl(${tinta} 68% ${chiaro(tinta) ? 30 : 40}%)`,
+    secondario: `hsl(${tinta2} 78% ${chiaro(tinta2) ? 44 : 52}%)`,
+    motivo: (h >>> 17) % 3,
+  };
 }
 
 const SCUDO = 'M20 1.5 37.5 6.5V22c0 12-7.5 20-17.5 24.5C10 42 2.5 34 2.5 22V6.5Z';

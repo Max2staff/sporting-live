@@ -8,6 +8,7 @@ const indice = { campionati: [
 
 test('gironi piatti con campionato', () => {
   assert.deepEqual(gironi(indice).map(g => [g.slug, g.campionato.nome]), [['serie-a', 'Calcio a 8'], ['serie-b', 'Calcio a 8'], ['super-league', 'Calcio a 5']]);
+  assert.deepEqual(gironi({ campionati: [{ id: 'x', nome: 'X' }] }), []);
 });
 
 test('girone: default, scelta, slug sparito, effettivo, etichetta (senza storage)', () => {

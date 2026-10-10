@@ -3,7 +3,7 @@ import { leggiTema, impostaTema } from '../tema.js';
 import { card } from './comuni.js';
 
 export const VERSIONE = '1.0.0';
-const EMAIL = 'sportinglive.app@gmail.com';   // da confermare con l'utente prima della pubblicazione
+const EMAIL = 'massimiliano.griletti@gmail.com';   // da confermare con l'utente prima della pubblicazione
 
 export async function render({ indice }) {
   const t = leggiTema();

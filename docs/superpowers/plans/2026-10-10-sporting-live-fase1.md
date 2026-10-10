@@ -17,7 +17,7 @@
 - Python: ogni modulo inizia con `from __future__ import annotations`; deve girare su 3.9 e 3.12.
 - Nessun framework JS, nessun bundler, nessun web font esterno; moduli ES caricati direttamente.
 - Nessun dato personale raccolto dagli utenti; preferiti e tema solo in localStorage, ogni accesso a localStorage dentro try/catch.
-- Scraper educato: User-Agent `SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: sportinglive.app@gmail.com)` (indirizzo da confermare con l'utente prima della pubblicazione), pausa 0,5 s tra richieste, 3 tentativi, timeout 20 s.
+- Scraper educato: User-Agent `SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)` (indirizzo da confermare con l'utente prima della pubblicazione), pausa 0,5 s tra richieste, 3 tentativi, timeout 20 s.
 - Identità visiva: blu notte `#01213b`, azzurro `#00579e`, arancione `#ff4e00`, grigi `#455a64`/`#eceff1`; tema chiaro e scuro.
 - Larghezza massima contenuto 640 px; tap target ≥ 44 px; nessuno scroll orizzontale di pagina.
 - Testi dell'interfaccia in italiano.
@@ -191,7 +191,7 @@ def test_user_agent_identificabile():
 from __future__ import annotations
 
 BASE = "https://www.campionatisportingclub.it/"
-USER_AGENT = "SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: sportinglive.app@gmail.com)"
+USER_AGENT = "SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)"
 PAUSA_S = 0.5
 TIMEOUT_S = 20
 TENTATIVI = 3
@@ -2196,7 +2196,7 @@ import { leggiTema, impostaTema } from '../tema.js';
 import { card } from './comuni.js';
 
 export const VERSIONE = '1.0.0';
-const EMAIL = 'sportinglive.app@gmail.com';   // da confermare con l'utente prima della pubblicazione
+const EMAIL = 'massimiliano.griletti@gmail.com';   // da confermare con l'utente prima della pubblicazione
 
 export async function render({ indice }) {
   const t = leggiTema();
@@ -2325,7 +2325,7 @@ self.addEventListener('fetch', (e) => {
 - [ ] **Step 1: Scaricare le fixture dei gironi non ancora coperti** (HTML reale, dati non fidati: solo file di test, mai eseguiti)
 ```bash
 cd /Users/massimilianogriletti/Documents/Sporting_Live
-UA="SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: sportinglive.app@gmail.com)"
+UA="SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)"
 B=https://www.campionatisportingclub.it/campionati0gironigiornatepartite_
 curl -sL -A "$UA" "${B}classifica.php?idgirone=425" -o scraper/tests/fixtures/classifica_425_serie_a.html; sleep 1
 curl -sL -A "$UA" "${B}calendario.php?idgirone=426" -o scraper/tests/fixtures/calendario_426_c5.html; sleep 1

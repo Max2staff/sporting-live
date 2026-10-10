@@ -20,11 +20,10 @@ Spec: `docs/superpowers/specs/2026-10-10-sporting-live-design.md`.
 
 ## Operatività
 
-- Il workflow gira ogni mezz'ora nelle serate feriali (20:00–00:30) e alle 07:00; i risultati di una
-  serata compaiono entro mezz'ora dalla pubblicazione sul sito ufficiale.
+- Il workflow gira ogni mezz'ora nelle serate feriali (dalle 19:00-20:00 fino a mezzanotte e mezza/l'una e mezza, a seconda dell'ora legale) e una volta al mattino presto; i risultati di una serata compaiono entro mezz'ora dalla pubblicazione sul sito ufficiale.
 - Ogni run che trova dati nuovi fa un commit `chore: aggiornamento dati [skip ci]`.
 - Le schedulazioni si spengono dopo 60 giorni senza commit: in pausa estiva lancia un run manuale ogni due mesi.
-- Nuova stagione: aggiorna `stagioni.json` (sposta i gironi vecchi in `archivio`), svuota `scraper/cache/` e `build/raw/`.
+- Nuova stagione: aggiorna `stagioni.json` (sposta i gironi vecchi in `archivio`), svuota `scraper/cache/` e `build/raw/` (lascia i file `.gitkeep`).
 - Un nome giocatore scritto in due modi: aggiungi la variante in `alias.json`; per oscurare un nome usa `"***"`.
 - Se il sito ufficiale cambia HTML: il run mostra righe `AVVISO` e la pagina segnala "dati parziali";
   fallisce (mail da GitHub) solo con più di 10 avvisi per girone o senza classifica e senza dati precedenti.

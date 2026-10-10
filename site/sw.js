@@ -14,14 +14,20 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
   if (url.pathname.includes('/data/')) {
-    // dati: rete prima, cache se offline
-    e.respondWith(fetch(e.request).then(r => { const copia = r.clone(); caches.open(VERSIONE).then(c => c.put(e.request, copia)); return r; })
-      .catch(() => caches.match(e.request)));
+    // dati: rete prima (senza cache HTTP), cache solo di risposte buone, cache se offline
+    e.respondWith(fetch(e.request, { cache: 'no-cache' }).then(r => {
+      if (r.ok) { const copia = r.clone(); e.waitUntil(caches.open(VERSIONE).then(c => c.put(e.request, copia)).catch(() => {})); }
+      return r;
+    }).catch(() => caches.match(e.request)));
   } else {
     // shell: cache prima, aggiornamento in sottofondo
     e.respondWith(caches.match(e.request).then(hit => {
-      const rete = fetch(e.request).then(r => { if (r.ok) caches.open(VERSIONE).then(c => c.put(e.request, r.clone())); return r; }).catch(() => hit);
-      return hit || rete;
+      const rete = fetch(e.request).then(r => {
+        if (r.ok) { const copia = r.clone(); e.waitUntil(caches.open(VERSIONE).then(c => c.put(e.request, copia)).catch(() => {})); }
+        return r;
+      }).catch(() => hit);
+      if (hit) { e.waitUntil(rete.catch(() => {})); return hit; }
+      return rete;
     }));
   }
 });

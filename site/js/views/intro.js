@@ -1,6 +1,6 @@
 import { esc } from '../util.js';
 import { stemmaHTML } from '../stemma.js';
-import { gironi, impostaGirone, gironeEffettivo, segnaIntroVista } from '../contesto.js';
+import { gironi, leggiGirone, impostaGirone, gironeEffettivo, segnaIntroVista } from '../contesto.js';
 import { èPreferita, togglePreferito } from '../preferiti.js';
 
 const punti = (n) => `<div class="punti-avanzamento" aria-label="Passo ${n} di 3">${[1, 2, 3].map(i => `<i class="${i === n ? 'attivo' : ''}"></i>`).join('')}</div>`;
@@ -17,10 +17,11 @@ function passo1() {
 }
 
 function passo2(indice) {
+  const corrente = leggiGirone(indice);
   return schermo('campo', 2, `
     <h1>Il tuo <b>campionato</b></h1>
     <p>Scegli categoria e girone: lo ritrovi sempre in alto per cambiarlo.</p>
-    ${indice.campionati.map(c => `<div class="camp-card"><h2>${esc(c.nome)}</h2><div class="chips">${c.gironi.map(g => `<button class="chip" data-girone="${esc(g.slug)}">${esc(g.nome)}</button>`).join('')}</div></div>`).join('')}`);
+    ${indice.campionati.map(c => `<div class="camp-card"><h2>${esc(c.nome)}</h2><div class="chips">${c.gironi.map(g => `<button class="chip${g.slug === corrente ? ' attivo' : ''}" aria-pressed="${g.slug === corrente}" data-girone="${esc(g.slug)}">${esc(g.nome)}</button>`).join('')}</div></div>`).join('')}`);
 }
 
 function passo3(indice) {

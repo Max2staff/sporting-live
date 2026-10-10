@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { capolista, capocannoniere, ultimaGiornata, podio } from '../evidenza.js';
+import { capolista, capocannoniere, ultimaGiornata, podio, squadraReale } from '../evidenza.js';
 
 const riga = (squadraId, pos, pt, g) => ({ squadraId, nome: `S${squadraId}`, pos, pt, g, v: 0, n: 0, p: 0, gf: 0, gs: 0, dr: 0 });
 const P = (id, giornata, giocata) => ({ id, giornata, giocata });
@@ -25,4 +25,12 @@ test('evidenza a inizio stagione', () => {
   assert.deepEqual(podio([]), []);
   assert.equal(capolista({}), null);
   assert.equal(ultimaGiornata({}), null);
+});
+
+test('RIPOSO mai capolista né sul podio', () => {
+  const rip = { ...riga(99, 1, 20, 2), nome: ' riposo ' };
+  const righe = [rip, riga(1, 2, 9, 3), riga(2, 3, 6, 3), riga(3, 4, 3, 3)];
+  assert.equal(squadraReale(rip), false);
+  assert.equal(capolista({ classifica: { totale: righe } }).squadraId, 1);
+  assert.deepEqual(podio(righe).map(r => r.squadraId), [1, 2, 3]);
 });

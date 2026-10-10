@@ -41,11 +41,12 @@ async function inEvidenza(indice, scelto, carica) {
       const cl = capolista(g), cc = capocannoniere(g), ug = ultimaGiornata(g);
       const t = [];
       if (cl) t.push(tessera('Capolista', `${stemmaHTML(squadraDa(indice, cl.squadraId), 28)}<span>${esc(cl.nome)}</span>`, `${cl.pt}<small>punti</small>`, `#/squadra/${Number(cl.squadraId)}`));
-      if (cc) t.push(tessera('Capocannoniere', `${stemmaHTML(squadraDa(indice, cc.squadraId), 28)}<span>${esc(cc.nome)}</span>`, `${cc.gol}<small>gol</small>`, `#/giocatore/${esc(cc.slug)}`));
+      if (cc && cc.slug) t.push(tessera('Capocannoniere', `${stemmaHTML(squadraDa(indice, cc.squadraId), 28)}<span>${esc(cc.nome)}</span>`, `${cc.gol}<small>gol</small>`, `#/giocatore/${esc(cc.slug)}`));
       if (ug) t.push(tessera('Ultima giornata', `<span>${ug.partite.length} partite giocate</span>`, `${ug.giornata}ª<small>giornata</small>`, `#/classifiche/${esc(scelto)}`));
       return t.length ? `<div class="evidenza">${t.join('')}</div>` : '';
     }
-    const tutti = await Promise.all(gironi(indice).map(async x => ({ x, g: await carica(`girone/${x.slug}.json`) })));
+    const esiti = await Promise.allSettled(gironi(indice).map(async x => ({ x, g: await carica(`girone/${x.slug}.json`) })));
+    const tutti = esiti.filter(e => e.status === 'fulfilled').map(e => e.value);
     const t = tutti.map(({ x, g }) => ({ x, cl: capolista(g) })).filter(o => o.cl)
       .map(({ x, cl }) => tessera(`Capolista ${x.nome}`, `${stemmaHTML(squadraDa(indice, cl.squadraId), 28)}<span>${esc(cl.nome)}</span>`, `${cl.pt}<small>punti</small>`, `#/squadra/${Number(cl.squadraId)}`));
     return t.length ? `<div class="evidenza">${t.join('')}</div>` : '';

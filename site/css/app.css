@@ -57,7 +57,7 @@ header.testa { position: sticky; top: 0; z-index: 5; background: var(--ink); col
 .card { background: var(--carta); border: 1px solid var(--bordo); border-radius: var(--r-md); padding: var(--s-3) var(--s-4); margin-bottom: var(--s-3); }
 .card.piena { padding: 0; overflow: hidden; }
 .segmenti { display: flex; gap: var(--s-1); background: var(--carta-alt); border-radius: var(--r-full); padding: 3px; margin: var(--s-2) 0 var(--s-3); }
-.segmenti button { flex: 1; border: 0; background: transparent; color: var(--muto); border-radius: var(--r-full); min-height: 36px; padding: 0 var(--s-2); }
+.segmenti button { flex: 1; border: 0; background: transparent; color: var(--muto); border-radius: var(--r-full); min-height: 44px; padding: 0 var(--s-2); }
 .segmenti button.attivo { background: var(--carta); color: var(--testo); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.12); }
 .tabs { display: flex; gap: var(--s-4); overflow-x: auto; border-bottom: 1px solid var(--bordo); margin: 0 0 var(--s-3); scrollbar-width: none; }
 .tabs::-webkit-scrollbar { display: none; }

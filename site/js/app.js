@@ -17,6 +17,7 @@ const SEZIONE = { partita: 'partite', squadra: 'classifiche', giocatore: 'giocat
 const icona = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
 const app = document.getElementById('app');
 let indice = null;
+let renderId = 0;
 
 function testata() {
   const stale = indice.campionati.some(c => c.gironi.some(g => g.stale));
@@ -27,6 +28,7 @@ function testata() {
 }
 
 export async function render() {
+  const id = ++renderId;
   const rotta = analizza(location.hash);
   const ctx = { indice, rotta, oggi: oggiISO(), naviga: (h) => { location.hash = h; }, carica: caricaJSON };
   const vista = VISTE[rotta.vista];
@@ -35,9 +37,12 @@ export async function render() {
     <nav class="tabbar">${TAB.map(([id, nome, d]) => `<a href="#/${id}" class="${id === attiva ? 'attivo' : ''}">${icona(d)}<span>${nome}</span></a>`).join('')}</nav>`;
   const main = app.querySelector('main');
   try {
-    main.innerHTML = await vista.render(ctx);
+    const html = await vista.render(ctx);
+    if (id !== renderId) return;
+    main.innerHTML = html;
     if (vista.dopo) vista.dopo(ctx, main);
   } catch (e) {
+    if (id !== renderId) return;
     main.innerHTML = `<p class="vuoto">Dati non disponibili${navigator.onLine ? '' : ' (sei offline)'}. <a href="#/partite">Torna alle partite</a></p>`;
     console.error(e);
   }

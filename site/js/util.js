@@ -11,6 +11,6 @@ export function formattaDataLunga(iso) { if (!iso) return 'da definire'; const d
 export function formattaOra(isoTs) { const d = new Date(isoTs); return isNaN(d) ? '' : `${pad(d.getHours())}:${pad(d.getMinutes())}`; }
 export function oggiISO() { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; }
 const TITOLO_FORMA = { V: 'vittoria', N: 'pareggio', P: 'sconfitta' };
-export function pallinoForma(e) { return `<span class="forma ${e}" title="${TITOLO_FORMA[e] || ''}">${e}</span>`; }
+export function pallinoForma(e) { return `<span class="forma ${esc(e)}" title="${TITOLO_FORMA[e] || ''}">${esc(e)}</span>`; }
 export const formaHTML = (lista) => `<span class="forma-lista">${(lista || []).map(pallinoForma).join('')}</span>`;
 export const segnoDR = (dr) => (dr > 0 ? '+' : '') + dr;

@@ -11,4 +11,5 @@ test('rotte', () => {
   assert.deepEqual(analizza('#/classifiche/serie-b'), { vista: 'classifiche', params: ['serie-b'] });
   assert.deepEqual(analizza('#/boh/x'), { vista: 'partite', params: [] });
   assert.deepEqual(analizza('#/partite/2026-09-16'), { vista: 'partite', params: ['2026-09-16'] });
+  assert.deepEqual(analizza('#/partita/%E0%A4'), { vista: 'partita', params: ['%E0%A4'] });
 });

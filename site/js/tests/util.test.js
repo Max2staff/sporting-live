@@ -9,3 +9,4 @@ test('date', () => {
   assert.equal(formattaDataLunga('2026-09-16'), 'mercoledì 16 settembre');
 });
 test('forma', () => assert.equal(pallinoForma('V'), '<span class="forma V" title="vittoria">V</span>'));
+test('forma escape', () => assert.equal(pallinoForma('<x>'), '<span class="forma &lt;x&gt;" title="">&lt;x&gt;</span>'));

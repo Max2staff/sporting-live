@@ -12,13 +12,17 @@ import sys
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 
 from . import config
 from .parse import parse_calendario, parse_classifica, parse_tabellino
 
-TZ_ROMA = timezone(timedelta(hours=2))  # basta per marcare la data; Actions gira con TZ=Europe/Rome
+try:
+    TZ_ROMA = ZoneInfo("Europe/Rome")
+except Exception:  # noqa: BLE001 — database dei fusi mancante
+    TZ_ROMA = timezone(timedelta(hours=1))
 
 
 def _norm(nome: str) -> str:
@@ -124,11 +128,15 @@ def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente
 
     tabellini: dict[str, dict] = dict(prec.get("tabellini") or {})
     falliti = False
+    incompleti: list[int] = []
     soglia = (adesso.replace(tzinfo=None) - timedelta(days=config.GIORNI_TABELLINO_INCOMPLETO)).date()
     for p in partite:
         if not p["giocata"] or (str(p["id"]) in tabellini and not force):
             continue
-        recente = p["data"] is None or datetime.strptime(p["data"], "%Y-%m-%d").date() > soglia
+        try:
+            recente = p["data"] is None or datetime.strptime(p["data"], "%Y-%m-%d").date() > soglia
+        except (ValueError, TypeError):
+            recente = True
 
         def _parse(html: str, p=p, recente=recente) -> dict:
             t = parse_tabellino(html)
@@ -149,6 +157,8 @@ def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente
         try:
             tabellini[str(p["id"])] = _cached(fetcher, cache_dir / "tabellini" / f"{p['id']}.html",
                                               config.url_tabellino(idgirone, p["id"]), _parse, force=force)
+        except TabellinoIncompleto:
+            incompleti.append(p["id"])
         except Exception as e:
             falliti = True
             errori.append(f"tabellini.{p['id']}: {e}")
@@ -162,6 +172,7 @@ def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente
         "classifica": {"totale": totale, "casa": casa, "trasferta": trasferta},
         "partite": partite,
         "tabellini": tabellini,
+        "incompleti": incompleti,
         "stale": stale,
         "errori": errori,
     }
@@ -189,7 +200,7 @@ def main(argv=None) -> int:
         prec = json.loads(f_out.read_text(encoding="utf-8")) if f_out.exists() else None
         try:
             raw = raccogli_girone(fetcher, Path(a.cache) / str(idg), idg, precedente=prec, force=a.force)
-        except RuntimeError as e:
+        except Exception as e:  # noqa: BLE001 — un girone rotto non ferma gli altri
             print(f"ERRORE girone {idg}: {e}", file=sys.stderr)
             esito = 1
             continue
@@ -198,6 +209,8 @@ def main(argv=None) -> int:
             print(f"AVVISO girone {idg}: {e}", file=sys.stderr)
         print(f"girone {idg} ({g['nome']}): {len(raw['partite'])} partite, {len(raw['tabellini'])} tabellini, "
               f"{len(raw['errori'])} avvisi")
+        if raw["incompleti"]:
+            print(f"INFO girone {idg}: {len(raw['incompleti'])} tabellini senza formazioni (riprovo al prossimo run)")
         if len(raw["errori"]) > 10:
             print(f"ERRORE girone {idg}: troppi avvisi, probabile cambio di struttura del sito", file=sys.stderr)
             esito = 1

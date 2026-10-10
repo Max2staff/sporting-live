@@ -68,7 +68,9 @@ def test_tabellino_senza_formazioni_recente_non_si_cachea(fixture, tmp_path):
     t = raccogli_girone(f, tmp_path, G, adesso=datetime(2025, 1, 1))   # prima della stagione: ogni partita è "recente"
     assert "13535" not in t["tabellini"]
     assert not (tmp_path / "tabellini" / "13535.html").exists()
-    assert any(e.startswith("tabellini.13535") for e in t["errori"])
+    assert 13535 in t["incompleti"]
+    assert not any(e.startswith("tabellini.13535") for e in t["errori"])
+    assert t["stale"] == {}
 
 
 def test_tabellino_senza_formazioni_vecchio_si_accetta(fixture, tmp_path):
@@ -118,3 +120,41 @@ def test_main_scrive_un_raw_per_girone(fixture, tmp_path, monkeypatch):
                      "--cache", str(tmp_path / "cache")])
     assert rc == 0
     assert (tmp_path / "raw" / "390.json").exists() and not (tmp_path / "raw" / "1.json").exists()
+
+
+def test_fuso_roma_e_aggiornato_invariato(fixture, tmp_path):
+    from scraper.fetch import TZ_ROMA
+    assert datetime.now(TZ_ROMA).utcoffset().total_seconds() in (3600, 7200)
+    f = Fetcher(get=fake_get_factory(fixture), pausa=0)
+    t = raccogli_girone(f, tmp_path, G, adesso=datetime(2026, 3, 10, 6, 0))
+    assert t["aggiornato"] == "2026-03-10T06:00:00"
+
+
+def test_data_malformata_non_abbatte_il_girone(fixture, tmp_path, monkeypatch):
+    from scraper import fetch
+    orig = fetch.parse_calendario
+    def finto(html):
+        ps = orig(html)
+        ps[0]["data"] = "31/02/2026"
+        return ps
+    monkeypatch.setattr(fetch, "parse_calendario", finto)
+    f = Fetcher(get=fake_get_factory(fixture), pausa=0)
+    t = raccogli_girone(f, tmp_path, G, adesso=datetime(2026, 3, 10))
+    assert len(t["partite"]) == 90
+
+
+def test_main_continua_dopo_girone_che_esplode(fixture, tmp_path, monkeypatch):
+    from scraper import fetch
+    (tmp_path / "stagioni.json").write_text(json.dumps({"stagione": "x", "campionati": [
+        {"id": "c", "nome": "C", "gironi": [{"idgirone": 7, "nome": "A", "slug": "a"},
+                                             {"idgirone": 390, "nome": "G", "slug": "g"}]}]}))
+    base = fake_get_factory(fixture)
+    def get(url):
+        if "idgirone=7&" in url or url.endswith("idgirone=7"):
+            raise ValueError("boom")
+        return base(url)
+    monkeypatch.setattr(fetch, "Fetcher", lambda: Fetcher(get=get, pausa=0))
+    monkeypatch.setattr(fetch, "raccogli_girone", fetch.raccogli_girone)
+    rc = fetch.main(["--stagioni", str(tmp_path / "stagioni.json"), "--out", str(tmp_path / "raw"),
+                     "--cache", str(tmp_path / "cache")])
+    assert rc == 1 and (tmp_path / "raw" / "390.json").exists()

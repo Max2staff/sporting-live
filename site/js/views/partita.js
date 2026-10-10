@@ -39,9 +39,9 @@ export async function render({ rotta, carica }) {
   return `<section class="testa-partita">
       <div class="meta">${esc(p.girone.nome)} · giornata ${p.giornata} · ${esc(formattaDataLunga(p.data))}${p.ora ? ` ore ${esc(p.ora)}` : ''}${p.tavolino ? ' · <span class="badge">a tavolino</span>' : ''}</div>
       <div class="scontro">
-        <div class="lato"><a href="#/squadra/${p.casa.id}">${esc(p.casa.nome)}</a>${stellaHTML(p.casa.id)}</div>
+        <div class="lato"><a href="#/squadra/${p.casa.id}">${esc(p.casa.nome)}</a>${stellaHTML(p.casa.id, p.casa.nome)}</div>
         <div class="punteggio">${p.giocata ? `${p.golCasa}<i>-</i>${p.golOspite}` : `<small>${esc(p.ora || '--:--')}</small>`}</div>
-        <div class="lato"><a href="#/squadra/${p.ospite.id}">${esc(p.ospite.nome)}</a>${stellaHTML(p.ospite.id)}</div>
+        <div class="lato"><a href="#/squadra/${p.ospite.id}">${esc(p.ospite.nome)}</a>${stellaHTML(p.ospite.id, p.ospite.nome)}</div>
       </div>
     </section>
     <div class="tabs">${[['riepilogo', 'Riepilogo'], ['formazioni', 'Formazioni'], ['classifica', 'Classifica']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>

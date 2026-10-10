@@ -8,11 +8,11 @@ function selettoreGiorno(giorni, giorno, oggi, haDaDefinire) {
   const prev = i > 0 ? giorni[i - 1] : null, next = i >= 0 && i < giorni.length - 1 ? giorni[i + 1] : null;
   const titolo = giorno === DA_DEFINIRE ? 'Da definire' : (giorno === oggi ? 'Oggi' : formattaDataLunga(giorno));
   return `<div class="giorno">
-    <a class="freccia ${prev ? '' : 'off'}" href="#/partite/${prev || ''}" aria-label="giorno precedente">‹</a>
+    ${prev ? `<a class="freccia" href="#/partite/${prev}" aria-label="giorno precedente">‹</a>` : '<span class="freccia off" aria-hidden="true">‹</span>'}
     <label class="titolo"><span>${esc(titolo)}</span>${giorno !== DA_DEFINIRE ? `<small>${esc(formattaData(giorno))}</small>` : ''}
       <select aria-label="Scegli il giorno">${giorni.map(g => `<option value="${g}" ${g === giorno ? 'selected' : ''}>${formattaData(g)}${g === oggi ? ' (oggi)' : ''}</option>`).join('')}${haDaDefinire ? `<option value="${DA_DEFINIRE}" ${giorno === DA_DEFINIRE ? 'selected' : ''}>da definire</option>` : ''}</select>
     </label>
-    <a class="freccia ${next ? '' : 'off'}" href="#/partite/${next || ''}" aria-label="giorno successivo">›</a>
+    ${next ? `<a class="freccia" href="#/partite/${next}" aria-label="giorno successivo">›</a>` : '<span class="freccia off" aria-hidden="true">›</span>'}
   </div>`;
 }
 

@@ -1,1 +1,21 @@
-export async function render() { return '<p class="vuoto">In costruzione</p>'; }
+import { esc, formattaOra, formattaData } from '../util.js';
+import { leggiTema, impostaTema } from '../tema.js';
+import { card } from './comuni.js';
+
+export const VERSIONE = '1.0.0';
+const EMAIL = 'sportinglive.app@gmail.com';   // da confermare con l'utente prima della pubblicazione
+
+export async function render({ indice }) {
+  const t = leggiTema();
+  return `<h2>Sporting Live</h2>
+    ${card('Cos\'è', `<p>Risultati, classifiche e statistiche dei campionati organizzati dallo <b>Sporting Club Mestre</b> (Endas Venezia), pensati per il telefono. Aggiungi l'app alla schermata Home per averla sempre a portata di mano.</p>`)}
+    ${card('Fonte dei dati', `<p>I dati sono letti dal sito ufficiale <a href="https://www.campionatisportingclub.it/" rel="noopener">campionatisportingclub.it</a> con il consenso dell'organizzazione. Ultimo aggiornamento: ${esc(formattaData(indice.generato.slice(0, 10)))} alle ${esc(formattaOra(indice.generato))}. Fa fede il sito ufficiale.</p>`)}
+    ${card('Aspetto', `<div class="segmenti">${[['auto', 'Automatico'], ['chiaro', 'Chiaro'], ['scuro', 'Scuro']].map(([k, l]) => `<button data-tema="${k}" class="${t === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>`)}
+    ${card('Privacy', `<p>L'app non raccoglie dati personali e non usa cookie. Le squadre preferite e il tema restano solo sul tuo dispositivo. I nomi dei giocatori sono quelli pubblicati dall'organizzazione nei tabellini ufficiali.</p>
+      <p>Se sei un giocatore e non vuoi comparire, scrivi a <a href="mailto:${EMAIL}">${EMAIL}</a>: il nome viene oscurato al primo aggiornamento utile.</p>`)}
+    <p class="muto centro">Sporting Live v${VERSIONE} · fatta a Mestre</p>`;
+}
+
+export function dopo(ctx, root) {
+  root.querySelectorAll('[data-tema]').forEach(b => { b.onclick = async () => { impostaTema(b.dataset.tema); root.innerHTML = await render(ctx); dopo(ctx, root); }; });
+}

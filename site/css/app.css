@@ -165,3 +165,8 @@ table.tab { width: 100%; border-collapse: collapse; font-size: .9rem; }
 .tab tr.cliccabile td { height: 44px; }
 
 .sq-sotto { display: block; color: var(--muto); font-size: .72rem; }
+
+/* info */
+.card p { margin: 0 0 var(--s-2); }
+.card p:last-child { margin-bottom: 0; }
+.card p a { color: var(--brand); text-decoration: underline; }

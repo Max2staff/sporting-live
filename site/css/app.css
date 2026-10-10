@@ -163,3 +163,5 @@ table.tab { width: 100%; border-collapse: collapse; font-size: .9rem; }
 .stat small { display: block; color: var(--muto); font-size: .72rem; text-transform: uppercase; letter-spacing: .4px; }
 .stat b { font-size: 1.1rem; }
 .tab tr.cliccabile td { height: 44px; }
+
+.sq-sotto { display: block; color: var(--muto); font-size: .72rem; }

@@ -55,13 +55,15 @@ Al termine `sl.intro = 'ok'`. In Info c'è "Rivedi l'introduzione".
 
 - `stemma.js`: `stemmaHTML(squadra, dim)` restituisce SVG inline: scudo con due colori derivati in
   modo deterministico dall'`id` (hash → tonalità principale e secondaria, saturazione e luminosità
-  fisse per leggibilità su nero), iniziali (`iniziali(nome)`: prime lettere delle prime due parole
-  significative, ignorando "F.C.", "A.S.D.", "REAL", "S.S."; una sola lettera se c'è una parola).
+  fisse per leggibilità su nero), iniziali (`iniziali(nome)`: iniziali delle prime due parole significative, ignorando le
+  sigle puntate come "F.C.", "R.S.M." e le parole REAL, ASD, FC, AC, SS, US, AS, CALCIO, C5, C8;
+  con una sola parola significativa, le sue prime due lettere: SOCKS → SO, F.C. PELIGROS → PE).
   Se `squadra.stemma` è vero, al posto dell'SVG un `<img src="img/stemmi/<id>.png">` con lo stesso
   contorno. Dimensioni: 24 (righe), 40 (classifica/podio), 72 (testate), 96 (intro).
 - Loghi veri: `site/img/stemmi/<id>.png` (quadrati, 256px). Build: `indice.squadre[].stemma`
   e `squadra/<id>.json.stemma` = esistenza del file; `squadra/<id>.json.foto` = esistenza di
-  `site/img/squadre/<id>.jpg`. Primo logo: SOCKS (2480).
+  `site/img/squadre/<id>.jpg`. Il logo SOCKS verrà aggiunto quando l'utente indica quale delle
+  proposte 2026/27 è stata scelta; fino ad allora anche SOCKS usa lo stemma generato.
 - Foto hero in `site/img/foto/`: `premiazione.jpg` e `campo.jpg` dal sito ufficiale (consenso
   dell'organizzazione), ridimensionate a 1600px, qualità 80. Loghi: `site/img/loghi/endas.png`,
   `sporting-club-mestre.png`.

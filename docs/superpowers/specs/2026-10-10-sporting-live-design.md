@@ -41,8 +41,8 @@ Sito ufficiale, stagione 2026/27 (rilevato il 2026-10-10):
 
 | Campionato | Gironi | idgirone |
 |---|---|---|
-| Calcio a 8 — Serie A, B, C | 3 | 422, 421, 425 (da verificare quale è A/C) |
-| Calcio a 5 — Super League | 1 | 426 |
+| Calcio a 8 — Serie A, B, C | 3 | 425, 421, 422 (14 squadre ciascuno) |
+| Calcio a 5 — Super League | 1 | 426 (10 squadre) |
 | Trofei estivi (World Cup, coppe) | 5–7 l'estate | 404–411 nel 2026 |
 
 Tutte le pagine sono le stesse tre PHP già lette dallo scraper SOCKS, parametrizzate su `idgirone`:
@@ -96,9 +96,9 @@ serve un run manuale ogni due mesi (documentato nel README).
   "stagione": "2026/27",
   "campionati": [
     {"id": "c8", "nome": "Calcio a 8", "gironi": [
-      {"idgirone": 422, "nome": "Serie A", "slug": "serie-a"},
+      {"idgirone": 425, "nome": "Serie A", "slug": "serie-a"},
       {"idgirone": 421, "nome": "Serie B", "slug": "serie-b"},
-      {"idgirone": 425, "nome": "Serie C", "slug": "serie-c"}]},
+      {"idgirone": 422, "nome": "Serie C", "slug": "serie-c"}]},
     {"id": "c5", "nome": "Calcio a 5", "gironi": [
       {"idgirone": 426, "nome": "Super League", "slug": "super-league"}]}
   ],

@@ -25,14 +25,14 @@
   color-scheme: light;
   --sfondo: #f2f4f7; --carta: #ffffff; --carta-alt: #eef1f4; --bordo: #dde2e8;
   --testo: #0f1720; --muto: #56636f; --accento: #c2410c; --accento-forte: #c2410c; --accento-tint: rgba(255,78,0,.12);
-  --link: #0369a1; --link-tint: rgba(3,105,161,.1); --ok: #15803d; --neutro: #8a96a1; --ko: #b91c1c; --giallo-c: #ca8a04;
+  --link: #0369a1; --link-tint: rgba(3,105,161,.1); --ok: #15803d; --neutro: #8a96a1; --ko: #b91c1c; --giallo-c: #ca8a04; --gr-argento: #7c8794;
   --testata: rgba(255,255,255,.9);
 }
 @media (prefers-color-scheme: light) { :root:not([data-theme]) {
   color-scheme: light;
   --sfondo: #f2f4f7; --carta: #ffffff; --carta-alt: #eef1f4; --bordo: #dde2e8;
   --testo: #0f1720; --muto: #56636f; --accento: #c2410c; --accento-forte: #c2410c; --accento-tint: rgba(255,78,0,.12);
-  --link: #0369a1; --link-tint: rgba(3,105,161,.1); --ok: #15803d; --neutro: #8a96a1; --ko: #b91c1c; --giallo-c: #ca8a04;
+  --link: #0369a1; --link-tint: rgba(3,105,161,.1); --ok: #15803d; --neutro: #8a96a1; --ko: #b91c1c; --giallo-c: #ca8a04; --gr-argento: #7c8794;
   --testata: rgba(255,255,255,.9);
 } }
 
@@ -363,3 +363,31 @@ a.prec-link { color: inherit; text-decoration: none; min-height: 44px; }
 .btn-indietro svg { width: 24px; height: 24px; }
 .testa.con-indietro .marchio { margin-right: auto; }
 @media (max-width: 380px) { .testa.con-indietro .agg { display: none; } }
+
+/* Grafici: corsa, legenda, animazioni */
+.grafico-corsa { height: auto; aspect-ratio: 340 / 210; }
+.grafico .gr-et { font-size: 11px; }
+.gr-serie .gr-linea { stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; transition: opacity .2s; }
+.gr-serie .gr-punto { stroke: var(--carta); stroke-width: 1.5; }
+.gr-serie.c-altro .gr-linea { stroke: var(--neutro); stroke-width: 1.2; opacity: .45; } .gr-serie.c-altro .gr-punto { fill: var(--neutro); opacity: .45; }
+.gr-serie.c-p1 .gr-linea { stroke: var(--oro); } .gr-serie.c-p1 .gr-punto { fill: var(--oro); }
+.gr-serie.c-p2 .gr-linea { stroke: var(--gr-argento, var(--argento)); } .gr-serie.c-p2 .gr-punto { fill: var(--gr-argento, var(--argento)); }
+.gr-serie.c-p3 .gr-linea { stroke: var(--bronzo); } .gr-serie.c-p3 .gr-punto { fill: var(--bronzo); }
+.gr-serie.c-pref .gr-linea { stroke: var(--accento); } .gr-serie.c-pref .gr-punto { fill: var(--accento); }
+.gr-serie.c-m1 .gr-linea { stroke: var(--accento); } .gr-serie.c-m1 .gr-punto { fill: var(--accento); }
+.gr-serie.c-m2 .gr-linea { stroke: var(--link); } .gr-serie.c-m2 .gr-punto { fill: var(--link); }
+.gr-serie.c-m3 .gr-linea { stroke: var(--ok); } .gr-serie.c-m3 .gr-punto { fill: var(--ok); }
+.gr-serie.c-m4 .gr-linea { stroke: var(--giallo-c); } .gr-serie.c-m4 .gr-punto { fill: var(--giallo-c); }
+.gr-serie.c-m5 .gr-linea { stroke: var(--ko); } .gr-serie.c-m5 .gr-punto { fill: var(--ko); }
+.con-focus .gr-serie { opacity: .15; } .con-focus .gr-serie.acceso { opacity: 1; } .con-focus .gr-serie.acceso .gr-linea { stroke-width: 3.5; opacity: 1; }
+.legenda { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-2); margin-top: var(--s-2); }
+.legenda .leg { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 10px; border: 1px solid var(--bordo); border-radius: var(--r-full); background: none; color: var(--testo); font-size: .78rem; }
+.legenda .leg i { width: 10px; height: 10px; border-radius: 50%; background: var(--neutro); }
+.legenda .leg.c-p1 i { background: var(--oro); } .legenda .leg.c-p2 i { background: var(--gr-argento, var(--argento)); } .legenda .leg.c-p3 i { background: var(--bronzo); } .legenda .leg.c-pref i { background: var(--accento); }
+.legenda .leg.c-m1 i { background: var(--accento); } .legenda .leg.c-m2 i { background: var(--link); } .legenda .leg.c-m3 i { background: var(--ok); } .legenda .leg.c-m4 i { background: var(--giallo-c); } .legenda .leg.c-m5 i { background: var(--ko); }
+.legenda .leg[aria-pressed="true"] { border-color: var(--accento); background: var(--accento-tint); }
+@keyframes gr-disegna { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes gr-appare { from { opacity: 0; } }
+.anima .gr-linea { stroke-dasharray: 1; animation: gr-disegna .8s ease-out both; }
+.anima .gr-punto { animation: gr-appare .3s .7s both; }
+@media (prefers-reduced-motion: reduce) { .anima .gr-linea, .anima .gr-punto, .anima .gr-barra, .anima .gr-fetta, .cf-barre i { animation: none !important; } }

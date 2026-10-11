@@ -5,7 +5,9 @@ import { gironi, impostaGirone, risolviGirone } from '../contesto.js';
 import { podio, inizioGirone } from '../evidenza.js';
 import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
-import { vuoto, heroHTML, squadraDa, collegaStelle } from './comuni.js';
+import { vuoto, heroHTML, squadraDa, collegaStelle, card } from './comuni.js';
+import { graficoCorsaSVG, legendaHTML, collegaLegenda, serieTitolo, serieMarcatori } from '../grafici/corsa.js';
+import { leggiPreferiti } from '../preferiti.js';
 import { calendarioHTML, collegaCalendario } from './calendario.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
 
@@ -43,8 +45,15 @@ function tabellaHTML(g, indice) {
     ${g.zone ? '<p class="muto centro">Bordo verde: zona promozione · bordo rosso: zona retrocessione</p>' : ''}` : vuoto('Classifica non disponibile.')}`;
 }
 
-// Riempita in Task 5.
-async function statisticheHTML() { return vuoto('Statistiche in arrivo.'); }
+async function statisticheHTML(g) {
+  const t = serieTitolo(g, inArchivio() ? [] : leggiPreferiti());
+  const svgT = graficoCorsaSVG(t.xs, t.serie, { titolo: 'Corsa al titolo: punti giornata per giornata' });
+  const m = serieMarcatori(g);
+  const svgM = graficoCorsaSVG(m.xs, m.serie, { titolo: 'Corsa marcatori: gol giornata per giornata' });
+  if (!svgT && !svgM) return vuoto('I grafici compaiono dopo la seconda giornata giocata.');
+  return `${svgT ? card('Corsa al titolo', `<div class="corsa">${svgT}${legendaHTML(t.serie)}</div><p class="muto grafico-nota">Punti dopo ogni giornata · tocca un nome per evidenziarlo</p>`) : ''}
+    ${svgM ? card('Corsa marcatori', `<div class="corsa">${svgM}${legendaHTML(m.serie)}</div><p class="muto grafico-nota">Gol segnati, giornata per giornata</p>`) : ''}`;
+}
 
 export async function render({ indice, rotta, carica }) {
   const lista = gironi(indice);
@@ -71,6 +80,7 @@ export function dopo(ctx, root) {
   root.querySelectorAll('tr[data-squadra]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/squadra/${tr.dataset.squadra}`); });
   collegaCondividi(root, dati);
   collegaCalendario(root, ctx, slug);
+  collegaLegenda(root);
   collegaStelle(root, async () => { root.innerHTML = await render(ctx); dopo(ctx, root); });
   collegaContesto(root, ctx.indice, { mostrato: slug, onCambio: (s) => ctx.naviga(`#/classifiche/${s}${scheda === 'classifica' ? '' : `/${scheda}`}`) });
 }

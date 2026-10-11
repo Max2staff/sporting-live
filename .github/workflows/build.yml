@@ -43,6 +43,8 @@ jobs:
         id: fetch
         continue-on-error: true
         run: python -m scraper.fetch
+      - name: Ricorda l'indice pubblicato
+        run: cp site/data/indice.json /tmp/indice-prima.json || true
       - name: Costruisci i dati del sito
         run: python -m scraper.build
       - name: Salva cache e dati nel repo
@@ -57,6 +59,12 @@ jobs:
           path: site
       - id: deploy
         uses: actions/deploy-pages@v5
+      - name: Avvisi Telegram
+        continue-on-error: true
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
+        run: python scripts/telegram.py /tmp/indice-prima.json site/data/indice.json || true
       - name: Segnala il fallimento della lettura
         if: steps.fetch.outcome == 'failure'
         run: |

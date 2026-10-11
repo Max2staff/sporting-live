@@ -18,7 +18,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 from . import config
-from .parse import parse_calendario, parse_classifica, parse_tabellino
+from .parse import ParseError, parse_calendario, parse_classifica, parse_tabellino
 
 try:
     TZ_ROMA = ZoneInfo("Europe/Rome")
@@ -206,12 +206,27 @@ def fetch_archivio(stagioni: dict, out: Path, fetcher: Fetcher, cache_base: Path
             for g in c["gironi"]:
                 idg = g["idgirone"]
                 f_out = _archivio_raw(out, ed["slug"], idg)
-                if f_out.exists() and not force:
+                f_skip = f_out.with_suffix(".skip")
+                if (f_out.exists() or f_skip.exists()) and not force:
                     continue
                 try:
                     raw = raccogli_girone(fetcher, cache_base / ed["slug"] / str(idg), idg, force=force)
                 except Exception as e:  # noqa: BLE001 — salto con avviso
-                    print(f"AVVISO archivio {ed['slug']} girone {idg} ({g['nome']}) saltato: {e}", file=sys.stderr)
+                    if isinstance(e, ParseError) or isinstance(e.__cause__, ParseError):
+                        f_skip.parent.mkdir(parents=True, exist_ok=True)
+                        f_skip.write_text(f"{datetime.now(TZ_ROMA).date().isoformat()}: {e}\n", encoding="utf-8")
+                        print(f"AVVISO girone d'archivio {idg} non leggibile: escluso; "
+                              f"cancella il file .skip per ritentare ({e})", file=sys.stderr)
+                    else:
+                        print(f"AVVISO archivio {ed['slug']} girone {idg} ({g['nome']}) saltato, riprovo al prossimo run: {e}",
+                              file=sys.stderr)
+                    continue
+                if raw["errori"] or raw["incompleti"]:
+                    for e in raw["errori"]:
+                        print(f"AVVISO archivio {ed['slug']} girone {idg}: {e}", file=sys.stderr)
+                    print(f"AVVISO archivio {ed['slug']} girone {idg} ({g['nome']}) incompleto "
+                          f"({len(raw['errori'])} errori, {len(raw['incompleti'])} tabellini incompleti): "
+                          f"non scritto, riprovo al prossimo run", file=sys.stderr)
                     continue
                 f_out.parent.mkdir(parents=True, exist_ok=True)
                 f_out.write_text(json.dumps(raw, ensure_ascii=False, indent=1), encoding="utf-8")

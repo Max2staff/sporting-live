@@ -171,12 +171,12 @@ def main(argv=None) -> int:
             contenuti[nome] = json.loads(f.read_text(encoding="utf-8"))
     adesso = datetime.now(TZ_ROMA).isoformat(timespec="seconds")
     try:
-        files = costruisci(stagioni, raws, carica_alias(Path(a.alias)),
+        alias_d = carica_alias(Path(a.alias))
+        files = costruisci(stagioni, raws, alias_d,
                            adesso=adesso, img_dir=Path(a.img), contenuti=contenuti)
     except BuildError as e:
         print("ERRORE:", e, file=sys.stderr)
         return 1
-    alias_d = carica_alias(Path(a.alias))
     edizioni, alberi = costruisci_archivio(stagioni, raws_arch, alias_d, adesso, img_dir=Path(a.img))
     files["indice.json"]["edizioni"] = edizioni
     scrivi(files, Path(a.out))

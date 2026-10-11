@@ -236,4 +236,50 @@ def test_archivio_girone_che_non_si_legge_viene_saltato(fixture, tmp_path, monke
     assert fetch.main(["--stagioni", str(p), "--out", str(tmp_path / "raw"), "--cache", str(tmp_path / "cache")]) == 0
     assert not (tmp_path / "raw" / "a" / "ed" / "7.json").exists()
     assert (tmp_path / "raw" / "a" / "ed" / "390.json").exists()
-    assert "saltato" in capsys.readouterr().err
+    assert "non leggibile" in capsys.readouterr().err
+
+
+def _run_archivio(fetch, tmp_path, p):
+    return fetch.main(["--stagioni", str(p), "--out", str(tmp_path / "raw"), "--cache", str(tmp_path / "cache")])
+
+
+def test_archivio_incompleto_non_viene_scritto_e_si_riprova(fixture, tmp_path, monkeypatch, capsys):
+    from scraper import fetch
+    p = _stagioni_archivio(tmp_path, [390])
+    base = fake_get_factory(fixture)
+    guasto = {"on": True}
+
+    def get(url):
+        if guasto["on"] and "calendario.php" in url:
+            raise RuntimeError("sito giù")
+        return base(url)
+    monkeypatch.setattr(fetch, "Fetcher", lambda: Fetcher(get=get, pausa=0))
+    assert _run_archivio(fetch, tmp_path, p) == 0
+    dest = tmp_path / "raw" / "a" / "ed" / "390.json"
+    assert not dest.exists() and "incompleto" in capsys.readouterr().err
+    guasto["on"] = False
+    assert _run_archivio(fetch, tmp_path, p) == 0
+    assert dest.exists() and len(json.loads(dest.read_text())["partite"]) == 90
+
+
+def test_archivio_parse_error_scrive_skip_e_non_ritenta(fixture, tmp_path, monkeypatch, capsys):
+    from scraper import fetch
+    p = _stagioni_archivio(tmp_path, [7])
+    f = Fetcher(get=lambda url: "<html>niente</html>", pausa=0)
+    monkeypatch.setattr(fetch, "Fetcher", lambda: f)
+    assert _run_archivio(fetch, tmp_path, p) == 0
+    skip = tmp_path / "raw" / "a" / "ed" / "7.skip"
+    assert skip.exists() and "tabella classifica" in skip.read_text()
+    assert "non leggibile: escluso; cancella il file .skip per ritentare" in capsys.readouterr().err
+    n = len(f.log)
+    assert _run_archivio(fetch, tmp_path, p) == 0 and len(f.log) == n
+
+
+def test_archivio_errore_di_rete_non_crea_skip(tmp_path, monkeypatch):
+    from scraper import fetch
+    p = _stagioni_archivio(tmp_path, [7])
+    def get(url):
+        raise RuntimeError("rete giù")
+    monkeypatch.setattr(fetch, "Fetcher", lambda: Fetcher(get=get, pausa=0))
+    assert _run_archivio(fetch, tmp_path, p) == 0
+    assert not list((tmp_path / "raw").rglob("*.skip"))

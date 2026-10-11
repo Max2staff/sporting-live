@@ -1,5 +1,6 @@
 import { esc, formaHTML, formattaData, pallinoForma } from '../util.js';
 import { stemmaHTML } from '../stemma.js';
+import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { stellaHTML, collegaStelle, card, vuoto, heroHTML, squadraDa } from './comuni.js';
 
 let tab = 'risultati';
@@ -41,7 +42,7 @@ export async function render({ indice, rotta, carica }) {
       <div class="hero-squadra">${stemmaHTML({ id: s.id, nome: s.nome, stemma: s.stemma }, 72)}
         <div><h1>${esc(s.nome)}</h1><p class="sotto"><a href="#/classifiche/${esc(s.girone.slug)}">${esc(s.girone.nome)}</a>${s.pos ? ` · ${s.pos}º posto · ${s.riga.pt} pt` : ''}</p>
         <p class="sotto">${formaHTML(s.forma)}</p></div>
-        ${stellaHTML(s.id, s.nome)}</div>` })}
+        ${condividiHTML()}${stellaHTML(s.id, s.nome)}</div>` })}
     <div class="tabs">${[['risultati', 'Risultati'], ['rosa', 'Rosa'], ['statistiche', 'Statistiche']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
     ${corpo}`;
 }
@@ -49,5 +50,13 @@ export async function render({ indice, rotta, carica }) {
 export function dopo(ctx, root) {
   root.querySelectorAll('.tabs button').forEach(b => { b.onclick = async () => { tab = b.dataset.tab; root.innerHTML = await render(ctx); dopo(ctx, root); }; });
   root.querySelectorAll('tr[data-slug]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/giocatore/${tr.dataset.slug}`); });
+  carica_condividi(ctx, root);
   collegaStelle(root, async () => { root.innerHTML = await render(ctx); dopo(ctx, root); });
+}
+
+async function carica_condividi(ctx, root) {
+  try {
+    const s = await ctx.carica(`squadra/${ctx.rotta.params[0]}.json`);
+    collegaCondividi(root, datiCondivisione('squadra', s, ctx.indice.sito, location.href));
+  } catch { /* inerte */ }
 }

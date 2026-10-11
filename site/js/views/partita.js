@@ -1,6 +1,7 @@
 import { esc, formattaDataLunga, segnoDR } from '../util.js';
 import { timelineMarcatori, formazioniAffiancate, slugGiocatore } from '../tabellino.js';
 import { stemmaHTML } from '../stemma.js';
+import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { stellaHTML, collegaStelle, vuoto, heroHTML, squadraDa } from './comuni.js';
 
 let tab = 'riepilogo';
@@ -46,7 +47,7 @@ export async function render({ indice, rotta, carica }) {
   const corpo = tab === 'formazioni' ? formazioni(p) : tab === 'classifica' ? await classifica(p, carica, indice) : riepilogo(p);
   const lato = (sq) => `<div class="lato"><a href="#/squadra/${Number(sq.id)}">${stemmaHTML(squadraDa(indice, sq.id), 72)}<span>${esc(sq.nome)}</span></a>${stellaHTML(sq.id, sq.nome)}</div>`;
   return `${heroHTML({ foto: 'campo', classe: 'hero-partita', contenuto: `
-      <div class="meta">${esc(p.girone.nome)} · giornata ${Number(p.giornata)} · ${esc(formattaDataLunga(p.data))}${p.ora ? ` ore ${esc(p.ora)}` : ''}${p.tavolino ? ' · <span class="badge">a tavolino</span>' : ''}</div>
+      ${condividiHTML(!!p.giocata)}<div class="meta">${esc(p.girone.nome)} · giornata ${Number(p.giornata)} · ${esc(formattaDataLunga(p.data))}${p.ora ? ` ore ${esc(p.ora)}` : ''}${p.tavolino ? ' · <span class="badge">a tavolino</span>' : ''}</div>
       <div class="scontro">${lato(p.casa)}<div class="punteggio">${p.giocata ? `${p.golCasa}<i>-</i>${p.golOspite}` : `<small>${esc(p.ora || '--:--')}</small>`}</div>${lato(p.ospite)}</div>` })}
     <div class="tabs">${[['riepilogo', 'Riepilogo'], ['formazioni', 'Formazioni'], ['classifica', 'Classifica']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
     ${corpo}`;
@@ -54,5 +55,13 @@ export async function render({ indice, rotta, carica }) {
 
 export function dopo(ctx, root) {
   root.querySelectorAll('.tabs button').forEach(b => { b.onclick = async () => { tab = b.dataset.tab; root.innerHTML = await render(ctx); dopo(ctx, root); }; });
+  carica_condividi(ctx, root);
   collegaStelle(root, async () => { root.innerHTML = await render(ctx); dopo(ctx, root); });
+}
+
+async function carica_condividi(ctx, root) {
+  try {
+    const p = await ctx.carica(`partita/${ctx.rotta.params[0]}.json`);
+    collegaCondividi(root, datiCondivisione('partita', p, ctx.indice.sito, location.href));
+  } catch { /* senza dati il pulsante resta inerte */ }
 }

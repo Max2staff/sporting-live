@@ -3,6 +3,7 @@ import { èPreferita } from '../preferiti.js';
 import { stemmaHTML } from '../stemma.js';
 import { gironi, impostaGirone, risolviGirone } from '../contesto.js';
 import { podio } from '../evidenza.js';
+import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { vuoto, heroHTML, squadraDa } from './comuni.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
 
@@ -33,7 +34,7 @@ export async function render({ indice, rotta, carica }) {
   const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
   return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
       <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
-      <h1>Classifica${parziali}</h1><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)} · stagione ${esc(g.stagione)}</p>` })}
+      <div class="hero-titolo"><h1>Classifica${parziali}</h1>${condividiHTML()}</div><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)} · stagione ${esc(g.stagione)}</p>` })}
     ${tipo === 'totale' ? podioHTML(indice, righe) : ''}
     <div class="segmenti">${[['totale', 'Totale'], ['casa', 'Casa'], ['trasferta', 'Trasferta']].map(([k, l]) => `<button data-tipo="${k}" class="${tipo === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
     ${righe.length ? `<section class="card piena"><div class="scroll-x"><table class="tab">
@@ -46,5 +47,14 @@ export async function render({ indice, rotta, carica }) {
 export function dopo(ctx, root) {
   root.querySelectorAll('.segmenti button').forEach(b => { b.onclick = async () => { tipo = b.dataset.tipo; root.innerHTML = await render(ctx); dopo(ctx, root); }; });
   root.querySelectorAll('tr[data-squadra]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/squadra/${tr.dataset.squadra}`); });
+  carica_condividi(ctx, root);
   collegaContesto(root, ctx.indice, { mostrato: risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato, onCambio: (slug) => ctx.naviga(`#/classifiche/${slug}`) });
+}
+
+async function carica_condividi(ctx, root) {
+  try {
+    const slug = risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato;
+    const g = await ctx.carica(`girone/${slug}.json`);
+    collegaCondividi(root, datiCondivisione('classifica', { nome: g.nome }, ctx.indice.sito, location.href));
+  } catch { /* inerte */ }
 }

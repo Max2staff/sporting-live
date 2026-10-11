@@ -5,6 +5,7 @@ import { stellaHTML, collegaStelle, card, vuoto, heroHTML, squadraDa } from './c
 
 let tab = 'risultati';
 let ultimaId = null;
+let dati = null;
 
 const rigaRis = (p, indice) => `<a class="ris-riga" href="#/partita/${p.id}"><span class="data">${esc(formattaData(p.data))}</span><span class="avv">${stemmaHTML(squadraDa(indice, p.avversarioId), 22)}<span>${p.casa ? '' : '@ '}${esc(p.avversario)}</span></span><span class="punti">${p.esito ? `${pallinoForma(p.esito)} <b>${p.gf}-${p.gs}</b>` : `<small>${esc(p.ora || '')}</small>`}</span></a>`;
 
@@ -37,6 +38,7 @@ function statistiche(s) {
 export async function render({ indice, rotta, carica }) {
   const s = await carica(`squadra/${rotta.params[0]}.json`);
   if (s.id !== ultimaId) { tab = 'risultati'; ultimaId = s.id; }
+  dati = datiCondivisione('squadra', s, indice.sito, location.href);
   const corpo = tab === 'rosa' ? rosa(s) : tab === 'statistiche' ? statistiche(s) : risultati(s, indice);
   return `${heroHTML({ foto: 'campo', classe: 'hero-squadra-box', contenuto: `
       <div class="hero-squadra">${stemmaHTML({ id: s.id, nome: s.nome, stemma: s.stemma }, 72)}
@@ -50,13 +52,7 @@ export async function render({ indice, rotta, carica }) {
 export function dopo(ctx, root) {
   root.querySelectorAll('.tabs button').forEach(b => { b.onclick = async () => { tab = b.dataset.tab; root.innerHTML = await render(ctx); dopo(ctx, root); }; });
   root.querySelectorAll('tr[data-slug]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/giocatore/${tr.dataset.slug}`); });
-  carica_condividi(ctx, root);
+  collegaCondividi(root, dati);
   collegaStelle(root, async () => { root.innerHTML = await render(ctx); dopo(ctx, root); });
 }
 
-async function carica_condividi(ctx, root) {
-  try {
-    const s = await ctx.carica(`squadra/${ctx.rotta.params[0]}.json`);
-    collegaCondividi(root, datiCondivisione('squadra', s, ctx.indice.sito, location.href));
-  } catch { /* inerte */ }
-}

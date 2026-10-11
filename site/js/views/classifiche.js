@@ -8,6 +8,7 @@ import { vuoto, heroHTML, squadraDa } from './comuni.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
 
 let tipo = 'totale';
+let dati = null;
 
 function podioHTML(indice, righe) {
   const p = podio(righe);
@@ -31,6 +32,7 @@ export async function render({ indice, rotta, carica }) {
   const g = await carica(`girone/${slug}.json`);
   const forma = new Map(g.squadre.map(s => [s.id, s.forma]));
   const righe = g.classifica[tipo] || [];
+  dati = datiCondivisione('classifica', { nome: g.nome }, indice.sito, location.href);
   const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
   return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
       <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
@@ -47,14 +49,7 @@ export async function render({ indice, rotta, carica }) {
 export function dopo(ctx, root) {
   root.querySelectorAll('.segmenti button').forEach(b => { b.onclick = async () => { tipo = b.dataset.tipo; root.innerHTML = await render(ctx); dopo(ctx, root); }; });
   root.querySelectorAll('tr[data-squadra]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/squadra/${tr.dataset.squadra}`); });
-  carica_condividi(ctx, root);
+  collegaCondividi(root, dati);
   collegaContesto(root, ctx.indice, { mostrato: risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato, onCambio: (slug) => ctx.naviga(`#/classifiche/${slug}`) });
 }
 
-async function carica_condividi(ctx, root) {
-  try {
-    const slug = risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato;
-    const g = await ctx.carica(`girone/${slug}.json`);
-    collegaCondividi(root, datiCondivisione('classifica', { nome: g.nome }, ctx.indice.sito, location.href));
-  } catch { /* inerte */ }
-}

@@ -57,19 +57,29 @@ async function condividiLink(d) {
   catch { mostraLink(d.url); }
 }
 
-async function condividiImmagine(d) {
-  try {
-    const r = await fetch(d.immagine);
-    if (!r.ok) throw new Error('immagine');
-    const blob = await r.blob();
-    const file = new File([blob], 'risultato.jpg', { type: blob.type || 'image/jpeg' });
-    if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: d.titolo }); return; }
-  } catch (e) { if (annullato(e)) return; }
-  window.open(d.immagine, '_blank', 'noopener');
+const fileCache = new Map();   // url immagine -> File (precaricato per restare dentro il gesto dell'utente)
+function precarica(url) {
+  if (fileCache.has(url) || typeof fetch === 'undefined') return;
+  fileCache.set(url, null);
+  fetch(url).then(r => { if (!r.ok) throw new Error('immagine'); return r.blob(); })
+    .then(b => fileCache.set(url, new File([b], 'risultato.jpg', { type: b.type || 'image/jpeg' })))
+    .catch(() => fileCache.delete(url));
+}
+
+// Sincrona: iOS richiede navigator.share dentro l'attivazione utente (niente await prima).
+function condividiImmagine(d) {
+  const file = fileCache.get(d.immagine);
+  if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+    navigator.share({ files: [file], title: d.titolo }).catch(e => { if (!annullato(e)) location.href = d.immagine; });
+  } else {
+    location.href = d.immagine;
+  }
 }
 
 // Idempotente: usa onclick (si sovrascrive a ogni nuovo render).
 export function collegaCondividi(root, dati) {
+  if (!dati) return;
+  if (dati.immagine) precarica(dati.immagine);
   root.querySelectorAll('[data-condividi]').forEach(b => { b.onclick = (e) => { e.preventDefault(); e.stopPropagation(); condividiLink(dati); }; });
   root.querySelectorAll('[data-condividi-img]').forEach(b => { b.onclick = (e) => { e.preventDefault(); e.stopPropagation(); if (dati.immagine) condividiImmagine(dati); }; });
 }

@@ -3,8 +3,11 @@ import { stemmaHTML } from '../stemma.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { card, heroHTML, squadraDa } from './comuni.js';
 
+let dati = null;
+
 export async function render({ indice, rotta, carica }) {
   const g = await carica(`giocatore/${rotta.params[0]}.json`);
+  dati = datiCondivisione('giocatore', g, indice.sito, location.href);
   const blocco = (t, x) => `<div class="stat"><small>${t}</small><b>${x}</b></div>`;
   return `${heroHTML({ foto: 'campo', classe: 'hero-giocatore', contenuto: `<div class="hero-squadra">${stemmaHTML(squadraDa(indice, g.squadraId), 64)}
       <div><h1>${esc(g.nome)}</h1><p class="sotto"><a href="#/squadra/${Number(g.squadraId)}">${esc(g.squadra)}</a> · <a href="#/classifiche/${esc(g.girone.slug)}">${esc(g.girone.nome)}</a></p></div>${condividiHTML()}</div>` })}
@@ -14,6 +17,6 @@ export async function render({ indice, rotta, carica }) {
 }
 
 export function dopo(ctx, root) {
-  ctx.carica(`giocatore/${ctx.rotta.params[0]}.json`).then(g => collegaCondividi(root, datiCondivisione('giocatore', g, ctx.indice.sito, location.href))).catch(() => {});
+  collegaCondividi(root, dati);
   root.querySelectorAll('tr[data-id]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/partita/${tr.dataset.id}`); });
 }

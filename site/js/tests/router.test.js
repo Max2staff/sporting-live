@@ -18,3 +18,8 @@ test('rotta intro', () => {
   assert.deepEqual(analizza('#/intro'), { vista: 'intro', params: [] });
   assert.deepEqual(analizza('#/intro/2'), { vista: 'intro', params: ['2'] });
 });
+
+test('rotta cerca', () => {
+  assert.deepEqual(analizza('#/cerca'), { vista: 'cerca', params: [] });
+  assert.deepEqual(analizza('#/cerca/d%27este%20s'), { vista: 'cerca', params: ["d'este s"] });
+});

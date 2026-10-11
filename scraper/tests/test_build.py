@@ -121,3 +121,12 @@ def test_flag_senza_cartella_immagini():
     assert all(s["stemma"] is False for s in f["indice.json"]["squadre"])
     assert f["squadra/10.json"]["foto"] is False
     assert f["girone/serie-b.json"]["zone"] is None
+
+
+def test_cerca_json_senza_riposo():
+    r = raw_con_classifica()
+    r["squadre"].append({"id": 99, "nome": "RIPOSO"})
+    f = costruisci(STAGIONI, {1: r}, {"*": {}}, adesso="2026-10-01T21:00:00")
+    c = f["cerca.json"]
+    assert {s["id"] for s in c["squadre"]} == {10, 20, 30} and c["squadre"][0] == {"id": 10, "nome": "ALFA", "girone": "serie-b"}
+    assert {"slug": "10-rossi-mario", "nome": "ROSSI MARIO", "squadraId": 10, "girone": "serie-b"} in c["giocatori"]

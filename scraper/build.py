@@ -34,6 +34,7 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
         return img_dir is not None and (img_dir / sotto / nome).exists()
 
     files: dict[str, object] = {}
+    cerca: dict[str, list] = {"squadre": [], "giocatori": []}
     indice = {"stagione": stagioni["stagione"], "generato": adesso, "campionati": [], "squadre": [], "partite": [],
                "sito": config.SITO_URL, "config": contenuti.get("config") or {}, "edizioni": []}
     for c in stagioni["campionati"]:
@@ -52,6 +53,9 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             compatte = [_partita_compatta(p, slug, raw) for p in raw["partite"]]
             indice["partite"] += compatte
             lista = giocatori(raw)
+            cerca["squadre"] += [{"id": s["id"], "nome": s["nome"], "girone": slug} for s in raw["squadre"]
+                                 if s["nome"].strip().upper() != "RIPOSO"]
+            cerca["giocatori"] += [{"slug": gi["slug"], "nome": gi["nome"], "squadraId": gi["squadraId"], "girone": slug} for gi in lista]
             files[f"girone/{slug}.json"] = {
                 "idgirone": g["idgirone"], "slug": slug, "nome": g["nome"], "campionato": {"id": c["id"], "nome": c["nome"]},
                 "stagione": stagioni["stagione"], "aggiornato": raw["aggiornato"], "stale": raw["stale"],
@@ -85,6 +89,7 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
         raise BuildError("nessun girone con classifica: indice vuoto, output precedente mantenuto")
     indice["generato"] = max(g["aggiornato"] for c in indice["campionati"] for g in c["gironi"])
     files["indice.json"] = indice
+    files["cerca.json"] = cerca
     files["documenti.json"] = contenuti.get("documenti") or {"documenti": []}
     oggi = adesso[:10]
     offerte = (contenuti.get("vantaggi") or {}).get("offerte", [])

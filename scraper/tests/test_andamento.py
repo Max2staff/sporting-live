@@ -77,3 +77,10 @@ def test_build_aggiunge_andamento_e_precedenti():
     assert "precedenti" not in f["partita/1.json"]
     pr = f["partita/2.json"]["precedenti"]   # GAMMA-ALFA, gia' giocata come ALFA-GAMMA alla g3
     assert [p["id"] for p in pr["partite"]] == [3] and pr["bilancio"] == {"casa": 1, "pari": 0, "ospite": 0}
+
+
+def test_andamento_recupero_di_giornata_incompleta_conteggiato_dopo():
+    ps = [P(1, 1, 1, 2, 1, 0), P(2, 1, 3, 4, None, None, False),   # g1 incompleta
+          P(3, 2, 1, 3, 0, 0), P(4, 2, 2, 4, 0, 0)]                # g2 completa
+    a = andamento(ps, SQ)
+    assert [r["giornata"] for r in a[1]] == [2] and a[1][0]["pt"] == 4   # include la vittoria della g1

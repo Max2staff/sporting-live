@@ -26,10 +26,14 @@ def andamento(partite_girone: list[dict], squadre: list[dict]) -> dict[int, list
         per_g.setdefault(p["giornata"], []).append(p)
     tot = {i: {"pt": 0, "dr": 0, "gf": 0} for i in reali}
     serie: dict[int, list[dict]] = {i: [] for i in reali}
+    contate: set = set()
     for g in sorted(per_g):
         if not all(_giocata(p) for p in per_g[g]):
-            continue  # giornata incompleta: esclusa (e non conteggiata nei punti successivi)
-        for p in per_g[g]:
+            continue  # giornata incompleta: nessun punto in serie
+        # include anche i recuperi giocati di giornate precedenti rimaste incomplete
+        nuove = [p for gg in sorted(per_g) if gg <= g for p in per_g[gg] if _giocata(p) and p["id"] not in contate]
+        for p in nuove:
+            contate.add(p["id"])
             gc, go = p["golCasa"], p["golOspite"]
             for i, f, s in ((p["casaId"], gc, go), (p["ospiteId"], go, gc)):
                 t = tot[i]

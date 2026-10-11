@@ -31,7 +31,7 @@ export async function render({ indice, indiceCorrente, carica }) {
     ${docs.length ? card('Documenti ufficiali', `<div class="doc-lista">${docs.map(d => `<a class="doc-link" href="${esc(d.url)}" target="_blank" rel="noopener"><span>${esc(d.titolo)}</span><span aria-hidden="true">↗</span></a>`).join('')}</div>`) : ''}
     ${archivioCard(corrente.edizioni || [])}
     ${card('Aspetto', `<div class="segmenti">${[['scuro', 'Scuro'], ['chiaro', 'Chiaro'], ['auto', 'Automatico']].map(([k, l]) => `<button data-tema="${k}" class="${t === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>`)}
-    ${card('Privacy', `<p>L'app non raccoglie dati personali e non usa cookie. Le squadre preferite e il tema restano solo sul tuo dispositivo. I nomi dei giocatori sono quelli pubblicati dall'organizzazione nei tabellini ufficiali.</p>
+    ${card('Privacy', `<p>L'app non raccoglie dati personali e non usa cookie. Le squadre preferite e il tema restano solo sul tuo dispositivo. Se attivo, l'app conta in forma anonima le pagine viste (senza cookie e senza dati personali) per sapere quante persone la usano. I nomi dei giocatori sono quelli pubblicati dall'organizzazione nei tabellini ufficiali.</p>
       <p>Se sei un giocatore e non vuoi comparire, scrivi a <a href="mailto:${EMAIL}">${EMAIL}</a>: il tuo nome viene rimosso da tutte le pagine dell'app al primo aggiornamento utile. I tabellini originali restano pubblicati sul sito ufficiale dell'organizzazione, che resta la fonte dei dati.</p>`)}
     ${inArchivio() ? '' : `<p class="centro"><a href="#/intro" data-rivedi class="link-tap">Rivedi l'introduzione</a></p>`}
     <p class="muto centro">Sporting Live v${VERSIONE} · fatta a Mestre</p>`;

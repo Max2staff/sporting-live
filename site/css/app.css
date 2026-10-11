@@ -267,3 +267,7 @@ body.intro { background: #05111c; }
 
 .sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .link-tap { display: inline-flex; align-items: center; min-height: 44px; }
+
+.doc-link { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); min-height: 44px; padding: var(--s-2) 0; border-top: 1px solid var(--bordo); color: inherit; text-decoration: none; }
+.doc-link:first-child { border-top: 0; }
+.doc-link span:first-child { min-width: 0; overflow-wrap: anywhere; }

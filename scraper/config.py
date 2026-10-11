@@ -22,3 +22,5 @@ def url_calendario(idgirone: int) -> str:
 
 def url_tabellino(idgirone: int, idpartita: int) -> str:
     return f"{_P}tabellini.php?idgirone={idgirone}&tipo=partita&idpartita={idpartita}"
+
+SITO_URL = "https://max2staff.github.io/sporting-live/"

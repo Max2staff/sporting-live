@@ -8,6 +8,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+from . import config
 from .alias import applica_alias, carica_alias
 from .fetch import TZ_ROMA
 from .stats import classifiche_giocatori, forma, giocatori, partite_squadra, stat_squadra
@@ -25,12 +26,15 @@ def _partita_compatta(p: dict, slug: str, raw: dict) -> dict:
             "giocata": p["giocata"], "tavolino": p["tavolino"], "tabellino": str(p["id"]) in raw["tabellini"]}
 
 
-def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso: str, img_dir: Path | None = None) -> dict[str, object]:
+def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso: str, img_dir: Path | None = None,
+              contenuti: dict | None = None) -> dict[str, object]:
+    contenuti = contenuti or {}
     def ha(sotto: str, nome: str) -> bool:
         return img_dir is not None and (img_dir / sotto / nome).exists()
 
     files: dict[str, object] = {}
-    indice = {"stagione": stagioni["stagione"], "generato": adesso, "campionati": [], "squadre": [], "partite": []}
+    indice = {"stagione": stagioni["stagione"], "generato": adesso, "campionati": [], "squadre": [], "partite": [],
+               "sito": config.SITO_URL, "config": contenuti.get("config") or {}, "edizioni": []}
     for c in stagioni["campionati"]:
         camp = {"id": c["id"], "nome": c["nome"], "gironi": []}
         for g in c["gironi"]:
@@ -80,6 +84,10 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
         raise BuildError("nessun girone con classifica: indice vuoto, output precedente mantenuto")
     indice["generato"] = max(g["aggiornato"] for c in indice["campionati"] for g in c["gironi"])
     files["indice.json"] = indice
+    files["documenti.json"] = contenuti.get("documenti") or {"documenti": []}
+    oggi = adesso[:10]
+    offerte = (contenuti.get("vantaggi") or {}).get("offerte", [])
+    files["vantaggi.json"] = {"offerte": [o for o in offerte if not o.get("validoFino") or o["validoFino"] >= oggi]}
     return files
 
 
@@ -99,6 +107,7 @@ def main(argv=None) -> int:
     ap.add_argument("--alias", default="alias.json")
     ap.add_argument("--out", default="site/data")
     ap.add_argument("--img", default="site/img")
+    ap.add_argument("--contenuti", default="contenuti")
     a = ap.parse_args(argv)
     stagioni = json.loads(Path(a.stagioni).read_text(encoding="utf-8"))
     raws = {}
@@ -106,9 +115,14 @@ def main(argv=None) -> int:
         for g in c["gironi"]:
             f = Path(a.raw) / f"{g['idgirone']}.json"
             raws[g["idgirone"]] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
+    contenuti = {}
+    for nome in ("config", "documenti", "vantaggi"):
+        f = Path(a.contenuti) / f"{nome}.json"
+        if f.exists():
+            contenuti[nome] = json.loads(f.read_text(encoding="utf-8"))
     try:
         files = costruisci(stagioni, raws, carica_alias(Path(a.alias)),
-                           adesso=datetime.now(TZ_ROMA).isoformat(timespec="seconds"), img_dir=Path(a.img))
+                           adesso=datetime.now(TZ_ROMA).isoformat(timespec="seconds"), img_dir=Path(a.img), contenuti=contenuti)
     except BuildError as e:
         print("ERRORE:", e, file=sys.stderr)
         return 1

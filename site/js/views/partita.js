@@ -4,6 +4,7 @@ import { stemmaHTML } from '../stemma.js';
 import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { stellaHTML, collegaStelle, card, vuoto, heroHTML, squadraDa } from './comuni.js';
+import { barreConfrontoHTML, righeConfrontoPartita } from '../grafici/confronto.js';
 
 let tab = 'riepilogo';
 let ultimaId = null;
@@ -36,14 +37,19 @@ function precedenti(p, nomiEdizioni = {}) {
   return card('Precedenti', `${pr.partite.map(riga).join('')}<p class="prec-bilancio muto">${vitt(b.casa)} ${esc(p.casa.nome)} · ${Number(b.pari)} pari · ${vitt(b.ospite)} ${esc(p.ospite.nome)}</p>`);
 }
 
+function confrontoCard(p) {
+  const h = barreConfrontoHTML(righeConfrontoPartita(p), { nomeA: p.casa.nome, nomeB: p.ospite.nome });
+  return h ? card(p.giocata ? 'Le squadre oggi' : 'Confronto', h) : '';
+}
+
 function riepilogo(p, nomi) {
   const t = p.tabellino;
-  if (!t) return vuoto(p.giocata ? 'Tabellino non ancora pubblicato.' : 'La partita non è ancora stata giocata.') + precedenti(p, nomi);
+  if (!t) return vuoto(p.giocata ? 'Tabellino non ancora pubblicato.' : 'La partita non è ancora stata giocata.') + confrontoCard(p) + precedenti(p, nomi);
   const tl = timelineMarcatori(t, p.casa.id);
   return `<section class="card">
     ${tl.length ? `<ul class="timeline">${tl.map(m => `<li class="${m.lato}"><span class="min">${m.minuto}'</span><span class="pallone" aria-hidden="true">⚽</span>${nomeLink(t, m.lato === 'casa' ? p.casa.id : p.ospite.id, m.nome)}</li>`).join('')}</ul>` : '<p class="muto">Nessun marcatore registrato.</p>'}
     ${t.migliore && t.migliore.squadraId != null ? `<p class="mvp"><span class="badge">★ MVP</span>${nomeLink(t, t.migliore.squadraId, t.migliore.nome)}</p>` : ''}
-  </section>${precedenti(p, nomi)}`;
+  </section>${confrontoCard(p)}${precedenti(p, nomi)}`;
 }
 
 function formazioni(p) {

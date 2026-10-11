@@ -1,5 +1,8 @@
 import { esc, formaHTML, formattaData, pallinoForma } from '../util.js';
 import { graficoAndamentoSVG } from '../grafico.js';
+import { graficoGolSVG } from '../grafici/barre.js';
+import { ciambellaHTML } from '../grafici/ciambella.js';
+import { barreConfrontoHTML } from '../grafici/confronto.js';
 import { stemmaHTML } from '../stemma.js';
 import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
@@ -46,10 +49,19 @@ function statistiche(s, nSquadre) {
   const st = s.stat;
   if (!st.g) return vuoto('Le statistiche compaiono dopo la prima partita.');
   const blocco = (t, x) => `<div class="stat"><small>${t}</small><b>${x}</b></div>`;
-  return `${andamento(s, nSquadre)}${card('Rendimento', `<div class="stat-griglia">
+  const gol = graficoGolSVG(s.partite);
+  const m = s.mediaGirone, r = s.riga;
+  const media = m && r && r.g ? barreConfrontoHTML([
+    { etichetta: 'Gol fatti a partita', a: st.gf / st.g, b: m.gf, meglio: 'alto', decimali: 1 },
+    { etichetta: 'Gol subiti a partita', a: st.gs / st.g, b: m.gs, meglio: 'basso', decimali: 1 },
+    { etichetta: 'Punti a partita', a: r.pt / r.g, b: m.pt, meglio: 'alto', decimali: 1 }], { nomeA: s.nome, nomeB: 'Media girone' }) : '';
+  return `${andamento(s, nSquadre)}
+    ${gol ? card('Gol per giornata', `${gol}<p class="muto grafico-nota">Sopra i gol fatti (colore = risultato), sotto i gol subiti</p>`) : ''}
+    ${card('Rendimento', `${ciambellaHTML(st)}<div class="stat-griglia">
       ${blocco('Giocate', st.g)}${blocco('Vinte', st.v)}${blocco('Pari', st.n)}${blocco('Perse', st.p)}
       ${blocco('Gol fatti', `${st.gf} <small>(${st.mediaGf}/partita)</small>`)}${blocco('Gol subiti', `${st.gs} <small>(${st.mediaGs}/partita)</small>`)}
     </div>`)}
+    ${media ? card('Rispetto alla media del girone', media) : ''}
     ${card('Forma e serie', `<p>Ultime partite: ${formaHTML(s.forma)}</p>${st.serie ? `<p class="muto">Serie in corso: ${st.serie.n} ${({ V: 'vittorie', N: 'pareggi', P: 'sconfitte' })[st.serie.tipo]} di fila</p>` : ''}`)}`;
 }
 

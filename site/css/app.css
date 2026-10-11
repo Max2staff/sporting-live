@@ -391,3 +391,35 @@ a.prec-link { color: inherit; text-decoration: none; min-height: 44px; }
 .anima .gr-linea { stroke-dasharray: 1; animation: gr-disegna .8s ease-out both; }
 .anima .gr-punto { animation: gr-appare .3s .7s both; }
 @media (prefers-reduced-motion: reduce) { .anima .gr-linea, .anima .gr-punto, .anima .gr-barra, .anima .gr-fetta, .cf-barre i { animation: none !important; } }
+
+/* Barre, ciambella, confronto */
+.grafico-barre { height: auto; aspect-ratio: 340 / 180; }
+.gr-barra { fill: var(--neutro); }
+.gr-barra.gr-v { fill: var(--ok); } .gr-barra.gr-n { fill: var(--neutro); } .gr-barra.gr-p { fill: var(--ko); }
+.gr-barra.giu { fill: var(--muto); opacity: .45; }
+.gr-barra.gr-gol { fill: var(--accento); }
+.gr-voti .gr-linea { stroke: var(--link); stroke-width: 2; }
+.gr-voti .gr-punto { fill: var(--link); stroke: var(--carta); stroke-width: 1.5; }
+.anima .gr-barra { transform-box: fill-box; animation: gr-cresce .7s ease-out both; }
+.anima .gr-barra.su { transform-origin: bottom; } .anima .gr-barra.giu { transform-origin: top; }
+@keyframes gr-cresce { from { transform: scaleY(0); } }
+.ciambella { display: flex; align-items: center; gap: var(--s-4); margin-bottom: var(--s-3); }
+.gr-fetta { fill: none; stroke-width: 14; }
+.gr-fetta.gr-v { stroke: var(--ok); } .gr-fetta.gr-n { stroke: var(--neutro); } .gr-fetta.gr-p { stroke: var(--ko); }
+.anima .gr-fetta { animation: gr-appare .8s ease-out both; }
+.cb-num { fill: var(--testo); font-size: 24px; font-weight: 800; } .cb-et { fill: var(--muto); font-size: 11px; }
+.cb-leg { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .9rem; }
+.cb-leg i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+.cb-leg i.gr-v { background: var(--ok); } .cb-leg i.gr-n { background: var(--neutro); } .cb-leg i.gr-p { background: var(--ko); }
+.confronto { display: grid; gap: var(--s-3); }
+.cf-testa { display: flex; justify-content: space-between; gap: var(--s-3); font-size: .85rem; }
+.cf-testa b:last-child { text-align: right; }
+.cf-riga { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2px var(--s-2); }
+.cf-et { text-align: center; color: var(--muto); font-size: .8rem; }
+.cf-val { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--muto); }
+.cf-val.meglio { color: var(--testo); }
+.cf-barre { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.cf-barre i { display: block; height: 8px; border-radius: 4px; background: var(--bordo); animation: gr-allarga .7s ease-out both; }
+.cf-barre i.cf-a { justify-self: end; } .cf-barre i.cf-b { justify-self: start; }
+.cf-barre i.meglio { background: var(--accento); }
+@keyframes gr-allarga { from { width: 0; } }

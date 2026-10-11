@@ -69,11 +69,13 @@ def sfondo() -> Image.Image:
 
 def logo_chip(tela: Image.Image, src: Path, cx: int, cy: int, lato: int) -> None:
     """Logo su riquadro bianco arrotondato (i loghi non sono pensati per il fondo nero)."""
-    chip = lato + 80
+    chip = lato + 70
     d = ImageDraw.Draw(tela)
     d.rounded_rectangle((cx - chip // 2, cy - chip // 2, cx + chip // 2, cy + chip // 2), radius=56, fill=BIANCO)
     lg = Image.open(src).convert("RGBA")
-    lg.thumbnail((lato, lato), LANCZOS)
+    lg = lg.crop(lg.getchannel("A").getbbox())  # via il margine trasparente: il logo riempie il riquadro
+    k = lato / max(lg.size)
+    lg = lg.resize((round(lg.width * k), round(lg.height * k)), LANCZOS)  # thumbnail non ingrandisce
     tela.alpha_composite(lg, (cx - lg.width // 2, cy - lg.height // 2))
 
 
@@ -91,38 +93,37 @@ def costruisci() -> Image.Image:
     x = (L - w_tot) / 2
     d.text((x, y_t + 80), "Sporting ", font=f_titolo, fill=BIANCO)
     d.text((x + w_sp, y_t + 80), "Live", font=f_titolo, fill=ARANCIO)
-    d.rectangle((L // 2 - 260, y_t + 470, L // 2 + 260, y_t + 490), fill=ARANCIO)
 
     righe = ("Risultati, classifiche e marcatori", "di tutti i campionati, sul telefono")
     f_sotto = adatta(d, righe[1], L - 240, 108)
     for i, riga in enumerate(righe):
-        centrato(d, 880 + i * 132, riga, f_sotto, CHIARO)
+        centrato(d, 850 + i * 132, riga, f_sotto, CHIARO)
 
     # fascia azzurra con l'invito all'azione
-    by0, by1 = 1200, 1420
+    by0, by1 = 1160, 1370
     d.rectangle((0, by0, L, by1), fill=CIELO)
     f_cta = adatta(d, "INQUADRA CON LA FOTOCAMERA", L - 200, 130)
     centrato(d, by0 + (by1 - by0 - f_cta.size) // 2 - 14, "INQUADRA CON LA FOTOCAMERA", f_cta, (6, 14, 34, 255))
 
     # QR su riquadro bianco arrotondato (zona di rispetto di 4 moduli inclusa nell'immagine QR)
     qr = qr_immagine(config.SITO_URL)
-    pad = 50
+    pad = 40
     tile = qr.width + 2 * pad
-    tx, ty = (L - tile) // 2, by1 + 70
+    tx, ty = (L - tile) // 2, by1 + 50
     d.rounded_rectangle((tx, ty, tx + tile, ty + tile), radius=90, fill=BIANCO)
     tela.alpha_composite(qr, (tx + pad, ty + pad))
 
     # URL leggibile
     url_vis = config.SITO_URL.replace("https://", "").rstrip("/")
-    y_u = ty + tile + 70
+    y_u = ty + tile + 55
     f_url = adatta(d, url_vis, L - 300, 130)
     centrato(d, y_u, url_vis, f_url, BIANCO)
-    centrato(d, y_u + 175, "Gratis  ·  senza registrazione  ·  senza scaricare nulla", font(78), CIELO)
+    centrato(d, y_u + 165, "Gratis  ·  senza registrazione  ·  senza scaricare nulla", font(78), CIELO)
 
     # loghi in basso
-    yl = A - 220
-    logo_chip(tela, IMG / "loghi" / "sporting-club-mestre.png", L // 2 - 330, yl, 220)
-    logo_chip(tela, IMG / "loghi" / "endas.png", L // 2 + 330, yl, 220)
+    yl = A - 270
+    logo_chip(tela, IMG / "loghi" / "sporting-club-mestre.png", L // 2 - 330, yl, 330)
+    logo_chip(tela, IMG / "loghi" / "endas.png", L // 2 + 330, yl, 330)
     return tela
 
 

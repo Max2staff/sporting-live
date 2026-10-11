@@ -14,7 +14,8 @@ import * as intro from './views/intro.js';
 import * as cercaVista from './views/cerca.js';
 import * as vantaggiVista from './views/vantaggi.js';
 import { conta } from './visite.js';
-import { introDaMostrare, azzeraSceltaArchivio } from './contesto.js';
+import { introDaMostrare, azzeraSceltaArchivio, fotografiaContesto, ripristinaContesto } from './contesto.js';
+import { passoDa, madre, mostraIndietro } from './indietro.js';
 
 const VISTE = { partite, partita, classifiche, squadra, giocatori, giocatore, info, intro, cerca: cercaVista, vantaggi: vantaggiVista };
 const TAB = [['partite', 'Partite', 'M4 4h16v16H4z M4 9h16 M9 4v16'], ['classifiche', 'Classifiche', 'M5 20h14 M8 20V10 M12 20V4 M16 20v-7'],
@@ -26,16 +27,20 @@ const app = document.getElementById('app');
 let indice = null;
 let vantaggi = { offerte: [] };
 let renderId = 0;
+let ultimoPasso = null;
+let datiMadre = null;
+let ultimoHash = null;
 let ultimaEdizione = null;
 let ultimoCaricamento = 0;
 const RICARICA_DOPO_MS = 5 * 60 * 1000;
 
-function testata(idx, ed) {
+function testata(idx, ed, conIndietro = false) {
   const stale = idx.campionati.some(c => c.gironi.some(g => g.stale));
   const etichetta = ed ? idx.nome || idx.stagione : idx.stagione;
   const fascia = ed ? `<div class="fascia-archivio"><span>Archivio · <b>${esc(idx.nome || idx.stagione)}</b></span><a href="#/partite" data-no-prefisso>Torna alla stagione in corso</a></div>` : '';
   // In archivio il marchio resta nell'edizione; la ricerca va sempre alla stagione corrente (nessun prefisso).
-  return `<header class="testa">
+  return `<header class="testa${conIndietro ? ' con-indietro' : ''}">
+    ${conIndietro ? `<button class="btn-indietro" data-indietro aria-label="Indietro">${icona('M15 18l-6-6 6-6')}</button>` : ''}
     <a href="${prefissaHash('#/partite', ed)}" class="marchio"><img src="icons/icon.svg" alt="" width="32" height="32"><span>Sporting <b>Live</b></span></a>
     <div class="testa-dx"><div class="agg"><span>${esc(etichetta)}</span><span>agg. ${formattaOra(idx.generato)}</span>${stale ? '<span class="stale">dati parziali</span>' : ''}</div>
     <a href="#/cerca" data-no-prefisso class="icona-cerca" aria-label="Cerca${ed ? ' (stagione in corso)' : ''}">${icona('M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z M21 21l-4.3-4.3')}</a></div>
@@ -78,6 +83,11 @@ export async function render() {
   if (ed && rotta.vista === 'cerca') { location.replace('#/cerca' + (rotta.params[0] ? `/${encodeURIComponent(rotta.params[0])}` : '')); return; }
   impostaArchivio(ed);
   if (ed !== ultimaEdizione) { azzeraSceltaArchivio(); ultimaEdizione = ed; }
+  const stato = history.state && typeof history.state === 'object' ? history.state : {};
+  const passo = passoDa(stato, ultimoPasso);
+  ultimoPasso = passo;
+  ultimoHash = location.hash;
+  datiMadre = null;
   let idx = indice;
   if (ed) {
     try { idx = await caricaIndice(ed); } catch (e) {
@@ -89,9 +99,12 @@ export async function render() {
     }
     if (id !== renderId) return;
   }
+  if (stato.contesto) ripristinaContesto(stato.contesto, idx);
   const base = baseEdizione(ed);
   const ctx = { vantaggi, indice: idx, indiceCorrente: indice, rotta, oggi: oggiISO(), naviga: (h) => { location.hash = prefissaHash(h, ed); },
-    prefissa: (h) => prefissaHash(h, ed), carica: (rel) => caricaJSON(rel, base) };
+    prefissa: (h) => prefissaHash(h, ed), carica: (rel) => caricaJSON(rel, base),
+    madre: (d) => { datiMadre = d; },
+    nuovoPasso: () => { history.pushState(null, '', location.hash); render(); } };
   const vista = VISTE[rotta.vista];
   const attiva = SEZIONE[rotta.vista] || rotta.vista;
   if (rotta.vista === 'intro' && !introDaMostrare()) { location.replace('#/partite'); return; }
@@ -113,9 +126,14 @@ export async function render() {
     return;
   }
   document.body.classList.remove('intro');
-  app.innerHTML = `${testata(idx, ed)}<main><div class="scheletro"></div></main>
+  app.innerHTML = `${testata(idx, ed, mostraIndietro(rotta.vista, passo))}<main><div class="scheletro"></div></main>
     <footer class="fonte">Dati: <a href="https://www.campionatisportingclub.it/" rel="noopener">campionatisportingclub.it</a> · Endas Venezia</footer>
     <nav class="tabbar">${tabAttive(ed).map(([t, nome, d]) => `<a href="${prefissaHash(`#/${t}`, ed)}" class="${t === attiva ? 'attivo' : ''}">${icona(d)}<span>${nome}</span></a>`).join('')}</nav>`;
+  const btnIndietro = app.querySelector('[data-indietro]');
+  if (btnIndietro) btnIndietro.onclick = () => {
+    if (passo > 0) { history.back(); return; }
+    location.replace(prefissaHash(madre(rotta.vista, datiMadre) || '#/partite', ed));
+  };
   const main = app.querySelector('main');
   tieniPrefisso(main, ed);
   try {
@@ -123,9 +141,11 @@ export async function render() {
     if (id !== renderId) return;
     main.innerHTML = html;
     if (vista.dopo) vista.dopo(ctx, main);
+    history.replaceState({ ...stato, sl: passo, contesto: fotografiaContesto(idx) }, '');
     conta(rotta, indice.config);
   } catch (e) {
     if (id !== renderId) return;
+    history.replaceState({ ...stato, sl: passo }, '');
     main.innerHTML = erroreHTML(ed);
     console.error(e);
   }
@@ -133,6 +153,8 @@ export async function render() {
 }
 
 window.addEventListener('hashchange', () => { if (indice) render(); });
+// Tornare indietro tra voci con lo stesso hash (cambio di girone in Partite) fa scattare solo popstate.
+window.addEventListener('popstate', () => { if (indice && location.hash === ultimoHash) render(); });
 async function ricarica() {
   svuotaCache();
   try { indice = await caricaIndice(); ultimoCaricamento = Date.now(); await caricaVantaggi(); await render(); } catch { /* resta sui dati in memoria */ }

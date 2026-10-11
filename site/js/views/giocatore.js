@@ -6,8 +6,9 @@ import { card, heroHTML, squadraDa } from './comuni.js';
 
 let dati = null;
 
-export async function render({ indice, rotta, carica }) {
+export async function render({ indice, rotta, carica, madre }) {
   const g = await carica(`giocatore/${rotta.params[0]}.json`);
+  madre?.({ squadraId: g.squadraId });
   dati = datiCondivisione('giocatore', g, indice.sito, location.href, inArchivio());
   const blocco = (t, x) => `<div class="stat"><small>${t}</small><b>${x}</b></div>`;
   return `${heroHTML({ foto: 'campo', classe: 'hero-giocatore', contenuto: `<div class="hero-squadra">${stemmaHTML(squadraDa(indice, g.squadraId), 64)}

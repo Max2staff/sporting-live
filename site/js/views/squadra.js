@@ -64,8 +64,9 @@ function ancheIn(s) {
   return `<p class="anche-in"><b>Anche in:</b> ${l.map(voce).join(' · ')}</p>`;
 }
 
-export async function render({ indice, rotta, carica }) {
+export async function render({ indice, rotta, carica, madre }) {
   const s = await carica(`squadra/${rotta.params[0]}.json`);
+  madre?.({ girone: s.girone });
   if (s.id !== ultimaId) { tab = 'risultati'; ultimaId = s.id; }
   dati = datiCondivisione('squadra', s, indice.sito, location.href, inArchivio());
   const corpo = tab === 'rosa' ? rosa(s) : tab === 'statistiche' ? statistiche(s, (indice.squadre || []).filter(q => q.girone === s.girone.slug && String(q.nome).trim().toUpperCase() !== 'RIPOSO').length) : risultati(s, indice);

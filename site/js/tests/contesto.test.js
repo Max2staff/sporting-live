@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { TUTTI, gironi, leggiGirone, impostaGirone, gironeEffettivo, etichettaGirone, introDaMostrare, segnaIntroVista, riattivaIntro, _reset } from '../contesto.js';
+import { TUTTI, gironi, leggiGirone, impostaGirone, gironeEffettivo, etichettaGirone, introDaMostrare, segnaIntroVista, riattivaIntro, _reset, fotografiaContesto, ripristinaContesto } from '../contesto.js';
 
 const indice = { campionati: [
   { id: 'c8', nome: 'Calcio a 8', gironi: [{ slug: 'serie-a', nome: 'Serie A' }, { slug: 'serie-b', nome: 'Serie B' }] },
@@ -121,4 +121,21 @@ test('gironeEffettivo: con "tutti" e una categoria vale il primo girone della ca
   impostaCategoria('c8');
   assert.equal(gironeEffettivo(indice), 'serie-a');
   _reset();
+});
+
+test('fotografia e ripristino del contesto', () => {
+  _reset();
+  impostaGirone('serie-b', indice);
+  const a = fotografiaContesto(indice);
+  impostaCategoria('c5');
+  const b = fotografiaContesto(indice);
+  assert.deepEqual(a, { girone: 'serie-b', categoria: 'c8' });
+  assert.deepEqual(b, { girone: TUTTI, categoria: 'c5' });
+  ripristinaContesto(a, indice);
+  assert.equal(leggiGirone(indice), 'serie-b');
+  ripristinaContesto(b, indice);
+  assert.equal(leggiGirone(indice), TUTTI);
+  assert.equal(leggiCategoria(indice), 'c5');
+  ripristinaContesto(null, indice);
+  assert.equal(leggiCategoria(indice), 'c5');
 });

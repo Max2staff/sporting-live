@@ -82,3 +82,10 @@ export const introDaMostrare = () => !inArchivio() && leggi(K_INTRO) !== 'ok';
 export const segnaIntroVista = () => { if (!inArchivio()) scrivi(K_INTRO, 'ok'); };
 export const riattivaIntro = () => { if (!inArchivio()) scrivi(K_INTRO, 'no'); };
 export function _reset() { for (const k of Object.keys(memoria)) delete memoria[k]; sceltaArchivio = null; categoriaArchivio = TUTTI; }
+// Contesto in vigore (girone + categoria), salvato in ogni voce della cronologia per il tasto indietro.
+export const fotografiaContesto = (indice) => ({ girone: leggiGirone(indice), categoria: leggiCategoria(indice) });
+export function ripristinaContesto(f, indice) {
+  if (!f || typeof f.girone !== 'string') return;
+  if (f.girone !== TUTTI) impostaGirone(f.girone, indice);
+  else impostaCategoria(typeof f.categoria === 'string' ? f.categoria : TUTTI);
+}

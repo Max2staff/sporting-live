@@ -64,9 +64,10 @@ async function classifica(p, carica, indice) {
   } catch { return vuoto('Classifica non disponibile.'); }
 }
 
-export async function render({ indice, indiceCorrente, rotta, carica }) {
+export async function render({ indice, indiceCorrente, rotta, carica, madre }) {
   const nomiEdizioni = Object.fromEntries(((indiceCorrente || indice).edizioni || []).map(e => [e.slug, e.nome]));
   const p = await carica(`partita/${rotta.params[0]}.json`);
+  madre?.({ data: p.data });
   if (p.id !== ultimaId) { tab = 'riepilogo'; ultimaId = p.id; }
   dati = datiCondivisione('partita', p, indice.sito, location.href, inArchivio());
   const corpo = tab === 'formazioni' ? formazioni(p) : tab === 'classifica' ? await classifica(p, carica, indice) : riepilogo(p, nomiEdizioni);

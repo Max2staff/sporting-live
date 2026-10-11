@@ -94,7 +94,7 @@ export function dopo(ctx, root) {
   const sel = root.querySelector('.giorno select');
   if (sel) sel.onchange = () => ctx.naviga(`#/partite/${sel.value}`);
   collegaStelle(root, ridisegna);
-  const cambio = () => { if (ctx.rotta.params.length) ctx.naviga('#/partite'); else ridisegna(); };
+  const cambio = () => { if (ctx.rotta.params.length) ctx.naviga('#/partite'); else ctx.nuovoPasso(); };
   collegaContesto(root, ctx.indice, { tutti: true, onCambio: cambio });
   collegaCategorie(root, cambio);
 }

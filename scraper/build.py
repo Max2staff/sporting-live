@@ -12,6 +12,7 @@ from . import config
 from .andamento import andamento, norm, precedenti
 from .alias import applica_alias, carica_alias
 from .condivisione import scrivi_condivisione
+from .grafici import confronto, corsa_marcatori, media_girone
 from .ics import scrivi_calendari
 from .fetch import TZ_ROMA
 from .stats import classifiche_giocatori, forma, giocatori, partite_squadra, stat_squadra
@@ -68,6 +69,9 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             compatte = [_partita_compatta(p, slug, raw) for p in raw["partite"]]
             indice["partite"] += compatte
             lista = giocatori(raw)
+            serie = andamento(raw["partite"], raw["squadre"])
+            righe = {r["squadraId"]: r for r in raw["classifica"]["totale"]}
+            media = media_girone(raw["classifica"]["totale"])
             cerca["squadre"] += [{"id": s["id"], "nome": s["nome"], "girone": slug} for s in raw["squadre"]
                                  if s["nome"].strip().upper() != "RIPOSO"]
             cerca["giocatori"] += [{"slug": gi["slug"], "nome": gi["nome"], "squadraId": gi["squadraId"], "girone": slug} for gi in lista]
@@ -76,26 +80,28 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
                 "stagione": stagioni["stagione"], "aggiornato": raw["aggiornato"], "stale": raw["stale"],
                 "zone": g.get("zone"),
                 "squadre": [{"id": s["id"], "nome": s["nome"], "forma": forma(raw, s["id"])} for s in raw["squadre"]],
-                "classifica": {"totale": raw["classifica"]["totale"]}, "partite": compatte, "giocatori": classifiche_giocatori(lista)}
+                "classifica": {"totale": raw["classifica"]["totale"]}, "partite": compatte, "giocatori": classifiche_giocatori(lista),
+                "andamento": {str(k): v for k, v in serie.items()},
+                "corsaMarcatori": corsa_marcatori(lista, raw["partite"])}
             for p in raw["partite"]:
                 files[f"partita/{p['id']}.json"] = {
                     "id": p["id"], "girone": ginfo, "giornata": p["giornata"], "data": p["data"], "ora": p["ora"],
                     "casa": {"id": p["casaId"], "nome": nome(p["casaId"])},
                     "ospite": {"id": p["ospiteId"], "nome": nome(p["ospiteId"])},
                     "golCasa": p["golCasa"], "golOspite": p["golOspite"], "giocata": p["giocata"],
-                    "tavolino": p["tavolino"], "tabellino": raw["tabellini"].get(str(p["id"]))}
+                    "tavolino": p["tavolino"], "tabellino": raw["tabellini"].get(str(p["id"])),
+                    "confronto": confronto(righe.get(p["casaId"]), righe.get(p["ospiteId"]),
+                                           forma(raw, p["casaId"]), forma(raw, p["ospiteId"]))}
             tutte += [{"id": p["id"], "data": p["data"], "casa": nome(p["casaId"]), "ospite": nome(p["ospiteId"]),
                        "golCasa": p["golCasa"], "golOspite": p["golOspite"], "giocata": p["giocata"]}
                       for p in raw["partite"]]
-            serie = andamento(raw["partite"], raw["squadre"])
-            righe = {r["squadraId"]: r for r in raw["classifica"]["totale"]}
             for s in raw["squadre"]:
                 riga = righe.get(s["id"])
                 files[f"squadra/{s['id']}.json"] = {
                     "id": s["id"], "nome": s["nome"], "girone": ginfo,
                     "stemma": ha("stemmi", f"{s['id']}.png"), "foto": ha("squadre", f"{s['id']}.jpg"), "pos": riga["pos"] if riga else None,
                     "riga": {k: riga[k] for k in ("pt", "g", "v", "n", "p", "gf", "gs", "dr")} if riga else None,
-                    "stat": stat_squadra(raw, s["id"]), "andamento": serie.get(s["id"], []), "forma": forma(raw, s["id"]),
+                    "stat": stat_squadra(raw, s["id"]), "andamento": serie.get(s["id"], []), "forma": forma(raw, s["id"]), "mediaGirone": media,
                     "partite": [{**p, "avversario": nome(p["avversarioId"])} for p in partite_squadra(raw, s["id"])],
                     "rosa": [{k: v for k, v in gi.items() if k != "perPartita"} for gi in lista if gi["squadraId"] == s["id"]]}
             for gi in lista:

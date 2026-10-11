@@ -215,3 +215,16 @@ def test_pulisci_archivi_toglie_solo_le_edizioni_sparite(tmp_path):
     assert (tmp_path / "a" / "2025-26").is_dir() and not (tmp_path / "a" / "vecchia").exists()
     assert (tmp_path / "a" / "nota.txt").exists() and (tmp_path / "girone").is_dir()
     assert pulisci_archivi(tmp_path / "assente", []) == []
+
+
+def test_dati_grafici_nei_json():
+    r = raw_con_classifica()
+    r["squadre"].append({"id": 99, "nome": "RIPOSO"})
+    f = costruisci(STAGIONI, {1: r}, {"*": {}}, adesso="2026-10-01T21:00:00")
+    g = f["girone/serie-b.json"]
+    assert set(g["andamento"]) == {"10", "20", "30"}
+    assert g["andamento"]["10"][0] == {"giornata": 1, "pos": 1, "pt": 3}
+    assert g["corsaMarcatori"]["marcatori"][0]["nome"] == "ROSSI MARIO"
+    assert f["squadra/10.json"]["mediaGirone"] == {"gf": 1.67, "gs": 1.67, "pt": 1.33}
+    c = f["partita/1.json"]["confronto"]
+    assert c["casa"]["pos"] == 1 and c["ospite"]["pos"] == 3 and c["casa"]["forma"] == ["V", "N", "P"]

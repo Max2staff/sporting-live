@@ -19,7 +19,8 @@ function precedenti(p) {
   if (!pr || !(pr.partite || []).length) return '';
   const b = pr.bilancio || {};
   const riga = (q) => `<div class="prec-riga"><span class="data">${esc(formattaData(q.data))}${q.edizione ? ` <small>${esc(q.edizione)}</small>` : ''}</span><span class="prec-ris">${esc(q.casa)} <b>${Number(q.golCasa)}-${Number(q.golOspite)}</b> ${esc(q.ospite)}</span></div>`;
-  return card('Precedenti', `${pr.partite.map(riga).join('')}<p class="prec-bilancio muto">${Number(b.casa)} vittorie ${esc(p.casa.nome)} · ${Number(b.pari)} pari · ${Number(b.ospite)} vittorie ${esc(p.ospite.nome)}</p>`);
+  const vitt = (n) => `${Number(n)} ${Number(n) === 1 ? 'vittoria' : 'vittorie'}`;
+  return card('Precedenti', `${pr.partite.map(riga).join('')}<p class="prec-bilancio muto">${vitt(b.casa)} ${esc(p.casa.nome)} · ${Number(b.pari)} pari · ${vitt(b.ospite)} ${esc(p.ospite.nome)}</p>`);
 }
 
 function riepilogo(p) {

@@ -3,6 +3,7 @@ import { inArchivio } from './archivio.js';
 
 const K_GIRONE = 'sl.girone';
 const K_INTRO = 'sl.intro';
+const K_CATEGORIA = 'sl.categoria';
 const memoria = {};
 
 function leggi(k) {
@@ -19,7 +20,8 @@ export const gironi = (indice) => (indice.campionati || []).flatMap(c => (c.giro
 // In archivio il girone scelto vive solo in memoria (azzerato a ogni cambio d'edizione), mai nello storage;
 // il default è il primo girone dell'edizione.
 let sceltaArchivio = null;
-export function azzeraSceltaArchivio() { sceltaArchivio = null; }
+let categoriaArchivio = TUTTI;
+export function azzeraSceltaArchivio() { sceltaArchivio = null; categoriaArchivio = TUTTI; }
 export function leggiGirone(indice) {
   if (inArchivio()) {
     return sceltaArchivio === TUTTI || (sceltaArchivio && gironi(indice).some(g => g.slug === sceltaArchivio))
@@ -28,7 +30,34 @@ export function leggiGirone(indice) {
   const v = leggi(K_GIRONE);
   return v && v !== TUTTI && gironi(indice).some(g => g.slug === v) ? v : TUTTI;
 }
-export const impostaGirone = (slug) => { if (inArchivio()) sceltaArchivio = slug; else scrivi(K_GIRONE, slug); };
+// Categoria = id del campionato (es. 'c5') oppure 'tutti'. Con un girone scelto la categoria è quella del girone;
+// con "tutti i gironi" vale il valore salvato. Come il girone, in archivio vive solo in memoria.
+export const categorie = (indice) => (indice.campionati || []).map(c => ({ id: c.id, nome: c.nome }));
+const categoriaDelGirone = (indice, slug) => gironi(indice).find(g => g.slug === slug)?.campionato.id ?? TUTTI;
+export function leggiCategoria(indice) {
+  const g = leggiGirone(indice);
+  if (g !== TUTTI) return categoriaDelGirone(indice, g);
+  const v = inArchivio() ? categoriaArchivio : leggi(K_CATEGORIA);
+  return v && categorie(indice).some(c => c.id === v) ? v : TUTTI;
+}
+function salvaCategoria(v) { if (inArchivio()) categoriaArchivio = v; else scrivi(K_CATEGORIA, v); }
+// Sceglie una categoria (o 'tutti') e azzera il girone a "tutti i gironi".
+export function impostaCategoria(id) {
+  if (inArchivio()) sceltaArchivio = TUTTI; else scrivi(K_GIRONE, TUTTI);
+  salvaCategoria(id);
+}
+export function impostaGirone(slug, indice) {
+  if (inArchivio()) sceltaArchivio = slug; else scrivi(K_GIRONE, slug);
+  if (slug === TUTTI) salvaCategoria(TUTTI);
+  else if (indice) salvaCategoria(categoriaDelGirone(indice, slug));
+}
+// Slug dei gironi coperti dal contesto corrente: il girone scelto, oppure quelli della categoria, oppure tutti.
+export function gironiVisibili(indice) {
+  const g = leggiGirone(indice);
+  if (g !== TUTTI) return [g];
+  const cat = leggiCategoria(indice);
+  return gironi(indice).filter(x => cat === TUTTI || x.campionato.id === cat).map(x => x.slug);
+}
 export function gironeEffettivo(indice) {
   const g = leggiGirone(indice);
   return g === TUTTI ? (gironi(indice)[0]?.slug ?? null) : g;
@@ -49,4 +78,4 @@ export function etichettaGirone(indice, slug) {
 export const introDaMostrare = () => !inArchivio() && leggi(K_INTRO) !== 'ok';
 export const segnaIntroVista = () => { if (!inArchivio()) scrivi(K_INTRO, 'ok'); };
 export const riattivaIntro = () => { if (!inArchivio()) scrivi(K_INTRO, 'no'); };
-export function _reset() { for (const k of Object.keys(memoria)) delete memoria[k]; sceltaArchivio = null; }
+export function _reset() { for (const k of Object.keys(memoria)) delete memoria[k]; sceltaArchivio = null; categoriaArchivio = TUTTI; }

@@ -338,3 +338,11 @@ a.prec-link { color: inherit; text-decoration: none; min-height: 44px; }
 .vant-azioni { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-3); }
 .btn-vant { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 var(--s-4); border-radius: var(--r-full); border: 1px solid var(--bordo); color: var(--link); font-weight: 700; text-decoration: none; }
 .tabbar a span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* categoria nell'hero, card "inizia", avviso classifica senza partite */
+.hero .segmenti.categorie { margin: 0 0 var(--s-3); background: rgba(255,255,255,.1); }
+.hero .segmenti.categorie button { color: var(--on-hero-muto); }
+.hero .segmenti.categorie button.attivo { color: #fff; }
+.card.inizio .inizio-testo { margin: 0 0 var(--s-2); color: var(--accento); }
+.card.inizio .inizio-link { display: flex; align-items: center; justify-content: flex-end; min-height: 44px; font-weight: 700; color: var(--accento); }
+.avviso-inizio { margin: 0 0 var(--s-3); padding: var(--s-3); border: 1px solid var(--bordo); border-left: 3px solid var(--accento); border-radius: var(--r-md); background: var(--carta); font-size: .9rem; }

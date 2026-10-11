@@ -62,3 +62,52 @@ test('risolviGirone: con "tutti" salvato lo slug di rotta non si salva', () => {
   assert.deepEqual(_risolvi(indice, 'zz'), { mostrato: 'a1', salva: false });
   _rst();
 });
+
+import { categorie, leggiCategoria, impostaCategoria, gironiVisibili } from '../contesto.js';
+import { impostaArchivio } from '../archivio.js';
+test('categoria: elenco dai campionati, scelta, azzeramento girone, derivazione dal girone', () => {
+  _reset();
+  assert.deepEqual(categorie(indice), [{ id: 'c8', nome: 'Calcio a 8' }, { id: 'c5', nome: 'Calcio a 5' }]);
+  assert.equal(leggiCategoria(indice), TUTTI);
+  assert.deepEqual(gironiVisibili(indice), ['serie-a', 'serie-b', 'super-league']);
+  impostaGirone('serie-b', indice);
+  assert.equal(leggiCategoria(indice), 'c8');
+  assert.deepEqual(gironiVisibili(indice), ['serie-b']);
+  impostaCategoria('c5');                       // azzera il girone a "tutti"
+  assert.equal(leggiGirone(indice), TUTTI);
+  assert.equal(leggiCategoria(indice), 'c5');
+  assert.deepEqual(gironiVisibili(indice), ['super-league']);
+  impostaGirone('serie-a', indice);
+  assert.equal(leggiCategoria(indice), 'c8');
+  impostaGirone(TUTTI, indice);                 // "Tutti i gironi" azzera anche la categoria
+  assert.equal(leggiCategoria(indice), TUTTI);
+  impostaCategoria('zz');                       // categoria sparita: ignorata
+  assert.equal(leggiCategoria(indice), TUTTI);
+  _reset();
+});
+
+test('categoria: persistenza in storage (sl.categoria) e storage che lancia', () => {
+  const mem = {};
+  globalThis.localStorage = { getItem: (k) => mem[k] ?? null, setItem: (k, v) => { mem[k] = String(v); } };
+  try {
+    _reset();
+    impostaCategoria('c5');
+    assert.equal(mem['sl.categoria'], 'c5');
+    _reset();
+    assert.equal(leggiCategoria(indice), 'c5');
+  } finally { delete globalThis.localStorage; }
+  globalThis.localStorage = { getItem() { throw new Error('no'); }, setItem() { throw new Error('no'); } };
+  try { _reset(); impostaCategoria('c5'); assert.equal(leggiCategoria(indice), 'c5'); } finally { delete globalThis.localStorage; _reset(); }
+});
+
+test('categoria in archivio: solo in memoria, nulla nello storage', () => {
+  const mem = {};
+  globalThis.localStorage = { getItem: (k) => mem[k] ?? null, setItem: (k, v) => { mem[k] = String(v); } };
+  try {
+    _reset(); impostaArchivio('2025-26');
+    assert.equal(leggiCategoria(indice), 'c8');   // default: primo girone dell'edizione
+    impostaCategoria('c5');
+    assert.equal(leggiCategoria(indice), 'c5');
+    assert.deepEqual(mem, {});
+  } finally { impostaArchivio(null); delete globalThis.localStorage; _reset(); }
+});

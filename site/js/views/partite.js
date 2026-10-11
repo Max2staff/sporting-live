@@ -2,11 +2,11 @@ import { esc, formattaData, formattaDataLunga } from '../util.js';
 import { DA_DEFINIRE, giorniConPartite, giornoIniziale, partiteDelGiorno, raggruppaPerGirone, partitePreferite } from '../giorni.js';
 import { leggiPreferiti } from '../preferiti.js';
 import { stemmaHTML } from '../stemma.js';
-import { TUTTI, leggiGirone, gironi } from '../contesto.js';
-import { capolista, capocannoniere, ultimaGiornata } from '../evidenza.js';
+import { TUTTI, leggiGirone, gironi, gironiVisibili } from '../contesto.js';
+import { capolista, capocannoniere, ultimaGiornata, gironiDaIniziare } from '../evidenza.js';
 import { rigaPartita, collegaStelle, nomeSquadra, squadraDa, card, vuoto, heroHTML } from './comuni.js';
 import { inArchivio } from '../archivio.js';
-import { barraContesto, collegaContesto } from './contesto-ui.js';
+import { barraContesto, collegaContesto, categorieHTML, collegaCategorie } from './contesto-ui.js';
 
 function selettoreGiorno(giorni, giorno, oggi, haDaDefinire) {
   const i = giorni.indexOf(giorno);
@@ -36,7 +36,16 @@ function bloccoPreferite(indice, partite, oggi) {
 
 const tessera = (titolo, chi, numero, href) => `<a class="tessera" href="${href}"><small>${esc(titolo)}</small><div class="chi">${chi}</div><div class="numero">${numero}</div></a>`;
 
-async function inEvidenza(indice, scelto, carica) {
+// Card "inizia ..." per i gironi visibili che non hanno ancora partite giocate (sparisce da sola alla prima partita giocata).
+function bloccoInizio(indice, visibili) {
+  if (inArchivio()) return '';
+  return gironiDaIniziare(indice, visibili).map(x => card(`${x.girone.nome} · ${x.campionato}`, `
+    <p class="inizio-testo"><b>${x.data ? `Si parte ${esc(formattaDataLunga(x.data))}` : 'Calendario in arrivo'}</b></p>
+    ${x.partite.map(p => rigaPartita(p, indice)).join('')}
+    <a class="inizio-link" href="#/classifiche/${esc(x.girone.slug)}">Vai alla classifica ›</a>`, 'inizio')).join('');
+}
+
+async function inEvidenza(indice, scelto, carica, visibili) {
   try {
     if (scelto !== TUTTI) {
       const g = await carica(`girone/${scelto}.json`);
@@ -47,7 +56,7 @@ async function inEvidenza(indice, scelto, carica) {
       if (ug) t.push(tessera('Ultima giornata', `<span>${ug.partite.length} partite giocate</span>`, `${ug.giornata}ª<small>giornata</small>`, `#/classifiche/${esc(scelto)}`));
       return t.length ? `<div class="evidenza">${t.join('')}</div>` : '';
     }
-    const esiti = await Promise.allSettled(gironi(indice).map(async x => ({ x, g: await carica(`girone/${x.slug}.json`) })));
+    const esiti = await Promise.allSettled(gironi(indice).filter(x => visibili.includes(x.slug)).map(async x => ({ x, g: await carica(`girone/${x.slug}.json`) })));
     const tutti = esiti.filter(e => e.status === 'fulfilled').map(e => e.value);
     const t = tutti.map(({ x, g }) => ({ x, cl: capolista(g) })).filter(o => o.cl)
       .map(({ x, cl }) => tessera(`Capolista ${x.nome}`, `${stemmaHTML(squadraDa(indice, cl.squadraId), 28)}<span>${esc(cl.nome)}</span>`, `${cl.pt}<small>punti</small>`, `#/squadra/${Number(cl.squadraId)}`));
@@ -57,19 +66,22 @@ async function inEvidenza(indice, scelto, carica) {
 
 export async function render({ indice, rotta, oggi, carica }) {
   const scelto = leggiGirone(indice);
-  const partite = scelto === TUTTI ? indice.partite : indice.partite.filter(p => p.girone === scelto);
+  const visibili = gironiVisibili(indice);
+  const partite = indice.partite.filter(p => visibili.includes(p.girone));
   const giorni = giorniConPartite(partite);
   const haDaDefinire = partite.some(p => !p.data);
   const param = rotta.params[0];
   const giorno = (param && (giorni.includes(param) || param === DA_DEFINIRE) ? param : null) || giornoIniziale(giorni, oggi) || (haDaDefinire ? DA_DEFINIRE : null);
   const hero = heroHTML({ foto: 'campo', classe: 'hero-home', contenuto: `
     <div class="contesto-riga">${barraContesto(indice, { tutti: true })}</div>
+    ${categorieHTML(indice)}
     ${giorno ? selettoreGiorno(giorni, giorno, oggi, haDaDefinire) : '<h1>Nessuna partita in calendario</h1>'}` });
-  if (!giorno) return hero;
+  if (!giorno) return hero + bloccoInizio(indice, visibili);
   const gruppi = raggruppaPerGirone(partiteDelGiorno(partite, giorno), indice);
   return `${hero}
+    ${bloccoInizio(indice, visibili)}
     ${bloccoPreferite(indice, partite, oggi)}
-    ${await inEvidenza(indice, scelto, carica)}
+    ${await inEvidenza(indice, scelto, carica, visibili)}
     ${gruppi.length ? gruppi.map(g => `<section class="card piena">
       <a class="intest-girone" href="#/classifiche/${esc(g.girone.slug)}"><span>${esc(g.campionato)} · <b>${esc(g.girone.nome)}</b></span><span class="freccia-piccola">classifica ›</span></a>
       ${g.partite.map(p => rigaPartita(p, indice, { evidenzia: giorno === oggi })).join('')}
@@ -81,5 +93,7 @@ export function dopo(ctx, root) {
   const sel = root.querySelector('.giorno select');
   if (sel) sel.onchange = () => ctx.naviga(`#/partite/${sel.value}`);
   collegaStelle(root, ridisegna);
-  collegaContesto(root, ctx.indice, { tutti: true, onCambio: () => { if (ctx.rotta.params.length) ctx.naviga('#/partite'); else ridisegna(); } });
+  const cambio = () => { if (ctx.rotta.params.length) ctx.naviga('#/partite'); else ridisegna(); };
+  collegaContesto(root, ctx.indice, { tutti: true, onCambio: cambio });
+  collegaCategorie(root, cambio);
 }

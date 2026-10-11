@@ -9,10 +9,21 @@ let dati = null;
 
 const rigaRis = (p, indice) => `<a class="ris-riga" href="#/partita/${p.id}"><span class="data">${esc(formattaData(p.data))}</span><span class="avv">${stemmaHTML(squadraDa(indice, p.avversarioId), 22)}<span>${p.casa ? '' : '@ '}${esc(p.avversario)}</span></span><span class="punti">${p.esito ? `${pallinoForma(p.esito)} <b>${p.gf}-${p.gs}</b>` : `<small>${esc(p.ora || '')}</small>`}</span></a>`;
 
+const baseSito = (sito) => { const b = String(sito || ''); return b && !b.endsWith('/') ? b + '/' : b; };
+const ICO_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>';
+
+function calendario(s, indice) {
+  const b = baseSito(indice.sito);
+  if (!b) return '';
+  const url = `${b}cal/${Number(s.id)}.ics`;
+  return `<div class="cal-riga"><a class="btn-cal" href="${esc(url.replace(/^https:\/\//, 'webcal://'))}">${ICO_CAL}<span>Aggiungi al calendario</span></a>
+    <p class="muto cal-nota">Le partite si aggiornano da sole quando cambiano date e orari.<br>oppure <a href="${esc(url)}" download>scarica il file</a></p></div>`;
+}
+
 function risultati(s, indice) {
   const prossima = s.partite.find(p => !p.giocata);
   return `${s.foto ? `<img class="foto-squadra" src="img/squadre/${Number(s.id)}.jpg" alt="Foto di squadra: ${esc(s.nome)}" loading="lazy">` : ''}
-    ${prossima ? card('Prossima partita', rigaRis(prossima, indice)) : ''}
+    ${prossima ? card('Prossima partita', rigaRis(prossima, indice) + calendario(s, indice)) : ''}
     ${card('Tutte le partite', s.partite.length ? s.partite.map(p => rigaRis(p, indice)).join('') : '<p class="muto">Nessuna partita.</p>')}`;
 }
 

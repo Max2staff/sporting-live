@@ -11,6 +11,7 @@ from pathlib import Path
 from . import config
 from .alias import applica_alias, carica_alias
 from .condivisione import scrivi_condivisione
+from .ics import scrivi_calendari
 from .fetch import TZ_ROMA
 from .stats import classifiche_giocatori, forma, giocatori, partite_squadra, stat_squadra
 
@@ -114,6 +115,7 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default="site/data")
     ap.add_argument("--img", default="site/img")
     ap.add_argument("--condivisione", default="site/s/p")
+    ap.add_argument("--cal", default="site/cal")
     ap.add_argument("--contenuti", default="contenuti")
     a = ap.parse_args(argv)
     stagioni = json.loads(Path(a.stagioni).read_text(encoding="utf-8"))
@@ -127,9 +129,10 @@ def main(argv=None) -> int:
         f = Path(a.contenuti) / f"{nome}.json"
         if f.exists():
             contenuti[nome] = json.loads(f.read_text(encoding="utf-8"))
+    adesso = datetime.now(TZ_ROMA).isoformat(timespec="seconds")
     try:
         files = costruisci(stagioni, raws, carica_alias(Path(a.alias)),
-                           adesso=datetime.now(TZ_ROMA).isoformat(timespec="seconds"), img_dir=Path(a.img), contenuti=contenuti)
+                           adesso=adesso, img_dir=Path(a.img), contenuti=contenuti)
     except BuildError as e:
         print("ERRORE:", e, file=sys.stderr)
         return 1
@@ -138,6 +141,8 @@ def main(argv=None) -> int:
     giocate = [v for k, v in files.items() if k.startswith("partita/") and v["giocata"]]
     n = scrivi_condivisione(giocate, Path(a.condivisione), config.SITO_URL, Path(a.img) / "stemmi")
     print(f"{a.condivisione}: {len(giocate)} pagine, {n} immagini riscritte")
+    nc = scrivi_calendari(files, Path(a.cal), config.SITO_URL, adesso)
+    print(f"{a.cal}: {nc} calendari riscritti")
     return 0
 
 

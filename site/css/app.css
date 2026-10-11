@@ -297,3 +297,10 @@ body.intro { background: #05111c; }
 .riga-cerca .chi b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .riga-cerca .chi small { display: block; color: var(--muto); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .marchio span { white-space: nowrap; } .testa-dx .agg { min-width: 0; }
+
+/* calendario squadra */
+.cal-riga { margin-top: var(--s-3); }
+.btn-cal { display: flex; align-items: center; justify-content: center; gap: var(--s-2); min-height: 44px; padding: 0 var(--s-4); border-radius: var(--r-full); background: var(--accento); color: #fff; font-weight: 700; text-decoration: none; }
+.btn-cal svg { width: 20px; height: 20px; flex: none; }
+.cal-nota { font-size: .78rem; margin: var(--s-2) 0 0; text-align: center; }
+.cal-nota a { display: inline-block; min-height: 44px; line-height: 44px; }

@@ -48,7 +48,6 @@ function statistiche(s, nSquadre) {
   return `${andamento(s, nSquadre)}${card('Rendimento', `<div class="stat-griglia">
       ${blocco('Giocate', st.g)}${blocco('Vinte', st.v)}${blocco('Pari', st.n)}${blocco('Perse', st.p)}
       ${blocco('Gol fatti', `${st.gf} <small>(${st.mediaGf}/partita)</small>`)}${blocco('Gol subiti', `${st.gs} <small>(${st.mediaGs}/partita)</small>`)}
-      ${blocco('In casa', `${st.casa.v}V ${st.casa.n}N ${st.casa.p}P`)}${blocco('Fuori', `${st.fuori.v}V ${st.fuori.n}N ${st.fuori.p}P`)}
     </div>`)}
     ${card('Forma e serie', `<p>Ultime partite: ${formaHTML(s.forma)}</p>${st.serie ? `<p class="muto">Serie in corso: ${st.serie.n} ${({ V: 'vittorie', N: 'pareggi', P: 'sconfitte' })[st.serie.tipo]} di fila</p>` : ''}`)}`;
 }

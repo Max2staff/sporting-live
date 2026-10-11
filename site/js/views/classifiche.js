@@ -1,14 +1,13 @@
-import { esc, formaHTML, segnoDR } from '../util.js';
+import { esc, formaHTML, segnoDR, formattaDataLunga } from '../util.js';
 import { èPreferita } from '../preferiti.js';
 import { stemmaHTML } from '../stemma.js';
 import { gironi, impostaGirone, risolviGirone } from '../contesto.js';
-import { podio } from '../evidenza.js';
+import { podio, inizioGirone } from '../evidenza.js';
 import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { vuoto, heroHTML, squadraDa } from './comuni.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
 
-let tipo = 'totale';
 let dati = null;
 
 function podioHTML(indice, righe) {
@@ -29,26 +28,26 @@ export async function render({ indice, rotta, carica }) {
   const lista = gironi(indice);
   if (!lista.length) return vuoto('Nessun campionato in corso.');
   const { mostrato: slug, salva } = risolviGirone(indice, rotta.params[0]);
-  if (salva) impostaGirone(slug);
+  if (salva) impostaGirone(slug, indice);
   const g = await carica(`girone/${slug}.json`);
   const forma = new Map(g.squadre.map(s => [s.id, s.forma]));
-  const righe = g.classifica[tipo] || [];
+  const righe = g.classifica.totale || [];
   dati = datiCondivisione('classifica', { nome: g.nome }, indice.sito, location.href, inArchivio());
+  const inizio = inizioGirone(g.partite);
   const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
   return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
       <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
       <div class="hero-titolo"><h1>Classifica${parziali}</h1>${condividiHTML()}</div><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)} · stagione ${esc(g.stagione)}</p>` })}
-    ${tipo === 'totale' ? podioHTML(indice, righe) : ''}
-    <div class="segmenti">${[['totale', 'Totale'], ['casa', 'Casa'], ['trasferta', 'Trasferta']].map(([k, l]) => `<button data-tipo="${k}" class="${tipo === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
+    ${inizio.iniziato ? '' : `<p class="avviso-inizio">Il campionato inizia ${inizio.data ? `il ${esc(formattaDataLunga(inizio.data))}` : 'a breve'}: la classifica si aggiorna dopo la prima giornata.</p>`}
+    ${podioHTML(indice, righe)}
     ${righe.length ? `<section class="card piena"><div class="scroll-x"><table class="tab">
-      <thead><tr><th>#</th><th class="sx">Squadra</th><th>PT</th><th>G</th><th>V</th><th>N</th><th>P</th><th>GF</th><th>GS</th><th>DR</th>${tipo === 'totale' ? '<th>Forma</th>' : ''}</tr></thead>
-      <tbody>${righe.map(r => `<tr class="cliccabile ${èPreferita(r.squadraId) ? 'evid' : ''} ${classeZona(g.zone, r.pos, righe.length)}" data-squadra="${Number(r.squadraId)}"><td>${r.pos}</td><td class="sx nome">${stemmaHTML(squadraDa(indice, r.squadraId), 24)}${esc(r.nome)}</td><td><b>${r.pt}</b></td><td>${r.g}</td><td>${r.v}</td><td>${r.n}</td><td>${r.p}</td><td>${r.gf}</td><td>${r.gs}</td><td>${segnoDR(r.dr)}</td>${tipo === 'totale' ? `<td>${formaHTML(forma.get(r.squadraId))}</td>` : ''}</tr>`).join('')}</tbody>
+      <thead><tr><th>#</th><th class="sx">Squadra</th><th>PT</th><th>G</th><th>V</th><th>N</th><th>P</th><th>GF</th><th>GS</th><th>DR</th><th>Forma</th></tr></thead>
+      <tbody>${righe.map(r => `<tr class="cliccabile ${èPreferita(r.squadraId) ? 'evid' : ''} ${classeZona(g.zone, r.pos, righe.length)}" data-squadra="${Number(r.squadraId)}"><td>${r.pos}</td><td class="sx nome">${stemmaHTML(squadraDa(indice, r.squadraId), 24)}${esc(r.nome)}</td><td><b>${r.pt}</b></td><td>${r.g}</td><td>${r.v}</td><td>${r.n}</td><td>${r.p}</td><td>${r.gf}</td><td>${r.gs}</td><td>${segnoDR(r.dr)}</td><td>${formaHTML(forma.get(r.squadraId))}</td></tr>`).join('')}</tbody>
     </table></div></section>
     ${g.zone ? '<p class="muto centro">Bordo verde: zona promozione · bordo rosso: zona retrocessione</p>' : ''}` : vuoto('Classifica non disponibile.')}`;
 }
 
 export function dopo(ctx, root) {
-  root.querySelectorAll('.segmenti button').forEach(b => { b.onclick = async () => { tipo = b.dataset.tipo; root.innerHTML = await render(ctx); dopo(ctx, root); }; });
   root.querySelectorAll('tr[data-squadra]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/squadra/${tr.dataset.squadra}`); });
   collegaCondividi(root, dati);
   collegaContesto(root, ctx.indice, { mostrato: risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato, onCambio: (slug) => ctx.naviga(`#/classifiche/${slug}`) });

@@ -4,23 +4,25 @@ import { gironi, impostaGirone, risolviGirone } from '../contesto.js';
 import { nomeSquadra, squadraDa, vuoto, heroHTML } from './comuni.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
 
+const TAB = ['marcatori', 'voti', 'mvp'];
 let tab = 'marcatori';
-const VALORE = { marcatori: (g) => g.gol, voti: (g) => g.votoMedio, mvp: (g) => g.mvp, fairplay: (g) => g.ammonizioni + 3 * g.espulsioni };
-const UNITA = { marcatori: 'gol', voti: 'media', mvp: 'premi', fairplay: 'punti cart.' };
-const NOTE = { voti: 'Almeno 3 voti.', fairplay: 'Almeno 3 presenze; ammonizione 1 punto, espulsione 3: meno punti prima.', marcatori: '', mvp: 'Premi "migliore in campo".' };
+const VALORE = { marcatori: (g) => g.gol, voti: (g) => g.votoMedio, mvp: (g) => g.mvp };
+const UNITA = { marcatori: 'gol', voti: 'media', mvp: 'premi' };
+const NOTE = { voti: 'Almeno 3 voti.', marcatori: '', mvp: 'Premi "migliore in campo".' };
 const MEDAGLIE = ['🥇', '🥈', '🥉'];
 
 export async function render({ indice, rotta, carica }) {
   const lista = gironi(indice);
   if (!lista.length) return vuoto('Nessun campionato in corso.');
   const { mostrato: slug, salva } = risolviGirone(indice, rotta.params[0]);
-  if (salva) impostaGirone(slug);
+  if (salva) impostaGirone(slug, indice);
   const g = await carica(`girone/${slug}.json`);
+  if (!TAB.includes(tab)) tab = 'marcatori';   // es. 'fairplay' di versioni precedenti
   const righe = (g.giocatori || {})[tab] || [];
   return `${heroHTML({ foto: 'premiazione', classe: 'hero-giocatori', contenuto: `
       <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
       <h1>Giocatori</h1><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)}</p>` })}
-    <div class="segmenti">${[['marcatori', 'Gol'], ['voti', 'Voti'], ['mvp', 'MVP'], ['fairplay', 'Fair play']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
+    <div class="segmenti">${[['marcatori', 'Gol'], ['voti', 'Voti'], ['mvp', 'MVP']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
     ${righe.length ? `<section class="card piena">${righe.map((r, i) => `<a class="riga-gioc" href="#/giocatore/${esc(r.slug)}">
         <span class="pos">${i < 3 ? MEDAGLIE[i] : i + 1}</span>${stemmaHTML(squadraDa(indice, r.squadraId), 32)}
         <span class="chi"><b>${esc(r.nome)}</b><small>${esc(nomeSquadra(indice, r.squadraId))} · ${r.presenze} pres.</small></span>

@@ -55,7 +55,7 @@ def test_girone_senza_partite_giocate_ok():
     for p in r["partite"]:
         p.update(giocata=False, golCasa=None, golOspite=None)
     f = costruisci(STAGIONI, {1: r}, {"*": {}}, adesso="x")
-    assert f["girone/serie-b.json"]["giocatori"] == {"marcatori": [], "voti": [], "mvp": [], "fairplay": []}
+    assert f["girone/serie-b.json"]["giocatori"] == {"marcatori": [], "voti": [], "mvp": []}
     assert f["squadra/10.json"]["rosa"] == [] and f["squadra/10.json"]["forma"] == []
     assert not any(k.startswith("giocatore/") for k in f)
 

@@ -37,7 +37,8 @@ def test_raccoglie_tutto_e_mappa_gli_id(fixture, tmp_path):
     assert t["idgirone"] == G
     assert len(t["squadre"]) == 10
     assert t["classifica"]["totale"][0]["nome"] == "PRINCIPE 1846"
-    assert len(t["classifica"]["casa"]) == 10 and len(t["classifica"]["trasferta"]) == 10
+    assert list(t["classifica"]) == ["totale"]
+    assert not [u for u in f.log if "tipo=incasa" in u or "tipo=fuoricasa" in u]   # niente richieste casa/trasferta
     assert len(t["partite"]) == 90
     p = next(x for x in t["partite"] if x["id"] == 13529)
     assert p["casaId"] == next(s["id"] for s in t["squadre"] if s["nome"] == "NOVAK C5")
@@ -85,11 +86,11 @@ def test_tabellino_senza_formazioni_vecchio_si_accetta(fixture, tmp_path):
 def test_fallback_ai_dati_precedenti_con_stale(fixture, tmp_path):
     f1 = Fetcher(get=fake_get_factory(fixture), pausa=0)
     prima = raccogli_girone(f1, tmp_path, G, adesso=datetime(2026, 3, 9, 6, 0))
-    f2 = Fetcher(get=fake_get_factory(fixture, mancanti=["calendario.php", "tipo=incasa"]), pausa=0)
+    f2 = Fetcher(get=fake_get_factory(fixture, mancanti=["calendario.php"]), pausa=0)
     t = raccogli_girone(f2, tmp_path, G, precedente=prima, adesso=datetime(2026, 3, 10, 6, 0))
     assert len(t["partite"]) == 90
     assert t["stale"]["partite"].startswith("2026-03-09")
-    assert t["stale"]["classifica.casa"].startswith("2026-03-09")
+    assert "classifica.casa" not in t["stale"]
     assert any(e.startswith("partite:") for e in t["errori"])
 
 
@@ -283,3 +284,12 @@ def test_archivio_errore_di_rete_non_crea_skip(tmp_path, monkeypatch):
     monkeypatch.setattr(fetch, "Fetcher", lambda: Fetcher(get=get, pausa=0))
     assert _run_archivio(fetch, tmp_path, p) == 0
     assert not list((tmp_path / "raw").rglob("*.skip"))
+
+
+def test_raw_precedente_con_casa_trasferta_viene_ignorato(fixture, tmp_path):
+    f1 = Fetcher(get=fake_get_factory(fixture), pausa=0)
+    prima = raccogli_girone(f1, tmp_path, G, adesso=datetime(2026, 3, 9, 6, 0))
+    prima["classifica"].update(casa=[{"x": 1}], trasferta=[{"x": 1}])
+    f2 = Fetcher(get=fake_get_factory(fixture), pausa=0)
+    t = raccogli_girone(f2, tmp_path, G, precedente=prima, adesso=datetime(2026, 3, 10, 6, 0))
+    assert list(t["classifica"]) == ["totale"]

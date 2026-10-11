@@ -115,15 +115,6 @@ def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente
             errori.append(f"squadra non mappata: {nome!r}")
         return idn
 
-    def classifica_variante(tipo: str, chiave: str):
-        try:
-            return parse_classifica(fetcher.get(config.url_classifica(idgirone, tipo=tipo)))
-        except Exception as e:
-            return fallback(chiave, e) or []
-
-    casa = classifica_variante("incasa", "classifica.casa")
-    trasferta = classifica_variante("fuoricasa", "classifica.trasferta")
-
     try:
         partite = [{
             "id": p["id"], "giornata": p["giornata"], "data": p["data"], "ora": p["ora"],
@@ -177,7 +168,7 @@ def raccogli_girone(fetcher: Fetcher, cache_dir: Path, idgirone: int, precedente
         "aggiornato": adesso.isoformat(timespec="seconds"),
         "idgirone": idgirone,
         "squadre": squadre,
-        "classifica": {"totale": totale, "casa": casa, "trasferta": trasferta},
+        "classifica": {"totale": totale},
         "partite": partite,
         "tabellini": tabellini,
         "incompleti": incompleti,

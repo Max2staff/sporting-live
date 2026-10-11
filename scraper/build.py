@@ -64,7 +64,7 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
                 "stagione": stagioni["stagione"], "aggiornato": raw["aggiornato"], "stale": raw["stale"],
                 "zone": g.get("zone"),
                 "squadre": [{"id": s["id"], "nome": s["nome"], "forma": forma(raw, s["id"])} for s in raw["squadre"]],
-                "classifica": raw["classifica"], "partite": compatte, "giocatori": classifiche_giocatori(lista)}
+                "classifica": {"totale": raw["classifica"]["totale"]}, "partite": compatte, "giocatori": classifiche_giocatori(lista)}
             for p in raw["partite"]:
                 files[f"partita/{p['id']}.json"] = {
                     "id": p["id"], "girone": ginfo, "giornata": p["giornata"], "data": p["data"], "ora": p["ora"],

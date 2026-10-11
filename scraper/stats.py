@@ -5,7 +5,6 @@ import re
 import unicodedata
 
 MIN_VOTI = 3
-MIN_PRESENZE_FAIRPLAY = 3
 MAX_VOCI = 50
 
 
@@ -64,7 +63,6 @@ def stat_squadra(raw: dict, squadra_id: int) -> dict:
         serie = {"tipo": ultimo, "n": n}
     return {**conta(gs_), "gf": gf, "gs": gsub,
             "mediaGf": _tondo(gf / len(gs_)) if gs_ else 0, "mediaGs": _tondo(gsub / len(gs_)) if gs_ else 0,
-            "casa": conta([p for p in gs_ if p["casa"]]), "fuori": conta([p for p in gs_ if not p["casa"]]),
             "serie": serie}
 
 
@@ -122,7 +120,5 @@ def classifiche_giocatori(lista: list[dict]) -> dict:
     marcatori = sorted((g for g in lista if g["gol"] > 0), key=lambda g: (-g["gol"], g["presenze"], g["nome"]))
     voti = sorted((g for g in lista if g["nVoti"] >= MIN_VOTI), key=lambda g: (-g["votoMedio"], -g["nVoti"], g["nome"]))
     mvp = sorted((g for g in lista if g["mvp"] > 0), key=lambda g: (-g["mvp"], g["nome"]))
-    fairplay = sorted((g for g in lista if g["presenze"] >= MIN_PRESENZE_FAIRPLAY),
-                      key=lambda g: (g["ammonizioni"] + 3 * g["espulsioni"], -g["presenze"], g["nome"]))
     return {k: [_senza_partite(g) for g in v[:MAX_VOCI]]
-            for k, v in (("marcatori", marcatori), ("voti", voti), ("mvp", mvp), ("fairplay", fairplay))}
+            for k, v in (("marcatori", marcatori), ("voti", voti), ("mvp", mvp))}

@@ -62,7 +62,7 @@ def test_partite_squadra_ordinate_per_data():
 def test_stat_squadra():
     s = stat_squadra(raw_finto(), 10)
     assert (s["g"], s["v"], s["n"], s["p"], s["gf"], s["gs"]) == (3, 1, 1, 1, 5, 5)
-    assert s["mediaGf"] == 1.67 and s["casa"] == {"g": 2, "v": 1, "n": 0, "p": 1}
+    assert s["mediaGf"] == 1.67 and "casa" not in s and "fuori" not in s
     assert s["serie"] == {"tipo": "P", "n": 1}
     assert stat_squadra(raw_finto(), 99)["g"] == 0 and stat_squadra(raw_finto(), 99)["serie"] is None
 
@@ -84,7 +84,7 @@ def test_classifiche_giocatori():
     assert [x["nome"] for x in c["marcatori"]] == ["ROSSI MARIO", "VERDI LUCA", "NERI ANNA"]   # a parità di gol, meno presenze prima
     assert [x["nome"] for x in c["voti"]] == ["ROSSI MARIO"]          # unico con almeno 3 voti
     assert [x["nome"] for x in c["mvp"]] == ["NERI ANNA", "ROSSI MARIO"]   # a parità, ordine alfabetico
-    assert [x["nome"] for x in c["fairplay"]] == ["ROSSI MARIO"]      # unico con 3 presenze
+    assert "fairplay" not in c
     assert "perPartita" not in c["marcatori"][0]
 
 
@@ -94,4 +94,4 @@ def test_girone_senza_partite_giocate():
     for p in r["partite"]:
         p.update(giocata=False, golCasa=None, golOspite=None)
     assert giocatori(r) == [] and forma(r, 10) == []
-    assert classifiche_giocatori([]) == {"marcatori": [], "voti": [], "mvp": [], "fairplay": []}
+    assert classifiche_giocatori([]) == {"marcatori": [], "voti": [], "mvp": []}

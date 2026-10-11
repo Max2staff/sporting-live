@@ -29,6 +29,17 @@ def _partita_compatta(p: dict, slug: str, raw: dict) -> dict:
             "giocata": p["giocata"], "tavolino": p["tavolino"], "tabellino": str(p["id"]) in raw["tabellini"]}
 
 
+def _senza_riposo(totale: list[dict]) -> list[dict]:
+    """Toglie la riga "RIPOSO" dalla classifica e fa scalare di uno le posizioni che la seguono."""
+    out, tolte = [], 0
+    for r in totale:
+        if norm(r["nome"]) == "RIPOSO":
+            tolte += 1
+        else:
+            out.append({**r, "pos": r["pos"] - tolte})
+    return out
+
+
 def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso: str, img_dir: Path | None = None,
               contenuti: dict | None = None, archivio: bool = False) -> dict[str, object]:
     contenuti = contenuti or {}
@@ -47,6 +58,7 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             if not raw or not raw["classifica"]["totale"]:
                 continue
             raw = applica_alias(raw, alias)
+            raw = {**raw, "classifica": {**raw["classifica"], "totale": _senza_riposo(raw["classifica"]["totale"])}}
             slug, ginfo = g["slug"], {"slug": g["slug"], "nome": g["nome"]}
             nome_sq = {s["id"]: s["nome"] for s in raw["squadre"]}
             nome = lambda i: nome_sq.get(i, "?")  # noqa: E731

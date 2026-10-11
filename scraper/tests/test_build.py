@@ -134,6 +134,18 @@ def test_cerca_json_senza_riposo():
     assert {"slug": "10-rossi-mario", "nome": "ROSSI MARIO", "squadraId": 10, "girone": "serie-b"} in c["giocatori"]
 
 
+def test_classifica_senza_riposo_e_posizioni_rinumerate():
+    r = raw_con_classifica()
+    r["squadre"].append({"id": 99, "nome": "RIPOSO"})
+    r["classifica"]["totale"].insert(2, {"squadraId": 99, "nome": "RIPOSO", "pos": 3, "pt": 0, "g": 0, "v": 0, "n": 0,
+                                         "p": 0, "gf": 0, "gs": 0, "dr": 0})
+    r["classifica"]["totale"][3]["pos"] = 4
+    f = costruisci(STAGIONI, {1: r}, {"*": {}}, adesso="2026-10-01T21:00:00")
+    tot = f["girone/serie-b.json"]["classifica"]["totale"]
+    assert [(x["nome"], x["pos"]) for x in tot] == [("ALFA", 1), ("GAMMA", 2), ("BETA", 3)]
+    assert f["squadra/20.json"]["pos"] == 3
+
+
 ARCH = {"slug": "2025-26", "nome": "Stagione 2025/26", "stagione": "2025/26", "documenti": [{"titolo": "PDF", "url": "u"}],
         "campionati": [{"id": "c8", "nome": "Calcio a 8", "gironi": [{"idgirone": 1, "nome": "Serie B", "slug": "serie-b"}]}]}
 

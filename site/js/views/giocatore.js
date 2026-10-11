@@ -1,5 +1,6 @@
 import { esc, formattaData, pallinoForma } from '../util.js';
 import { stemmaHTML } from '../stemma.js';
+import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { card, heroHTML, squadraDa } from './comuni.js';
 
@@ -7,7 +8,7 @@ let dati = null;
 
 export async function render({ indice, rotta, carica }) {
   const g = await carica(`giocatore/${rotta.params[0]}.json`);
-  dati = datiCondivisione('giocatore', g, indice.sito, location.href);
+  dati = datiCondivisione('giocatore', g, indice.sito, location.href, inArchivio());
   const blocco = (t, x) => `<div class="stat"><small>${t}</small><b>${x}</b></div>`;
   return `${heroHTML({ foto: 'campo', classe: 'hero-giocatore', contenuto: `<div class="hero-squadra">${stemmaHTML(squadraDa(indice, g.squadraId), 64)}
       <div><h1>${esc(g.nome)}</h1><p class="sotto"><a href="#/squadra/${Number(g.squadraId)}">${esc(g.squadra)}</a> · <a href="#/classifiche/${esc(g.girone.slug)}">${esc(g.girone.nome)}</a></p></div>${condividiHTML()}</div>` })}

@@ -3,6 +3,7 @@ import { èPreferita } from '../preferiti.js';
 import { stemmaHTML } from '../stemma.js';
 import { gironi, impostaGirone, risolviGirone } from '../contesto.js';
 import { podio } from '../evidenza.js';
+import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { vuoto, heroHTML, squadraDa } from './comuni.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
@@ -32,7 +33,7 @@ export async function render({ indice, rotta, carica }) {
   const g = await carica(`girone/${slug}.json`);
   const forma = new Map(g.squadre.map(s => [s.id, s.forma]));
   const righe = g.classifica[tipo] || [];
-  dati = datiCondivisione('classifica', { nome: g.nome }, indice.sito, location.href);
+  dati = datiCondivisione('classifica', { nome: g.nome }, indice.sito, location.href, inArchivio());
   const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
   return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
       <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>

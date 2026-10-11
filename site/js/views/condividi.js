@@ -3,12 +3,17 @@ import { formattaDataLunga } from '../util.js';
 const base = (sito) => { const s = String(sito || ''); return s && !s.endsWith('/') ? s + '/' : s; };
 
 // Pura: nessun accesso a browser. oggetto: partita | {nome} (girone) | squadra | giocatore.
-export function datiCondivisione(tipo, oggetto, sito, href) {
+// `archivio`: le pagine s/p e le immagini esistono solo per la stagione corrente, quindi si condivide l'URL dell'app.
+export function datiCondivisione(tipo, oggetto, sito, href, archivio = false) {
   const o = oggetto || {};
   const b = base(sito);
   if (tipo === 'partita') {
     const casa = o.casa && o.casa.nome, osp = o.ospite && o.ospite.nome;
     const girone = o.girone ? o.girone.nome : '';
+    if (o.giocata && archivio) {
+      const ris = `${casa} ${o.golCasa}-${o.golOspite} ${osp}`;
+      return { titolo: ris, testo: `${ris}${girone ? ` · ${girone}` : ''} · Sporting Live`, url: href };
+    }
     if (o.giocata) {
       const ris = `${casa} ${o.golCasa}-${o.golOspite} ${osp}`;
       const id = Number(o.id);

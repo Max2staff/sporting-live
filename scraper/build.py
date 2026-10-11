@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import config
-from .andamento import andamento, precedenti
+from .andamento import andamento, norm, precedenti
 from .alias import applica_alias, carica_alias
 from .condivisione import scrivi_condivisione
 from .ics import scrivi_calendari
@@ -136,8 +136,47 @@ def costruisci_archivio(stagioni: dict, raws_per_slug: dict[str, dict[int, dict 
                                             img_dir=img_dir, archivio=True)
         except BuildError:
             continue
-        edizioni.append({"slug": ed["slug"], "nome": ed["nome"]})
+        edizioni.append({"slug": ed["slug"], "nome": ed["nome"], "documenti": ed.get("documenti", [])})
     return edizioni, alberi
+
+
+def collega_edizioni(corrente: dict[str, object], alberi: dict[str, dict[str, object]], edizioni: list[dict]) -> None:
+    """Collegamenti tra edizioni (modifica i dict in place).
+
+    - `squadra/<id>.json.ancheIn`: la stessa squadra (per nome normalizzato) nelle altre edizioni, corrente
+      compresa: [{edizione (slug o None = stagione corrente), nome, id, girone, pos}].
+    - `partita/<id>.json.precedenti`: scontri diretti su tutte le edizioni; ogni riga d'archivio ha `edizione`.
+    """
+    nome_ed = {e["slug"]: e["nome"] for e in edizioni}
+    nome_ed[None] = f"Stagione {corrente['indice.json']['stagione']}"
+    alberi_tutti: list[tuple[str | None, dict[str, object]]] = [(None, corrente)] + [
+        (e["slug"], alberi[e["slug"]]) for e in edizioni if e["slug"] in alberi]
+    per_nome: dict[str, list[tuple[str | None, dict]]] = {}
+    per_coppia: dict[frozenset, list[dict]] = {}
+    for slug, files in alberi_tutti:
+        for rel, v in files.items():
+            if rel.startswith("squadra/") and norm(v["nome"]) != "RIPOSO":
+                per_nome.setdefault(norm(v["nome"]), []).append((slug, v))
+            elif rel.startswith("partita/"):
+                q = {"id": v["id"], "data": v["data"], "casa": v["casa"]["nome"], "ospite": v["ospite"]["nome"],
+                     "golCasa": v["golCasa"], "golOspite": v["golOspite"], "giocata": v["giocata"]}
+                if slug is not None:
+                    q["edizione"] = slug
+                per_coppia.setdefault(frozenset((norm(q["casa"]), norm(q["ospite"]))), []).append(q)
+    for slug, files in alberi_tutti:
+        for rel, v in files.items():
+            if rel.startswith("squadra/") and norm(v["nome"]) != "RIPOSO":
+                altre = [{"edizione": s2, "nome": nome_ed[s2], "id": w["id"], "girone": w["girone"]["nome"], "pos": w["pos"]}
+                         for s2, w in per_nome.get(norm(v["nome"]), []) if s2 != slug]
+                v.pop("ancheIn", None)
+                if altre:
+                    v["ancheIn"] = altre
+            elif rel.startswith("partita/"):
+                v.pop("precedenti", None)
+                pool = per_coppia.get(frozenset((norm(v["casa"]["nome"]), norm(v["ospite"]["nome"]))), [])
+                prec = precedenti({**v, "edizione": slug}, pool)
+                if prec["partite"]:
+                    v["precedenti"] = prec
 
 
 def main(argv=None) -> int:
@@ -179,6 +218,7 @@ def main(argv=None) -> int:
         return 1
     edizioni, alberi = costruisci_archivio(stagioni, raws_arch, alias_d, adesso, img_dir=Path(a.img))
     files["indice.json"]["edizioni"] = edizioni
+    collega_edizioni(files, alberi, edizioni)
     scrivi(files, Path(a.out))
     for slug, albero in alberi.items():
         scrivi(albero, Path(a.out) / "a" / slug)

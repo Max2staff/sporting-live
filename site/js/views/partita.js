@@ -1,6 +1,7 @@
 import { esc, formattaData, formattaDataLunga, segnoDR } from '../util.js';
 import { timelineMarcatori, formazioniAffiancate, slugGiocatore } from '../tabellino.js';
 import { stemmaHTML } from '../stemma.js';
+import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { stellaHTML, collegaStelle, card, vuoto, heroHTML, squadraDa } from './comuni.js';
 
@@ -14,23 +15,35 @@ const numero = (g) => g && g.numero != null ? g.numero : '';
 const nomeLink = (t, sq, nome) => (t.formazioni || []).some(f => f.squadraId === sq && f.nome === nome)
   ? `<a href="#/giocatore/${slugGiocatore(sq, nome)}">${esc(nome)}</a>` : `<span>${esc(nome)}</span>`;
 
-function precedenti(p) {
+// Link a una partita dei precedenti: d'archivio -> `#/a/<ed>/partita/<id>`; della stagione corrente -> `#/partita/<id>`
+// (da archivio resta senza prefisso: data-no-prefisso).
+export function hrefPrecedente(q) {
+  if (q.id == null) return null;
+  return q.edizione ? `#/a/${encodeURIComponent(q.edizione)}/partita/${Number(q.id)}` : `#/partita/${Number(q.id)}`;
+}
+
+function precedenti(p, nomiEdizioni = {}) {
   const pr = p.precedenti;
   if (!pr || !(pr.partite || []).length) return '';
   const b = pr.bilancio || {};
-  const riga = (q) => `<div class="prec-riga"><span class="data">${esc(formattaData(q.data))}${q.edizione ? ` <small>${esc(q.edizione)}</small>` : ''}</span><span class="prec-ris">${esc(q.casa)} <b>${Number(q.golCasa)}-${Number(q.golOspite)}</b> ${esc(q.ospite)}</span></div>`;
+  const etich = (q) => q.edizione ? (nomiEdizioni[q.edizione] || q.edizione) : (inArchivio() ? 'Stagione in corso' : '');
+  const riga = (q) => {
+    const href = hrefPrecedente(q);
+    const corpo = `<span class="data">${esc(formattaData(q.data))}${etich(q) ? ` <small>${esc(etich(q))}</small>` : ''}</span><span class="prec-ris">${esc(q.casa)} <b>${Number(q.golCasa)}-${Number(q.golOspite)}</b> ${esc(q.ospite)}</span>`;
+    return href ? `<a class="prec-riga prec-link" href="${esc(href)}"${q.edizione ? '' : ' data-no-prefisso'}>${corpo}</a>` : `<div class="prec-riga">${corpo}</div>`;
+  };
   const vitt = (n) => `${Number(n)} ${Number(n) === 1 ? 'vittoria' : 'vittorie'}`;
   return card('Precedenti', `${pr.partite.map(riga).join('')}<p class="prec-bilancio muto">${vitt(b.casa)} ${esc(p.casa.nome)} · ${Number(b.pari)} pari · ${vitt(b.ospite)} ${esc(p.ospite.nome)}</p>`);
 }
 
-function riepilogo(p) {
+function riepilogo(p, nomi) {
   const t = p.tabellino;
-  if (!t) return vuoto(p.giocata ? 'Tabellino non ancora pubblicato.' : 'La partita non è ancora stata giocata.') + precedenti(p);
+  if (!t) return vuoto(p.giocata ? 'Tabellino non ancora pubblicato.' : 'La partita non è ancora stata giocata.') + precedenti(p, nomi);
   const tl = timelineMarcatori(t, p.casa.id);
   return `<section class="card">
     ${tl.length ? `<ul class="timeline">${tl.map(m => `<li class="${m.lato}"><span class="min">${m.minuto}'</span><span class="pallone" aria-hidden="true">⚽</span>${nomeLink(t, m.lato === 'casa' ? p.casa.id : p.ospite.id, m.nome)}</li>`).join('')}</ul>` : '<p class="muto">Nessun marcatore registrato.</p>'}
     ${t.migliore && t.migliore.squadraId != null ? `<p class="mvp"><span class="badge">★ MVP</span>${nomeLink(t, t.migliore.squadraId, t.migliore.nome)}</p>` : ''}
-  </section>${precedenti(p)}`;
+  </section>${precedenti(p, nomi)}`;
 }
 
 function formazioni(p) {
@@ -51,14 +64,15 @@ async function classifica(p, carica, indice) {
   } catch { return vuoto('Classifica non disponibile.'); }
 }
 
-export async function render({ indice, rotta, carica }) {
+export async function render({ indice, indiceCorrente, rotta, carica }) {
+  const nomiEdizioni = Object.fromEntries(((indiceCorrente || indice).edizioni || []).map(e => [e.slug, e.nome]));
   const p = await carica(`partita/${rotta.params[0]}.json`);
   if (p.id !== ultimaId) { tab = 'riepilogo'; ultimaId = p.id; }
-  dati = datiCondivisione('partita', p, indice.sito, location.href);
-  const corpo = tab === 'formazioni' ? formazioni(p) : tab === 'classifica' ? await classifica(p, carica, indice) : riepilogo(p);
+  dati = datiCondivisione('partita', p, indice.sito, location.href, inArchivio());
+  const corpo = tab === 'formazioni' ? formazioni(p) : tab === 'classifica' ? await classifica(p, carica, indice) : riepilogo(p, nomiEdizioni);
   const lato = (sq) => `<div class="lato"><a href="#/squadra/${Number(sq.id)}">${stemmaHTML(squadraDa(indice, sq.id), 72)}<span>${esc(sq.nome)}</span></a>${stellaHTML(sq.id, sq.nome)}</div>`;
   return `${heroHTML({ foto: 'campo', classe: 'hero-partita', contenuto: `
-      ${condividiHTML(!!p.giocata)}<div class="meta">${esc(p.girone.nome)} · giornata ${Number(p.giornata)} · ${esc(formattaDataLunga(p.data))}${p.ora ? ` ore ${esc(p.ora)}` : ''}${p.tavolino ? ' · <span class="badge">a tavolino</span>' : ''}</div>
+      ${condividiHTML(!!p.giocata && !inArchivio())}<div class="meta">${esc(p.girone.nome)} · giornata ${Number(p.giornata)} · ${esc(formattaDataLunga(p.data))}${p.ora ? ` ore ${esc(p.ora)}` : ''}${p.tavolino ? ' · <span class="badge">a tavolino</span>' : ''}</div>
       <div class="scontro">${lato(p.casa)}<div class="punteggio">${p.giocata ? `${p.golCasa}<i>-</i>${p.golOspite}` : `<small>${esc(p.ora || '--:--')}</small>`}</div>${lato(p.ospite)}</div>` })}
     <div class="tabs">${[['riepilogo', 'Riepilogo'], ['formazioni', 'Formazioni'], ['classifica', 'Classifica']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
     ${corpo}`;

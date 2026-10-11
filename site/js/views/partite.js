@@ -5,6 +5,7 @@ import { stemmaHTML } from '../stemma.js';
 import { TUTTI, leggiGirone, gironi } from '../contesto.js';
 import { capolista, capocannoniere, ultimaGiornata } from '../evidenza.js';
 import { rigaPartita, collegaStelle, nomeSquadra, squadraDa, card, vuoto, heroHTML } from './comuni.js';
+import { inArchivio } from '../archivio.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
 
 function selettoreGiorno(giorni, giorno, oggi, haDaDefinire) {
@@ -21,6 +22,7 @@ function selettoreGiorno(giorni, giorno, oggi, haDaDefinire) {
 }
 
 function bloccoPreferite(indice, partite, oggi) {
+  if (inArchivio()) return '';
   const pref = leggiPreferiti();
   if (!pref.length) return card('Le mie squadre', '<p class="muto">Tocca la stellina accanto a una squadra per vederla qui.</p>');
   const r = partitePreferite(indice.partite, pref, oggi);

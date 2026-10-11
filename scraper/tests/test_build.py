@@ -143,7 +143,7 @@ def test_costruisci_archivio_edizioni_e_albero():
     st = {**STAGIONI, "archivio": [ARCH, {**ARCH, "slug": "vuota", "nome": "Vuota"}]}
     edizioni, alberi = costruisci_archivio(st, {"2025-26": {1: raw_con_classifica()}, "vuota": {1: None}},
                                            {"*": {}}, adesso="2026-10-01T21:00:00")
-    assert edizioni == [{"slug": "2025-26", "nome": "Stagione 2025/26"}]
+    assert edizioni == [{"slug": "2025-26", "nome": "Stagione 2025/26", "documenti": [{"titolo": "PDF", "url": "u"}]}]
     f = alberi["2025-26"]
     assert "girone/serie-b.json" in f and "partita/1.json" in f and "squadra/10.json" in f
     ind = f["indice.json"]
@@ -162,8 +162,31 @@ def test_main_scrive_archivio_e_indice_edizioni(tmp_path):
                "--contenuti", str(tmp_path / "contenuti")])
     assert rc == 0
     ind = json.loads((tmp_path / "data" / "indice.json").read_text())
-    assert ind["edizioni"] == [{"slug": "2025-26", "nome": "Stagione 2025/26"}]
+    assert ind["edizioni"] == [{"slug": "2025-26", "nome": "Stagione 2025/26", "documenti": [{"titolo": "PDF", "url": "u"}]}]
     assert (tmp_path / "data" / "a" / "2025-26" / "indice.json").exists()
     assert (tmp_path / "data" / "a" / "2025-26" / "girone" / "serie-b.json").exists()
     assert not (tmp_path / "data" / "a" / "senza-raw").exists()
     assert not (tmp_path / "s" / "a").exists() and not (tmp_path / "cal" / "a").exists()
+
+
+def test_collega_edizioni_ancheIn_e_precedenti_cross():
+    from scraper.build import costruisci_archivio, collega_edizioni
+    st = {**STAGIONI, "archivio": [ARCH]}
+    corrente = costruisci(st, {1: raw_con_classifica()}, {"*": {}}, adesso="2026-10-01T21:00:00")
+    edizioni, alberi = costruisci_archivio(st, {"2025-26": {1: raw_con_classifica()}}, {"*": {}}, adesso="2026-10-01T21:00:00")
+    corrente["indice.json"]["edizioni"] = edizioni
+    collega_edizioni(corrente, alberi, edizioni)
+    s = corrente["squadra/10.json"]
+    assert s["ancheIn"] == [{"edizione": "2025-26", "nome": "Stagione 2025/26", "id": 10, "girone": "Serie B", "pos": 1}]
+    a = alberi["2025-26"]["squadra/10.json"]
+    assert a["ancheIn"] == [{"edizione": None, "nome": "Stagione 2026/27", "id": 10, "girone": "Serie B", "pos": 1}]
+    prec = corrente["partita/1.json"]["precedenti"]
+    # le partite dell'altra edizione compaiono con lo slug, quelle della stessa edizione no
+    assert prec["partite"] and all(r.get("edizione") == "2025-26" for r in prec["partite"])
+    assert all(r.get("edizione") == "2025-26" for r in alberi["2025-26"]["partita/1.json"]["precedenti"]["partite"] if "edizione" in r)
+    assert any("edizione" not in r for r in alberi["2025-26"]["partita/1.json"]["precedenti"]["partite"])
+    # idempotente
+    import copy
+    prima = copy.deepcopy(corrente)
+    collega_edizioni(corrente, alberi, edizioni)
+    assert corrente == prima

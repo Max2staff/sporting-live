@@ -1,6 +1,7 @@
 import { esc, formaHTML, formattaData, pallinoForma } from '../util.js';
 import { graficoAndamentoSVG } from '../grafico.js';
 import { stemmaHTML } from '../stemma.js';
+import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
 import { stellaHTML, collegaStelle, card, vuoto, heroHTML, squadraDa } from './comuni.js';
 
@@ -15,7 +16,7 @@ const ICO_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 
 function calendario(s, indice) {
   const b = baseSito(indice.sito);
-  if (!b) return '';
+  if (!b || inArchivio()) return '';   // nessun ICS per le edizioni d'archivio
   const url = `${b}cal/${Number(s.id)}.ics`;
   return `<div class="cal-riga"><a class="btn-cal" href="${esc(url.replace(/^https:\/\//, 'webcal://'))}">${ICO_CAL}<span>Aggiungi al calendario</span></a>
     <p class="muto cal-nota">Le partite si aggiornano da sole quando cambiano date e orari.<br>oppure <a href="${esc(url)}" download>scarica il file</a></p></div>`;
@@ -52,16 +53,28 @@ function statistiche(s, nSquadre) {
     ${card('Forma e serie', `<p>Ultime partite: ${formaHTML(s.forma)}</p>${st.serie ? `<p class="muto">Serie in corso: ${st.serie.n} ${({ V: 'vittorie', N: 'pareggi', P: 'sconfitte' })[st.serie.tipo]} di fila</p>` : ''}`)}`;
 }
 
+function ancheIn(s) {
+  const l = s.ancheIn || [];
+  if (!l.length) return '';
+  const voce = (x) => {
+    const href = x.edizione ? `#/a/${encodeURIComponent(x.edizione)}/squadra/${Number(x.id)}` : `#/squadra/${Number(x.id)}`;
+    const dett = [x.girone, x.pos ? `${x.pos}º` : null].filter(Boolean).join(', ');
+    return `<a class="link-tap" href="${esc(href)}"${x.edizione ? '' : ' data-no-prefisso'}>${esc(x.nome)}</a>${dett ? ` <span class="muto">(${esc(dett)})</span>` : ''}`;
+  };
+  return `<p class="anche-in"><b>Anche in:</b> ${l.map(voce).join(' · ')}</p>`;
+}
+
 export async function render({ indice, rotta, carica }) {
   const s = await carica(`squadra/${rotta.params[0]}.json`);
   if (s.id !== ultimaId) { tab = 'risultati'; ultimaId = s.id; }
-  dati = datiCondivisione('squadra', s, indice.sito, location.href);
+  dati = datiCondivisione('squadra', s, indice.sito, location.href, inArchivio());
   const corpo = tab === 'rosa' ? rosa(s) : tab === 'statistiche' ? statistiche(s, (indice.squadre || []).filter(q => q.girone === s.girone.slug && String(q.nome).trim().toUpperCase() !== 'RIPOSO').length) : risultati(s, indice);
   return `${heroHTML({ foto: 'campo', classe: 'hero-squadra-box', contenuto: `
       <div class="hero-squadra">${stemmaHTML({ id: s.id, nome: s.nome, stemma: s.stemma }, 72)}
         <div><h1>${esc(s.nome)}</h1><p class="sotto"><a href="#/classifiche/${esc(s.girone.slug)}">${esc(s.girone.nome)}</a>${s.pos ? ` · ${s.pos}º posto · ${s.riga.pt} pt` : ''}</p>
         <p class="sotto">${formaHTML(s.forma)}</p></div>
         ${condividiHTML()}${stellaHTML(s.id, s.nome)}</div>` })}
+    ${ancheIn(s)}
     <div class="tabs">${[['risultati', 'Risultati'], ['rosa', 'Rosa'], ['statistiche', 'Statistiche']].map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'attivo' : ''}">${l}</button>`).join('')}</div>
     ${corpo}`;
 }

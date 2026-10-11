@@ -31,3 +31,10 @@ test('classifica, squadra, giocatore', () => {
   const g = datiCondivisione('giocatore', { nome: 'ROSSI M.', squadra: 'ALFA', girone: { nome: 'Serie B' } }, SITO, '#/g');
   assert.match(g.testo, /ROSSI M\./); assert.match(g.testo, /Serie B/);
 });
+
+test('partita giocata in archivio: nessun URL s/p ne immagine, si condivide l app', () => {
+  const d = datiCondivisione('partita', giocata, SITO, 'https://app/#/a/2025-26/partita/14627', true);
+  assert.equal(d.url, 'https://app/#/a/2025-26/partita/14627');
+  assert.equal(d.immagine, undefined);
+  assert.equal(d.titolo, 'ALFA 2-1 BETA');
+});

@@ -1,9 +1,11 @@
 import { esc } from '../util.js';
 import { stemmaHTML } from '../stemma.js';
 import { èPreferita, togglePreferito } from '../preferiti.js';
+import { inArchivio } from '../archivio.js';
 
 export const iconaStella = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.7 5.9 21.1l1.4-6.8L2.2 9.6l6.9-.8z"/></svg>';
-export const stellaHTML = (id, nome, attiva = èPreferita(id)) => `<button class="stella ${attiva ? 'attiva' : ''}" data-squadra="${id}" aria-label="Preferita: ${esc(nome)}" aria-pressed="${attiva}">${iconaStella}</button>`;
+// In archivio le stelline non si mostrano: i preferiti valgono solo per la stagione corrente.
+export const stellaHTML = (id, nome, attiva = èPreferita(id)) => inArchivio() ? '' : `<button class="stella ${attiva ? 'attiva' : ''}" data-squadra="${id}" aria-label="Preferita: ${esc(nome)}" aria-pressed="${attiva}">${iconaStella}</button>`;
 export function collegaStelle(root, onToggle) {
   root.querySelectorAll('.stella[data-squadra]').forEach(b => {
     b.onclick = (e) => { e.preventDefault(); e.stopPropagation(); togglePreferito(b.dataset.squadra); onToggle(); };

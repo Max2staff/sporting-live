@@ -37,14 +37,15 @@ function testata(idx, ed) {
   // In archivio il marchio resta nell'edizione; la ricerca va sempre alla stagione corrente (nessun prefisso).
   return `<header class="testa">
     <a href="${prefissaHash('#/partite', ed)}" class="marchio"><img src="icons/icon.svg" alt="" width="32" height="32"><span>Sporting <b>Live</b></span></a>
-    <div class="testa-dx"><div class="agg">${esc(etichetta)} · agg. ${formattaOra(idx.generato)}${stale ? '<br><span class="stale">dati parziali</span>' : ''}</div>
+    <div class="testa-dx"><div class="agg"><span>${esc(etichetta)}</span><span>agg. ${formattaOra(idx.generato)}</span>${stale ? '<span class="stale">dati parziali</span>' : ''}</div>
     <a href="#/cerca" data-no-prefisso class="icona-cerca" aria-label="Cerca${ed ? ' (stagione in corso)' : ''}">${icona('M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z M21 21l-4.3-4.3')}</a></div>
   </header>${fascia}`;
 }
 
 // Quinta voce solo se ci sono offerte valide, e solo nella stagione corrente (le offerte non hanno archivio).
 const tabAttive = (ed) => (!ed && vantaggi.offerte.length ? [...TAB, TAB_VANTAGGI] : TAB);
-const caricaVantaggi = async () => { try { const v = await caricaJSON('vantaggi.json'); vantaggi = { offerte: Array.isArray(v && v.offerte) ? v.offerte : [] }; } catch { vantaggi = { offerte: [] }; } };
+// Se il refresh fallisce restano le offerte già caricate (vantaggi parte da [] all'avvio).
+const caricaVantaggi = async () => { try { const v = await caricaJSON('vantaggi.json'); vantaggi = { offerte: (Array.isArray(v && v.offerte) ? v.offerte : []).filter(o => o && typeof o === 'object') }; } catch { /* tiene le precedenti */ } };
 
 let osservatore = null;
 // Riscrive i link `#/…` di <main> (anche quelli che le viste ridisegnano da sole dopo un tocco).
@@ -60,6 +61,7 @@ const erroreHTML = (ed) => `<p class="vuoto">Dati non disponibili${navigator.onL
 
 export async function render() {
   const id = ++renderId;
+  if (osservatore) { osservatore.disconnect(); osservatore = null; }
   const rotta = analizza(location.hash);
   let ed = rotta.edizione;
   if (ed && !(indice.edizioni || []).some(e => e.slug === ed)) {

@@ -60,3 +60,10 @@ test('prefissaLink su elemento DOM', () => {
   assert.equal(a1.v, '#/a/e1/squadra/2');
   assert.equal(a2.v, '#/a/x/squadra/2');
 });
+
+test('prefissaLink su html: non tocca data-href né attributi simili', () => {
+  const r = prefissaLink('<a data-href="#/x" href="#/y">a</a><a data-href="#/z">b</a>', 'e1');
+  assert.match(r, /data-href="#\/x"/);
+  assert.match(r, / href="#\/a\/e1\/y"/);
+  assert.match(r, /data-href="#\/z"/);
+});

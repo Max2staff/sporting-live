@@ -25,7 +25,7 @@ export function prefissaLink(x, edizione) {
   if (!edizione) return x;
   if (typeof x === 'string') {
     return x.replace(/<a\b[^>]*>/g, (tag) => /\bdata-no-prefisso\b/.test(tag)
-      ? tag : tag.replace(/(\bhref=)(["'])(#\/[^"']*)\2/, (_, h, q, v) => `${h}${q}${prefissaHash(v, edizione)}${q}`));
+      ? tag : tag.replace(/(\shref=)(["'])(#\/[^"']*)\2/, (_, h, q, v) => `${h}${q}${prefissaHash(v, edizione)}${q}`));
   }
   x.querySelectorAll('a[href^="#/"]:not([data-no-prefisso])').forEach(a => { a.setAttribute('href', prefissaHash(a.getAttribute('href'), edizione)); });
   return x;

@@ -1,4 +1,4 @@
-const VERSIONE = 'sl-3';   // incrementare a ogni rilascio di codice (non di dati)
+const VERSIONE = 'sl-4';   // incrementare a ogni rilascio di codice (non di dati)
 const SHELL = ['./', 'index.html', 'css/app.css', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png',
   'js/app.js', 'js/router.js', 'js/archivio.js', 'js/data.js', 'js/util.js', 'js/tema.js', 'js/giorni.js', 'js/preferiti.js', 'js/tabellino.js', 'js/grafico.js',
   'js/views/comuni.js', 'js/views/partite.js', 'js/views/partita.js', 'js/views/classifiche.js', 'js/views/squadra.js',
@@ -15,6 +15,7 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
+  if (/\/(cal|s)\//.test(url.pathname)) return;   // calendari e immagini di condivisione: sempre dalla rete, mai in cache
   if (url.pathname.includes('/data/')) {
     // dati: rete prima (senza cache HTTP), cache solo di risposte buone, cache se offline
     e.respondWith(fetch(e.request, { cache: 'no-cache' }).then(r => {

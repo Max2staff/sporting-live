@@ -219,7 +219,9 @@ def immagine_risultato(partita: dict, stemmi_dir: Path | None = None) -> bytes:
 def _hash(partita: dict, stemmi_dir: Path | None) -> str:
     vero = [int(s["id"]) for s in (partita["casa"], partita["ospite"])
             if stemmi_dir is not None and (stemmi_dir / f"{int(s['id'])}.png").is_file()]
-    blob = json.dumps([VERSIONE_LAYOUT, partita, vero], sort_keys=True, ensure_ascii=False)
+    # `precedenti` non compare nell'immagine: ignorarlo evita di rigenerare tutte le immagini quando cambia
+    base = {k: v for k, v in partita.items() if k != "precedenti"}
+    blob = json.dumps([VERSIONE_LAYOUT, base, vero], sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(blob.encode("utf-8")).hexdigest()[:16]
 
 

@@ -1,8 +1,8 @@
-import { esc, formattaDataLunga, segnoDR } from '../util.js';
+import { esc, formattaData, formattaDataLunga, segnoDR } from '../util.js';
 import { timelineMarcatori, formazioniAffiancate, slugGiocatore } from '../tabellino.js';
 import { stemmaHTML } from '../stemma.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
-import { stellaHTML, collegaStelle, vuoto, heroHTML, squadraDa } from './comuni.js';
+import { stellaHTML, collegaStelle, card, vuoto, heroHTML, squadraDa } from './comuni.js';
 
 let tab = 'riepilogo';
 let ultimaId = null;
@@ -14,14 +14,22 @@ const numero = (g) => g && g.numero != null ? g.numero : '';
 const nomeLink = (t, sq, nome) => (t.formazioni || []).some(f => f.squadraId === sq && f.nome === nome)
   ? `<a href="#/giocatore/${slugGiocatore(sq, nome)}">${esc(nome)}</a>` : `<span>${esc(nome)}</span>`;
 
+function precedenti(p) {
+  const pr = p.precedenti;
+  if (!pr || !(pr.partite || []).length) return '';
+  const b = pr.bilancio || {};
+  const riga = (q) => `<div class="prec-riga"><span class="data">${esc(formattaData(q.data))}${q.edizione ? ` <small>${esc(q.edizione)}</small>` : ''}</span><span class="prec-ris">${esc(q.casa)} <b>${Number(q.golCasa)}-${Number(q.golOspite)}</b> ${esc(q.ospite)}</span></div>`;
+  return card('Precedenti', `${pr.partite.map(riga).join('')}<p class="prec-bilancio muto">${Number(b.casa)} vittorie ${esc(p.casa.nome)} · ${Number(b.pari)} pari · ${Number(b.ospite)} vittorie ${esc(p.ospite.nome)}</p>`);
+}
+
 function riepilogo(p) {
   const t = p.tabellino;
-  if (!t) return vuoto(p.giocata ? 'Tabellino non ancora pubblicato.' : 'La partita non è ancora stata giocata.');
+  if (!t) return vuoto(p.giocata ? 'Tabellino non ancora pubblicato.' : 'La partita non è ancora stata giocata.') + precedenti(p);
   const tl = timelineMarcatori(t, p.casa.id);
   return `<section class="card">
     ${tl.length ? `<ul class="timeline">${tl.map(m => `<li class="${m.lato}"><span class="min">${m.minuto}'</span><span class="pallone" aria-hidden="true">⚽</span>${nomeLink(t, m.lato === 'casa' ? p.casa.id : p.ospite.id, m.nome)}</li>`).join('')}</ul>` : '<p class="muto">Nessun marcatore registrato.</p>'}
     ${t.migliore && t.migliore.squadraId != null ? `<p class="mvp"><span class="badge">★ MVP</span>${nomeLink(t, t.migliore.squadraId, t.migliore.nome)}</p>` : ''}
-  </section>`;
+  </section>${precedenti(p)}`;
 }
 
 function formazioni(p) {

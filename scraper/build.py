@@ -9,6 +9,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import config
+from .andamento import andamento, precedenti
 from .alias import applica_alias, carica_alias
 from .condivisione import scrivi_condivisione
 from .ics import scrivi_calendari
@@ -35,6 +36,7 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
         return img_dir is not None and (img_dir / sotto / nome).exists()
 
     files: dict[str, object] = {}
+    tutte: list[dict] = []
     cerca: dict[str, list] = {"squadre": [], "giocatori": []}
     indice = {"stagione": stagioni["stagione"], "generato": adesso, "campionati": [], "squadre": [], "partite": [],
                "sito": config.SITO_URL, "config": contenuti.get("config") or {}, "edizioni": []}
@@ -70,6 +72,10 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
                     "ospite": {"id": p["ospiteId"], "nome": nome(p["ospiteId"])},
                     "golCasa": p["golCasa"], "golOspite": p["golOspite"], "giocata": p["giocata"],
                     "tavolino": p["tavolino"], "tabellino": raw["tabellini"].get(str(p["id"]))}
+            tutte += [{"id": p["id"], "data": p["data"], "casa": nome(p["casaId"]), "ospite": nome(p["ospiteId"]),
+                       "golCasa": p["golCasa"], "golOspite": p["golOspite"], "giocata": p["giocata"]}
+                      for p in raw["partite"]]
+            serie = andamento(raw["partite"], raw["squadre"])
             righe = {r["squadraId"]: r for r in raw["classifica"]["totale"]}
             for s in raw["squadre"]:
                 riga = righe.get(s["id"])
@@ -77,7 +83,7 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
                     "id": s["id"], "nome": s["nome"], "girone": ginfo,
                     "stemma": ha("stemmi", f"{s['id']}.png"), "foto": ha("squadre", f"{s['id']}.jpg"), "pos": riga["pos"] if riga else None,
                     "riga": {k: riga[k] for k in ("pt", "g", "v", "n", "p", "gf", "gs", "dr")} if riga else None,
-                    "stat": stat_squadra(raw, s["id"]), "forma": forma(raw, s["id"]),
+                    "stat": stat_squadra(raw, s["id"]), "andamento": serie.get(s["id"], []), "forma": forma(raw, s["id"]),
                     "partite": [{**p, "avversario": nome(p["avversarioId"])} for p in partite_squadra(raw, s["id"])],
                     "rosa": [{k: v for k, v in gi.items() if k != "perPartita"} for gi in lista if gi["squadraId"] == s["id"]]}
             for gi in lista:
@@ -88,6 +94,11 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             indice["campionati"].append(camp)
     if not indice["campionati"]:
         raise BuildError("nessun girone con classifica: indice vuoto, output precedente mantenuto")
+    for k, v in files.items():
+        if k.startswith("partita/"):
+            prec = precedenti(v, tutte)
+            if prec["partite"]:
+                v["precedenti"] = prec
     indice["generato"] = max(g["aggiornato"] for c in indice["campionati"] for g in c["gironi"])
     files["indice.json"] = indice
     files["cerca.json"] = cerca

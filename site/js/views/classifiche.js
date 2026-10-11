@@ -55,7 +55,7 @@ async function statisticheHTML(g) {
     ${svgM ? card('Corsa marcatori', `<div class="corsa">${svgM}${legendaHTML(m.serie)}</div><p class="muto grafico-nota">Gol segnati, giornata per giornata</p>`) : ''}`;
 }
 
-export async function render({ indice, rotta, carica }) {
+export async function render({ indice, rotta, carica, oggi }) {
   const lista = gironi(indice);
   if (!lista.length) return vuoto('Nessun campionato in corso.');
   const { mostrato: slug, salva } = risolviGirone(indice, rotta.params[0]);
@@ -65,7 +65,7 @@ export async function render({ indice, rotta, carica }) {
   dati = datiCondivisione('classifica', { nome: g.nome }, indice.sito, location.href, inArchivio());
   const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
   const titolo = { classifica: 'Classifica', calendario: 'Calendario', statistiche: 'Statistiche' }[scheda];
-  const corpo = scheda === 'calendario' ? calendarioHTML(g, indice, rotta.params[2])
+  const corpo = scheda === 'calendario' ? calendarioHTML(g, indice, rotta.params[2], oggi)
     : scheda === 'statistiche' ? await statisticheHTML(g, indice) : tabellaHTML(g, indice);
   return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
       <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>

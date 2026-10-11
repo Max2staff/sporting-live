@@ -4,11 +4,16 @@ const intera = (g) => Number.isInteger(g);
 
 export const giornate = (partite) => [...new Set((partite || []).map(p => p.giornata).filter(intera))].sort((a, b) => a - b);
 
-// Prima giornata con almeno una partita da giocare; se sono tutte giocate, l'ultima.
-export function giornataIniziale(partite) {
+// Prima giornata con una partita ancora da giocare (con `oggi`: da oggi in poi, così un rinvio non blocca
+// il calendario); altrimenti l'ultima giornata con partite giocate, o la prima se non si è ancora giocato.
+export function giornataIniziale(partite, oggi) {
   const gg = giornate(partite);
   if (!gg.length) return null;
-  return gg.find(g => partite.some(p => p.giornata === g && !p.giocata)) ?? gg[gg.length - 1];
+  const prossima = (p) => !p.giocata && (!oggi || (p.data && p.data >= oggi));
+  const f = gg.find(g => partite.some(p => p.giornata === g && prossima(p)));
+  if (f !== undefined) return f;
+  const giocate = gg.filter(g => partite.some(p => p.giornata === g && p.giocata));
+  return giocate.length ? giocate[giocate.length - 1] : gg[0];
 }
 
 const chiave = (p) => `${p.data || '9999-99-99'} ${p.ora || '99:99'}`;

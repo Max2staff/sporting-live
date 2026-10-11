@@ -41,9 +41,9 @@ export async function render({ indice, rotta }) {
 }
 
 export function dopo(ctx, root) {
-  root.querySelectorAll('[data-fine]').forEach(el => { el.onclick = (e) => { e.preventDefault(); segnaIntroVista(); location.replace('#/partite'); }; });
-  root.querySelectorAll('[data-avanti]').forEach(el => { el.onclick = (e) => { e.preventDefault(); location.replace(el.getAttribute('href')); }; });
-  root.querySelectorAll('[data-girone]').forEach(b => { b.onclick = () => { impostaGirone(b.dataset.girone, ctx.indice); location.replace('#/intro/3'); }; });
+  root.querySelectorAll('[data-fine]').forEach(el => { el.onclick = (e) => { e.preventDefault(); segnaIntroVista(); ctx.sostituisci('#/partite'); }; });
+  root.querySelectorAll('[data-avanti]').forEach(el => { el.onclick = (e) => { e.preventDefault(); ctx.sostituisci(el.getAttribute('href')); }; });
+  root.querySelectorAll('[data-girone]').forEach(b => { b.onclick = () => { impostaGirone(b.dataset.girone, ctx.indice); ctx.sostituisci('#/intro/3'); }; });
   root.querySelectorAll('.squadra-scelta').forEach(b => {
     b.onclick = () => { togglePreferito(b.dataset.squadra); b.setAttribute('aria-pressed', String(èPreferita(b.dataset.squadra))); };
   });

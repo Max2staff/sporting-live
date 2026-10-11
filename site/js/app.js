@@ -62,6 +62,12 @@ function tieniPrefisso(main, ed) {
   osservatore.observe(main, { childList: true, subtree: true });
 }
 
+// Reindirizzamento che sostituisce la voce corrente: tiene il suo passo (location.replace la farebbe sembrare nuova).
+function sostituisci(h) {
+  history.replaceState({ sl: passoDa(history.state, ultimoPasso) }, '', h);
+  render();
+}
+
 const erroreHTML = (ed) => `<p class="vuoto">Dati non disponibili${navigator.onLine ? '' : ' (sei offline)'}. ${ed ? '<a href="#/partite" data-no-prefisso>Torna alla stagione in corso</a>' : '<a href="#/partite">Torna alle partite</a>'}</p>`;
 
 export async function render() {
@@ -78,9 +84,9 @@ export async function render() {
     window.scrollTo(0, 0);
     return;
   }
-  if (ed && rotta.vista === 'intro') { location.replace(prefissaHash('#/partite', ed)); return; }
-  if (ed && rotta.vista === 'vantaggi') { location.replace('#/vantaggi'); return; }
-  if (ed && rotta.vista === 'cerca') { location.replace('#/cerca' + (rotta.params[0] ? `/${encodeURIComponent(rotta.params[0])}` : '')); return; }
+  if (ed && rotta.vista === 'intro') { sostituisci(prefissaHash('#/partite', ed)); return; }
+  if (ed && rotta.vista === 'vantaggi') { sostituisci('#/vantaggi'); return; }
+  if (ed && rotta.vista === 'cerca') { sostituisci('#/cerca' + (rotta.params[0] ? `/${encodeURIComponent(rotta.params[0])}` : '')); return; }
   impostaArchivio(ed);
   if (ed !== ultimaEdizione) { azzeraSceltaArchivio(); ultimaEdizione = ed; }
   const stato = history.state && typeof history.state === 'object' ? history.state : {};
@@ -88,6 +94,7 @@ export async function render() {
   ultimoPasso = passo;
   ultimoHash = location.hash;
   datiMadre = null;
+  history.replaceState({ ...stato, sl: passo }, '');   // subito: un tocco durante il caricamento non deve perdere il passo
   let idx = indice;
   if (ed) {
     try { idx = await caricaIndice(ed); } catch (e) {
@@ -104,10 +111,11 @@ export async function render() {
   const ctx = { vantaggi, indice: idx, indiceCorrente: indice, rotta, oggi: oggiISO(), naviga: (h) => { location.hash = prefissaHash(h, ed); },
     prefissa: (h) => prefissaHash(h, ed), carica: (rel) => caricaJSON(rel, base),
     madre: (d) => { datiMadre = d; },
-    nuovoPasso: () => { history.pushState(null, '', location.hash); render(); } };
+    nuovoPasso: () => { history.pushState(null, '', location.hash); render(); },
+    sostituisci };
   const vista = VISTE[rotta.vista];
   const attiva = SEZIONE[rotta.vista] || rotta.vista;
-  if (rotta.vista === 'intro' && !introDaMostrare()) { location.replace('#/partite'); return; }
+  if (rotta.vista === 'intro' && !introDaMostrare()) { sostituisci('#/partite'); return; }
   if (rotta.vista === 'intro') {
     document.body.classList.add('intro');
     app.innerHTML = '<main class="intro-main"></main>';
@@ -132,7 +140,7 @@ export async function render() {
   const btnIndietro = app.querySelector('[data-indietro]');
   if (btnIndietro) btnIndietro.onclick = () => {
     if (passo > 0) { history.back(); return; }
-    location.replace(prefissaHash(madre(rotta.vista, datiMadre) || '#/partite', ed));
+    sostituisci(prefissaHash(madre(rotta.vista, datiMadre) || '#/partite', ed));
   };
   const main = app.querySelector('main');
   tieniPrefisso(main, ed);

@@ -4,13 +4,13 @@ import { squadraReale } from '../evidenza.js';
 import { rigaPartita, vuoto, nomeSquadra } from './comuni.js';
 
 // Scheda "Calendario" del girone: una giornata alla volta, frecce e menu a tendina.
-export function calendarioHTML(g, indice, param) {
+export function calendarioHTML(g, indice, param, oggi) {
   const { partite: tutte, riposa } = separaRiposo(g.partite, (g.squadre || []).filter(s => !squadraReale(s)).map(s => s.id));
   const gg = giornate(tutte);
   const extra = senzaGiornata(tutte);
   const voci = [...gg.map(String), ...(extra.length ? [DA_DEFINIRE_G] : [])];
   if (!voci.length) return vuoto('Calendario non ancora pubblicato.');
-  const scelto = voci.includes(String(param)) ? String(param) : String(giornataIniziale(tutte) ?? voci[0]);
+  const scelto = voci.includes(String(param)) ? String(param) : String(giornataIniziale(tutte, oggi) ?? voci[0]);
   const i = voci.indexOf(scelto);
   const base = `#/classifiche/${esc(g.slug)}/calendario/`;
   const nome = (v) => (v === DA_DEFINIRE_G ? 'Da definire' : `${v}ª giornata`);

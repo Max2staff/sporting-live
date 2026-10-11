@@ -41,7 +41,7 @@ export async function dopo({ indice, rotta, carica }, root) {
     clearTimeout(t);
     t = setTimeout(() => {
       const v = campo.value.trim();
-      history.replaceState(null, '', v ? `#/cerca/${encodeURIComponent(v)}` : '#/cerca');
+      history.replaceState(history.state, '', v ? `#/cerca/${encodeURIComponent(v)}` : '#/cerca');
     }, 150);
   });
   if (!rotta.params[0]) campo.focus();

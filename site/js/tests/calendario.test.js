@@ -39,3 +39,16 @@ test('partite contro RIPOSO: tolte dal calendario, la squadra risulta a riposo',
   assert.equal(giornataIniziale(r.partite), 1);
   assert.deepEqual(separaRiposo(l, []).partite.length, 3);
 });
+
+test('giornata iniziale con oggi: una partita rinviata non blocca il calendario', () => {
+  const l = [P(1, 1, true, '2026-09-14'), P(2, 2, false, '2026-09-21'), P(3, 2, true, '2026-09-21'),
+    P(4, 3, true, '2026-09-28'), P(5, 4, false, '2026-10-12'), P(6, 5, false, '2026-10-19')];
+  assert.equal(giornataIniziale(l, '2026-10-11'), 4);
+  assert.equal(giornataIniziale(l, '2026-10-12'), 4);
+  // stagione finita salvo un recupero mai giocato: l'ultima giornata giocata
+  assert.equal(giornataIniziale(l.slice(0, 4), '2027-05-01'), 3);
+  // recupero senza data: non conta
+  assert.equal(giornataIniziale([P(1, 1, true), P(2, 2, false, null), P(3, 2, true)], '2026-10-11'), 2);
+  // niente giocato e date future: la prima
+  assert.equal(giornataIniziale([P(1, 1, false, '2026-10-13'), P(2, 2, false, '2026-10-20')], '2026-10-11'), 1);
+});

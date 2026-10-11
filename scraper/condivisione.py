@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 from .stemma import FONT_BOLD
 
 LATO = 1080
-VERSIONE_LAYOUT = "1"          # da cambiare quando cambia il disegno: forza la rigenerazione
+VERSIONE_LAYOUT = "2"          # da cambiare quando cambia il disegno: forza la rigenerazione
 MAX_MARCATORI = 6
 _GIORNI = ["lun", "mar", "mer", "gio", "ven", "sab", "dom"]   # date.weekday()
 ARANCIO, AZZURRO = (255, 78, 0), (56, 189, 248)
@@ -223,8 +223,8 @@ def immagine_risultato(partita: dict, stemmi_dir: Path | None = None) -> bytes:
 def _hash(partita: dict, stemmi_dir: Path | None) -> str:
     vero = [int(s["id"]) for s in (partita["casa"], partita["ospite"])
             if stemmi_dir is not None and (stemmi_dir / f"{int(s['id'])}.png").is_file()]
-    # `precedenti` non compare nell'immagine: ignorarlo evita di rigenerare tutte le immagini quando cambia
-    base = {k: v for k, v in partita.items() if k != "precedenti"}
+    # `precedenti` e `confronto` non compaiono nell'immagine: ignorarli evita di rigenerare tutte le immagini quando cambiano
+    base = {k: v for k, v in partita.items() if k not in ("precedenti", "confronto")}
     blob = json.dumps([VERSIONE_LAYOUT, base, vero], sort_keys=True, ensure_ascii=False)
     return hashlib.sha256(blob.encode("utf-8")).hexdigest()[:16]
 

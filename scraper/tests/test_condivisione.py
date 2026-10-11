@@ -103,3 +103,10 @@ def test_immagine_con_logo_vero(tmp_path):
     Image.new("RGBA", (300, 300), (255, 0, 0, 255)).save(tmp_path / "10.png")
     im = Image.open(io.BytesIO(immagine_risultato(_partita(), stemmi_dir=tmp_path))).convert("RGB")
     assert any(r > 200 and g < 60 and b < 60 for r, g, b in im.getdata())
+
+
+def test_hash_ignora_confronto():
+    from scraper.condivisione import _hash
+    a, b = _partita(), _partita()
+    b["confronto"] = {"casa": {"pos": 1}, "ospite": {"pos": 2}}
+    assert _hash(a, None) == _hash(b, None)

@@ -1,5 +1,6 @@
 import copy
 import io
+import json
 import os
 import re
 
@@ -61,9 +62,28 @@ def test_stabilita(tmp_path):
     os.utime(out / "1.jpg", ns=(1, 1)); mt["1.jpg"] = 1
     assert scrivi_condivisione(copy.deepcopy(ps), out, SITO) == 0
     assert {f.name: f.stat().st_mtime_ns for f in out.glob("*.*")} == mt
+    (out / "note.txt").write_text("x"); (out / "altro.png").write_text("x")
     ps[0]["golCasa"] = 5
     assert scrivi_condivisione(ps, out, SITO) == 1
     # partita non piu' presente: file rimossi
     assert scrivi_condivisione(ps[:1], out, SITO) == 0
     assert not (out / "2.html").exists() and not (out / "2.jpg").exists()
-    assert re.search(r'"1"', (out / "manifest.json").read_text())
+    assert (out / "note.txt").exists() and (out / "altro.png").exists()
+    assert list(json.loads((out / "manifest.json").read_text())) == ["1"]
+
+
+def test_partita_malformata_non_blocca(tmp_path, capsys):
+    out = tmp_path / "p"
+    buone = [_partita(1), _partita(2, gc=0, go=0)]
+    brutta = _partita(3, gc=None, go=None)            # giocata ma senza gol
+    brutta2 = _partita(4, mar=[{"squadraId": 10, "minuto": 5}])  # marcatore senza nome
+    assert scrivi_condivisione(buone + [brutta, brutta2], out, SITO) == 2
+    assert (out / "1.jpg").exists() and (out / "2.html").exists()
+    assert "AVVISO: condivisione partita 3" in capsys.readouterr().err
+    assert sorted(json.loads((out / "manifest.json").read_text())) == ["1", "2"]
+    # la partita 1 era buona e diventa malformata: restano file e voce di manifest precedenti
+    prima = (out / "1.jpg").read_bytes()
+    rotta = _partita(1, gc=None, go=None)
+    assert scrivi_condivisione([rotta, buone[1]], out, SITO) == 0
+    assert (out / "1.jpg").read_bytes() == prima and (out / "1.html").exists()
+    assert "1" in json.loads((out / "manifest.json").read_text())

@@ -5,6 +5,7 @@ import hashlib
 import html
 import io
 import json
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -239,16 +240,31 @@ def scrivi_condivisione(partite: list[dict], out_dir: Path, sito: str, stemmi_di
     giocate = [p for p in partite if p.get("giocata")]
     nuovo, riscritte = {}, 0
     for p in giocate:
-        pid = str(int(p["id"]))
-        h = _hash(p, stemmi_dir)
-        nuovo[pid] = h
-        jpg = out_dir / f"{pid}.jpg"
-        if vecchio.get(pid) != h or not jpg.is_file():
-            jpg.write_bytes(immagine_risultato(p, stemmi_dir))
-            riscritte += 1
-        _scrivi_se_cambia(out_dir / f"{pid}.html", pagina_condivisione(p, sito).encode("utf-8"))
+        pid = str(p.get("id"))
+        try:
+            pid = str(int(p["id"]))
+            if not all(isinstance(p.get(k), int) for k in ("golCasa", "golOspite")):
+                raise ValueError("risultato mancante")
+            h = _hash(p, stemmi_dir)
+            jpg = out_dir / f"{pid}.jpg"
+            img = pagina = None
+            if vecchio.get(pid) != h or not jpg.is_file():
+                img = immagine_risultato(p, stemmi_dir)
+            pagina = pagina_condivisione(p, sito).encode("utf-8")
+            if img is not None:
+                jpg.write_bytes(img)
+                riscritte += 1
+            _scrivi_se_cambia(out_dir / f"{pid}.html", pagina)
+            nuovo[pid] = h
+        except Exception as e:  # una partita malformata non deve bloccare il build
+            print(f"AVVISO: condivisione partita {pid}: {e}", file=sys.stderr)
+            if pid in vecchio:           # tiene file e voce di manifest precedenti
+                nuovo[pid] = vecchio[pid]
+            else:
+                nuovo.setdefault(pid, None)
     for f in out_dir.iterdir():
         if f.suffix in (".html", ".jpg") and f.stem not in nuovo:
             f.unlink()
+    nuovo = {k: v for k, v in nuovo.items() if v is not None}
     _scrivi_se_cambia(mf, json.dumps(nuovo, sort_keys=True, separators=(",", ":")).encode("utf-8"))
     return riscritte

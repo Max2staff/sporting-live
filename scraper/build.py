@@ -10,6 +10,7 @@ from pathlib import Path
 
 from . import config
 from .alias import applica_alias, carica_alias
+from .condivisione import scrivi_condivisione
 from .fetch import TZ_ROMA
 from .stats import classifiche_giocatori, forma, giocatori, partite_squadra, stat_squadra
 
@@ -107,6 +108,7 @@ def main(argv=None) -> int:
     ap.add_argument("--alias", default="alias.json")
     ap.add_argument("--out", default="site/data")
     ap.add_argument("--img", default="site/img")
+    ap.add_argument("--condivisione", default="site/s/p")
     ap.add_argument("--contenuti", default="contenuti")
     a = ap.parse_args(argv)
     stagioni = json.loads(Path(a.stagioni).read_text(encoding="utf-8"))
@@ -128,6 +130,9 @@ def main(argv=None) -> int:
         return 1
     scrivi(files, Path(a.out))
     print(f"site/data: {len(files)} file, {len(files['indice.json']['partite'])} partite")
+    giocate = [v for k, v in files.items() if k.startswith("partita/") and v["giocata"]]
+    n = scrivi_condivisione(giocate, Path(a.condivisione), config.SITO_URL, Path(a.img) / "stemmi")
+    print(f"{a.condivisione}: {len(giocate)} pagine, {n} immagini riscritte")
     return 0
 
 

@@ -1,0 +1,68 @@
+{
+  "colori": [
+    {
+      "id": 1,
+      "primario": "hsl(4 68% 40%)",
+      "secondario": "hsl(179 78% 44%)",
+      "motivo": 2
+    },
+    {
+      "id": 7,
+      "primario": "hsl(6 68% 40%)",
+      "secondario": "hsl(163 78% 44%)",
+      "motivo": 1
+    },
+    {
+      "id": 2480,
+      "primario": "hsl(83 68% 30%)",
+      "secondario": "hsl(290 78% 52%)",
+      "motivo": 2
+    },
+    {
+      "id": 2532,
+      "primario": "hsl(113 68% 30%)",
+      "secondario": "hsl(259 78% 52%)",
+      "motivo": 0
+    },
+    {
+      "id": 99999,
+      "primario": "hsl(104 68% 30%)",
+      "secondario": "hsl(244 78% 52%)",
+      "motivo": 1
+    }
+  ],
+  "iniziali": [
+    {
+      "nome": "SOCKS",
+      "iniziali": "SO"
+    },
+    {
+      "nome": "F.C. BECK'S",
+      "iniziali": "BE"
+    },
+    {
+      "nome": "6 GOMME SCORZE",
+      "iniziali": "6G"
+    },
+    {
+      "nome": "EASY M&M",
+      "iniziali": "EM"
+    },
+    {
+      "nome": "IMPRESA EDILE GABRIELI",
+      "iniziali": "IE"
+    },
+    {
+      "nome": "NZ",
+      "iniziali": "NZ"
+    },
+    {
+      "nome": "S.GIORGIO",
+      "iniziali": "?"
+    },
+    {
+      "nome": "D'ESTE",
+      "iniziali": "DE"
+    }
+  ]
+}

@@ -132,3 +132,38 @@ def test_cerca_json_senza_riposo():
     c = f["cerca.json"]
     assert {s["id"] for s in c["squadre"]} == {10, 20, 30} and c["squadre"][0] == {"id": 10, "nome": "ALFA", "girone": "serie-b"}
     assert {"slug": "10-rossi-mario", "nome": "ROSSI MARIO", "squadraId": 10, "girone": "serie-b"} in c["giocatori"]
+
+
+ARCH = {"slug": "2025-26", "nome": "Stagione 2025/26", "stagione": "2025/26", "documenti": [{"titolo": "PDF", "url": "u"}],
+        "campionati": [{"id": "c8", "nome": "Calcio a 8", "gironi": [{"idgirone": 1, "nome": "Serie B", "slug": "serie-b"}]}]}
+
+
+def test_costruisci_archivio_edizioni_e_albero():
+    from scraper.build import costruisci_archivio
+    st = {**STAGIONI, "archivio": [ARCH, {**ARCH, "slug": "vuota", "nome": "Vuota"}]}
+    edizioni, alberi = costruisci_archivio(st, {"2025-26": {1: raw_con_classifica()}, "vuota": {1: None}},
+                                           {"*": {}}, adesso="2026-10-01T21:00:00")
+    assert edizioni == [{"slug": "2025-26", "nome": "Stagione 2025/26"}]
+    f = alberi["2025-26"]
+    assert "girone/serie-b.json" in f and "partita/1.json" in f and "squadra/10.json" in f
+    ind = f["indice.json"]
+    assert ind["archivio"] is True and ind["nome"] == "Stagione 2025/26" and ind["documenti"] == [{"titolo": "PDF", "url": "u"}]
+    assert "edizioni" not in ind and ind["stagione"] == "2025/26"
+
+
+def test_main_scrive_archivio_e_indice_edizioni(tmp_path):
+    (tmp_path / "raw" / "a" / "2025-26").mkdir(parents=True)
+    (tmp_path / "raw" / "1.json").write_text(json.dumps(raw_con_classifica()))
+    (tmp_path / "raw" / "a" / "2025-26" / "1.json").write_text(json.dumps(raw_con_classifica()))
+    (tmp_path / "stagioni.json").write_text(json.dumps({**STAGIONI, "archivio": [ARCH, {**ARCH, "slug": "senza-raw"}]}))
+    rc = main(["--stagioni", str(tmp_path / "stagioni.json"), "--raw", str(tmp_path / "raw"),
+               "--alias", str(tmp_path / "x.json"), "--out", str(tmp_path / "data"), "--img", str(tmp_path / "img"),
+               "--condivisione", str(tmp_path / "s"), "--cal", str(tmp_path / "cal"),
+               "--contenuti", str(tmp_path / "contenuti")])
+    assert rc == 0
+    ind = json.loads((tmp_path / "data" / "indice.json").read_text())
+    assert ind["edizioni"] == [{"slug": "2025-26", "nome": "Stagione 2025/26"}]
+    assert (tmp_path / "data" / "a" / "2025-26" / "indice.json").exists()
+    assert (tmp_path / "data" / "a" / "2025-26" / "girone" / "serie-b.json").exists()
+    assert not (tmp_path / "data" / "a" / "senza-raw").exists()
+    assert not (tmp_path / "s" / "a").exists() and not (tmp_path / "cal" / "a").exists()

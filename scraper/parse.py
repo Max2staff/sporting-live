@@ -47,6 +47,8 @@ def parse_classifica(html: str) -> list[dict]:
     tabella = None
     for t in soup.select("table"):
         intestazioni = [_txt(th) for th in t.select("tr th")]
+        if intestazioni and intestazioni[0] == "":      # alcuni tornei hanno una colonna logo iniziale
+            intestazioni = intestazioni[1:]
         if intestazioni[:2] == ["SQUADRA", "PT"]:
             tabella = t
             break
@@ -56,6 +58,8 @@ def parse_classifica(html: str) -> list[dict]:
     righe = []
     for tr in tabella.select("tr"):
         tds = tr.select("td")
+        if len(tds) == 2 + len(_COLONNE) and not _txt(tds[0]):
+            tds = tds[1:]                                 # scarta la colonna logo
         if len(tds) != 1 + len(_COLONNE):
             continue
         a = tds[0].select_one("a[href*='idsquadra=']")

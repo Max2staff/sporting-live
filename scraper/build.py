@@ -30,7 +30,7 @@ def _partita_compatta(p: dict, slug: str, raw: dict) -> dict:
 
 
 def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso: str, img_dir: Path | None = None,
-              contenuti: dict | None = None) -> dict[str, object]:
+              contenuti: dict | None = None, archivio: bool = False) -> dict[str, object]:
     contenuti = contenuti or {}
     def ha(sotto: str, nome: str) -> bool:
         return img_dir is not None and (img_dir / sotto / nome).exists()
@@ -100,8 +100,15 @@ def costruisci(stagioni: dict, raws: dict[int, dict | None], alias: dict, adesso
             if prec["partite"]:
                 v["precedenti"] = prec
     indice["generato"] = max(g["aggiornato"] for c in indice["campionati"] for g in c["gironi"])
+    if archivio:
+        indice["archivio"] = True
+        indice["nome"] = stagioni.get("nome", stagioni["stagione"])
+        indice["documenti"] = stagioni.get("documenti", [])
+        del indice["edizioni"]
     files["indice.json"] = indice
     files["cerca.json"] = cerca
+    if archivio:
+        return files
     files["documenti.json"] = contenuti.get("documenti") or {"documenti": []}
     oggi = adesso[:10]
     offerte = (contenuti.get("vantaggi") or {}).get("offerte", [])
@@ -116,6 +123,21 @@ def scrivi(files: dict[str, object], out_dir: Path) -> None:
         path = out_dir / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(obj, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
+def costruisci_archivio(stagioni: dict, raws_per_slug: dict[str, dict[int, dict | None]], alias: dict,
+                        adesso: str, img_dir: Path | None = None) -> tuple[list[dict], dict[str, dict[str, object]]]:
+    """Costruisce un albero per ogni edizione chiusa con almeno un girone leggibile.
+    Ritorna (elenco `edizioni` per l'indice principale, {slug: files})."""
+    edizioni, alberi = [], {}
+    for ed in stagioni.get("archivio", []):
+        try:
+            alberi[ed["slug"]] = costruisci(ed, raws_per_slug.get(ed["slug"], {}), alias, adesso,
+                                            img_dir=img_dir, archivio=True)
+        except BuildError:
+            continue
+        edizioni.append({"slug": ed["slug"], "nome": ed["nome"]})
+    return edizioni, alberi
 
 
 def main(argv=None) -> int:
@@ -135,6 +157,13 @@ def main(argv=None) -> int:
         for g in c["gironi"]:
             f = Path(a.raw) / f"{g['idgirone']}.json"
             raws[g["idgirone"]] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
+    raws_arch: dict[str, dict[int, dict | None]] = {}
+    for ed in stagioni.get("archivio", []):
+        raws_arch[ed["slug"]] = {}
+        for c in ed["campionati"]:
+            for g in c["gironi"]:
+                f = Path(a.raw) / "a" / ed["slug"] / f"{g['idgirone']}.json"
+                raws_arch[ed["slug"]][g["idgirone"]] = json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
     contenuti = {}
     for nome in ("config", "documenti", "vantaggi"):
         f = Path(a.contenuti) / f"{nome}.json"
@@ -147,7 +176,13 @@ def main(argv=None) -> int:
     except BuildError as e:
         print("ERRORE:", e, file=sys.stderr)
         return 1
+    alias_d = carica_alias(Path(a.alias))
+    edizioni, alberi = costruisci_archivio(stagioni, raws_arch, alias_d, adesso, img_dir=Path(a.img))
+    files["indice.json"]["edizioni"] = edizioni
     scrivi(files, Path(a.out))
+    for slug, albero in alberi.items():
+        scrivi(albero, Path(a.out) / "a" / slug)
+        print(f"{a.out}/a/{slug}: {len(albero)} file")
     print(f"site/data: {len(files)} file, {len(files['indice.json']['partite'])} partite")
     giocate = [v for k, v in files.items() if k.startswith("partita/") and v["giocata"]]
     n = scrivi_condivisione(giocate, Path(a.condivisione), config.SITO_URL, Path(a.img) / "stemmi")

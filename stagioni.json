@@ -1,14 +1,152 @@
 {
   "stagione": "2026/27",
   "campionati": [
-    {"id": "c8", "nome": "Calcio a 8", "gironi": [
-      {"idgirone": 425, "nome": "Serie A", "slug": "serie-a", "attivo": true},
-      {"idgirone": 421, "nome": "Serie B", "slug": "serie-b", "attivo": true},
-      {"idgirone": 422, "nome": "Serie C", "slug": "serie-c", "attivo": true}
-    ]},
-    {"id": "c5", "nome": "Calcio a 5", "gironi": [
-      {"idgirone": 426, "nome": "Super League", "slug": "super-league", "attivo": true}
-    ]}
+    {
+      "id": "c8",
+      "nome": "Calcio a 8",
+      "gironi": [
+        {
+          "idgirone": 425,
+          "nome": "Serie A",
+          "slug": "serie-a",
+          "attivo": true
+        },
+        {
+          "idgirone": 421,
+          "nome": "Serie B",
+          "slug": "serie-b",
+          "attivo": true
+        },
+        {
+          "idgirone": 422,
+          "nome": "Serie C",
+          "slug": "serie-c",
+          "attivo": true
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "nome": "Calcio a 5",
+      "gironi": [
+        {
+          "idgirone": 426,
+          "nome": "Super League",
+          "slug": "super-league",
+          "attivo": true
+        }
+      ]
+    }
   ],
-  "archivio": []
+  "archivio": [
+    {
+      "slug": "2025-26",
+      "nome": "Stagione 2025/26",
+      "stagione": "2025/26",
+      "campionati": [
+        {
+          "id": "c8",
+          "nome": "Calcio a 8",
+          "gironi": [
+            {
+              "idgirone": 392,
+              "nome": "Serie A",
+              "slug": "serie-a"
+            },
+            {
+              "idgirone": 388,
+              "nome": "Serie B",
+              "slug": "serie-b"
+            },
+            {
+              "idgirone": 393,
+              "nome": "Serie C",
+              "slug": "serie-c"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "nome": "Calcio a 5",
+          "gironi": [
+            {
+              "idgirone": 390,
+              "nome": "Super League",
+              "slug": "super-league"
+            }
+          ]
+        }
+      ],
+      "documenti": [
+        {
+          "titolo": "Finali play-off e play-out 2026 (calcio a 8)",
+          "url": "https://www.campionatisportingclub.it/file/fianli-paly-offout-2026-ag10.pdf"
+        },
+        {
+          "titolo": "Finali Coppa Venezia calcio a 8",
+          "url": "https://www.campionatisportingclub.it/file/finali-coppa-venezia-calcio-a-8-19.pdf"
+        },
+        {
+          "titolo": "Finali campionato calcio a 5 (Coppa Venezia)",
+          "url": "https://www.campionatisportingclub.it/file/finali-campionato-calcio-a-5-ag11.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "estate-2026",
+      "nome": "Estate 2026",
+      "stagione": "Estate 2026",
+      "campionati": [
+        {
+          "id": "c8",
+          "nome": "Trofeo World Cup 2026 (calcio a 8)",
+          "gironi": [
+            {
+              "idgirone": 404,
+              "nome": "Girone A",
+              "slug": "girone-a"
+            },
+            {
+              "idgirone": 405,
+              "nome": "Girone B",
+              "slug": "girone-b"
+            },
+            {
+              "idgirone": 406,
+              "nome": "Girone C",
+              "slug": "girone-c"
+            },
+            {
+              "idgirone": 407,
+              "nome": "Girone D",
+              "slug": "girone-d"
+            },
+            {
+              "idgirone": 408,
+              "nome": "Girone E Open",
+              "slug": "girone-e-open"
+            }
+          ]
+        }
+      ],
+      "documenti": [
+        {
+          "titolo": "Finali World Cup, Coppa Diamond",
+          "url": "https://www.campionatisportingclub.it/file/finali-di-coppa-diamond-ag5.pdf"
+        },
+        {
+          "titolo": "Finali World Cup, Coppa Gold",
+          "url": "https://www.campionatisportingclub.it/file/finali-di-coppa-gold-ag10.pdf"
+        },
+        {
+          "titolo": "Finali World Cup, Coppa Silver",
+          "url": "https://www.campionatisportingclub.it/file/finali-di-coppa-silver-ag12.pdf"
+        },
+        {
+          "titolo": "Finali Summer Cup calcio a 5",
+          "url": "https://www.campionatisportingclub.it/file/finali-summer-cup-calcio-a-5-ag7.pdf"
+        }
+      ]
+    }
+  ]
 }

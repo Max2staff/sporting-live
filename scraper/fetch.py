@@ -9,6 +9,7 @@ import argparse
 import json
 import re
 import sys
+import tempfile
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -192,6 +193,36 @@ def gironi_attivi(stagioni: dict) -> list[dict]:
     return [g for c in stagioni["campionati"] for g in c["gironi"] if g.get("attivo", True)]
 
 
+def _archivio_raw(out: Path, slug: str, idg: int) -> Path:
+    return out / "a" / slug / f"{idg}.json"
+
+
+def fetch_archivio(stagioni: dict, out: Path, fetcher: Fetcher, cache_base: Path, force: bool = False) -> int:
+    """Edizioni chiuse: un girone si legge solo se il suo raw manca. Un girone che non si legge
+    o non si interpreta viene saltato con avviso (non fa fallire il run né blocca gli altri)."""
+    letti = 0
+    for ed in stagioni.get("archivio", []):
+        for c in ed["campionati"]:
+            for g in c["gironi"]:
+                idg = g["idgirone"]
+                f_out = _archivio_raw(out, ed["slug"], idg)
+                if f_out.exists() and not force:
+                    continue
+                try:
+                    raw = raccogli_girone(fetcher, cache_base / ed["slug"] / str(idg), idg, force=force)
+                except Exception as e:  # noqa: BLE001 — salto con avviso
+                    print(f"AVVISO archivio {ed['slug']} girone {idg} ({g['nome']}) saltato: {e}", file=sys.stderr)
+                    continue
+                f_out.parent.mkdir(parents=True, exist_ok=True)
+                f_out.write_text(json.dumps(raw, ensure_ascii=False, indent=1), encoding="utf-8")
+                letti += 1
+                for e in raw["errori"]:
+                    print(f"AVVISO archivio {ed['slug']} girone {idg}: {e}", file=sys.stderr)
+                print(f"archivio {ed['slug']} girone {idg} ({g['nome']}): {len(raw['squadre'])} squadre, "
+                      f"{len(raw['partite'])} partite, {len(raw['tabellini'])} tabellini, {len(raw['errori'])} avvisi")
+    return letti
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--stagioni", default="stagioni.json")
@@ -224,6 +255,9 @@ def main(argv=None) -> int:
         if len(raw["errori"]) > 10:
             print(f"ERRORE girone {idg}: troppi avvisi, probabile cambio di struttura del sito", file=sys.stderr)
             esito = 1
+    # i tabellini d'archivio non entrano nel repo: il raw contiene già tutto, la cache HTML è temporanea
+    with tempfile.TemporaryDirectory(prefix="sl-archivio-") as tmp:
+        fetch_archivio(stagioni, out, fetcher, Path(tmp), force=a.force)
     return esito
 
 

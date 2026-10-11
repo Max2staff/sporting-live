@@ -31,3 +31,9 @@ def test_classifica_in_casa(fixture):
 def test_classifica_senza_tabella_solleva():
     with pytest.raises(ParseError):
         parse_classifica("<html><body><p>niente</p></body></html>")
+
+
+def test_classifica_con_colonna_logo_iniziale(fixture):
+    righe = parse_classifica(fixture("classifica_estate_logo.html"))
+    assert len(righe) == 8
+    assert righe[0]["nome"] == "SVEZIA" and righe[0]["squadraId"] == 2357 and righe[0]["pt"] == 17

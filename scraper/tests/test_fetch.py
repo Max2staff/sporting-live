@@ -187,3 +187,53 @@ def test_aggiornato_cambia_se_contenuto_diverso(fixture, tmp_path):
     f = Fetcher(get=lambda url: cal if "calendario.php" in url else base(url), pausa=0)
     secondo = raccogli_girone(f, tmp_path, G, precedente=prima, adesso=datetime(2026, 3, 10, 6, 0))
     assert secondo["aggiornato"] == "2026-03-10T06:00:00"
+
+
+def _stagioni_archivio(tmp_path, gironi):
+    p = tmp_path / "stagioni.json"
+    p.write_text(json.dumps({"stagione": "x", "campionati": [], "archivio": [
+        {"slug": "ed", "nome": "Ed", "stagione": "e", "campionati": [
+            {"id": "c", "nome": "C", "gironi": [{"idgirone": i, "nome": f"G{i}", "slug": f"g{i}"} for i in gironi]}],
+         "documenti": []}]}))
+    return p
+
+
+def test_archivio_raw_presente_non_genera_richieste(fixture, tmp_path, monkeypatch):
+    from scraper import fetch
+    p = _stagioni_archivio(tmp_path, [390])
+    (tmp_path / "raw" / "a" / "ed").mkdir(parents=True)
+    (tmp_path / "raw" / "a" / "ed" / "390.json").write_text("{}")
+    f = Fetcher(get=fake_get_factory(fixture), pausa=0)
+    monkeypatch.setattr(fetch, "Fetcher", lambda: f)
+    assert fetch.main(["--stagioni", str(p), "--out", str(tmp_path / "raw"), "--cache", str(tmp_path / "cache")]) == 0
+    assert f.log == []
+
+
+def test_archivio_senza_raw_scrive_e_non_sporca_la_cache(fixture, tmp_path, monkeypatch):
+    from scraper import fetch
+    p = _stagioni_archivio(tmp_path, [390])
+    f = Fetcher(get=fake_get_factory(fixture), pausa=0)
+    monkeypatch.setattr(fetch, "Fetcher", lambda: f)
+    assert fetch.main(["--stagioni", str(p), "--out", str(tmp_path / "raw"), "--cache", str(tmp_path / "cache")]) == 0
+    raw = json.loads((tmp_path / "raw" / "a" / "ed" / "390.json").read_text())
+    assert raw["idgirone"] == 390 and len(raw["partite"]) == 90 and f.log
+    assert not (tmp_path / "cache").exists() and not (tmp_path / "raw" / "390.json").exists()
+    n = len(f.log)
+    assert fetch.main(["--stagioni", str(p), "--out", str(tmp_path / "raw"), "--cache", str(tmp_path / "cache")]) == 0
+    assert len(f.log) == n
+
+
+def test_archivio_girone_che_non_si_legge_viene_saltato(fixture, tmp_path, monkeypatch, capsys):
+    from scraper import fetch
+    p = _stagioni_archivio(tmp_path, [7, 390])
+    base = fake_get_factory(fixture)
+
+    def get(url):
+        if "idgirone=7" in url:
+            return "<html>niente</html>"
+        return base(url)
+    monkeypatch.setattr(fetch, "Fetcher", lambda: Fetcher(get=get, pausa=0))
+    assert fetch.main(["--stagioni", str(p), "--out", str(tmp_path / "raw"), "--cache", str(tmp_path / "cache")]) == 0
+    assert not (tmp_path / "raw" / "a" / "ed" / "7.json").exists()
+    assert (tmp_path / "raw" / "a" / "ed" / "390.json").exists()
+    assert "saltato" in capsys.readouterr().err

@@ -241,8 +241,6 @@ img.stemma { object-fit: contain; border-radius: 6px; }
 .sq-sotto { display: block; color: var(--muto); font-size: .72rem; }
 
 /* info */
-.loghi { display: flex; gap: var(--s-4); align-items: center; margin-top: var(--s-3); }
-.loghi img { height: 76px; max-width: 42vw; object-fit: contain; width: auto; background: #fff; border-radius: var(--r-sm); padding: 4px; }
 
 /* introduzione */
 body.intro { background: #05111c; }

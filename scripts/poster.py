@@ -67,18 +67,6 @@ def sfondo() -> Image.Image:
     return tela
 
 
-def logo_chip(tela: Image.Image, src: Path, cx: int, cy: int, lato: int) -> None:
-    """Logo su riquadro bianco arrotondato (i loghi non sono pensati per il fondo nero)."""
-    chip = lato + 70
-    d = ImageDraw.Draw(tela)
-    d.rounded_rectangle((cx - chip // 2, cy - chip // 2, cx + chip // 2, cy + chip // 2), radius=56, fill=BIANCO)
-    lg = Image.open(src).convert("RGBA")
-    lg = lg.crop(lg.getchannel("A").getbbox())  # via il margine trasparente: il logo riempie il riquadro
-    k = lato / max(lg.size)
-    lg = lg.resize((round(lg.width * k), round(lg.height * k)), LANCZOS)  # thumbnail non ingrandisce
-    tela.alpha_composite(lg, (cx - lg.width // 2, cy - lg.height // 2))
-
-
 def costruisci() -> Image.Image:
     tela = sfondo()
     d = ImageDraw.Draw(tela)
@@ -120,10 +108,12 @@ def costruisci() -> Image.Image:
     centrato(d, y_u, url_vis, f_url, BIANCO)
     centrato(d, y_u + 165, "Gratis  ·  senza registrazione  ·  senza scaricare nulla", font(78), CIELO)
 
-    # loghi in basso
-    yl = A - 270
-    logo_chip(tela, IMG / "loghi" / "sporting-club-mestre.png", L // 2 - 330, yl, 330)
-    logo_chip(tela, IMG / "loghi" / "endas.png", L // 2 + 330, yl, 330)
+    # organizzatori in basso, come testo (i loghi disponibili sono a bassa risoluzione)
+    yo = A - 330
+    d.line((L // 2 - 300, yo - 60, L // 2 + 300, yo - 60), fill=ARANCIO, width=8)
+    centrato(d, yo, "Campionati organizzati da", font(70), CHIARO)
+    f_org = adatta(d, "Sporting Club Mestre  ·  Endas Venezia", L - 300, 110)
+    centrato(d, yo + 100, "Sporting Club Mestre  ·  Endas Venezia", f_org, BIANCO)
     return tela
 
 

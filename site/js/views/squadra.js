@@ -19,7 +19,8 @@ function calendario(s, indice) {
   if (!b || inArchivio()) return '';   // nessun ICS per le edizioni d'archivio
   const url = `${b}cal/${Number(s.id)}.ics`;
   return `<div class="cal-riga"><a class="btn-cal" href="${esc(url.replace(/^https:\/\//, 'webcal://'))}">${ICO_CAL}<span>Aggiungi al calendario</span></a>
-    <p class="muto cal-nota">Le partite si aggiornano da sole quando cambiano date e orari.<br>oppure <a href="${esc(url)}" download>scarica il file</a></p></div>`;
+    <p class="muto cal-nota">Le partite si aggiornano da sole quando cambiano date e orari.</p>
+    <p class="cal-alt"><a href="https://calendar.google.com/calendar/r?cid=${encodeURIComponent(url.replace(/^https:\/\//, 'webcal://'))}" target="_blank" rel="noopener">Google Calendar</a> · <a href="${esc(url)}" download>scarica il file</a></p></div>`;
 }
 
 function risultati(s, indice) {
@@ -70,7 +71,7 @@ export async function render({ indice, rotta, carica }) {
   const corpo = tab === 'rosa' ? rosa(s) : tab === 'statistiche' ? statistiche(s, (indice.squadre || []).filter(q => q.girone === s.girone.slug && String(q.nome).trim().toUpperCase() !== 'RIPOSO').length) : risultati(s, indice);
   return `${heroHTML({ foto: 'campo', classe: 'hero-squadra-box', contenuto: `
       <div class="hero-squadra">${stemmaHTML({ id: s.id, nome: s.nome, stemma: s.stemma }, 72)}
-        <div><h1>${esc(s.nome)}</h1><p class="sotto"><a href="#/classifiche/${esc(s.girone.slug)}">${esc(s.girone.nome)}</a>${s.pos ? ` · ${s.pos}º posto · ${s.riga.pt} pt` : ''}</p>
+        <div><h1>${esc(s.nome)}</h1><p class="sotto"><a href="#/classifiche/${esc(s.girone.slug)}">${esc(s.girone.nome)}</a>${s.pos ? ` · <span class="nw">${s.pos}º posto</span> · <span class="nw">${s.riga.pt} pt</span>` : ''}</p>
         <p class="sotto">${formaHTML(s.forma)}</p></div>
         ${condividiHTML()}${stellaHTML(s.id, s.nome)}</div>` })}
     ${ancheIn(s)}

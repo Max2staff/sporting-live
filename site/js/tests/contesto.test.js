@@ -111,3 +111,14 @@ test('categoria in archivio: solo in memoria, nulla nello storage', () => {
     assert.deepEqual(mem, {});
   } finally { impostaArchivio(null); delete globalThis.localStorage; _reset(); }
 });
+
+test('gironeEffettivo: con "tutti" e una categoria vale il primo girone della categoria', () => {
+  _reset();
+  assert.equal(gironeEffettivo(indice), 'serie-a');
+  impostaCategoria('c5');
+  assert.equal(gironeEffettivo(indice), 'super-league');
+  assert.deepEqual(_risolvi(indice, undefined), { mostrato: 'super-league', salva: false });
+  impostaCategoria('c8');
+  assert.equal(gironeEffettivo(indice), 'serie-a');
+  _reset();
+});

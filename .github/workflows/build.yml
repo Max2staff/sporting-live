@@ -6,7 +6,7 @@ on:
     - cron: "0 5 * * *"            # mattino: 07:00 (ora legale) / 06:00 (ora solare)
   push:
     branches: [main]
-    paths: ["stagioni.json", "alias.json", "scraper/**", "site/**", "!site/data/**", ".github/workflows/**"]
+    paths: ["stagioni.json", "alias.json", "scraper/**", "site/**", "!site/data/**", "contenuti/**", "scripts/**", ".github/workflows/**"]
   workflow_dispatch:
 
 permissions:

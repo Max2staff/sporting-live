@@ -1,10 +1,12 @@
 import { esc } from '../util.js';
-import { TUTTI, leggiGirone, impostaGirone, etichettaGirone, categorie, leggiCategoria, impostaCategoria } from '../contesto.js';
+import { TUTTI, gironeEffettivo, leggiGirone, impostaGirone, etichettaGirone, categorie, leggiCategoria, impostaCategoria } from '../contesto.js';
 
 export function barraContesto(indice, { tutti = false, mostrato } = {}) {
   const scelto = mostrato ?? leggiGirone(indice);
-  const slug = scelto === TUTTI && !tutti ? (indice.campionati[0]?.gironi[0]?.slug ?? TUTTI) : scelto;
-  return `<button class="chip-contesto" data-contesto aria-haspopup="dialog">${esc(etichettaGirone(indice, slug))}<span class="freccina" aria-hidden="true">▾</span></button>`;
+  const slug = scelto === TUTTI && !tutti ? (gironeEffettivo(indice) ?? TUTTI) : scelto;
+  const cat = scelto === TUTTI && slug === TUTTI ? categorie(indice).find(c => c.id === leggiCategoria(indice)) : null;
+  const etichetta = cat ? `${cat.nome} · tutti i gironi` : etichettaGirone(indice, slug);
+  return `<button class="chip-contesto" data-contesto aria-haspopup="dialog">${esc(etichetta)}<span class="freccina" aria-hidden="true">▾</span></button>`;
 }
 
 // Riga "Tutti · <categoria>…" generata dai campionati dell'indice; assente con un solo campionato.
@@ -16,7 +18,7 @@ export function categorieHTML(indice) {
 }
 
 export function collegaCategorie(root, onCambio) {
-  root.querySelectorAll('[data-categoria]').forEach(b => { b.onclick = () => { impostaCategoria(b.dataset.categoria); onCambio?.(b.dataset.categoria); }; });
+  root.querySelectorAll('[data-categoria]').forEach(b => { b.onclick = () => { if (b.classList.contains('attivo')) return; impostaCategoria(b.dataset.categoria); onCambio?.(b.dataset.categoria); }; });
 }
 
 export function collegaContesto(root, indice, { tutti = false, mostrato, onCambio }) {

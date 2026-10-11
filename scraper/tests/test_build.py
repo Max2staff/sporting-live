@@ -190,3 +190,16 @@ def test_collega_edizioni_ancheIn_e_precedenti_cross():
     prima = copy.deepcopy(corrente)
     collega_edizioni(corrente, alberi, edizioni)
     assert corrente == prima
+
+
+def test_pulisci_archivi_toglie_solo_le_edizioni_sparite(tmp_path):
+    from scraper.build import pulisci_archivi
+    (tmp_path / "a" / "2025-26").mkdir(parents=True)
+    (tmp_path / "a" / "vecchia" / "squadra").mkdir(parents=True)
+    (tmp_path / "a" / "vecchia" / "indice.json").write_text("{}")
+    (tmp_path / "a" / "nota.txt").write_text("resta")
+    (tmp_path / "girone").mkdir()
+    assert pulisci_archivi(tmp_path, ["2025-26"]) == ["vecchia"]
+    assert (tmp_path / "a" / "2025-26").is_dir() and not (tmp_path / "a" / "vecchia").exists()
+    assert (tmp_path / "a" / "nota.txt").exists() and (tmp_path / "girone").is_dir()
+    assert pulisci_archivi(tmp_path / "assente", []) == []

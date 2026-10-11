@@ -82,6 +82,7 @@ export async function render() {
   if (ed) {
     try { idx = await caricaIndice(ed); } catch (e) {
       if (id !== renderId) return;
+      impostaArchivio(null);
       app.innerHTML = `${testata(indice, null)}<main>${erroreHTML(false)}</main>`;
       console.error(e);
       return;

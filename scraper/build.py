@@ -125,6 +125,18 @@ def scrivi(files: dict[str, object], out_dir: Path) -> None:
         path.write_text(json.dumps(obj, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
+def pulisci_archivi(out_dir: Path, slugs) -> list[str]:
+    """Rimuove le cartelle `<out>/a/<slug>/` che non sono più un'edizione con dati. Solo cartelle dirette di `a/`."""
+    base = out_dir / "a"
+    rimosse = []
+    if base.is_dir():
+        for c in sorted(base.iterdir()):
+            if c.is_dir() and not c.is_symlink() and c.name not in set(slugs):
+                shutil.rmtree(c)
+                rimosse.append(c.name)
+    return rimosse
+
+
 def costruisci_archivio(stagioni: dict, raws_per_slug: dict[str, dict[int, dict | None]], alias: dict,
                         adesso: str, img_dir: Path | None = None) -> tuple[list[dict], dict[str, dict[str, object]]]:
     """Costruisce un albero per ogni edizione chiusa con almeno un girone leggibile.
@@ -220,6 +232,8 @@ def main(argv=None) -> int:
     files["indice.json"]["edizioni"] = edizioni
     collega_edizioni(files, alberi, edizioni)
     scrivi(files, Path(a.out))
+    for slug in pulisci_archivi(Path(a.out), alberi):
+        print(f"{a.out}/a/{slug}: edizione non più presente, rimossa")
     for slug, albero in alberi.items():
         scrivi(albero, Path(a.out) / "a" / slug)
         print(f"{a.out}/a/{slug}: {len(albero)} file")

@@ -21,5 +21,5 @@ python3 -m http.server -d "$TMP" 8089 >/dev/null 2>&1 & PID=$!
 trap 'kill $PID 2>/dev/null || true; rm -rf "$TMP"' EXIT
 for i in $(seq 1 50); do curl -s -o /dev/null http://localhost:8089/apri.html && break; sleep 0.1; done
 mkdir -p "$OUT"; NOME=$(echo "$ROTTA" | tr '/' '_')
-"$CH" --headless=new --disable-gpu --hide-scrollbars --window-size=$((LARGHEZZA>500?LARGHEZZA+20:500)),860 --virtual-time-budget=9000 --screenshot="$OUT/${NOME}-${GIRONE}-${TEMA}.png" "file://$TMP/cornice.html" 2>/dev/null || true
+"$CH" --headless=new --disable-gpu --hide-scrollbars --window-size=$((LARGHEZZA>500?LARGHEZZA+20:500)),860 --virtual-time-budget=9000 --screenshot="$OUT/${NOME}-${GIRONE}-${TEMA}.png" "http://localhost:8089/cornice.html" 2>/dev/null || true
 echo "$OUT/${NOME}-${GIRONE}-${TEMA}.png"

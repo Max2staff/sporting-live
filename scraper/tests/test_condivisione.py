@@ -87,3 +87,19 @@ def test_partita_malformata_non_blocca(tmp_path, capsys):
     assert scrivi_condivisione([rotta, buone[1]], out, SITO) == 0
     assert (out / "1.jpg").read_bytes() == prima and (out / "1.html").exists()
     assert "1" in json.loads((out / "manifest.json").read_text())
+
+
+def test_immagine_senza_stemmi_generati(monkeypatch):
+    import scraper.condivisione as c
+
+    def vietato(*a, **k):
+        raise AssertionError("niente stemmi generati nelle immagini")
+    monkeypatch.setattr(c, "disegna_stemma", vietato, raising=False)
+    for p in (_partita(), _partita(casa="A.S.D. Associazione Sportiva Dilettantistica Molto Lunga Di Mestre", ospite="X")):
+        assert len(immagine_risultato(p)) < 120_000
+
+
+def test_immagine_con_logo_vero(tmp_path):
+    Image.new("RGBA", (300, 300), (255, 0, 0, 255)).save(tmp_path / "10.png")
+    im = Image.open(io.BytesIO(immagine_risultato(_partita(), stemmi_dir=tmp_path))).convert("RGB")
+    assert any(r > 200 and g < 60 and b < 60 for r, g, b in im.getdata())

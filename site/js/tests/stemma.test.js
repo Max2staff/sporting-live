@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { iniziali, coloriStemma, stemmaHTML } from '../stemma.js';
+import { iniziali, coloriStemma, stemmaHTML, PALLINI, colorePallino } from '../stemma.js';
 
 test('iniziali', () => {
   assert.equal(iniziali('SOCKS'), 'SO');
@@ -22,15 +22,17 @@ test('colori stabili e diversi', () => {
   assert.match(coloriStemma(7).primario, /^hsl\(\d+ \d+% \d+%\)$/);
 });
 
-test('stemma generato o immagine', () => {
-  const svg = stemmaHTML({ id: 2480, nome: 'SOCKS' }, 40);
-  assert.match(svg, /^<svg class="stemma"/);
-  assert.match(svg, />SO</);
-  assert.match(svg, /aria-hidden="true"/);
+test('niente stemma generato: pallino negli elenchi, nulla nei formati grandi, logo vero se c\'è', () => {
+  const p = stemmaHTML({ id: 2480, nome: 'SOCKS' }, 24);
+  assert.match(p, /^<span class="stemma pallino" style="background:#[0-9a-f]{6}" aria-hidden="true"><\/span>$/);
+  assert.equal(p, stemmaHTML({ id: 2480, nome: 'ALTRO' }, 32));
+  assert.ok(!/<svg/.test(stemmaHTML({ id: 2480, nome: 'SOCKS' }, 24)));
+  assert.equal(stemmaHTML({ id: 2480, nome: 'SOCKS' }, 40), '');
+  assert.equal(stemmaHTML({ id: 2480, nome: 'SOCKS' }, 72), '');
   const img = stemmaHTML({ id: 2480, nome: 'SOCKS', stemma: true }, 24);
   assert.match(img, /<img class="stemma" src="img\/stemmi\/2480\.png" width="24" height="24"/);
+  assert.match(stemmaHTML({ id: 2480, nome: 'SOCKS', stemma: true }, 72), /width="72"/);
   assert.equal(stemmaHTML(null), '');
-  assert.ok(!stemmaHTML({ id: 1, nome: '<b>x</b>' }).includes('<b>'));
 });
 
 test('contrasto: tinte chiare più scure', () => {
@@ -39,4 +41,13 @@ test('contrasto: tinte chiare più scure', () => {
     const [, h, , l] = primario.match(/^hsl\((\d+) (\d+)% (\d+)%\)$/).map(Number);
     assert.ok(h >= 40 && h <= 200 ? l === 30 : l === 40, `id ${id}: ${primario}`);
   }
+});
+
+test('pallini: tavolozza di colori distinti, stabile per squadra e ben distribuita', () => {
+  assert.equal(new Set(PALLINI).size, PALLINI.length);
+  assert.ok(PALLINI.length >= 10);
+  assert.equal(colorePallino(2530), colorePallino(2530));
+  assert.ok(PALLINI.includes(colorePallino(2530)));
+  const usati = new Set(Array.from({ length: 14 }, (_, i) => colorePallino(2529 + i)));
+  assert.ok(usati.size >= 8, `solo ${usati.size} colori su 14 squadre consecutive`);
 });

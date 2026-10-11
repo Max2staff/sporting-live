@@ -423,3 +423,11 @@ a.prec-link { color: inherit; text-decoration: none; min-height: 44px; }
 .cf-barre i.cf-a { justify-self: end; } .cf-barre i.cf-b { justify-self: start; }
 .cf-barre i.meglio { background: var(--accento); }
 @keyframes gr-allarga { from { width: 0; } }
+
+/* Senza logo vero: pallino col colore della squadra */
+.stemma.pallino { width: 10px; height: 10px; border-radius: 50%; margin: 0 2px; }
+.tab .nome .stemma.pallino { margin-right: 8px; }
+.scontro .lato { font-size: 1.12rem; }
+.scontro { align-items: start; }
+.scontro .lato a { min-height: 2.8rem; justify-content: center; }
+.scontro .punteggio { min-height: 2.8rem; display: flex; align-items: center; justify-content: center; }

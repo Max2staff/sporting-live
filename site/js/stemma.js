@@ -1,5 +1,4 @@
-// Stemmi delle squadre: logo vero se presente, altrimenti scudo SVG generato in modo stabile dall'id.
-import { esc } from './util.js';
+// Stemmi delle squadre: logo vero se presente, altrimenti un pallino col colore (stabile) della squadra.
 
 const PAROLE_IGNORATE = new Set(['REAL', 'ASD', 'FC', 'AC', 'SS', 'US', 'AS', 'CALCIO', 'C5', 'C8']);
 
@@ -32,26 +31,15 @@ export function coloriStemma(id) {
   };
 }
 
-const SCUDO = 'M20 1.5 37.5 6.5V22c0 12-7.5 20-17.5 24.5C10 42 2.5 34 2.5 22V6.5Z';
-const MOTIVI = [
-  'M2 31 38 11v12L2 43Z',          // fascia diagonale
-  'M20 0h20v48H20Z',               // metà verticale
-  'M2 17 20 29 38 17v11L20 40 2 28Z', // chevron
-];
-let contatore = 0;
+// Colori ben distinguibili tra loro, leggibili su sfondo scuro e chiaro.
+export const PALLINI = ['#ef4444', '#f97316', '#eab308', '#22c55e', '#14b8a6', '#0ea5e9', '#3b82f6', '#8b5cf6', '#d946ef', '#ec4899', '#84cc16', '#a16207'];
+export const colorePallino = (id) => PALLINI[hash(id) % PALLINI.length];
 
+// Logo vero se c'è; altrimenti negli elenchi (fino a 32px) un pallino col colore della squadra, nei formati grandi niente.
 export function stemmaHTML(squadra, dim = 40) {
   if (!squadra) return '';
   const id = Number(squadra.id);
   if (squadra.stemma) return `<img class="stemma" src="img/stemmi/${id}.png" width="${dim}" height="${dim}" alt="" aria-hidden="true" loading="lazy">`;
-  const { primario, secondario, motivo } = coloriStemma(id);
-  const sigla = esc(iniziali(squadra.nome));
-  const clip = `sc${id}-${++contatore}`;
-  const larg = Math.round(dim * 40 / 48);
-  return `<svg class="stemma" viewBox="0 0 40 48" width="${larg}" height="${dim}" aria-hidden="true">`
-    + `<clipPath id="${clip}"><path d="${SCUDO}"/></clipPath>`
-    + `<g clip-path="url(#${clip})"><rect width="40" height="48" fill="${primario}"/><path d="${MOTIVI[motivo]}" fill="${secondario}"/></g>`
-    + `<path d="${SCUDO}" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.6"/>`
-    + `<text x="20" y="25" text-anchor="middle" dominant-baseline="middle" font-family="system-ui,-apple-system,sans-serif" font-weight="800" font-size="${sigla.length > 1 ? 15 : 19}" fill="#fff" stroke="rgba(0,0,0,.45)" stroke-width="2.4" paint-order="stroke">${sigla}</text>`
-    + '</svg>';
+  if (dim > 32) return '';
+  return `<span class="stemma pallino" style="background:${colorePallino(id)}" aria-hidden="true"></span>`;
 }

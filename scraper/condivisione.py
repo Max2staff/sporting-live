@@ -11,7 +11,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from .stemma import FONT_BOLD, disegna_stemma
+from .stemma import FONT_BOLD
 
 LATO = 1080
 VERSIONE_LAYOUT = "1"          # da cambiare quando cambia il disegno: forza la rigenerazione
@@ -130,7 +130,8 @@ def _sfondo() -> Image.Image:
     return im
 
 
-def _stemma(squadra: dict, px: int, stemmi_dir: Path | None) -> Image.Image:
+def _logo(squadra: dict, px: int, stemmi_dir: Path | None) -> Image.Image | None:
+    """Logo vero della squadra (img/stemmi/<id>.png), oppure None: gli stemmi generati non si usano più."""
     if stemmi_dir is not None:
         f = stemmi_dir / f"{int(squadra['id'])}.png"
         if f.is_file():
@@ -143,7 +144,7 @@ def _stemma(squadra: dict, px: int, stemmi_dir: Path | None) -> Image.Image:
                     return tela
             except OSError:
                 pass
-    return disegna_stemma(squadra, px)
+    return None
 
 
 def immagine_risultato(partita: dict, stemmi_dir: Path | None = None) -> bytes:
@@ -157,16 +158,19 @@ def immagine_risultato(partita: dict, stemmi_dir: Path | None = None) -> bytes:
     testa = f"{partita['girone']['nome']} · Giornata {partita['giornata']} · {_data_breve(partita.get('data'))}".upper()
     d.text((cx, 80), testa, font=_adatta(testa, 40, 980), fill=_GRIGIO, anchor="mm")
 
-    # stemmi
-    for sq, c in ((casa, c_casa), (osp, c_osp)):
-        st = _stemma(sq, 260, stemmi_dir)
-        im.paste(st, (c - 130, 150), st)
+    # loghi veri solo se ci sono per entrambe; altrimenti i nomi salgono in alto e il risultato sotto
+    loghi = [_logo(sq, 260, stemmi_dir) for sq in (casa, osp)]
+    con_loghi = all(loghi)
+    if con_loghi:
+        for st, c in zip(loghi, (c_casa, c_osp)):
+            im.paste(st, (c - 130, 150), st)
+    y_gol, y_tav, y_nomi = (290, 400, 462) if con_loghi else (400, 515, 150)
 
     # risultato
     gol = f"{partita['golCasa']}-{partita['golOspite']}"
-    d.text((cx, 290), gol, font=_adatta(gol, 240, 340), fill=_BIANCO, anchor="mm")
+    d.text((cx, y_gol), gol, font=_adatta(gol, 240, 340), fill=_BIANCO, anchor="mm")
     if partita.get("tavolino"):
-        d.text((cx, 400), "A TAVOLINO", font=_font(32), fill=ARANCIO, anchor="mm")
+        d.text((cx, y_tav), "A TAVOLINO", font=_font(32), fill=ARANCIO, anchor="mm")
 
     # nomi squadre
     for sq, c in ((casa, c_casa), (osp, c_osp)):
@@ -180,7 +184,7 @@ def immagine_risultato(partita: dict, stemmi_dir: Path | None = None) -> bytes:
             f = _font(38)
             righe = _a_capo(nome, f, 460)
         righe = [_taglia(r, f, 460) for r in righe]
-        y0 = 462 + (0 if len(righe) > 1 else 28)
+        y0 = y_nomi + (0 if len(righe) > 1 else 28)
         for i, r in enumerate(righe):
             d.text((c, y0 + 28 + i * 58), r, font=f, fill=_BIANCO, anchor="mm")
 

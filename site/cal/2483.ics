@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F.C. AMICONI · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14087@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260916T220000
+DTEND;TZID=Europe/Rome:20260916T230000
+SUMMARY:F.C. AMICONI 3-3 GOC FELLAS
+DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14087
+URL:https://max2staff.github.io/sporting-live/#/partita/14087
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14099@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260921T210000
+DTEND;TZID=Europe/Rome:20260921T220000
+SUMMARY:F.C. AMICONI 4-2 DESPERADOS
+DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14099
+URL:https://max2staff.github.io/sporting-live/#/partita/14099
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14111@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260928T213000
+DTEND;TZID=Europe/Rome:20260928T223000
+SUMMARY:F.C. AMICONI 3-9 F.C. PELIGROS
+DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14111
+URL:https://max2staff.github.io/sporting-live/#/partita/14111
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14133@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261008T210000
+DTEND;TZID=Europe/Rome:20261008T220000
+SUMMARY:BROCCA JUNIORS 2-10 F.C. AMICONI
+DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14133
+URL:https://max2staff.github.io/sporting-live/#/partita/14133
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14141@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261013T203000
+DTEND;TZID=Europe/Rome:20261013T213000
+SUMMARY:F.C. AMICONI - FORTITUDO HURRICANES
+DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14141
+URL:https://max2staff.github.io/sporting-live/#/partita/14141
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14163@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261022T220000
+DTEND;TZID=Europe/Rome:20261022T230000
+SUMMARY:SEI RESTAURI - F.C. AMICONI
+DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14163
+URL:https://max2staff.github.io/sporting-live/#/partita/14163
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14167@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261027T203000
+DTEND;TZID=Europe/Rome:20261027T213000
+SUMMARY:F.C. AMICONI - REAL GNECA MIAMI
+DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14167
+URL:https://max2staff.github.io/sporting-live/#/partita/14167
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14189@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261104T213000
+DTEND;TZID=Europe/Rome:20261104T223000
+SUMMARY:SOCKS - F.C. AMICONI
+DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14189
+URL:https://max2staff.github.io/sporting-live/#/partita/14189
+END:VEVENT
+END:VCALENDAR

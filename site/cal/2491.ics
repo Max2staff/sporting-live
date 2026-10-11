@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:U.S. TRIVIGNANO · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14273@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260916T213000
+DTEND;TZID=Europe/Rome:20260916T223000
+SUMMARY:F.C. SPORTLIFE 3-3 U.S. TRIVIGNANO
+DESCRIPTION:Serie C · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14273
+URL:https://max2staff.github.io/sporting-live/#/partita/14273
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14279@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260921T203000
+DTEND;TZID=Europe/Rome:20260921T213000
+SUMMARY:U.S. TRIVIGNANO 1-5 DEPORTIVO VIBORA
+DESCRIPTION:Serie C · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14279
+URL:https://max2staff.github.io/sporting-live/#/partita/14279
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14301@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260930T200000
+DTEND;TZID=Europe/Rome:20260930T210000
+SUMMARY:F.C. ETTANERA 7-2 U.S. TRIVIGNANO
+DESCRIPTION:Serie C · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14301
+URL:https://max2staff.github.io/sporting-live/#/partita/14301
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14315@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261007T203000
+DTEND;TZID=Europe/Rome:20261007T213000
+SUMMARY:U.S. TRIVIGNANO 4-1 BEVERLYAMARONE
+DESCRIPTION:Serie C · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14315
+URL:https://max2staff.github.io/sporting-live/#/partita/14315
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14325@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261014T213000
+DTEND;TZID=Europe/Rome:20261014T223000
+SUMMARY:DIERRE VENETO - U.S. TRIVIGNANO
+DESCRIPTION:Serie C · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14325
+URL:https://max2staff.github.io/sporting-live/#/partita/14325
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14335@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261019T213000
+DTEND;TZID=Europe/Rome:20261019T223000
+SUMMARY:U.S. TRIVIGNANO - BUZ BEKISTAN
+DESCRIPTION:Serie C · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14335
+URL:https://max2staff.github.io/sporting-live/#/partita/14335
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14361@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261029T210000
+DTEND;TZID=Europe/Rome:20261029T220000
+SUMMARY:FACILE - U.S. TRIVIGNANO
+DESCRIPTION:Serie C · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14361
+URL:https://max2staff.github.io/sporting-live/#/partita/14361
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14363@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261102T203000
+DTEND;TZID=Europe/Rome:20261102T213000
+SUMMARY:U.S. TRIVIGNANO - F.C. SCAVESAI
+DESCRIPTION:Serie C · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14363
+URL:https://max2staff.github.io/sporting-live/#/partita/14363
+END:VEVENT
+END:VCALENDAR

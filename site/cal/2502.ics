@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F.C. SCAVESAI · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14267@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260915T203000
+DTEND;TZID=Europe/Rome:20260915T213000
+SUMMARY:BEVERLYAMARONE 5-4 F.C. SCAVESAI
+DESCRIPTION:Serie C · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14267
+URL:https://max2staff.github.io/sporting-live/#/partita/14267
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14281@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260921T213000
+DTEND;TZID=Europe/Rome:20260921T223000
+SUMMARY:F.C. SCAVESAI 2-3 DIERRE VENETO
+DESCRIPTION:Serie C · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14281
+URL:https://max2staff.github.io/sporting-live/#/partita/14281
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14297@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260930T203000
+DTEND;TZID=Europe/Rome:20260930T213000
+SUMMARY:BUZ BEKISTAN 1-6 F.C. SCAVESAI
+DESCRIPTION:Serie C · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14297
+URL:https://max2staff.github.io/sporting-live/#/partita/14297
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14319@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261009T213000
+DTEND;TZID=Europe/Rome:20261009T223000
+SUMMARY:F.C. SCAVESAI 6-2 FACILE
+DESCRIPTION:Serie C · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14319
+URL:https://max2staff.github.io/sporting-live/#/partita/14319
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14327@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261014T213000
+DTEND;TZID=Europe/Rome:20261014T223000
+SUMMARY:F.C. SCAVESAI - BOCA JUNIORS
+DESCRIPTION:Serie C · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14327
+URL:https://max2staff.github.io/sporting-live/#/partita/14327
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14339@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261020T213000
+DTEND;TZID=Europe/Rome:20261020T223000
+SUMMARY:JOGA OLMITO - F.C. SCAVESAI
+DESCRIPTION:Serie C · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14339
+URL:https://max2staff.github.io/sporting-live/#/partita/14339
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14349@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261026T203000
+DTEND;TZID=Europe/Rome:20261026T213000
+SUMMARY:F.C. SCAVESAI - OCHO AR MOCHO
+DESCRIPTION:Serie C · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14349
+URL:https://max2staff.github.io/sporting-live/#/partita/14349
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14363@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261102T203000
+DTEND;TZID=Europe/Rome:20261102T213000
+SUMMARY:U.S. TRIVIGNANO - F.C. SCAVESAI
+DESCRIPTION:Serie C · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14363
+URL:https://max2staff.github.io/sporting-live/#/partita/14363
+END:VEVENT
+END:VCALENDAR

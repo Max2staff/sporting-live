@@ -92,11 +92,13 @@ def test_main_non_tocca_out_se_build_fallisce(tmp_path):
     out.mkdir()
     (out / "indice.json").write_text('{"vecchio": true}')
     rc = main(["--stagioni", str(tmp_path / "stagioni.json"), "--raw", str(tmp_path / "raw"),
-               "--alias", str(tmp_path / "alias.json"), "--out", str(out)])
+               "--alias", str(tmp_path / "alias.json"), "--out", str(out),
+               "--condivisione", str(tmp_path / "s"), "--cal", str(tmp_path / "cal")])
     assert rc == 1 and json.loads((out / "indice.json").read_text()) == {"vecchio": True}
     (tmp_path / "raw" / "1.json").write_text(json.dumps(raw_con_classifica()))
     rc = main(["--stagioni", str(tmp_path / "stagioni.json"), "--raw", str(tmp_path / "raw"),
-               "--alias", str(tmp_path / "alias.json"), "--out", str(out)])
+               "--alias", str(tmp_path / "alias.json"), "--out", str(out),
+               "--condivisione", str(tmp_path / "s"), "--cal", str(tmp_path / "cal")])
     assert rc == 0 and (out / "girone" / "serie-b.json").exists()
 
 

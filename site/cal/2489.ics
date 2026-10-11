@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:GOC FELLAS · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14087@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260916T220000
+DTEND;TZID=Europe/Rome:20260916T230000
+SUMMARY:F.C. AMICONI 3-3 GOC FELLAS
+DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14087
+URL:https://max2staff.github.io/sporting-live/#/partita/14087
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14109@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260924T203000
+DTEND;TZID=Europe/Rome:20260924T213000
+SUMMARY:GOC FELLAS 0-6 F.C. PELIGROS
+DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14109
+URL:https://max2staff.github.io/sporting-live/#/partita/14109
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14115@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260930T220000
+DTEND;TZID=Europe/Rome:20260930T230000
+SUMMARY:GOC FELLAS 5-1 BROCCA JUNIORS
+DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14115
+URL:https://max2staff.github.io/sporting-live/#/partita/14115
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14131@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261007T213000
+DTEND;TZID=Europe/Rome:20261007T223000
+SUMMARY:FORTITUDO HURRICANES 2-3 GOC FELLAS
+DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14131
+URL:https://max2staff.github.io/sporting-live/#/partita/14131
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14143@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261014T203000
+DTEND;TZID=Europe/Rome:20261014T213000
+SUMMARY:GOC FELLAS - SEI RESTAURI
+DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14143
+URL:https://max2staff.github.io/sporting-live/#/partita/14143
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14159@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261022T210000
+DTEND;TZID=Europe/Rome:20261022T220000
+SUMMARY:REAL GNECA MIAMI - GOC FELLAS
+DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14159
+URL:https://max2staff.github.io/sporting-live/#/partita/14159
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14171@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261028T213000
+DTEND;TZID=Europe/Rome:20261028T223000
+SUMMARY:GOC FELLAS - SOCKS
+DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14171
+URL:https://max2staff.github.io/sporting-live/#/partita/14171
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14187@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261104T213000
+DTEND;TZID=Europe/Rome:20261104T223000
+SUMMARY:F.C. BECK'S - GOC FELLAS
+DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14187
+URL:https://max2staff.github.io/sporting-live/#/partita/14187
+END:VEVENT
+END:VCALENDAR

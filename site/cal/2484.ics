@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MARCON C8 · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14093@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260917T213000
+DTEND;TZID=Europe/Rome:20260917T223000
+SUMMARY:SEI RESTAURI 5-4 MARCON C8
+DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14093
+URL:https://max2staff.github.io/sporting-live/#/partita/14093
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14105@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260923T213000
+DTEND;TZID=Europe/Rome:20260923T223000
+SUMMARY:MARCON C8 2-7 FORTITUDO HURRICANES
+DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14105
+URL:https://max2staff.github.io/sporting-live/#/partita/14105
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14117@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261001T203000
+DTEND;TZID=Europe/Rome:20261001T213000
+SUMMARY:MARCON C8 3-1 REAL GNECA MIAMI
+DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14117
+URL:https://max2staff.github.io/sporting-live/#/partita/14117
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14135@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261008T220000
+DTEND;TZID=Europe/Rome:20261008T230000
+SUMMARY:SOCKS 5-2 MARCON C8
+DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14135
+URL:https://max2staff.github.io/sporting-live/#/partita/14135
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14145@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261014T203000
+DTEND;TZID=Europe/Rome:20261014T213000
+SUMMARY:MARCON C8 - F.C. BECK'S
+DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14145
+URL:https://max2staff.github.io/sporting-live/#/partita/14145
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14157@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261021T213000
+DTEND;TZID=Europe/Rome:20261021T223000
+SUMMARY:EASY M&M - MARCON C8
+DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14157
+URL:https://max2staff.github.io/sporting-live/#/partita/14157
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14175@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261029T213000
+DTEND;TZID=Europe/Rome:20261029T223000
+SUMMARY:MARCON C8 - 6 GOMME SCORZE
+DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14175
+URL:https://max2staff.github.io/sporting-live/#/partita/14175
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14191@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261105T220000
+DTEND;TZID=Europe/Rome:20261105T230000
+SUMMARY:F.C. PELIGROS - MARCON C8
+DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14191
+URL:https://max2staff.github.io/sporting-live/#/partita/14191
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,97 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:TATANGALAR · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14631@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260914T203000
+DTEND;TZID=Europe/Rome:20260914T213000
+SUMMARY:TATANGALAR 3-4 IMPRESA EDILE GAVAGNIN
+DESCRIPTION:Serie A · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14631
+URL:https://max2staff.github.io/sporting-live/#/partita/14631
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14643@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260922T213000
+DTEND;TZID=Europe/Rome:20260922T223000
+SUMMARY:AUTOSANDONA' 5-3 TATANGALAR
+DESCRIPTION:Serie A · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14643
+URL:https://max2staff.github.io/sporting-live/#/partita/14643
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14659@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260928T203000
+DTEND;TZID=Europe/Rome:20260928T213000
+SUMMARY:NZ 3-2 TATANGALAR
+DESCRIPTION:Serie A · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14659
+URL:https://max2staff.github.io/sporting-live/#/partita/14659
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14683@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261012T203000
+DTEND;TZID=Europe/Rome:20261012T213000
+SUMMARY:DEAM TEAM - TATANGALAR
+DESCRIPTION:Serie A · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14683
+URL:https://max2staff.github.io/sporting-live/#/partita/14683
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14703@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261021T203000
+DTEND;TZID=Europe/Rome:20261021T213000
+SUMMARY:TATANGALAR - THE HATEFUL 8
+DESCRIPTION:Serie A · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14703
+URL:https://max2staff.github.io/sporting-live/#/partita/14703
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14715@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261027T213000
+DTEND;TZID=Europe/Rome:20261027T223000
+SUMMARY:F.C. BRIGATA - TATANGALAR
+DESCRIPTION:Serie A · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14715
+URL:https://max2staff.github.io/sporting-live/#/partita/14715
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14725@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261102T203000
+DTEND;TZID=Europe/Rome:20261102T213000
+SUMMARY:TATANGALAR - VENICE OUD
+DESCRIPTION:Serie A · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14725
+URL:https://max2staff.github.io/sporting-live/#/partita/14725
+END:VEVENT
+END:VCALENDAR

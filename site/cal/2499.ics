@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:F.C. SPORTLIFE · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14273@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260916T213000
+DTEND;TZID=Europe/Rome:20260916T223000
+SUMMARY:F.C. SPORTLIFE 3-3 U.S. TRIVIGNANO
+DESCRIPTION:Serie C · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14273
+URL:https://max2staff.github.io/sporting-live/#/partita/14273
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14285@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260922T203000
+DTEND;TZID=Europe/Rome:20260922T213000
+SUMMARY:LA SERENISSIMA 2-4 F.C. SPORTLIFE
+DESCRIPTION:Serie C · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14285
+URL:https://max2staff.github.io/sporting-live/#/partita/14285
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14303@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261001T203000
+DTEND;TZID=Europe/Rome:20261001T213000
+SUMMARY:F.C. SPORTLIFE 2-7 EDIT
+DESCRIPTION:Serie C · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14303
+URL:https://max2staff.github.io/sporting-live/#/partita/14303
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14317@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261008T203000
+DTEND;TZID=Europe/Rome:20261008T213000
+SUMMARY:BOCA JUNIORS 0-6 F.C. SPORTLIFE
+DESCRIPTION:Serie C · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14317
+URL:https://max2staff.github.io/sporting-live/#/partita/14317
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14331@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261015T220000
+DTEND;TZID=Europe/Rome:20261015T230000
+SUMMARY:DEPORTIVO VIBORA - F.C. SPORTLIFE
+DESCRIPTION:Serie C · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14331
+URL:https://max2staff.github.io/sporting-live/#/partita/14331
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14345@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261023T213000
+DTEND;TZID=Europe/Rome:20261023T223000
+SUMMARY:F.C. SPORTLIFE - F.C. ETTANERA
+DESCRIPTION:Serie C · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14345
+URL:https://max2staff.github.io/sporting-live/#/partita/14345
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14359@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261029T200000
+DTEND;TZID=Europe/Rome:20261029T210000
+SUMMARY:BEVERLYAMARONE - F.C. SPORTLIFE
+DESCRIPTION:Serie C · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14359
+URL:https://max2staff.github.io/sporting-live/#/partita/14359
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14367@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261103T203000
+DTEND;TZID=Europe/Rome:20261103T213000
+SUMMARY:F.C. SPORTLIFE - DIERRE VENETO
+DESCRIPTION:Serie C · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14367
+URL:https://max2staff.github.io/sporting-live/#/partita/14367
+END:VEVENT
+END:VCALENDAR

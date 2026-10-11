@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:SOCKS · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14083@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260916T203000
+DTEND;TZID=Europe/Rome:20260916T213000
+SUMMARY:SOCKS 3-5 EASY M&M
+DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14083
+URL:https://max2staff.github.io/sporting-live/#/partita/14083
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14101@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260923T203000
+DTEND;TZID=Europe/Rome:20260923T213000
+SUMMARY:F.C. BECK'S 2-0 SOCKS
+DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14101
+URL:https://max2staff.github.io/sporting-live/#/partita/14101
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14119@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261001T213000
+DTEND;TZID=Europe/Rome:20261001T223000
+SUMMARY:6 GOMME SCORZE 1-5 SOCKS
+DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14119
+URL:https://max2staff.github.io/sporting-live/#/partita/14119
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14135@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261008T220000
+DTEND;TZID=Europe/Rome:20261008T230000
+SUMMARY:SOCKS 5-2 MARCON C8
+DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14135
+URL:https://max2staff.github.io/sporting-live/#/partita/14135
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14151@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261016T213000
+DTEND;TZID=Europe/Rome:20261016T223000
+SUMMARY:MCONOR PUB - SOCKS
+DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14151
+URL:https://max2staff.github.io/sporting-live/#/partita/14151
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14161@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261022T213000
+DTEND;TZID=Europe/Rome:20261022T223000
+SUMMARY:SOCKS - DESPERADOS
+DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14161
+URL:https://max2staff.github.io/sporting-live/#/partita/14161
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14171@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261028T213000
+DTEND;TZID=Europe/Rome:20261028T223000
+SUMMARY:GOC FELLAS - SOCKS
+DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14171
+URL:https://max2staff.github.io/sporting-live/#/partita/14171
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14189@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261104T213000
+DTEND;TZID=Europe/Rome:20261104T223000
+SUMMARY:SOCKS - F.C. AMICONI
+DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14189
+URL:https://max2staff.github.io/sporting-live/#/partita/14189
+END:VEVENT
+END:VCALENDAR

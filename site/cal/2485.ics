@@ -1,0 +1,107 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sporting Live//Calendario//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:6 GOMME SCORZE · Sporting Live
+X-WR-TIMEZONE:Europe/Rome
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:partita-14091@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260917T203000
+DTEND;TZID=Europe/Rome:20260917T213000
+SUMMARY:REAL GNECA MIAMI 1-0 6 GOMME SCORZE
+DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14091
+URL:https://max2staff.github.io/sporting-live/#/partita/14091
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14097@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20260921T200000
+DTEND;TZID=Europe/Rome:20260921T210000
+SUMMARY:6 GOMME SCORZE 1-3 SEI RESTAURI
+DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14097
+URL:https://max2staff.github.io/sporting-live/#/partita/14097
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14119@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261001T213000
+DTEND;TZID=Europe/Rome:20261001T223000
+SUMMARY:6 GOMME SCORZE 1-5 SOCKS
+DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14119
+URL:https://max2staff.github.io/sporting-live/#/partita/14119
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14129@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261007T213000
+DTEND;TZID=Europe/Rome:20261007T223000
+SUMMARY:F.C. BECK'S 3-3 6 GOMME SCORZE
+DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14129
+URL:https://max2staff.github.io/sporting-live/#/partita/14129
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14139@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261013T203000
+DTEND;TZID=Europe/Rome:20261013T213000
+SUMMARY:6 GOMME SCORZE - EASY M&M
+DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14139
+URL:https://max2staff.github.io/sporting-live/#/partita/14139
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14153@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261020T203000
+DTEND;TZID=Europe/Rome:20261020T213000
+SUMMARY:F.C. PELIGROS - 6 GOMME SCORZE
+DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14153
+URL:https://max2staff.github.io/sporting-live/#/partita/14153
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14175@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261029T213000
+DTEND;TZID=Europe/Rome:20261029T223000
+SUMMARY:MARCON C8 - 6 GOMME SCORZE
+DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14175
+URL:https://max2staff.github.io/sporting-live/#/partita/14175
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14193@sportinglive
+DTSTAMP:20261011T092723Z
+DTSTART;TZID=Europe/Rome:20261106T213000
+DTEND;TZID=Europe/Rome:20261106T223000
+SUMMARY:6 GOMME SCORZE - MCONOR PUB
+DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
+ e/#/partita/14193
+URL:https://max2staff.github.io/sporting-live/#/partita/14193
+END:VEVENT
+END:VCALENDAR

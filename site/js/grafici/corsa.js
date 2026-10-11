@@ -1,6 +1,6 @@
 // Grafico a più linee: corsa al titolo (punti) e corsa marcatori (gol cumulati, a gradini).
 import { esc } from '../util.js';
-import { num, f1, scala, tacche } from './base.js';
+import { num, f1, scala, tacche, etichettaX } from './base.js';
 
 const W = 340, H = 210, SX = 28, DX = 10, SU = 10, GIU = 24;
 
@@ -13,7 +13,7 @@ export function graficoCorsaSVG(xs, serie, { gradini = false, titolo = '' } = {}
   const x = scala(0, X.length - 1, SX, W - DX), y = scala(0, tk[tk.length - 1], H - GIU, SU);
   const griglia = tk.map(v => `<line class="gr-griglia" x1="${SX}" x2="${W - DX}" y1="${f1(y(v))}" y2="${f1(y(v))}"/><text class="gr-et" x="${SX - 6}" y="${f1(y(v) + 4)}" text-anchor="end">${v}</text>`).join('');
   const passoX = Math.max(1, Math.ceil(X.length / 8));
-  const asse = X.map((gg, i) => (i % passoX === 0 || i === X.length - 1 ? `<text class="gr-et" x="${f1(x(i))}" y="${H - 6}" text-anchor="middle">${gg}</text>` : '')).join('');
+  const asse = X.map((gg, i) => (etichettaX(i, X.length, passoX) ? `<text class="gr-et" x="${f1(x(i))}" y="${H - 6}" text-anchor="middle">${gg}</text>` : '')).join('');
   const linee = S.map(s => {
     const pti = s.valori.map((v, i) => [i, num(v)]).filter(([, v]) => v !== null);
     const d = pti.map(([i, v], k) => (k === 0 ? `M${f1(x(i))} ${f1(y(v))}` : gradini ? `H${f1(x(i))}V${f1(y(v))}` : `L${f1(x(i))} ${f1(y(v))}`)).join('');

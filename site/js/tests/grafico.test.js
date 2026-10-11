@@ -23,3 +23,10 @@ test('asse y invertito: la posizione 1 sta più in alto (y minore)', () => {
   const cy = [...s.matchAll(/<circle[^>]*cy="([\d.]+)"/g)].map(m => Number(m[1]));
   assert.ok(cy[0] < cy[1]);
 });
+
+test('andamento: l\'ultima giornata non si sovrappone alla penultima etichetta', () => {
+  const s = Array.from({ length: 26 }, (_, i) => ({ giornata: i + 1, pos: 1 + (i % 5) }));
+  const et = [...graficoAndamentoSVG(s, 14).matchAll(/text-anchor="middle">(\d+)</g)].map(m => Number(m[1]));
+  assert.equal(et[et.length - 1], 26);
+  assert.ok(26 - et[et.length - 2] >= 2, `etichette troppo vicine: ${et.join(',')}`);
+});

@@ -13,3 +13,5 @@ export function tacche(max, n = 4) {
   for (let v = 0; v < max + passo; v += passo) { out.push(v); if (v >= max) break; }
   return out;
 }
+// Etichetta dell'asse x da mostrare: una ogni `passo`, sempre l'ultima, ma mai una troppo vicina all'ultima.
+export const etichettaX = (i, n, passo) => i === n - 1 || (i % passo === 0 && n - 1 - i >= Math.ceil(passo / 2));

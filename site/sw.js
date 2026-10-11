@@ -1,9 +1,11 @@
-const VERSIONE = 'sl-5';   // incrementare a ogni rilascio di codice (non di dati)
+const VERSIONE = 'sl-6';   // incrementare a ogni rilascio di codice (non di dati)
 const SHELL = ['./', 'index.html', 'css/app.css', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png',
   'js/app.js', 'js/router.js', 'js/archivio.js', 'js/data.js', 'js/util.js', 'js/tema.js', 'js/giorni.js', 'js/preferiti.js', 'js/tabellino.js', 'js/grafico.js',
   'js/views/comuni.js', 'js/views/partite.js', 'js/views/partita.js', 'js/views/classifiche.js', 'js/views/squadra.js',
   'js/views/giocatori.js', 'js/views/giocatore.js', 'js/views/info.js',
   'js/stemma.js', 'js/contesto.js', 'js/evidenza.js', 'js/views/contesto-ui.js', 'js/views/intro.js', 'js/views/condividi.js', 'js/cerca.js', 'js/views/cerca.js', 'js/visite.js', 'js/views/vantaggi.js',
+  'js/calendario.js', 'js/indietro.js', 'js/views/calendario.js',
+  'js/grafici/base.js', 'js/grafici/corsa.js', 'js/grafici/barre.js', 'js/grafici/ciambella.js', 'js/grafici/confronto.js',
   'img/foto/campo.jpg', 'img/foto/premiazione.jpg'];
 
 self.addEventListener('install', (e) => {

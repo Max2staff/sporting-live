@@ -15,7 +15,7 @@ _VTIMEZONE = [
 
 
 def _esc(t: str) -> str:
-    return (str(t).replace("\\", "\\\\").replace(";", "\;").replace(",", "\\,")
+    return (str(t).replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,")
             .replace("\r\n", "\\n").replace("\n", "\\n"))
 
 

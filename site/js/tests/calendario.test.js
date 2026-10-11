@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { giornate, giornataIniziale, partiteGiornata, senzaGiornata } from '../calendario.js';
+import { giornate, giornataIniziale, partiteGiornata, senzaGiornata, separaRiposo } from '../calendario.js';
 
 const P = (id, giornata, giocata, data = '2026-10-0' + (giornata || 9), ora = '20:00') => ({ id, giornata, giocata, data, ora });
 
@@ -28,4 +28,14 @@ test('partite della giornata ordinate per data, ora, id; data mancante in fondo'
 
 test('partite senza giornata', () => {
   assert.deepEqual(senzaGiornata([P(1, 1, true), P(2, null, false), P(3, undefined, false)]).map(p => p.id), [2, 3]);
+});
+
+test('partite contro RIPOSO: tolte dal calendario, la squadra risulta a riposo', () => {
+  const l = [{ id: 1, giornata: 1, giocata: true, casaId: 10, ospiteId: 20 }, { id: 2, giornata: 1, giocata: false, casaId: 30, ospiteId: 99 },
+    { id: 3, giornata: 2, giocata: false, casaId: 99, ospiteId: 10 }];
+  const r = separaRiposo(l, [99]);
+  assert.deepEqual(r.partite.map(p => p.id), [1]);
+  assert.deepEqual(r.riposa, [{ giornata: 1, squadraId: 30 }, { giornata: 2, squadraId: 10 }]);
+  assert.equal(giornataIniziale(r.partite), 1);
+  assert.deepEqual(separaRiposo(l, []).partite.length, 3);
 });

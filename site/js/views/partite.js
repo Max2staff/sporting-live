@@ -75,7 +75,8 @@ export async function render({ indice, rotta, oggi, carica }) {
   const hero = heroHTML({ foto: 'campo', classe: 'hero-home', contenuto: `
     <div class="contesto-riga">${barraContesto(indice, { tutti: true })}</div>
     ${categorieHTML(indice)}
-    ${giorno ? selettoreGiorno(giorni, giorno, oggi, haDaDefinire) : '<h1>Nessuna partita in calendario</h1>'}` });
+    ${giorno ? selettoreGiorno(giorni, giorno, oggi, haDaDefinire) : '<h1>Nessuna partita in calendario</h1>'}
+    ${scelto !== TUTTI ? `<a class="link-calendario" href="#/classifiche/${esc(scelto)}/calendario">Calendario completo ›</a>` : ''}` });
   if (!giorno) return hero + bloccoInizio(indice, visibili);
   const gruppi = raggruppaPerGirone(partiteDelGiorno(partite, giorno), indice);
   return `${hero}

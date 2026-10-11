@@ -5,7 +5,8 @@ import { gironi, impostaGirone, risolviGirone } from '../contesto.js';
 import { podio, inizioGirone } from '../evidenza.js';
 import { inArchivio } from '../archivio.js';
 import { condividiHTML, collegaCondividi, datiCondivisione } from './condividi.js';
-import { vuoto, heroHTML, squadraDa } from './comuni.js';
+import { vuoto, heroHTML, squadraDa, collegaStelle } from './comuni.js';
+import { calendarioHTML, collegaCalendario } from './calendario.js';
 import { barraContesto, collegaContesto } from './contesto-ui.js';
 
 let dati = null;
@@ -24,21 +25,16 @@ function classeZona(zone, pos, totale) {
   return '';
 }
 
-export async function render({ indice, rotta, carica }) {
-  const lista = gironi(indice);
-  if (!lista.length) return vuoto('Nessun campionato in corso.');
-  const { mostrato: slug, salva } = risolviGirone(indice, rotta.params[0]);
-  if (salva) impostaGirone(slug, indice);
-  const g = await carica(`girone/${slug}.json`);
+const SCHEDE = [['classifica', 'Classifica'], ['calendario', 'Calendario'], ['statistiche', 'Statistiche']];
+const schedaDa = (p) => (SCHEDE.some(([k]) => k === p) ? p : 'classifica');
+export const schedeHTML = (slug, scheda) => `<nav class="tabs" aria-label="Sezioni del girone">${SCHEDE.map(([k, l]) =>
+  `<a href="#/classifiche/${esc(slug)}${k === 'classifica' ? '' : `/${k}`}" class="${k === scheda ? 'attivo' : ''}"${k === scheda ? ' aria-current="page"' : ''}>${l}</a>`).join('')}</nav>`;
+
+function tabellaHTML(g, indice) {
   const forma = new Map(g.squadre.map(s => [s.id, s.forma]));
   const righe = g.classifica.totale || [];
-  dati = datiCondivisione('classifica', { nome: g.nome }, indice.sito, location.href, inArchivio());
   const inizio = inizioGirone(g.partite);
-  const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
-  return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
-      <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
-      <div class="hero-titolo"><h1>Classifica${parziali}</h1>${condividiHTML()}</div><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)} · stagione ${esc(g.stagione)}</p>` })}
-    ${inizio.iniziato ? '' : `<p class="avviso-inizio">Il campionato inizia ${inizio.data ? esc(formattaDataLunga(inizio.data)) : 'a breve'}: la classifica si aggiorna dopo la prima giornata.</p>`}
+  return `${inizio.iniziato ? '' : `<p class="avviso-inizio">Il campionato inizia ${inizio.data ? esc(formattaDataLunga(inizio.data)) : 'a breve'}: la classifica si aggiorna dopo la prima giornata.</p>`}
     ${podioHTML(indice, righe)}
     ${righe.length ? `<section class="card piena"><div class="scroll-x"><table class="tab">
       <thead><tr><th>#</th><th class="sx">Squadra</th><th>PT</th><th>G</th><th>V</th><th>N</th><th>P</th><th>GF</th><th>GS</th><th>DR</th><th>Forma</th></tr></thead>
@@ -47,9 +43,34 @@ export async function render({ indice, rotta, carica }) {
     ${g.zone ? '<p class="muto centro">Bordo verde: zona promozione · bordo rosso: zona retrocessione</p>' : ''}` : vuoto('Classifica non disponibile.')}`;
 }
 
-export function dopo(ctx, root) {
-  root.querySelectorAll('tr[data-squadra]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/squadra/${tr.dataset.squadra}`); });
-  collegaCondividi(root, dati);
-  collegaContesto(root, ctx.indice, { mostrato: risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato, onCambio: (slug) => ctx.naviga(`#/classifiche/${slug}`) });
+// Riempita in Task 5.
+async function statisticheHTML() { return vuoto('Statistiche in arrivo.'); }
+
+export async function render({ indice, rotta, carica }) {
+  const lista = gironi(indice);
+  if (!lista.length) return vuoto('Nessun campionato in corso.');
+  const { mostrato: slug, salva } = risolviGirone(indice, rotta.params[0]);
+  if (salva) impostaGirone(slug, indice);
+  const scheda = schedaDa(rotta.params[1]);
+  const g = await carica(`girone/${slug}.json`);
+  dati = datiCondivisione('classifica', { nome: g.nome }, indice.sito, location.href, inArchivio());
+  const parziali = g.stale && Object.keys(g.stale).length ? ' <span class="badge">dati parziali</span>' : '';
+  const titolo = { classifica: 'Classifica', calendario: 'Calendario', statistiche: 'Statistiche' }[scheda];
+  const corpo = scheda === 'calendario' ? calendarioHTML(g, indice, rotta.params[2])
+    : scheda === 'statistiche' ? await statisticheHTML(g, indice) : tabellaHTML(g, indice);
+  return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
+      <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
+      <div class="hero-titolo"><h1>${titolo}${parziali}</h1>${scheda === 'classifica' ? condividiHTML() : ''}</div><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)} · stagione ${esc(g.stagione)}</p>` })}
+    ${schedeHTML(slug, scheda)}
+    ${corpo}`;
 }
 
+export function dopo(ctx, root) {
+  const slug = risolviGirone(ctx.indice, ctx.rotta.params[0]).mostrato;
+  const scheda = schedaDa(ctx.rotta.params[1]);
+  root.querySelectorAll('tr[data-squadra]').forEach(tr => { tr.onclick = () => ctx.naviga(`#/squadra/${tr.dataset.squadra}`); });
+  collegaCondividi(root, dati);
+  collegaCalendario(root, ctx, slug);
+  collegaStelle(root, async () => { root.innerHTML = await render(ctx); dopo(ctx, root); });
+  collegaContesto(root, ctx.indice, { mostrato: slug, onCambio: (s) => ctx.naviga(`#/classifiche/${s}${scheda === 'classifica' ? '' : `/${scheda}`}`) });
+}

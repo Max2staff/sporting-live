@@ -16,3 +16,15 @@ const ordina = (l) => [...l].sort((a, b) => chiave(a).localeCompare(chiave(b)) |
 
 export const partiteGiornata = (partite, n) => ordina((partite || []).filter(p => p.giornata === n));
 export const senzaGiornata = (partite) => ordina((partite || []).filter(p => !intera(p.giornata)));
+
+// Le "partite" contro la squadra fittizia RIPOSO non si giocano: escono dal calendario e diventano "riposa".
+export function separaRiposo(partite, idsRiposo) {
+  const r = new Set((idsRiposo || []).map(Number));
+  const out = { partite: [], riposa: [] };
+  for (const p of partite || []) {
+    if (r.has(Number(p.casaId))) out.riposa.push({ giornata: p.giornata, squadraId: p.ospiteId });
+    else if (r.has(Number(p.ospiteId))) out.riposa.push({ giornata: p.giornata, squadraId: p.casaId });
+    else out.partite.push(p);
+  }
+  return out;
+}

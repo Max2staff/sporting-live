@@ -349,3 +349,11 @@ a.prec-link { color: inherit; text-decoration: none; min-height: 44px; }
 .cal-alt a { color: var(--accento); display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-2); }
 :root[data-theme="light"] .hero-squadra .stella.attiva, :root[data-theme="light"] .scontro .lato .stella.attiva { color: #ff4e00; }
 @media (prefers-color-scheme: light) { :root:not([data-theme]) .hero-squadra .stella.attiva, :root:not([data-theme]) .scontro .lato .stella.attiva { color: #ff4e00; } }
+
+/* Schede-link (pagina del girone) e calendario per giornate */
+.tabs a { color: var(--muto); padding: var(--s-2) 0; min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -1px; font-weight: 600; text-decoration: none; }
+.tabs a.attivo { color: var(--testo); border-color: var(--accento); }
+.cal-giornata { margin: 0 0 var(--s-3); }
+.link-calendario { display: inline-flex; align-items: center; min-height: 44px; color: var(--on-hero); font-weight: 600; text-decoration: none; }
+.partita .squadre { min-width: 0; }
+.cal-riposo { margin: 0; padding: var(--s-3); border-top: 1px solid var(--bordo); }

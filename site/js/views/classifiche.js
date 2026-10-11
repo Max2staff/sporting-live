@@ -38,7 +38,7 @@ export async function render({ indice, rotta, carica }) {
   return `${heroHTML({ foto: 'campo', classe: 'hero-classifica', contenuto: `
       <div class="contesto-riga">${barraContesto(indice, { mostrato: slug })}</div>
       <div class="hero-titolo"><h1>Classifica${parziali}</h1>${condividiHTML()}</div><p class="sotto">${esc(g.campionato.nome)} · ${esc(g.nome)} · stagione ${esc(g.stagione)}</p>` })}
-    ${inizio.iniziato ? '' : `<p class="avviso-inizio">Il campionato inizia ${inizio.data ? `il ${esc(formattaDataLunga(inizio.data))}` : 'a breve'}: la classifica si aggiorna dopo la prima giornata.</p>`}
+    ${inizio.iniziato ? '' : `<p class="avviso-inizio">Il campionato inizia ${inizio.data ? esc(formattaDataLunga(inizio.data)) : 'a breve'}: la classifica si aggiorna dopo la prima giornata.</p>`}
     ${podioHTML(indice, righe)}
     ${righe.length ? `<section class="card piena"><div class="scroll-x"><table class="tab">
       <thead><tr><th>#</th><th class="sx">Squadra</th><th>PT</th><th>G</th><th>V</th><th>N</th><th>P</th><th>GF</th><th>GS</th><th>DR</th><th>Forma</th></tr></thead>

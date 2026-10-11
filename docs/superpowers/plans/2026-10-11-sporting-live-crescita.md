@@ -36,7 +36,7 @@
 ### Task 1: Fondamenta — workflow, SITO_URL, contenuti, documenti
 
 **Files:**
-- Modify: `.github/workflows/aggiorna-e-pubblica.yml`, `scraper/config.py`, `scraper/build.py`, `site/js/views/info.js`, `.gitignore`
+- Modify: `.github/workflows/build.yml`, `scraper/config.py`, `scraper/build.py`, `site/js/views/info.js`, `.gitignore`
 - Create: `contenuti/config.json`, `contenuti/documenti.json`, `contenuti/vantaggi.json`, `scraper/tests/test_contenuti.py` (o il file di test build esistente)
 
 **Interfaces:**
@@ -116,7 +116,7 @@
 
 **Files:**
 - Create: `scraper/ics.py`, `scraper/tests/test_ics.py`
-- Modify: `scraper/build.py`, `site/js/views/squadra.js`, `site/css/app.css`, `.github/workflows/aggiorna-e-pubblica.yml` (`git add` += `site/cal`)
+- Modify: `scraper/build.py`, `site/js/views/squadra.js`, `site/css/app.css`, `.github/workflows/build.yml` (`git add` += `site/cal`)
 
 **Interfaces:**
 - Produces: `calendario_squadra(squadra: dict, partite: list[dict], girone: dict, sito: str, adesso: str) -> str` (testo ICS con CRLF); `site/cal/<id>.ics` per ogni squadra reale della stagione corrente.
@@ -143,7 +143,7 @@
 ### Task 8: Archivio — lettura e build delle edizioni chiuse
 
 **Files:**
-- Modify: `stagioni.json`, `scraper/fetch.py`, `scraper/build.py` (+ test), `.github/workflows/aggiorna-e-pubblica.yml` (nulla da aggiungere se `build/raw` e `site/data` coprono già i nuovi percorsi: verifica)
+- Modify: `stagioni.json`, `scraper/fetch.py`, `scraper/build.py` (+ test), `.github/workflows/build.yml` (nulla da aggiungere se `build/raw` e `site/data` coprono già i nuovi percorsi: verifica)
 
 **Interfaces:**
 - Produces: `stagioni.json.archivio = [{slug, nome, stagione, campionati:[…stessa forma…], documenti:[{titolo,url}]}]`; raw in `build/raw/a/<slug>/<idgirone>.json`; output in `site/data/a/<slug>/` (indice, girone, partita, squadra, giocatore — stessa forma della stagione corrente, con `indice.archivio = true`, `indice.nome`, `indice.documenti`); `indice.edizioni = [{slug, nome}]` nell'indice principale.
@@ -171,7 +171,7 @@
 
 **Files:**
 - Create: `scripts/telegram.py`, `scraper/tests/test_telegram.py`, `docs/attivazione.md`
-- Modify: `.github/workflows/aggiorna-e-pubblica.yml`
+- Modify: `.github/workflows/build.yml`
 
 **Interfaces:**
 - Produces: `nuovi_risultati(indice_prima: dict|None, indice_dopo: dict) -> list[dict]`; `messaggi(nuovi, indice_dopo, sito) -> list[str]` (≤ 5 nuove partite in un girone → un messaggio per partita; > 5 → un riepilogo per girone con tutte le righe); `main()` legge `TELEGRAM_TOKEN`/`TELEGRAM_CHAT` dall'ambiente; se mancano esce 0 con "Telegram non configurato"; invia con `requests.post(https://api.telegram.org/bot<token>/sendMessage, data={chat_id, text, parse_mode:'HTML', disable_web_page_preview:false})`; errori → stampa `::warning::` ed esce 0.

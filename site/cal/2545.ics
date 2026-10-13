@@ -26,12 +26,22 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14811@sportinglive
-DTSTAMP:20261011T092723Z
+DTSTAMP:20261013T123129Z
 DTSTART;TZID=Europe/Rome:20261013T210000
 DTEND;TZID=Europe/Rome:20261013T220000
 SUMMARY:PRINCIPE 1846 - LEVIX GROUP
 DESCRIPTION:Super League · giornata 1\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14811
 URL:https://max2staff.github.io/sporting-live/#/partita/14811
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14825@sportinglive
+DTSTAMP:20261013T123129Z
+DTSTART;TZID=Europe/Rome:20261022T213000
+DTEND;TZID=Europe/Rome:20261022T223000
+SUMMARY:BARCA B - LEVIX GROUP
+DESCRIPTION:Super League · giornata 2\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14825
+URL:https://max2staff.github.io/sporting-live/#/partita/14825
 END:VEVENT
 END:VCALENDAR

@@ -26,12 +26,22 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14809@sportinglive
-DTSTAMP:20261011T092723Z
+DTSTAMP:20261013T123129Z
 DTSTART;TZID=Europe/Rome:20261013T200000
 DTEND;TZID=Europe/Rome:20261013T210000
 SUMMARY:TATANGA C5 - BARCA B
 DESCRIPTION:Super League · giornata 1\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14809
 URL:https://max2staff.github.io/sporting-live/#/partita/14809
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14823@sportinglive
+DTSTAMP:20261013T123129Z
+DTSTART;TZID=Europe/Rome:20261022T203000
+DTEND;TZID=Europe/Rome:20261022T213000
+SUMMARY:BENVENUTI AL SUD - TATANGA C5
+DESCRIPTION:Super League · giornata 2\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14823
+URL:https://max2staff.github.io/sporting-live/#/partita/14823
 END:VEVENT
 END:VCALENDAR

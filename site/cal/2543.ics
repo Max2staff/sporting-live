@@ -26,12 +26,22 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14813@sportinglive
-DTSTAMP:20261011T092723Z
+DTSTAMP:20261013T123129Z
 DTSTART;TZID=Europe/Rome:20261015T200000
 DTEND;TZID=Europe/Rome:20261015T210000
 SUMMARY:BENVENUTI AL SUD - CHAOS LEGACY
 DESCRIPTION:Super League · giornata 1\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14813
 URL:https://max2staff.github.io/sporting-live/#/partita/14813
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14819@sportinglive
+DTSTAMP:20261013T123129Z
+DTSTART;TZID=Europe/Rome:20261021T203000
+DTEND;TZID=Europe/Rome:20261021T213000
+SUMMARY:CHAOS LEGACY - PRINCIPE 1846
+DESCRIPTION:Super League · giornata 2\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14819
+URL:https://max2staff.github.io/sporting-live/#/partita/14819
 END:VEVENT
 END:VCALENDAR

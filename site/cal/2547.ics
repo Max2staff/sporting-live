@@ -26,12 +26,22 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14817@sportinglive
-DTSTAMP:20261011T092723Z
+DTSTAMP:20261013T123129Z
 DTSTART;TZID=Europe/Rome:20261015T220000
 DTEND;TZID=Europe/Rome:20261015T230000
 SUMMARY:POWER RANGERS - I GUARDIANI DEL PALLONE
 DESCRIPTION:Super League · giornata 1\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14817
 URL:https://max2staff.github.io/sporting-live/#/partita/14817
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14827@sportinglive
+DTSTAMP:20261013T123129Z
+DTSTART;TZID=Europe/Rome:20261022T203000
+DTEND;TZID=Europe/Rome:20261022T213000
+SUMMARY:I PIÙ CALMI - POWER RANGERS
+DESCRIPTION:Super League · giornata 2\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14827
+URL:https://max2staff.github.io/sporting-live/#/partita/14827
 END:VEVENT
 END:VCALENDAR

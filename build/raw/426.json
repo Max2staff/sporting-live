@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-11T13:50:35+02:00",
+ "aggiornato": "2026-10-13T14:31:27+02:00",
  "idgirone": 426,
  "squadre": [
   {
@@ -241,20 +241,8 @@
   {
    "id": 14819,
    "giornata": 2,
-   "data": null,
-   "ora": null,
-   "casaId": 2549,
-   "ospiteId": 2551,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14821,
-   "giornata": 2,
-   "data": null,
-   "ora": null,
+   "data": "2026-10-21",
+   "ora": "20:30",
    "casaId": 2543,
    "ospiteId": 2544,
    "golCasa": null,
@@ -263,22 +251,10 @@
    "tavolino": false
   },
   {
-   "id": 14823,
+   "id": 14821,
    "giornata": 2,
-   "data": null,
-   "ora": null,
-   "casaId": 2546,
-   "ospiteId": 2545,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14825,
-   "giornata": 2,
-   "data": null,
-   "ora": null,
+   "data": "2026-10-21",
+   "ora": "21:30",
    "casaId": 2548,
    "ospiteId": 2550,
    "golCasa": null,
@@ -287,10 +263,34 @@
    "tavolino": false
   },
   {
+   "id": 14823,
+   "giornata": 2,
+   "data": "2026-10-22",
+   "ora": "20:30",
+   "casaId": 2549,
+   "ospiteId": 2551,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14825,
+   "giornata": 2,
+   "data": "2026-10-22",
+   "ora": "21:30",
+   "casaId": 2546,
+   "ospiteId": 2545,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14827,
    "giornata": 2,
-   "data": null,
-   "ora": null,
+   "data": "2026-10-22",
+   "ora": "20:30",
    "casaId": 2552,
    "ospiteId": 2547,
    "golCasa": null,

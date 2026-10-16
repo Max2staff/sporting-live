@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-16T11:34:09+02:00",
+ "aggiornato": "2026-10-17T00:58:15+02:00",
  "idgirone": 426,
  "squadre": [
   {
@@ -24,7 +24,7 @@
   },
   {
    "id": 2547,
-   "nome": "POWER RANGERS"
+   "nome": "F.C. DARDANIA"
   },
   {
    "id": 2548,
@@ -112,7 +112,7 @@
    },
    {
     "squadraId": 2547,
-    "nome": "POWER RANGERS",
+    "nome": "F.C. DARDANIA",
     "pos": 6,
     "pt": 0,
     "g": 0,

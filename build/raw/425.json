@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-16T11:33:54+02:00",
+ "aggiornato": "2026-10-17T03:09:45+02:00",
  "idgirone": 425,
  "squadre": [
   {
@@ -11,12 +11,12 @@
    "nome": "THE HATEFUL 8"
   },
   {
-   "id": 2538,
-   "nome": "IMPRESA EDILE GAVAGNIN"
-  },
-  {
    "id": 2534,
    "nome": "ELYSIUM ENERGY GROUP"
+  },
+  {
+   "id": 2538,
+   "nome": "IMPRESA EDILE GAVAGNIN"
   },
   {
    "id": 2533,
@@ -88,29 +88,29 @@
     "dr": 13
    },
    {
-    "squadraId": 2538,
-    "nome": "IMPRESA EDILE GAVAGNIN",
+    "squadraId": 2534,
+    "nome": "ELYSIUM ENERGY GROUP",
     "pos": 3,
-    "pt": 10,
-    "g": 4,
-    "v": 3,
-    "n": 1,
-    "p": 0,
+    "pt": 12,
+    "g": 5,
+    "v": 4,
+    "n": 0,
+    "p": 1,
     "gf": 15,
     "gs": 9,
     "dr": 6
    },
    {
-    "squadraId": 2534,
-    "nome": "ELYSIUM ENERGY GROUP",
+    "squadraId": 2538,
+    "nome": "IMPRESA EDILE GAVAGNIN",
     "pos": 4,
-    "pt": 9,
-    "g": 4,
+    "pt": 10,
+    "g": 5,
     "v": 3,
-    "n": 0,
+    "n": 1,
     "p": 1,
-    "gf": 12,
-    "gs": 7,
+    "gf": 17,
+    "gs": 12,
     "dr": 5
    },
    {
@@ -649,9 +649,9 @@
    "ora": "21:30",
    "casaId": 2538,
    "ospiteId": 2534,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 2,
+   "golOspite": 3,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -8448,6 +8448,202 @@
    "migliore": {
     "squadraId": 2539,
     "nome": "ANNICIELLO ALVISE"
+   },
+   "completo": true
+  },
+  "14693": {
+   "marcatori": [
+    {
+     "squadraId": 2538,
+     "nome": "VIANELLO FILIPPO",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2538,
+     "nome": "CHIODIN GIACOMO",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PROTO RICCARDO",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "minuto": 49
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2538,
+     "nome": "BALLARIN GIACOMO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MARINO ROBERTO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "FINOTTO NICOLO'",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "KHALISSI ALESSANDRO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "MARESCA PIETRO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "BOCCATO NICOLA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "MOLIN JACOPO",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PROTO RICCARDO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "BISUTTO LEONARDO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MAZZON FILIPPO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "CHIODIN GIACOMO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "CREGLIA ALESSIO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "GAVAGNIN NICOLO'",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "numero": 7,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "VIANELLO FILIPPO",
+     "numero": 8,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MUSTALI EDISON",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "RIGHETTI GABRIELE",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "ZENNARO FRANCESCO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "D'ANTONIO FELICE",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "BOCCATO MASSIMILIANO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2538,
+    "nome": "MOLIN JACOPO"
    },
    "completo": true
   }

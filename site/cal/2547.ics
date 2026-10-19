@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14817@sportinglive
-DTSTAMP:20261016T225818Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261015T220000
 DTEND;TZID=Europe/Rome:20261015T230000
 SUMMARY:F.C. DARDANIA - I GUARDIANI DEL PALLONE
@@ -36,7 +36,7 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14817
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14827@sportinglive
-DTSTAMP:20261016T225818Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261022T203000
 DTEND;TZID=Europe/Rome:20261022T213000
 SUMMARY:I PIÙ CALMI - F.C. DARDANIA
@@ -46,12 +46,82 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14827
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14837@sportinglive
-DTSTAMP:20261016T225818Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261029T210000
 DTEND;TZID=Europe/Rome:20261029T220000
 SUMMARY:BARCA B - F.C. DARDANIA
 DESCRIPTION:Super League · giornata 3\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14837
 URL:https://max2staff.github.io/sporting-live/#/partita/14837
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14847@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261105T213000
+DTEND;TZID=Europe/Rome:20261105T223000
+SUMMARY:F.C. DARDANIA - CHAOS LEGACY
+DESCRIPTION:Super League · giornata 4\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14847
+URL:https://max2staff.github.io/sporting-live/#/partita/14847
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14857@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261112T213000
+DTEND;TZID=Europe/Rome:20261112T223000
+SUMMARY:LEVIX GROUP - F.C. DARDANIA
+DESCRIPTION:Super League · giornata 5\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14857
+URL:https://max2staff.github.io/sporting-live/#/partita/14857
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14865@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261119T203000
+DTEND;TZID=Europe/Rome:20261119T213000
+SUMMARY:F.C. DARDANIA - PRINCIPE 1846
+DESCRIPTION:Super League · giornata 6\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14865
+URL:https://max2staff.github.io/sporting-live/#/partita/14865
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14875@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261126T203000
+DTEND;TZID=Europe/Rome:20261126T213000
+SUMMARY:F.C. DARDANIA - BOZKURT
+DESCRIPTION:Super League · giornata 7\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14875
+URL:https://max2staff.github.io/sporting-live/#/partita/14875
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14885@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261203T203000
+DTEND;TZID=Europe/Rome:20261203T213000
+SUMMARY:TATANGA C5 - F.C. DARDANIA
+DESCRIPTION:Super League · giornata 8\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14885
+URL:https://max2staff.github.io/sporting-live/#/partita/14885
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14895@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261210T203000
+DTEND;TZID=Europe/Rome:20261210T213000
+SUMMARY:F.C. DARDANIA - BENVENUTI AL SUD
+DESCRIPTION:Super League · giornata 9\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14895
+URL:https://max2staff.github.io/sporting-live/#/partita/14895
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14810@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20270114T200000
+DTEND;TZID=Europe/Rome:20270114T210000
+SUMMARY:F.C. DARDANIA - I PIÙ CALMI
+DESCRIPTION:Super League · giornata 10\nhttps://max2staff.github.io/sporti
+ ng-live/#/partita/14810
+URL:https://max2staff.github.io/sporting-live/#/partita/14810
 END:VEVENT
 END:VCALENDAR

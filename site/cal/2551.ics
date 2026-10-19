@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14809@sportinglive
-DTSTAMP:20261014T095905Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261013T200000
 DTEND;TZID=Europe/Rome:20261013T210000
 SUMMARY:TATANGA C5 4-8 BARCA B
@@ -36,7 +36,7 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14809
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14823@sportinglive
-DTSTAMP:20261014T095905Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261022T203000
 DTEND;TZID=Europe/Rome:20261022T213000
 SUMMARY:BENVENUTI AL SUD - TATANGA C5
@@ -46,12 +46,82 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14823
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14831@sportinglive
-DTSTAMP:20261014T095905Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261029T203000
 DTEND;TZID=Europe/Rome:20261029T213000
 SUMMARY:CHAOS LEGACY - TATANGA C5
 DESCRIPTION:Super League · giornata 3\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14831
 URL:https://max2staff.github.io/sporting-live/#/partita/14831
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14841@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261105T210000
+DTEND;TZID=Europe/Rome:20261105T220000
+SUMMARY:TATANGA C5 - I PIÙ CALMI
+DESCRIPTION:Super League · giornata 4\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14841
+URL:https://max2staff.github.io/sporting-live/#/partita/14841
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14853@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261112T220000
+DTEND;TZID=Europe/Rome:20261112T230000
+SUMMARY:I GUARDIANI DEL PALLONE - TATANGA C5
+DESCRIPTION:Super League · giornata 5\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14853
+URL:https://max2staff.github.io/sporting-live/#/partita/14853
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14861@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261119T210000
+DTEND;TZID=Europe/Rome:20261119T220000
+SUMMARY:TATANGA C5 - LEVIX GROUP
+DESCRIPTION:Super League · giornata 6\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14861
+URL:https://max2staff.github.io/sporting-live/#/partita/14861
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14871@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261126T210000
+DTEND;TZID=Europe/Rome:20261126T220000
+SUMMARY:PRINCIPE 1846 - TATANGA C5
+DESCRIPTION:Super League · giornata 7\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14871
+URL:https://max2staff.github.io/sporting-live/#/partita/14871
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14885@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261203T203000
+DTEND;TZID=Europe/Rome:20261203T213000
+SUMMARY:TATANGA C5 - F.C. DARDANIA
+DESCRIPTION:Super League · giornata 8\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14885
+URL:https://max2staff.github.io/sporting-live/#/partita/14885
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14891@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261210T210000
+DTEND;TZID=Europe/Rome:20261210T220000
+SUMMARY:BOZKURT - TATANGA C5
+DESCRIPTION:Super League · giornata 9\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14891
+URL:https://max2staff.github.io/sporting-live/#/partita/14891
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14816@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20270114T203000
+DTEND;TZID=Europe/Rome:20270114T213000
+SUMMARY:TATANGA C5 - BENVENUTI AL SUD
+DESCRIPTION:Super League · giornata 10\nhttps://max2staff.github.io/sporti
+ ng-live/#/partita/14816
+URL:https://max2staff.github.io/sporting-live/#/partita/14816
 END:VEVENT
 END:VCALENDAR

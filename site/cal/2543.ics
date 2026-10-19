@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14813@sportinglive
-DTSTAMP:20261016T093414Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261015T200000
 DTEND;TZID=Europe/Rome:20261015T210000
 SUMMARY:BENVENUTI AL SUD 3-7 CHAOS LEGACY
@@ -36,7 +36,7 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14813
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14819@sportinglive
-DTSTAMP:20261016T093414Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261021T203000
 DTEND;TZID=Europe/Rome:20261021T213000
 SUMMARY:CHAOS LEGACY - PRINCIPE 1846
@@ -46,12 +46,82 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14819
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14831@sportinglive
-DTSTAMP:20261016T093414Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261029T203000
 DTEND;TZID=Europe/Rome:20261029T213000
 SUMMARY:CHAOS LEGACY - TATANGA C5
 DESCRIPTION:Super League · giornata 3\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14831
 URL:https://max2staff.github.io/sporting-live/#/partita/14831
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14847@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261105T213000
+DTEND;TZID=Europe/Rome:20261105T223000
+SUMMARY:F.C. DARDANIA - CHAOS LEGACY
+DESCRIPTION:Super League · giornata 4\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14847
+URL:https://max2staff.github.io/sporting-live/#/partita/14847
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14851@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261112T210000
+DTEND;TZID=Europe/Rome:20261112T220000
+SUMMARY:CHAOS LEGACY - I PIÙ CALMI
+DESCRIPTION:Super League · giornata 5\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14851
+URL:https://max2staff.github.io/sporting-live/#/partita/14851
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14867@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261119T213000
+DTEND;TZID=Europe/Rome:20261119T223000
+SUMMARY:BOZKURT - CHAOS LEGACY
+DESCRIPTION:Super League · giornata 6\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14867
+URL:https://max2staff.github.io/sporting-live/#/partita/14867
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14869@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261126T200000
+DTEND;TZID=Europe/Rome:20261126T210000
+SUMMARY:BARCA B - CHAOS LEGACY
+DESCRIPTION:Super League · giornata 7\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14869
+URL:https://max2staff.github.io/sporting-live/#/partita/14869
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14883@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261203T220000
+DTEND;TZID=Europe/Rome:20261203T230000
+SUMMARY:CHAOS LEGACY - I GUARDIANI DEL PALLONE
+DESCRIPTION:Super League · giornata 8\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14883
+URL:https://max2staff.github.io/sporting-live/#/partita/14883
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14897@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261210T213000
+DTEND;TZID=Europe/Rome:20261210T223000
+SUMMARY:LEVIX GROUP - CHAOS LEGACY
+DESCRIPTION:Super League · giornata 9\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14897
+URL:https://max2staff.github.io/sporting-live/#/partita/14897
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14812@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20270114T210000
+DTEND;TZID=Europe/Rome:20270114T220000
+SUMMARY:PRINCIPE 1846 - CHAOS LEGACY
+DESCRIPTION:Super League · giornata 10\nhttps://max2staff.github.io/sporti
+ ng-live/#/partita/14812
+URL:https://max2staff.github.io/sporting-live/#/partita/14812
 END:VEVENT
 END:VCALENDAR

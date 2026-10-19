@@ -26,7 +26,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14817@sportinglive
-DTSTAMP:20261016T225818Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261015T220000
 DTEND;TZID=Europe/Rome:20261015T230000
 SUMMARY:F.C. DARDANIA - I GUARDIANI DEL PALLONE
@@ -36,7 +36,7 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14817
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14821@sportinglive
-DTSTAMP:20261016T225818Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261021T213000
 DTEND;TZID=Europe/Rome:20261021T223000
 SUMMARY:I GUARDIANI DEL PALLONE - BOZKURT
@@ -46,12 +46,82 @@ URL:https://max2staff.github.io/sporting-live/#/partita/14821
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14833@sportinglive
-DTSTAMP:20261016T225818Z
+DTSTAMP:20261019T103534Z
 DTSTART;TZID=Europe/Rome:20261029T213000
 DTEND;TZID=Europe/Rome:20261029T223000
 SUMMARY:I GUARDIANI DEL PALLONE - PRINCIPE 1846
 DESCRIPTION:Super League · giornata 3\nhttps://max2staff.github.io/sportin
  g-live/#/partita/14833
 URL:https://max2staff.github.io/sporting-live/#/partita/14833
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14843@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261105T220000
+DTEND;TZID=Europe/Rome:20261105T230000
+SUMMARY:LEVIX GROUP - I GUARDIANI DEL PALLONE
+DESCRIPTION:Super League · giornata 4\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14843
+URL:https://max2staff.github.io/sporting-live/#/partita/14843
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14853@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261112T220000
+DTEND;TZID=Europe/Rome:20261112T230000
+SUMMARY:I GUARDIANI DEL PALLONE - TATANGA C5
+DESCRIPTION:Super League · giornata 5\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14853
+URL:https://max2staff.github.io/sporting-live/#/partita/14853
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14863@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261119T220000
+DTEND;TZID=Europe/Rome:20261119T230000
+SUMMARY:BENVENUTI AL SUD - I GUARDIANI DEL PALLONE
+DESCRIPTION:Super League · giornata 6\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14863
+URL:https://max2staff.github.io/sporting-live/#/partita/14863
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14873@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261126T220000
+DTEND;TZID=Europe/Rome:20261126T230000
+SUMMARY:I GUARDIANI DEL PALLONE - I PIÙ CALMI
+DESCRIPTION:Super League · giornata 7\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14873
+URL:https://max2staff.github.io/sporting-live/#/partita/14873
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14883@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261203T220000
+DTEND;TZID=Europe/Rome:20261203T230000
+SUMMARY:CHAOS LEGACY - I GUARDIANI DEL PALLONE
+DESCRIPTION:Super League · giornata 8\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14883
+URL:https://max2staff.github.io/sporting-live/#/partita/14883
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14893@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20261210T220000
+DTEND;TZID=Europe/Rome:20261210T230000
+SUMMARY:I GUARDIANI DEL PALLONE - BARCA B
+DESCRIPTION:Super League · giornata 9\nhttps://max2staff.github.io/sportin
+ g-live/#/partita/14893
+URL:https://max2staff.github.io/sporting-live/#/partita/14893
+END:VEVENT
+BEGIN:VEVENT
+UID:partita-14814@sportinglive
+DTSTAMP:20261019T103534Z
+DTSTART;TZID=Europe/Rome:20270114T220000
+DTEND;TZID=Europe/Rome:20270114T230000
+SUMMARY:BOZKURT - I GUARDIANI DEL PALLONE
+DESCRIPTION:Super League · giornata 10\nhttps://max2staff.github.io/sporti
+ ng-live/#/partita/14814
+URL:https://max2staff.github.io/sporting-live/#/partita/14814
 END:VEVENT
 END:VCALENDAR

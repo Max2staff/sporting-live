@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-20T11:51:42+02:00",
+ "aggiornato": "2026-10-22T11:53:43+02:00",
  "idgirone": 425,
  "squadre": [
   {
@@ -23,6 +23,10 @@
    "nome": "LEVIX GROUP"
   },
   {
+   "id": 2536,
+   "nome": "F.C. PETTIMORTO"
+  },
+  {
    "id": 2530,
    "nome": "AUTOSANDONA'"
   },
@@ -31,20 +35,16 @@
    "nome": "DEAM TEAM"
   },
   {
-   "id": 2536,
-   "nome": "F.C. PETTIMORTO"
-  },
-  {
    "id": 2535,
    "nome": "R.S.M. CARPENEDO"
   },
   {
-   "id": 2529,
-   "nome": "APERITIVO LA CORUNA"
-  },
-  {
    "id": 2537,
    "nome": "TATANGALAR"
+  },
+  {
+   "id": 2529,
+   "nome": "APERITIVO LA CORUNA"
   },
   {
    "id": 2531,
@@ -79,13 +79,13 @@
     "nome": "THE HATEFUL 8",
     "pos": 2,
     "pt": 12,
-    "g": 4,
+    "g": 5,
     "v": 4,
     "n": 0,
-    "p": 0,
-    "gf": 22,
-    "gs": 9,
-    "dr": 13
+    "p": 1,
+    "gf": 24,
+    "gs": 12,
+    "dr": 12
    },
    {
     "squadraId": 2534,
@@ -104,13 +104,13 @@
     "squadraId": 2538,
     "nome": "IMPRESA EDILE GAVAGNIN",
     "pos": 4,
-    "pt": 10,
-    "g": 5,
+    "pt": 11,
+    "g": 6,
     "v": 3,
-    "n": 1,
+    "n": 2,
     "p": 1,
-    "gf": 17,
-    "gs": 12,
+    "gf": 19,
+    "gs": 14,
     "dr": 5
    },
    {
@@ -127,9 +127,22 @@
     "dr": 0
    },
    {
+    "squadraId": 2536,
+    "nome": "F.C. PETTIMORTO",
+    "pos": 6,
+    "pt": 8,
+    "g": 6,
+    "v": 2,
+    "n": 2,
+    "p": 2,
+    "gf": 14,
+    "gs": 18,
+    "dr": -4
+   },
+   {
     "squadraId": 2530,
     "nome": "AUTOSANDONA'",
-    "pos": 6,
+    "pos": 7,
     "pt": 7,
     "g": 6,
     "v": 2,
@@ -142,7 +155,7 @@
    {
     "squadraId": 2540,
     "nome": "DEAM TEAM",
-    "pos": 7,
+    "pos": 8,
     "pt": 7,
     "g": 6,
     "v": 2,
@@ -151,19 +164,6 @@
     "gf": 15,
     "gs": 17,
     "dr": -2
-   },
-   {
-    "squadraId": 2536,
-    "nome": "F.C. PETTIMORTO",
-    "pos": 8,
-    "pt": 7,
-    "g": 5,
-    "v": 2,
-    "n": 1,
-    "p": 2,
-    "gf": 12,
-    "gs": 16,
-    "dr": -4
    },
    {
     "squadraId": 2535,
@@ -179,9 +179,22 @@
     "dr": -1
    },
    {
+    "squadraId": 2537,
+    "nome": "TATANGALAR",
+    "pos": 10,
+    "pt": 6,
+    "g": 5,
+    "v": 2,
+    "n": 0,
+    "p": 3,
+    "gf": 14,
+    "gs": 16,
+    "dr": -2
+   },
+   {
     "squadraId": 2529,
     "nome": "APERITIVO LA CORUNA",
-    "pos": 10,
+    "pos": 11,
     "pt": 5,
     "g": 5,
     "v": 1,
@@ -190,19 +203,6 @@
     "gf": 12,
     "gs": 14,
     "dr": -2
-   },
-   {
-    "squadraId": 2537,
-    "nome": "TATANGALAR",
-    "pos": 11,
-    "pt": 3,
-    "g": 4,
-    "v": 1,
-    "n": 0,
-    "p": 3,
-    "gf": 11,
-    "gs": 14,
-    "dr": -3
    },
    {
     "squadraId": 2531,
@@ -709,9 +709,9 @@
    "ora": "20:30",
    "casaId": 2537,
    "ospiteId": 2539,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 3,
+   "golOspite": 2,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -721,9 +721,9 @@
    "ora": "21:30",
    "casaId": 2536,
    "ospiteId": 2538,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 2,
+   "golOspite": 2,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -9268,6 +9268,343 @@
    "migliore": {
     "squadraId": 2533,
     "nome": "GHEORGHE CIOCOI"
+   },
+   "completo": true
+  },
+  "14703": {
+   "marcatori": [
+    {
+     "squadraId": 2537,
+     "nome": "PERVIS GJULJDAN",
+     "minuto": 17
+    },
+    {
+     "squadraId": 2537,
+     "nome": "BELO SELVI",
+     "minuto": 34
+    },
+    {
+     "squadraId": 2537,
+     "nome": "EMRO GOKAN",
+     "minuto": 45
+    },
+    {
+     "squadraId": 2539,
+     "nome": "PERESIN LORENZO",
+     "minuto": 19
+    },
+    {
+     "squadraId": 2539,
+     "nome": "PERESIN LORENZO",
+     "minuto": 21
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2537,
+     "nome": "BELO BAYRAM",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "MORON DAVDE",
+     "numero": 1,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "PERVIS GJULJDAN",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "ZENNARO NICOLO'",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "SUNER PERVIS",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "BAZZACCO ELIA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "JASAR TUNCAJ",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "BALLARIN SIMONE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "ILYAS TUNCAY",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "TOCCHI ROCCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "MELIH MURAT",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "LUCICH LUDOVICO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "PERVIS SUNAY",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "ABIDAR NASSIM",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "ABDULA TAIR",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "CASTILLO JOHNNY",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "EMRO GOKAN",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "SALVAGNO JACOPO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2537,
+     "nome": "BELO SELVI",
+     "numero": 10,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "NARDO NICOLO'",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "PERESIN LORENZO",
+     "numero": 11,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2537,
+    "nome": "JASAR TUNCAJ"
+   },
+   "completo": true
+  },
+  "14705": {
+   "marcatori": [
+    {
+     "squadraId": 2536,
+     "nome": "TOGNIN MATTEO",
+     "minuto": 39
+    },
+    {
+     "squadraId": 2536,
+     "nome": "SEMENZATO GABRIELE",
+     "minuto": 41
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2536,
+     "nome": "BENIAMIN TOMMASO",
+     "numero": 1,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "BALLARIN GIACOMO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "CECCHINATO MATTIA",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "MARESCA PIETRO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "VANIN GABRIEL",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "CHIODIN GIACOMO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "PENSO ROCCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "GAVAGNIN NICOLO'",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "MASSARO SALVATORE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2538,
+     "nome": "VIANELLO FILIPPO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "BUSHPEPA KRESHNIK",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "GUADALUPI EMILIANO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "SEMENZATO GABRIELE",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2536,
+     "nome": "TOGNIN MATTEO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2536,
+    "nome": "CECCHINATO MATTIA"
    },
    "completo": true
   }

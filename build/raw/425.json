@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-22T11:53:43+02:00",
+ "aggiornato": "2026-10-22T23:10:08+02:00",
  "idgirone": 425,
  "squadre": [
   {
@@ -23,16 +23,16 @@
    "nome": "LEVIX GROUP"
   },
   {
-   "id": 2536,
-   "nome": "F.C. PETTIMORTO"
-  },
-  {
    "id": 2530,
    "nome": "AUTOSANDONA'"
   },
   {
    "id": 2540,
    "nome": "DEAM TEAM"
+  },
+  {
+   "id": 2536,
+   "nome": "F.C. PETTIMORTO"
   },
   {
    "id": 2535,
@@ -104,13 +104,13 @@
     "squadraId": 2538,
     "nome": "IMPRESA EDILE GAVAGNIN",
     "pos": 4,
-    "pt": 11,
-    "g": 6,
+    "pt": 10,
+    "g": 5,
     "v": 3,
-    "n": 2,
+    "n": 1,
     "p": 1,
-    "gf": 19,
-    "gs": 14,
+    "gf": 17,
+    "gs": 12,
     "dr": 5
    },
    {
@@ -127,22 +127,9 @@
     "dr": 0
    },
    {
-    "squadraId": 2536,
-    "nome": "F.C. PETTIMORTO",
-    "pos": 6,
-    "pt": 8,
-    "g": 6,
-    "v": 2,
-    "n": 2,
-    "p": 2,
-    "gf": 14,
-    "gs": 18,
-    "dr": -4
-   },
-   {
     "squadraId": 2530,
     "nome": "AUTOSANDONA'",
-    "pos": 7,
+    "pos": 6,
     "pt": 7,
     "g": 6,
     "v": 2,
@@ -155,7 +142,7 @@
    {
     "squadraId": 2540,
     "nome": "DEAM TEAM",
-    "pos": 8,
+    "pos": 7,
     "pt": 7,
     "g": 6,
     "v": 2,
@@ -164,6 +151,19 @@
     "gf": 15,
     "gs": 17,
     "dr": -2
+   },
+   {
+    "squadraId": 2536,
+    "nome": "F.C. PETTIMORTO",
+    "pos": 8,
+    "pt": 7,
+    "g": 5,
+    "v": 2,
+    "n": 1,
+    "p": 2,
+    "gf": 12,
+    "gs": 16,
+    "dr": -4
    },
    {
     "squadraId": 2535,

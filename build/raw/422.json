@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-21T11:53:36+02:00",
+ "aggiornato": "2026-10-23T11:47:38+02:00",
  "idgirone": 422,
  "squadre": [
   {
@@ -11,16 +11,16 @@
    "nome": "JOGA OLMITO"
   },
   {
+   "id": 2500,
+   "nome": "EDIT"
+  },
+  {
    "id": 2504,
    "nome": "DIERRE VENETO"
   },
   {
    "id": 2497,
    "nome": "F.C. ETTANERA"
-  },
-  {
-   "id": 2500,
-   "nome": "EDIT"
   },
   {
    "id": 2499,
@@ -88,9 +88,22 @@
     "dr": 19
    },
    {
+    "squadraId": 2500,
+    "nome": "EDIT",
+    "pos": 3,
+    "pt": 12,
+    "g": 6,
+    "v": 4,
+    "n": 0,
+    "p": 2,
+    "gf": 31,
+    "gs": 22,
+    "dr": 9
+   },
+   {
     "squadraId": 2504,
     "nome": "DIERRE VENETO",
-    "pos": 3,
+    "pos": 4,
     "pt": 10,
     "g": 6,
     "v": 3,
@@ -103,7 +116,7 @@
    {
     "squadraId": 2497,
     "nome": "F.C. ETTANERA",
-    "pos": 4,
+    "pos": 5,
     "pt": 9,
     "g": 5,
     "v": 3,
@@ -112,19 +125,6 @@
     "gf": 21,
     "gs": 14,
     "dr": 7
-   },
-   {
-    "squadraId": 2500,
-    "nome": "EDIT",
-    "pos": 5,
-    "pt": 9,
-    "g": 5,
-    "v": 3,
-    "n": 0,
-    "p": 2,
-    "gf": 26,
-    "gs": 20,
-    "dr": 6
    },
    {
     "squadraId": 2499,
@@ -144,13 +144,13 @@
     "nome": "BEVERLYAMARONE",
     "pos": 7,
     "pt": 7,
-    "g": 5,
+    "g": 6,
     "v": 2,
     "n": 1,
-    "p": 2,
-    "gf": 23,
-    "gs": 24,
-    "dr": -1
+    "p": 3,
+    "gf": 25,
+    "gs": 29,
+    "dr": -4
    },
    {
     "squadraId": 2491,
@@ -721,9 +721,9 @@
    "ora": "20:00",
    "casaId": 2500,
    "ospiteId": 2494,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 5,
+   "golOspite": 2,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -10465,6 +10465,228 @@
    "migliore": {
     "squadraId": 2501,
     "nome": "MENEGAZZI CHRISTIAN"
+   },
+   "completo": true
+  },
+  "14343": {
+   "marcatori": [
+    {
+     "squadraId": 2500,
+     "nome": "ZENNARO ALVISE",
+     "minuto": 18
+    },
+    {
+     "squadraId": 2500,
+     "nome": "TREVISAN SIMONE",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2500,
+     "nome": "ZENNARO ALVISE",
+     "minuto": 31
+    },
+    {
+     "squadraId": 2500,
+     "nome": "TREVISAN SIMONE",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2500,
+     "nome": "LONGATO MIRCO",
+     "minuto": 41
+    },
+    {
+     "squadraId": 2494,
+     "nome": "NOTABUONO ALEX",
+     "minuto": 15
+    },
+    {
+     "squadraId": 2494,
+     "nome": "NOTABUONO ALEX",
+     "minuto": 21
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2500,
+     "nome": "TESAN MAICOL",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "TAGLIATI MASSIMO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "ZADRO SIMONE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": true,
+     "espulso": true
+    },
+    {
+     "squadraId": 2494,
+     "nome": "CONTE STEFANO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "INSALACO MARCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "DI LIETO OTTAVIO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "ZAGO MATTIA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "PARISI STEFANO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "GIANNI ALESSANDRO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "CONTE ENRICO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "FAINELLO RAOUL",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "CONTE FILIPPO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "FORNARO LUCA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "LUONGO MATTEO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "GIANNI MATTIA",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "NOTABUONO ALEX",
+     "numero": 8,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "COPPOLA RICCARDO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2494,
+     "nome": "LUONGO ROBERTO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "TREVISAN SIMONE",
+     "numero": 10,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "LONGATO MIRCO",
+     "numero": 11,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "ROSSO GIACOMO",
+     "numero": 12,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2500,
+     "nome": "ZENNARO ALVISE",
+     "numero": 13,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2500,
+    "nome": "TESAN MAICOL"
    },
    "completo": true
   }

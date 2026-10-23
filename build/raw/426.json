@@ -1,42 +1,42 @@
 {
- "aggiornato": "2026-10-22T23:10:18+02:00",
+ "aggiornato": "2026-10-23T11:47:43+02:00",
  "idgirone": 426,
  "squadre": [
-  {
-   "id": 2543,
-   "nome": "CHAOS LEGACY"
-  },
-  {
-   "id": 2546,
-   "nome": "BARCA B"
-  },
   {
    "id": 2545,
    "nome": "LEVIX GROUP"
   },
   {
-   "id": 2550,
-   "nome": "BOZKURT"
+   "id": 2543,
+   "nome": "CHAOS LEGACY"
   },
   {
    "id": 2552,
    "nome": "I PIÙ CALMI"
   },
   {
-   "id": 2547,
-   "nome": "F.C. DARDANIA"
-  },
-  {
-   "id": 2548,
-   "nome": "I GUARDIANI DEL PALLONE"
-  },
-  {
    "id": 2551,
    "nome": "TATANGA C5"
   },
   {
+   "id": 2546,
+   "nome": "BARCA B"
+  },
+  {
+   "id": 2550,
+   "nome": "BOZKURT"
+  },
+  {
+   "id": 2548,
+   "nome": "RIPOSO"
+  },
+  {
    "id": 2544,
    "nome": "PRINCIPE 1846"
+  },
+  {
+   "id": 2547,
+   "nome": "F.C. DARDANIA"
   },
   {
    "id": 2549,
@@ -46,9 +46,22 @@
  "classifica": {
   "totale": [
    {
+    "squadraId": 2545,
+    "nome": "LEVIX GROUP",
+    "pos": 1,
+    "pt": 6,
+    "g": 2,
+    "v": 2,
+    "n": 0,
+    "p": 0,
+    "gf": 14,
+    "gs": 6,
+    "dr": 8
+   },
+   {
     "squadraId": 2543,
     "nome": "CHAOS LEGACY",
-    "pos": 1,
+    "pos": 2,
     "pt": 6,
     "g": 2,
     "v": 2,
@@ -59,73 +72,60 @@
     "dr": 7
    },
    {
-    "squadraId": 2546,
-    "nome": "BARCA B",
-    "pos": 2,
-    "pt": 3,
-    "g": 1,
+    "squadraId": 2552,
+    "nome": "I PIÙ CALMI",
+    "pos": 3,
+    "pt": 4,
+    "g": 2,
     "v": 1,
-    "n": 0,
+    "n": 1,
     "p": 0,
-    "gf": 8,
-    "gs": 4,
-    "dr": 4
+    "gf": 20,
+    "gs": 14,
+    "dr": 6
    },
    {
-    "squadraId": 2545,
-    "nome": "LEVIX GROUP",
-    "pos": 3,
+    "squadraId": 2551,
+    "nome": "TATANGA C5",
+    "pos": 4,
     "pt": 3,
-    "g": 1,
+    "g": 2,
     "v": 1,
     "n": 0,
-    "p": 0,
-    "gf": 2,
-    "gs": 1,
-    "dr": 1
+    "p": 1,
+    "gf": 14,
+    "gs": 15,
+    "dr": -1
+   },
+   {
+    "squadraId": 2546,
+    "nome": "BARCA B",
+    "pos": 5,
+    "pt": 3,
+    "g": 2,
+    "v": 1,
+    "n": 0,
+    "p": 1,
+    "gf": 13,
+    "gs": 16,
+    "dr": -3
    },
    {
     "squadraId": 2550,
     "nome": "BOZKURT",
-    "pos": 4,
-    "pt": 1,
-    "g": 1,
-    "v": 0,
-    "n": 1,
-    "p": 0,
-    "gf": 8,
-    "gs": 8,
-    "dr": 0
-   },
-   {
-    "squadraId": 2552,
-    "nome": "I PIÙ CALMI",
-    "pos": 5,
-    "pt": 1,
-    "g": 1,
-    "v": 0,
-    "n": 1,
-    "p": 0,
-    "gf": 8,
-    "gs": 8,
-    "dr": 0
-   },
-   {
-    "squadraId": 2547,
-    "nome": "F.C. DARDANIA",
     "pos": 6,
-    "pt": 0,
-    "g": 0,
+    "pt": 1,
+    "g": 1,
     "v": 0,
-    "n": 0,
+    "n": 1,
     "p": 0,
-    "gf": 0,
-    "gs": 0,
+    "gf": 8,
+    "gs": 8,
     "dr": 0
    },
    {
     "squadraId": 2548,
-    "nome": "I GUARDIANI DEL PALLONE",
+    "nome": "RIPOSO",
     "pos": 7,
     "pt": 0,
     "g": 0,
@@ -137,22 +137,9 @@
     "dr": 0
    },
    {
-    "squadraId": 2551,
-    "nome": "TATANGA C5",
-    "pos": 8,
-    "pt": 0,
-    "g": 1,
-    "v": 0,
-    "n": 0,
-    "p": 1,
-    "gf": 4,
-    "gs": 8,
-    "dr": -4
-   },
-   {
     "squadraId": 2544,
     "nome": "PRINCIPE 1846",
-    "pos": 9,
+    "pos": 8,
     "pt": 0,
     "g": 2,
     "v": 0,
@@ -163,17 +150,30 @@
     "dr": -4
    },
    {
-    "squadraId": 2549,
-    "nome": "BENVENUTI AL SUD",
-    "pos": 10,
+    "squadraId": 2547,
+    "nome": "F.C. DARDANIA",
+    "pos": 9,
     "pt": 0,
     "g": 1,
     "v": 0,
     "n": 0,
     "p": 1,
-    "gf": 3,
-    "gs": 7,
-    "dr": -4
+    "gf": 6,
+    "gs": 12,
+    "dr": -6
+   },
+   {
+    "squadraId": 2549,
+    "nome": "BENVENUTI AL SUD",
+    "pos": 10,
+    "pt": 0,
+    "g": 2,
+    "v": 0,
+    "n": 0,
+    "p": 2,
+    "gf": 10,
+    "gs": 17,
+    "dr": -7
    }
   ]
  },
@@ -229,8 +229,8 @@
   {
    "id": 14817,
    "giornata": 1,
-   "data": "2026-10-15",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2547,
    "ospiteId": 2548,
    "golCasa": null,
@@ -253,8 +253,8 @@
   {
    "id": 14821,
    "giornata": 2,
-   "data": "2026-10-21",
-   "ora": "21:30",
+   "data": null,
+   "ora": null,
    "casaId": 2548,
    "ospiteId": 2550,
    "golCasa": null,
@@ -269,9 +269,9 @@
    "ora": "20:30",
    "casaId": 2549,
    "ospiteId": 2551,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 7,
+   "golOspite": 10,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -281,9 +281,9 @@
    "ora": "21:30",
    "casaId": 2546,
    "ospiteId": 2545,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 5,
+   "golOspite": 12,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -293,9 +293,9 @@
    "ora": "20:30",
    "casaId": 2552,
    "ospiteId": 2547,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 12,
+   "golOspite": 6,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -325,8 +325,8 @@
   {
    "id": 14833,
    "giornata": 3,
-   "data": "2026-10-29",
-   "ora": "21:30",
+   "data": null,
+   "ora": null,
    "casaId": 2548,
    "ospiteId": 2544,
    "golCasa": null,
@@ -385,8 +385,8 @@
   {
    "id": 14843,
    "giornata": 4,
-   "data": "2026-11-05",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2545,
    "ospiteId": 2548,
    "golCasa": null,
@@ -445,8 +445,8 @@
   {
    "id": 14853,
    "giornata": 5,
-   "data": "2026-11-12",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2548,
    "ospiteId": 2551,
    "golCasa": null,
@@ -505,8 +505,8 @@
   {
    "id": 14863,
    "giornata": 6,
-   "data": "2026-11-19",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2549,
    "ospiteId": 2548,
    "golCasa": null,
@@ -565,8 +565,8 @@
   {
    "id": 14873,
    "giornata": 7,
-   "data": "2026-11-26",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2548,
    "ospiteId": 2552,
    "golCasa": null,
@@ -625,8 +625,8 @@
   {
    "id": 14883,
    "giornata": 8,
-   "data": "2026-12-03",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2543,
    "ospiteId": 2548,
    "golCasa": null,
@@ -685,8 +685,8 @@
   {
    "id": 14893,
    "giornata": 9,
-   "data": "2026-12-10",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2548,
    "ospiteId": 2546,
    "golCasa": null,
@@ -745,8 +745,8 @@
   {
    "id": 14814,
    "giornata": 10,
-   "data": "2027-01-14",
-   "ora": "22:00",
+   "data": null,
+   "ora": null,
    "casaId": 2550,
    "ospiteId": 2548,
    "golCasa": null,
@@ -2131,6 +2131,630 @@
    "migliore": {
     "squadraId": 2543,
     "nome": "VEDOVA ALBERTO"
+   },
+   "completo": true
+  },
+  "14823": {
+   "marcatori": [
+    {
+     "squadraId": 2549,
+     "nome": "D'ORTA EMANUELE",
+     "minuto": 7
+    },
+    {
+     "squadraId": 2549,
+     "nome": "DI BARI ALESSANDRO",
+     "minuto": 7
+    },
+    {
+     "squadraId": 2549,
+     "nome": "PALAZZOTTO DAVIDE",
+     "minuto": 10
+    },
+    {
+     "squadraId": 2549,
+     "nome": "MAIESE GIUSEPPE",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2549,
+     "nome": "PALAZZOTTO DAVIDE",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2549,
+     "nome": "MAIESE GIUSEPPE",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2549,
+     "nome": "MAIESE GIUSEPPE",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2551,
+     "nome": "ILYAS TUNCAY",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2551,
+     "nome": "BELO BAYRAM",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2551,
+     "nome": "MESUT PERZVIZOV",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2551,
+     "nome": "PERVIS GJULJDAN",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2551,
+     "nome": "ILYAS TUNCAY",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2551,
+     "nome": "ILYAS TUNCAY",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2551,
+     "nome": "BELO BAYRAM",
+     "minuto": 34
+    },
+    {
+     "squadraId": 2551,
+     "nome": "BELO BAYRAM",
+     "minuto": 43
+    },
+    {
+     "squadraId": 2551,
+     "nome": "ILYAS TUNCAY",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2551,
+     "nome": "BELO BAYRAM",
+     "minuto": 52
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2549,
+     "nome": "FIORENTINO LUCA",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2551,
+     "nome": "MUSTAFA ENGUEL",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2549,
+     "nome": "DI BARI ALESSANDRO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2551,
+     "nome": "BELO BAYRAM",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2549,
+     "nome": "PALAZZOTTO DAVIDE",
+     "numero": 3,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2551,
+     "nome": "PERVIS MEHMET",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2549,
+     "nome": "FONTANA PASQUALE DANIELE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2551,
+     "nome": "ILYAS TUNCAY",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2549,
+     "nome": "MAIESE GIUSEPPE",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2551,
+     "nome": "PERVIS GJULJDAN",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2549,
+     "nome": "D'ORTA EMANUELE",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2551,
+     "nome": "MESUT PERZVIZOV",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2549,
+     "nome": "MEDURI FRANCESCO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2551,
+     "nome": "DZANSEN SOLYMAN",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2549,
+    "nome": "MAIESE GIUSEPPE"
+   },
+   "completo": true
+  },
+  "14825": {
+   "marcatori": [
+    {
+     "squadraId": 2546,
+     "nome": "MDELLEL NACEUR",
+     "minuto": 5
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SIDI CEYHUN",
+     "minuto": 7
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SIDI CEYHUN",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SIDI CEYHUN",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SIDI CEYHUN",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "minuto": 3
+    },
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "minuto": 12
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MARJAN GJINAI",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2545,
+     "nome": "GENUALDI ALESSIO",
+     "minuto": 19
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MDELLEL NACEUR",
+     "minuto": 19
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MDELLEL NACEUR",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MDELLEL NACEUR",
+     "minuto": 39
+    },
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2545,
+     "nome": "GHEORGHE CIOCOI",
+     "minuto": 49
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MDELLEL NACEUR",
+     "minuto": 49
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2546,
+     "nome": "SARDER SALAM",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "PJOLLA DEDE",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SEJDI GULAYDIN",
+     "numero": 2,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MDELLEL NACEUR",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SIDI CHAN",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "numero": 3,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SIDI CEYHUN",
+     "numero": 4,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "GHEORGHE CIOCOI",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2546,
+     "nome": "SEJDI MERT",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "GENUALDI ALESSIO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2546,
+     "nome": "LJAMO ENIS",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "LEVITSKYI RUSLAN",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2546,
+     "nome": "ASAN EMRE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MOCCIA GIOVANNI",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MARJAN GJINAI",
+     "numero": 8,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2546,
+    "nome": "SIDI CEYHUN"
+   },
+   "completo": true
+  },
+  "14827": {
+   "marcatori": [
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "minuto": 1
+    },
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "minuto": 3
+    },
+    {
+     "squadraId": 2552,
+     "nome": "SIDI DJAVIT",
+     "minuto": 7
+    },
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "minuto": 25
+    },
+    {
+     "squadraId": 2552,
+     "nome": "SIDI DJAVIT",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2552,
+     "nome": "SHALA ARXHEND",
+     "minuto": 30
+    },
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2552,
+     "nome": "SHALA ARXHEND",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2547,
+     "nome": "LUSHAS FERID",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2547,
+     "nome": "RAMADAN ZOGAJ",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2547,
+     "nome": "KRASNIQI ARLIND",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2547,
+     "nome": "RAMADAN ZOGAJ",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2547,
+     "nome": "KRASNIQI ARLIND",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2547,
+     "nome": "RAMADAN ZOGAJ",
+     "minuto": 33
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2552,
+     "nome": "SUTI ENUEL",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2547,
+     "nome": "EGZON HAJDARI",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2552,
+     "nome": "NICOLIN NDREKA",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2547,
+     "nome": "BEKOLLI RINOR",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2552,
+     "nome": "SHALA ARXHEND",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2547,
+     "nome": "HOXHA VALDRIN",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2552,
+     "nome": "SIDI DJAVIT",
+     "numero": 4,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2547,
+     "nome": "LUSHAS FERID",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2552,
+     "nome": "PJTERNIKAJ SABAH",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2547,
+     "nome": "RAMADAN ZOGAJ",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2552,
+     "nome": "VEIZI MARJO",
+     "numero": 6,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2547,
+     "nome": "HOXHAJ URIN",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2547,
+     "nome": "KRASNIQI ARLIND",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2552,
+    "nome": "SUTI ENUEL"
    },
    "completo": true
   }

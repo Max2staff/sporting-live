@@ -1,7 +1,11 @@
 {
- "aggiornato": "2026-10-22T23:10:08+02:00",
+ "aggiornato": "2026-10-23T11:47:28+02:00",
  "idgirone": 425,
  "squadre": [
+  {
+   "id": 2534,
+   "nome": "ELYSIUM ENERGY GROUP"
+  },
   {
    "id": 2532,
    "nome": "NZ"
@@ -9,10 +13,6 @@
   {
    "id": 2539,
    "nome": "THE HATEFUL 8"
-  },
-  {
-   "id": 2534,
-   "nome": "ELYSIUM ENERGY GROUP"
   },
   {
    "id": 2538,
@@ -62,22 +62,35 @@
  "classifica": {
   "totale": [
    {
+    "squadraId": 2534,
+    "nome": "ELYSIUM ENERGY GROUP",
+    "pos": 1,
+    "pt": 15,
+    "g": 6,
+    "v": 5,
+    "n": 0,
+    "p": 1,
+    "gf": 18,
+    "gs": 10,
+    "dr": 8
+   },
+   {
     "squadraId": 2532,
     "nome": "NZ",
-    "pos": 1,
+    "pos": 2,
     "pt": 13,
-    "g": 5,
+    "g": 6,
     "v": 4,
     "n": 1,
-    "p": 0,
-    "gf": 18,
-    "gs": 7,
-    "dr": 11
+    "p": 1,
+    "gf": 19,
+    "gs": 10,
+    "dr": 9
    },
    {
     "squadraId": 2539,
     "nome": "THE HATEFUL 8",
-    "pos": 2,
+    "pos": 3,
     "pt": 12,
     "g": 5,
     "v": 4,
@@ -86,19 +99,6 @@
     "gf": 24,
     "gs": 12,
     "dr": 12
-   },
-   {
-    "squadraId": 2534,
-    "nome": "ELYSIUM ENERGY GROUP",
-    "pos": 3,
-    "pt": 12,
-    "g": 5,
-    "v": 4,
-    "n": 0,
-    "p": 1,
-    "gf": 15,
-    "gs": 9,
-    "dr": 6
    },
    {
     "squadraId": 2538,
@@ -733,9 +733,9 @@
    "ora": "20:30",
    "casaId": 2534,
    "ospiteId": 2532,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 3,
+   "golOspite": 1,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -9605,6 +9605,189 @@
    "migliore": {
     "squadraId": 2536,
     "nome": "CECCHINATO MATTIA"
+   },
+   "completo": true
+  },
+  "14707": {
+   "marcatori": [
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2534,
+     "nome": "ZENNARO FRANCESCO",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2534,
+     "nome": "ZENNARO FRANCESCO",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2532,
+     "nome": "SIFFANO PIETRO",
+     "minuto": 44
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2534,
+     "nome": "MARINO ROBERTO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "TIDIANE MBAYE CHEJKH",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "KHALISSI ALESSANDRO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "ZENNARO CHRISTIAN",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "CONTE RICCARDO",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "PERON FEDERICO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "CREGLIA ALESSIO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "SIFFANO PIETRO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "LAMBERTI ALVISE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PROTO RICCARDO",
+     "numero": 6,
+     "voto": 8.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "BATTISTIN NICOLA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "GASORE IVAN",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "RUGGERO GIANMARCO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MUSTALI EDISON",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "PAVANELLO ALESSANDRO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "ZENNARO FRANCESCO",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2532,
+     "nome": "PADULA GABRIELE",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "BOCCATO MASSIMILIANO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2534,
+    "nome": "PROTO RICCARDO"
    },
    "completo": true
   }

@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-23T11:47:43+02:00",
+ "aggiornato": "2026-10-23T22:56:46+02:00",
  "idgirone": 426,
  "squadre": [
   {
@@ -350,7 +350,7 @@
    "id": 14837,
    "giornata": 3,
    "data": "2026-10-29",
-   "ora": "21:00",
+   "ora": "21:30",
    "casaId": 2546,
    "ospiteId": 2547,
    "golCasa": null,

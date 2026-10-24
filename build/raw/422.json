@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-23T22:56:43+02:00",
+ "aggiornato": "2026-10-24T11:20:58+02:00",
  "idgirone": 422,
  "squadre": [
   {
@@ -15,6 +15,10 @@
    "nome": "EDIT"
   },
   {
+   "id": 2499,
+   "nome": "F.C. SPORTLIFE"
+  },
+  {
    "id": 2504,
    "nome": "DIERRE VENETO"
   },
@@ -23,8 +27,8 @@
    "nome": "F.C. ETTANERA"
   },
   {
-   "id": 2499,
-   "nome": "F.C. SPORTLIFE"
+   "id": 2496,
+   "nome": "FACILE"
   },
   {
    "id": 2494,
@@ -37,10 +41,6 @@
   {
    "id": 2493,
    "nome": "BOCA JUNIORS"
-  },
-  {
-   "id": 2496,
-   "nome": "FACILE"
   },
   {
    "id": 2502,
@@ -101,9 +101,22 @@
     "dr": 9
    },
    {
+    "squadraId": 2499,
+    "nome": "F.C. SPORTLIFE",
+    "pos": 4,
+    "pt": 10,
+    "g": 6,
+    "v": 3,
+    "n": 1,
+    "p": 2,
+    "gf": 21,
+    "gs": 18,
+    "dr": 3
+   },
+   {
     "squadraId": 2504,
     "nome": "DIERRE VENETO",
-    "pos": 4,
+    "pos": 5,
     "pt": 10,
     "g": 6,
     "v": 3,
@@ -116,33 +129,33 @@
    {
     "squadraId": 2497,
     "nome": "F.C. ETTANERA",
-    "pos": 5,
+    "pos": 6,
     "pt": 9,
-    "g": 5,
+    "g": 6,
     "v": 3,
     "n": 0,
-    "p": 2,
-    "gf": 21,
-    "gs": 14,
-    "dr": 7
+    "p": 3,
+    "gf": 23,
+    "gs": 17,
+    "dr": 6
    },
    {
-    "squadraId": 2499,
-    "nome": "F.C. SPORTLIFE",
-    "pos": 6,
-    "pt": 7,
-    "g": 5,
-    "v": 2,
-    "n": 1,
-    "p": 2,
-    "gf": 18,
-    "gs": 16,
-    "dr": 2
+    "squadraId": 2496,
+    "nome": "FACILE",
+    "pos": 7,
+    "pt": 9,
+    "g": 6,
+    "v": 3,
+    "n": 0,
+    "p": 3,
+    "gf": 17,
+    "gs": 18,
+    "dr": -1
    },
    {
     "squadraId": 2494,
     "nome": "BEVERLYAMARONE",
-    "pos": 7,
+    "pos": 8,
     "pt": 7,
     "g": 6,
     "v": 2,
@@ -155,7 +168,7 @@
    {
     "squadraId": 2491,
     "nome": "U.S. TRIVIGNANO",
-    "pos": 8,
+    "pos": 9,
     "pt": 7,
     "g": 6,
     "v": 2,
@@ -168,7 +181,7 @@
    {
     "squadraId": 2493,
     "nome": "BOCA JUNIORS",
-    "pos": 9,
+    "pos": 10,
     "pt": 7,
     "g": 6,
     "v": 2,
@@ -177,19 +190,6 @@
     "gf": 18,
     "gs": 27,
     "dr": -9
-   },
-   {
-    "squadraId": 2496,
-    "nome": "FACILE",
-    "pos": 10,
-    "pt": 6,
-    "g": 5,
-    "v": 2,
-    "n": 0,
-    "p": 3,
-    "gf": 12,
-    "gs": 15,
-    "dr": -3
    },
    {
     "squadraId": 2502,
@@ -222,13 +222,13 @@
     "nome": "OCHO AR MOCHO",
     "pos": 13,
     "pt": 5,
-    "g": 5,
+    "g": 6,
     "v": 1,
     "n": 2,
-    "p": 2,
-    "gf": 22,
-    "gs": 24,
-    "dr": -2
+    "p": 3,
+    "gf": 25,
+    "gs": 29,
+    "dr": -4
    },
    {
     "squadraId": 2503,
@@ -733,9 +733,9 @@
    "ora": "21:30",
    "casaId": 2499,
    "ospiteId": 2497,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 3,
+   "golOspite": 2,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -745,9 +745,9 @@
    "ora": "21:30",
    "casaId": 2495,
    "ospiteId": 2496,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 3,
+   "golOspite": 5,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -814,7 +814,7 @@
    "id": 14359,
    "giornata": 7,
    "data": "2026-10-29",
-   "ora": "20:00",
+   "ora": "20:30",
    "casaId": 2494,
    "ospiteId": 2499,
    "golCasa": null,
@@ -1089,20 +1089,8 @@
   {
    "id": 14405,
    "giornata": 11,
-   "data": null,
-   "ora": null,
-   "casaId": 2491,
-   "ospiteId": 2493,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14407,
-   "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-23",
+   "ora": "20:30",
    "casaId": 2492,
    "ospiteId": 2500,
    "golCasa": null,
@@ -1111,12 +1099,24 @@
    "tavolino": false
   },
   {
+   "id": 14407,
+   "giornata": 11,
+   "data": "2026-11-24",
+   "ora": "20:30",
+   "casaId": 2491,
+   "ospiteId": 2493,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14409,
    "giornata": 11,
-   "data": null,
-   "ora": null,
-   "casaId": 2502,
-   "ospiteId": 2499,
+   "data": "2026-11-24",
+   "ora": "20:30",
+   "casaId": 2504,
+   "ospiteId": 2494,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1125,8 +1125,8 @@
   {
    "id": 14411,
    "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-24",
+   "ora": "21:30",
    "casaId": 2503,
    "ospiteId": 2497,
    "golCasa": null,
@@ -1137,20 +1137,8 @@
   {
    "id": 14413,
    "giornata": 11,
-   "data": null,
-   "ora": null,
-   "casaId": 2504,
-   "ospiteId": 2494,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14415,
-   "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-26",
+   "ora": "21:30",
    "casaId": 2495,
    "ospiteId": 2501,
    "golCasa": null,
@@ -1159,10 +1147,22 @@
    "tavolino": false
   },
   {
+   "id": 14415,
+   "giornata": 11,
+   "data": "2026-11-26",
+   "ora": "22:00",
+   "casaId": 2502,
+   "ospiteId": 2499,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14417,
    "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-27",
+   "ora": "21:30",
    "casaId": 2496,
    "ospiteId": 2498,
    "golCasa": null,
@@ -1173,8 +1173,8 @@
   {
    "id": 14419,
    "giornata": 12,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-30",
+   "ora": "20:30",
    "casaId": 2500,
    "ospiteId": 2495,
    "golCasa": null,
@@ -1185,32 +1185,8 @@
   {
    "id": 14421,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2504,
-   "ospiteId": 2493,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14423,
-   "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2501,
-   "ospiteId": 2491,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14425,
-   "giornata": 12,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-30",
+   "ora": "21:30",
    "casaId": 2494,
    "ospiteId": 2503,
    "golCasa": null,
@@ -1219,10 +1195,34 @@
    "tavolino": false
   },
   {
+   "id": 14423,
+   "giornata": 12,
+   "data": "2026-12-01",
+   "ora": "20:30",
+   "casaId": 2504,
+   "ospiteId": 2493,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14425,
+   "giornata": 12,
+   "data": "2026-12-01",
+   "ora": "21:30",
+   "casaId": 2501,
+   "ospiteId": 2491,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14427,
    "giornata": 12,
-   "data": null,
-   "ora": null,
+   "data": "2026-12-01",
+   "ora": "21:30",
    "casaId": 2497,
    "ospiteId": 2496,
    "golCasa": null,
@@ -1233,20 +1233,8 @@
   {
    "id": 14429,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2498,
-   "ospiteId": 2502,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14431,
-   "giornata": 12,
-   "data": null,
-   "ora": null,
+   "data": "2026-12-03",
+   "ora": "22:00",
    "casaId": 2499,
    "ospiteId": 2492,
    "golCasa": null,
@@ -1255,12 +1243,24 @@
    "tavolino": false
   },
   {
+   "id": 14431,
+   "giornata": 12,
+   "data": "2026-12-04",
+   "ora": "21:30",
+   "casaId": 2498,
+   "ospiteId": 2502,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14433,
    "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2491,
-   "ospiteId": 2500,
+   "data": "2026-12-09",
+   "ora": "20:30",
+   "casaId": 2502,
+   "ospiteId": 2497,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1269,8 +1269,8 @@
   {
    "id": 14435,
    "giornata": 13,
-   "data": null,
-   "ora": null,
+   "data": "2026-12-09",
+   "ora": "21:30",
    "casaId": 2492,
    "ospiteId": 2498,
    "golCasa": null,
@@ -1281,32 +1281,8 @@
   {
    "id": 14437,
    "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2502,
-   "ospiteId": 2497,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14439,
-   "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2503,
-   "ospiteId": 2504,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14441,
-   "giornata": 13,
-   "data": null,
-   "ora": null,
+   "data": "2026-12-10",
+   "ora": "20:30",
    "casaId": 2493,
    "ospiteId": 2501,
    "golCasa": null,
@@ -1315,12 +1291,36 @@
    "tavolino": false
   },
   {
+   "id": 14439,
+   "giornata": 13,
+   "data": "2026-12-14",
+   "ora": "20:30",
+   "casaId": 2491,
+   "ospiteId": 2500,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14441,
+   "giornata": 13,
+   "data": "2026-12-14",
+   "ora": "21:30",
+   "casaId": 2496,
+   "ospiteId": 2494,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14443,
    "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2495,
-   "ospiteId": 2499,
+   "data": "2026-12-15",
+   "ora": "20:30",
+   "casaId": 2503,
+   "ospiteId": 2504,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1329,10 +1329,10 @@
   {
    "id": 14445,
    "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2496,
-   "ospiteId": 2494,
+   "data": "2026-12-15",
+   "ora": "21:30",
+   "casaId": 2495,
+   "ospiteId": 2499,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -10687,6 +10687,405 @@
    "migliore": {
     "squadraId": 2500,
     "nome": "TESAN MAICOL"
+   },
+   "completo": true
+  },
+  "14345": {
+   "marcatori": [
+    {
+     "squadraId": 2499,
+     "nome": "MARTINI LORENZO",
+     "minuto": 12
+    },
+    {
+     "squadraId": 2499,
+     "nome": "MARTINI LORENZO",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2499,
+     "nome": "VIAN FEDERICO",
+     "minuto": 31
+    },
+    {
+     "squadraId": 2497,
+     "nome": "GARUFI NICOLO'",
+     "minuto": 28
+    },
+    {
+     "squadraId": 2497,
+     "nome": "DI FUCCIA PASQUALE",
+     "minuto": 41
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2499,
+     "nome": "FABRICI GIACOMO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "DI PASQUALE MATTIA",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "VIAN SIMONE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "ALLOCCA DANIELE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "MARTINI RICCARDO",
+     "numero": 3,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "BENTIVENGA VINCENZO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "MUNTEANU MARCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "SARACENO SIMONE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "VIAN FEDERICO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "GARUFI NICOLO'",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "MARTINI LORENZO",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "SERNICOLA LUCA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "BOLZONELLA TOMMASO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "OLIVE MICHELE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "TESO MARCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "ROMANUCCI MARCO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "JASTER DAVIDE",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2497,
+     "nome": "DI FUCCIA PASQUALE",
+     "numero": 9,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "QUAHI AMIR",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2499,
+     "nome": "MARINO RICCARDO GIOVANNI",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2499,
+    "nome": "MARTINI LORENZO"
+   },
+   "completo": true
+  },
+  "14347": {
+   "marcatori": [
+    {
+     "squadraId": 2495,
+     "nome": "VIANELLO ALVISE",
+     "minuto": 27
+    },
+    {
+     "squadraId": 2495,
+     "nome": "COMELLATO TOMMASO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2495,
+     "nome": "SPINA GIACOMO",
+     "minuto": 47
+    },
+    {
+     "squadraId": 2496,
+     "nome": "SENIGAGLIA FILIPPO",
+     "minuto": 8
+    },
+    {
+     "squadraId": 2496,
+     "nome": "GRIDELLI GIANMARCO",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2496,
+     "nome": "GRIDELLI GIANMARCO",
+     "minuto": 23
+    },
+    {
+     "squadraId": 2496,
+     "nome": "GRIDELLI GIANMARCO",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2496,
+     "nome": "NICASTRO BRUNO TOMMASO",
+     "minuto": 42
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2495,
+     "nome": "SARTOR DANIEL",
+     "numero": 1,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "ZENNARO DAVIDE",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "DALLA CARBONARE MATTEO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "WULTEN GIOVANNI",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "VIANELLO ALVISE",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "GRIDELLI GIANMARCO",
+     "numero": 3,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "SIMI MARCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "NICASTRO BRUNO TOMMASO",
+     "numero": 4,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "VIGNOTTO DANIEL",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "BORTOLINI MARCO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "DA LIO FILIBERTO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "MAIONE GIACOMO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "COMELLATO TOMMASO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "COMIN HASSINE",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "SACCHETTO ALESSANDRO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "SENIGAGLIA FILIPPO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "SPINA GIACOMO",
+     "numero": 9,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2496,
+     "nome": "TARLA LEONARDO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2495,
+     "nome": "ANCUTA FLORIAN",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2495,
+    "nome": "SPINA GIACOMO"
    },
    "completo": true
   }

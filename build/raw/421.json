@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-23T11:47:32+02:00",
+ "aggiornato": "2026-10-24T11:20:54+02:00",
  "idgirone": 421,
  "squadre": [
   {
@@ -9,6 +9,10 @@
   {
    "id": 2478,
    "nome": "FORTITUDO HURRICANES"
+  },
+  {
+   "id": 2487,
+   "nome": "F.C. BECK'S"
   },
   {
    "id": 2489,
@@ -21,10 +25,6 @@
   {
    "id": 2483,
    "nome": "F.C. AMICONI"
-  },
-  {
-   "id": 2487,
-   "nome": "F.C. BECK'S"
   },
   {
    "id": 2481,
@@ -88,9 +88,22 @@
     "dr": 12
    },
    {
+    "squadraId": 2487,
+    "nome": "F.C. BECK'S",
+    "pos": 3,
+    "pt": 13,
+    "g": 6,
+    "v": 4,
+    "n": 1,
+    "p": 1,
+    "gf": 24,
+    "gs": 14,
+    "dr": 10
+   },
+   {
     "squadraId": 2489,
     "nome": "GOC FELLAS",
-    "pos": 3,
+    "pos": 4,
     "pt": 13,
     "g": 6,
     "v": 4,
@@ -103,7 +116,7 @@
    {
     "squadraId": 2482,
     "nome": "REAL TURAN C8 (SEI RESTAURI)",
-    "pos": 4,
+    "pos": 5,
     "pt": 12,
     "g": 6,
     "v": 4,
@@ -116,7 +129,7 @@
    {
     "squadraId": 2483,
     "nome": "F.C. AMICONI",
-    "pos": 5,
+    "pos": 6,
     "pt": 10,
     "g": 6,
     "v": 3,
@@ -127,30 +140,17 @@
     "dr": 7
    },
    {
-    "squadraId": 2487,
-    "nome": "F.C. BECK'S",
-    "pos": 6,
-    "pt": 10,
-    "g": 5,
-    "v": 3,
-    "n": 1,
-    "p": 1,
-    "gf": 17,
-    "gs": 12,
-    "dr": 5
-   },
-   {
     "squadraId": 2481,
     "nome": "MCONOR PUB",
     "pos": 7,
     "pt": 9,
-    "g": 5,
+    "g": 6,
     "v": 3,
     "n": 0,
-    "p": 2,
-    "gf": 15,
-    "gs": 10,
-    "dr": 5
+    "p": 3,
+    "gf": 17,
+    "gs": 17,
+    "dr": 0
    },
    {
     "squadraId": 2486,
@@ -745,15 +745,15 @@
    "ora": "20:30",
    "casaId": 2487,
    "ospiteId": 2481,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 7,
+   "golOspite": 2,
+   "giocata": true,
    "tavolino": false
   },
   {
    "id": 14167,
    "giornata": 7,
-   "data": "2026-10-27",
+   "data": "2026-12-16",
    "ora": "20:30",
    "casaId": 2483,
    "ospiteId": 2477,
@@ -765,7 +765,7 @@
   {
    "id": 14169,
    "giornata": 7,
-   "data": "2026-10-28",
+   "data": "2026-12-16",
    "ora": "21:30",
    "casaId": 2478,
    "ospiteId": 2479,
@@ -777,7 +777,7 @@
   {
    "id": 14171,
    "giornata": 7,
-   "data": "2026-10-28",
+   "data": "2026-12-10",
    "ora": "21:30",
    "casaId": 2489,
    "ospiteId": 2480,
@@ -789,8 +789,8 @@
   {
    "id": 14173,
    "giornata": 7,
-   "data": "2026-10-29",
-   "ora": "20:30",
+   "data": "2026-12-16",
+   "ora": "21:30",
    "casaId": 2488,
    "ospiteId": 2482,
    "golCasa": null,
@@ -801,8 +801,8 @@
   {
    "id": 14175,
    "giornata": 7,
-   "data": "2026-10-29",
-   "ora": "21:30",
+   "data": "2026-12-17",
+   "ora": "20:30",
    "casaId": 2484,
    "ospiteId": 2485,
    "golCasa": null,
@@ -813,8 +813,8 @@
   {
    "id": 14177,
    "giornata": 7,
-   "data": "2026-10-29",
-   "ora": "22:00",
+   "data": "2026-12-17",
+   "ora": "20:30",
    "casaId": 2487,
    "ospiteId": 2490,
    "golCasa": null,
@@ -825,7 +825,7 @@
   {
    "id": 14179,
    "giornata": 7,
-   "data": "2026-10-30",
+   "data": "2026-12-17",
    "ora": "21:30",
    "casaId": 2481,
    "ospiteId": 2486,
@@ -1089,32 +1089,8 @@
   {
    "id": 14223,
    "giornata": 11,
-   "data": null,
-   "ora": null,
-   "casaId": 2477,
-   "ospiteId": 2479,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14225,
-   "giornata": 11,
-   "data": null,
-   "ora": null,
-   "casaId": 2478,
-   "ospiteId": 2487,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14227,
-   "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-25",
+   "ora": "20:30",
    "casaId": 2488,
    "ospiteId": 2486,
    "golCasa": null,
@@ -1123,10 +1099,34 @@
    "tavolino": false
   },
   {
+   "id": 14225,
+   "giornata": 11,
+   "data": "2026-11-25",
+   "ora": "21:30",
+   "casaId": 2482,
+   "ospiteId": 2480,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14227,
+   "giornata": 11,
+   "data": "2026-11-25",
+   "ora": "21:30",
+   "casaId": 2478,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14229,
    "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-26",
+   "ora": "20:00",
    "casaId": 2489,
    "ospiteId": 2484,
    "golCasa": null,
@@ -1137,20 +1137,8 @@
   {
    "id": 14231,
    "giornata": 11,
-   "data": null,
-   "ora": null,
-   "casaId": 2482,
-   "ospiteId": 2480,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14233,
-   "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-26",
+   "ora": "21:00",
    "casaId": 2483,
    "ospiteId": 2485,
    "golCasa": null,
@@ -1159,10 +1147,22 @@
    "tavolino": false
   },
   {
+   "id": 14233,
+   "giornata": 11,
+   "data": "2026-11-26",
+   "ora": "20:30",
+   "casaId": 2477,
+   "ospiteId": 2479,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14235,
    "giornata": 11,
-   "data": null,
-   "ora": null,
+   "data": "2026-11-27",
+   "ora": "20:30",
    "casaId": 2481,
    "ospiteId": 2490,
    "golCasa": null,
@@ -1173,10 +1173,10 @@
   {
    "id": 14237,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2487,
-   "ospiteId": 2482,
+   "data": "2026-12-01",
+   "ora": "20:30",
+   "casaId": 2486,
+   "ospiteId": 2478,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1185,10 +1185,10 @@
   {
    "id": 14239,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2480,
-   "ospiteId": 2477,
+   "data": "2026-12-02",
+   "ora": "20:30",
+   "casaId": 2487,
+   "ospiteId": 2482,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1197,10 +1197,10 @@
   {
    "id": 14241,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2481,
-   "ospiteId": 2489,
+   "data": "2026-12-02",
+   "ora": "21:30",
+   "casaId": 2479,
+   "ospiteId": 2490,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1209,8 +1209,8 @@
   {
    "id": 14243,
    "giornata": 12,
-   "data": null,
-   "ora": null,
+   "data": "2026-12-02",
+   "ora": "21:30",
    "casaId": 2484,
    "ospiteId": 2483,
    "golCasa": null,
@@ -1221,10 +1221,10 @@
   {
    "id": 14245,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2485,
-   "ospiteId": 2488,
+   "data": "2026-12-03",
+   "ora": "20:30",
+   "casaId": 2480,
+   "ospiteId": 2477,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1233,10 +1233,10 @@
   {
    "id": 14247,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2486,
-   "ospiteId": 2478,
+   "data": "2026-12-03",
+   "ora": "21:30",
+   "casaId": 2485,
+   "ospiteId": 2488,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -1245,10 +1245,10 @@
   {
    "id": 14249,
    "giornata": 12,
-   "data": null,
-   "ora": null,
-   "casaId": 2479,
-   "ospiteId": 2490,
+   "data": "2026-12-04",
+   "ora": "20:30",
+   "casaId": 2481,
+   "ospiteId": 2489,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,
@@ -10684,6 +10684,206 @@
    "migliore": {
     "squadraId": 2482,
     "nome": "MAHMUTOGO JUSUF"
+   },
+   "completo": true
+  },
+  "14165": {
+   "marcatori": [
+    {
+     "squadraId": 2487,
+     "nome": "BETTIN THOMAS",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BALDIN ALVISE",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "minuto": 22
+    },
+    {
+     "squadraId": 2487,
+     "nome": "POMIATO LEONARDO",
+     "minuto": 28
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MORON DAVDE",
+     "minuto": 41
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "minuto": 44
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "minuto": 29
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "minuto": 31
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2487,
+     "nome": "MORON DAVDE",
+     "numero": 1,
+     "voto": 8.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "CALLEGARO MATTEO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "CALCE FRANCESCO",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVANI JACOPO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MARINELLO LUCA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BON ALBERTO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BALDIN ALVISE",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BRIKI ANIS",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "MEMMO MARCO",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": true,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "POMIATO LEONARDO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POSSAMAI MATTEO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "BETTIN THOMAS",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ORSENO DOMENICO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "ABIDAR NASSIM",
+     "numero": 8,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "CIRAVOLO OMAR",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2487,
+     "nome": "SILVESTRI GIOELE",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POLO GIOVANNI",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2487,
+    "nome": "MORON DAVDE"
    },
    "completo": true
   }

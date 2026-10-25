@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-24T11:20:54+02:00",
+ "aggiornato": "2026-10-25T10:38:00+01:00",
  "idgirone": 421,
  "squadre": [
   {
@@ -753,7 +753,7 @@
   {
    "id": 14167,
    "giornata": 7,
-   "data": "2026-12-16",
+   "data": "2026-10-27",
    "ora": "20:30",
    "casaId": 2483,
    "ospiteId": 2477,
@@ -765,7 +765,7 @@
   {
    "id": 14169,
    "giornata": 7,
-   "data": "2026-12-16",
+   "data": "2026-10-28",
    "ora": "21:30",
    "casaId": 2478,
    "ospiteId": 2479,
@@ -777,7 +777,7 @@
   {
    "id": 14171,
    "giornata": 7,
-   "data": "2026-12-10",
+   "data": "2026-10-28",
    "ora": "21:30",
    "casaId": 2489,
    "ospiteId": 2480,
@@ -789,8 +789,8 @@
   {
    "id": 14173,
    "giornata": 7,
-   "data": "2026-12-16",
-   "ora": "21:30",
+   "data": "2026-10-29",
+   "ora": "20:00",
    "casaId": 2488,
    "ospiteId": 2482,
    "golCasa": null,
@@ -801,8 +801,8 @@
   {
    "id": 14175,
    "giornata": 7,
-   "data": "2026-12-17",
-   "ora": "20:30",
+   "data": "2026-10-29",
+   "ora": "21:30",
    "casaId": 2484,
    "ospiteId": 2485,
    "golCasa": null,
@@ -813,8 +813,8 @@
   {
    "id": 14177,
    "giornata": 7,
-   "data": "2026-12-17",
-   "ora": "20:30",
+   "data": "2026-10-29",
+   "ora": "22:00",
    "casaId": 2487,
    "ospiteId": 2490,
    "golCasa": null,
@@ -825,7 +825,7 @@
   {
    "id": 14179,
    "giornata": 7,
-   "data": "2026-12-17",
+   "data": "2026-10-30",
    "ora": "21:30",
    "casaId": 2481,
    "ospiteId": 2486,
@@ -1257,56 +1257,8 @@
   {
    "id": 14251,
    "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2477,
-   "ospiteId": 2487,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14253,
-   "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2478,
-   "ospiteId": 2485,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14255,
-   "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2488,
-   "ospiteId": 2484,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14257,
-   "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2479,
-   "ospiteId": 2480,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
-   "tavolino": false
-  },
-  {
-   "id": 14259,
-   "giornata": 13,
-   "data": null,
-   "ora": null,
+   "data": "2026-12-09",
+   "ora": "20:30",
    "casaId": 2482,
    "ospiteId": 2486,
    "golCasa": null,
@@ -1315,10 +1267,34 @@
    "tavolino": false
   },
   {
-   "id": 14261,
+   "id": 14253,
    "giornata": 13,
-   "data": null,
-   "ora": null,
+   "data": "2026-12-09",
+   "ora": "21:30",
+   "casaId": 2477,
+   "ospiteId": 2487,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14255,
+   "giornata": 13,
+   "data": "2026-12-10",
+   "ora": "21:30",
+   "casaId": 2489,
+   "ospiteId": 2490,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14257,
+   "giornata": 13,
+   "data": "2026-12-11",
+   "ora": "21:30",
    "casaId": 2483,
    "ospiteId": 2481,
    "golCasa": null,
@@ -1327,12 +1303,36 @@
    "tavolino": false
   },
   {
+   "id": 14259,
+   "giornata": 13,
+   "data": "2026-12-16",
+   "ora": "20:30",
+   "casaId": 2478,
+   "ospiteId": 2485,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
+   "id": 14261,
+   "giornata": 13,
+   "data": "2026-12-16",
+   "ora": "20:30",
+   "casaId": 2488,
+   "ospiteId": 2484,
+   "golCasa": null,
+   "golOspite": null,
+   "giocata": false,
+   "tavolino": false
+  },
+  {
    "id": 14263,
    "giornata": 13,
-   "data": null,
-   "ora": null,
-   "casaId": 2489,
-   "ospiteId": 2490,
+   "data": "2026-12-17",
+   "ora": "20:30",
+   "casaId": 2479,
+   "ospiteId": 2480,
    "golCasa": null,
    "golOspite": null,
    "giocata": false,

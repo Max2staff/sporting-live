@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-25T10:38:00+01:00",
+ "aggiornato": "2026-10-28T01:57:30+01:00",
  "idgirone": 421,
  "squadre": [
   {
@@ -9,6 +9,10 @@
   {
    "id": 2478,
    "nome": "FORTITUDO HURRICANES"
+  },
+  {
+   "id": 2483,
+   "nome": "F.C. AMICONI"
   },
   {
    "id": 2487,
@@ -23,10 +27,6 @@
    "nome": "REAL TURAN C8 (SEI RESTAURI)"
   },
   {
-   "id": 2483,
-   "nome": "F.C. AMICONI"
-  },
-  {
    "id": 2481,
    "nome": "MCONOR PUB"
   },
@@ -39,12 +39,12 @@
    "nome": "SOCKS"
   },
   {
-   "id": 2477,
-   "nome": "REAL GNECA MIAMI"
-  },
-  {
    "id": 2490,
    "nome": "DESPERADOS"
+  },
+  {
+   "id": 2477,
+   "nome": "REAL GNECA MIAMI"
   },
   {
    "id": 2485,
@@ -88,9 +88,22 @@
     "dr": 12
    },
    {
+    "squadraId": 2483,
+    "nome": "F.C. AMICONI",
+    "pos": 3,
+    "pt": 13,
+    "g": 7,
+    "v": 4,
+    "n": 1,
+    "p": 2,
+    "gf": 32,
+    "gs": 19,
+    "dr": 13
+   },
+   {
     "squadraId": 2487,
     "nome": "F.C. BECK'S",
-    "pos": 3,
+    "pos": 4,
     "pt": 13,
     "g": 6,
     "v": 4,
@@ -103,7 +116,7 @@
    {
     "squadraId": 2489,
     "nome": "GOC FELLAS",
-    "pos": 4,
+    "pos": 5,
     "pt": 13,
     "g": 6,
     "v": 4,
@@ -116,7 +129,7 @@
    {
     "squadraId": 2482,
     "nome": "REAL TURAN C8 (SEI RESTAURI)",
-    "pos": 5,
+    "pos": 6,
     "pt": 12,
     "g": 6,
     "v": 4,
@@ -125,19 +138,6 @@
     "gf": 26,
     "gs": 20,
     "dr": 6
-   },
-   {
-    "squadraId": 2483,
-    "nome": "F.C. AMICONI",
-    "pos": 6,
-    "pt": 10,
-    "g": 6,
-    "v": 3,
-    "n": 1,
-    "p": 2,
-    "gf": 26,
-    "gs": 19,
-    "dr": 7
    },
    {
     "squadraId": 2481,
@@ -179,22 +179,9 @@
     "dr": 0
    },
    {
-    "squadraId": 2477,
-    "nome": "REAL GNECA MIAMI",
-    "pos": 10,
-    "pt": 6,
-    "g": 6,
-    "v": 2,
-    "n": 0,
-    "p": 4,
-    "gf": 8,
-    "gs": 12,
-    "dr": -4
-   },
-   {
     "squadraId": 2490,
     "nome": "DESPERADOS",
-    "pos": 11,
+    "pos": 10,
     "pt": 6,
     "g": 6,
     "v": 2,
@@ -203,6 +190,19 @@
     "gf": 14,
     "gs": 22,
     "dr": -8
+   },
+   {
+    "squadraId": 2477,
+    "nome": "REAL GNECA MIAMI",
+    "pos": 11,
+    "pt": 6,
+    "g": 7,
+    "v": 2,
+    "n": 0,
+    "p": 5,
+    "gf": 8,
+    "gs": 18,
+    "dr": -10
    },
    {
     "squadraId": 2485,
@@ -757,9 +757,9 @@
    "ora": "20:30",
    "casaId": 2483,
    "ospiteId": 2477,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 6,
+   "golOspite": 0,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -10888,7 +10888,9 @@
    "completo": true
   }
  },
- "incompleti": [],
+ "incompleti": [
+  14167
+ ],
  "stale": {},
  "errori": []
 }

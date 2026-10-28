@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-23T22:56:46+02:00",
+ "aggiornato": "2026-10-28T01:57:38+01:00",
  "idgirone": 426,
  "squadre": [
   {
@@ -49,13 +49,13 @@
     "squadraId": 2545,
     "nome": "LEVIX GROUP",
     "pos": 1,
-    "pt": 6,
-    "g": 2,
+    "pt": 7,
+    "g": 3,
     "v": 2,
-    "n": 0,
+    "n": 1,
     "p": 0,
-    "gf": 14,
-    "gs": 6,
+    "gf": 18,
+    "gs": 10,
     "dr": 8
    },
    {
@@ -114,13 +114,13 @@
     "squadraId": 2550,
     "nome": "BOZKURT",
     "pos": 6,
-    "pt": 1,
-    "g": 1,
+    "pt": 2,
+    "g": 2,
     "v": 0,
-    "n": 1,
+    "n": 2,
     "p": 0,
-    "gf": 8,
-    "gs": 8,
+    "gf": 12,
+    "gs": 12,
     "dr": 0
    },
    {
@@ -305,9 +305,9 @@
    "ora": "20:30",
    "casaId": 2545,
    "ospiteId": 2550,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 4,
+   "golOspite": 4,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -2755,6 +2755,177 @@
    "migliore": {
     "squadraId": 2552,
     "nome": "SUTI ENUEL"
+   },
+   "completo": true
+  },
+  "14829": {
+   "marcatori": [
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "minuto": 4
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MARJAN GJINAI",
+     "minuto": 14
+    },
+    {
+     "squadraId": 2545,
+     "nome": "GHEORGHE CIOCOI",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2545,
+     "nome": "IODICE DOMENICO",
+     "minuto": 32
+    },
+    {
+     "squadraId": 2550,
+     "nome": "REDZEP OKAN",
+     "minuto": 2
+    },
+    {
+     "squadraId": 2550,
+     "nome": "HAJDAROGLU USEIN",
+     "minuto": 18
+    },
+    {
+     "squadraId": 2550,
+     "nome": "ASAN USNI",
+     "minuto": 30
+    },
+    {
+     "squadraId": 2550,
+     "nome": "REDZEP OKAN",
+     "minuto": 31
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2545,
+     "nome": "PJOLLA DEDE",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2550,
+     "nome": "OSMAN MAHMUD",
+     "numero": 1,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "GENUALDI ALESSIO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2550,
+     "nome": "SEMSI ALIL",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "LEVITSKYI RUSLAN",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2550,
+     "nome": "FEJZO FEJZO",
+     "numero": 3,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MOCCIA GIOVANNI",
+     "numero": 4,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2550,
+     "nome": "ASAN USNI",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "MARJAN GJINAI",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2550,
+     "nome": "REDZEP OKAN",
+     "numero": 5,
+     "voto": 6.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "DABBOUSSI MOHAMED",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2550,
+     "nome": "FEJZO KEMAL",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "IODICE DOMENICO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2550,
+     "nome": "HAJDAROGLU USEIN",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2545,
+     "nome": "GHEORGHE CIOCOI",
+     "numero": 8,
+     "voto": null,
+     "ammonito": true,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2545,
+    "nome": "MOCCIA GIOVANNI"
    },
    "completo": true
   }

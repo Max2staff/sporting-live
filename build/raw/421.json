@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-30T12:14:17+01:00",
+ "aggiornato": "2026-10-31T11:46:43+01:00",
  "idgirone": 421,
  "squadre": [
   {
@@ -27,12 +27,12 @@
    "nome": "REAL TURAN C8 (SEI RESTAURI)"
   },
   {
-   "id": 2481,
-   "nome": "MCONOR PUB"
-  },
-  {
    "id": 2486,
    "nome": "EASY M&M"
+  },
+  {
+   "id": 2481,
+   "nome": "MCONOR PUB"
   },
   {
    "id": 2480,
@@ -140,30 +140,30 @@
     "dr": 3
    },
    {
-    "squadraId": 2481,
-    "nome": "MCONOR PUB",
+    "squadraId": 2486,
+    "nome": "EASY M&M",
     "pos": 7,
-    "pt": 9,
-    "g": 6,
-    "v": 3,
+    "pt": 12,
+    "g": 7,
+    "v": 4,
     "n": 0,
     "p": 3,
     "gf": 17,
-    "gs": 17,
-    "dr": 0
+    "gs": 23,
+    "dr": -6
    },
    {
-    "squadraId": 2486,
-    "nome": "EASY M&M",
+    "squadraId": 2481,
+    "nome": "MCONOR PUB",
     "pos": 8,
     "pt": 9,
-    "g": 6,
+    "g": 7,
     "v": 3,
     "n": 0,
-    "p": 3,
-    "gf": 13,
-    "gs": 20,
-    "dr": -7
+    "p": 4,
+    "gf": 20,
+    "gs": 21,
+    "dr": -1
    },
    {
     "squadraId": 2480,
@@ -829,9 +829,9 @@
    "ora": "21:30",
    "casaId": 2481,
    "ospiteId": 2486,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 3,
+   "golOspite": 4,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -11880,6 +11880,212 @@
    "migliore": {
     "squadraId": 2487,
     "nome": "MORON DAVDE"
+   },
+   "completo": true
+  },
+  "14179": {
+   "marcatori": [
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2481,
+     "nome": "LA ROSA ALESSANDRO",
+     "minuto": 28
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "minuto": 38
+    },
+    {
+     "squadraId": 2486,
+     "nome": "LA TERZA GIANMARCO",
+     "minuto": 21
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA ALVISE",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DARLANTE ANDREA",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "minuto": 44
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2481,
+     "nome": "CALLEGARO MATTEO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA MATTIA",
+     "numero": 1,
+     "voto": 6.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "PADOVANI JACOPO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BIASUTI DANIELE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "CASASOLA ANDREA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "LA TERZA GIANMARCO",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BRIKI ANIS",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BERARDI MARCO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ORSENO DOMENICO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": true,
+     "espulso": true
+    },
+    {
+     "squadraId": 2486,
+     "nome": "DARLANTE ANDREA",
+     "numero": 5,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "ZITO NICOLO'",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "TAGLIAPIETRA ALVISE",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "SPONCHIADO MATTIA",
+     "numero": 7,
+     "voto": 7.5,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "CARRARO MARK",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "POLO GIOVANNI",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "COLLI MATTIA",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "LA ROSA ALESSANDRO",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "BERTUZZI NICHOLAS",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2481,
+     "nome": "BROVEDANI THOMAS",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2486,
+     "nome": "PANFILO BARNABA",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2481,
+    "nome": "LA ROSA ALESSANDRO"
    },
    "completo": true
   }

@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-31T11:46:43+01:00",
+ "aggiornato": "2026-11-03T01:27:19+01:00",
  "idgirone": 421,
  "squadre": [
   {
@@ -12088,11 +12088,15 @@
     "nome": "LA ROSA ALESSANDRO"
    },
    "completo": true
+  },
+  "14167": {
+   "marcatori": [],
+   "formazioni": [],
+   "migliore": null,
+   "completo": false
   }
  },
- "incompleti": [
-  14167
- ],
+ "incompleti": [],
  "stale": {},
  "errori": []
 }

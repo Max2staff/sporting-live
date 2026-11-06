@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-06T00:13:48+01:00",
+ "aggiornato": "2026-11-06T13:46:20+01:00",
  "idgirone": 421,
  "squadre": [
   {
@@ -65,14 +65,14 @@
     "squadraId": 2479,
     "nome": "F.C. PELIGROS",
     "pos": 1,
-    "pt": 21,
-    "g": 7,
-    "v": 7,
+    "pt": 24,
+    "g": 8,
+    "v": 8,
     "n": 0,
     "p": 0,
-    "gf": 41,
-    "gs": 9,
-    "dr": 32
+    "gf": 46,
+    "gs": 11,
+    "dr": 35
    },
    {
     "squadraId": 2487,
@@ -222,13 +222,13 @@
     "nome": "MARCON C8",
     "pos": 13,
     "pt": 4,
-    "g": 7,
+    "g": 8,
     "v": 1,
     "n": 1,
-    "p": 5,
-    "gf": 15,
-    "gs": 27,
-    "dr": -12
+    "p": 6,
+    "gf": 17,
+    "gs": 32,
+    "dr": -15
    },
    {
     "squadraId": 2488,
@@ -901,9 +901,9 @@
    "ora": "22:00",
    "casaId": 2479,
    "ospiteId": 2484,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 5,
+   "golOspite": 2,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -13095,6 +13095,196 @@
    "migliore": {
     "squadraId": 2480,
     "nome": "BUSO MATTIA"
+   },
+   "completo": true
+  },
+  "14191": {
+   "marcatori": [
+    {
+     "squadraId": 2479,
+     "nome": "BARONE MANUEL",
+     "minuto": 20
+    },
+    {
+     "squadraId": 2479,
+     "nome": "GIRARDI DIEGO",
+     "minuto": 25
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "minuto": 30
+    },
+    {
+     "squadraId": 2479,
+     "nome": "BARONE MANUEL",
+     "minuto": 31
+    },
+    {
+     "squadraId": 2479,
+     "nome": "RAPISARDA MARCO",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO MASSIMILIANO",
+     "minuto": 11
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "minuto": 35
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2479,
+     "nome": "VIDAL GIACOMO",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "MAZZOLIN FRANCESCO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "CITTON FILIPPO",
+     "numero": 2,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "GRAZIANO EMANUELE",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PALAZZI CHRISTIAN",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "DE BERNARDIS ANDREA",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "PRESTI MATTEO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "SARRO FEDERICO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "VERNA NICHOLAS",
+     "numero": 5,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LAMPITELLI MATTEO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "ANESIN ALEX",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "BUSATTO ANDREA",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "RAPISARDA MARCO",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO GIANMARIA",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "BARONE MANUEL",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "LOZITO PASQUALE",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2479,
+     "nome": "GIRARDI DIEGO",
+     "numero": 9,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2484,
+     "nome": "CIMMINO MASSIMILIANO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2479,
+    "nome": "CITTON FILIPPO"
    },
    "completo": true
   }

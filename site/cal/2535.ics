@@ -26,122 +26,122 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14629@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260914T210000
 DTEND;TZID=Europe/Rome:20260914T220000
 SUMMARY:R.S.M. CARPENEDO 2-2 F.C. PETTIMORTO
-DESCRIPTION:Serie A · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14629
-URL:https://max2staff.github.io/sporting-live/#/partita/14629
+DESCRIPTION:Serie A · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14629
+URL:https://sportinglive.github.io/#/partita/14629
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14649@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260925T203000
 DTEND;TZID=Europe/Rome:20260925T213000
 SUMMARY:ELYSIUM ENERGY GROUP 3-1 R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14649
-URL:https://max2staff.github.io/sporting-live/#/partita/14649
+DESCRIPTION:Serie A · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14649
+URL:https://sportinglive.github.io/#/partita/14649
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14655@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260928T203000
 DTEND;TZID=Europe/Rome:20260928T213000
 SUMMARY:AUTOSANDONA' 1-2 R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14655
-URL:https://max2staff.github.io/sporting-live/#/partita/14655
+DESCRIPTION:Serie A · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14655
+URL:https://sportinglive.github.io/#/partita/14655
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14669@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261005T213000
 DTEND;TZID=Europe/Rome:20261005T223000
 SUMMARY:R.S.M. CARPENEDO 2-2 IMPRESA EDILE GAVAGNIN
-DESCRIPTION:Serie A · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14669
-URL:https://max2staff.github.io/sporting-live/#/partita/14669
+DESCRIPTION:Serie A · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14669
+URL:https://sportinglive.github.io/#/partita/14669
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14689@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261012T213000
 DTEND;TZID=Europe/Rome:20261012T223000
 SUMMARY:NZ 2-2 R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14689
-URL:https://max2staff.github.io/sporting-live/#/partita/14689
+DESCRIPTION:Serie A · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14689
+URL:https://sportinglive.github.io/#/partita/14689
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14711@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261026T213000
 DTEND;TZID=Europe/Rome:20261026T223000
 SUMMARY:DEAM TEAM 1-4 R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14711
-URL:https://max2staff.github.io/sporting-live/#/partita/14711
+DESCRIPTION:Serie A · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14711
+URL:https://sportinglive.github.io/#/partita/14711
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14735@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261105T203000
 DTEND;TZID=Europe/Rome:20261105T213000
 SUMMARY:R.S.M. CARPENEDO 3-5 THE HATEFUL 8
-DESCRIPTION:Serie A · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14735
-URL:https://max2staff.github.io/sporting-live/#/partita/14735
+DESCRIPTION:Serie A · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14735
+URL:https://sportinglive.github.io/#/partita/14735
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14739@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261109T203000
 DTEND;TZID=Europe/Rome:20261109T213000
 SUMMARY:F.C. BRIGATA - R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14739
-URL:https://max2staff.github.io/sporting-live/#/partita/14739
+DESCRIPTION:Serie A · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14739
+URL:https://sportinglive.github.io/#/partita/14739
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14757@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261116T210000
 DTEND;TZID=Europe/Rome:20261116T220000
 SUMMARY:R.S.M. CARPENEDO - VENICE OUD
-DESCRIPTION:Serie A · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14757
-URL:https://max2staff.github.io/sporting-live/#/partita/14757
+DESCRIPTION:Serie A · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14757
+URL:https://sportinglive.github.io/#/partita/14757
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14771@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261123T213000
 DTEND;TZID=Europe/Rome:20261123T223000
 SUMMARY:TATANGALAR - R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14771
-URL:https://max2staff.github.io/sporting-live/#/partita/14771
+DESCRIPTION:Serie A · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14771
+URL:https://sportinglive.github.io/#/partita/14771
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14785@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261202T203000
 DTEND;TZID=Europe/Rome:20261202T213000
 SUMMARY:R.S.M. CARPENEDO - APERITIVO LA CORUNA
-DESCRIPTION:Serie A · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14785
-URL:https://max2staff.github.io/sporting-live/#/partita/14785
+DESCRIPTION:Serie A · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14785
+URL:https://sportinglive.github.io/#/partita/14785
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14805@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261215T213000
 DTEND;TZID=Europe/Rome:20261215T223000
 SUMMARY:LEVIX GROUP - R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14805
-URL:https://max2staff.github.io/sporting-live/#/partita/14805
+DESCRIPTION:Serie A · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14805
+URL:https://sportinglive.github.io/#/partita/14805
 END:VEVENT
 END:VCALENDAR

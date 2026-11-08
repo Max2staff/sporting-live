@@ -26,132 +26,132 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14095@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260918T213000
 DTEND;TZID=Europe/Rome:20260918T223000
 SUMMARY:BROCCA JUNIORS 1-4 DESPERADOS
-DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14095
-URL:https://max2staff.github.io/sporting-live/#/partita/14095
+DESCRIPTION:Serie B · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14095
+URL:https://sportinglive.github.io/#/partita/14095
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14099@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260921T210000
 DTEND;TZID=Europe/Rome:20260921T220000
 SUMMARY:F.C. AMICONI 4-2 DESPERADOS
-DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14099
-URL:https://max2staff.github.io/sporting-live/#/partita/14099
+DESCRIPTION:Serie B · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14099
+URL:https://sportinglive.github.io/#/partita/14099
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14113@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260929T203000
 DTEND;TZID=Europe/Rome:20260929T213000
 SUMMARY:FORTITUDO HURRICANES 4-3 DESPERADOS
-DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14113
-URL:https://max2staff.github.io/sporting-live/#/partita/14113
+DESCRIPTION:Serie B · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14113
+URL:https://sportinglive.github.io/#/partita/14113
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14137@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261009T203000
 DTEND;TZID=Europe/Rome:20261009T213000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) 10-2 DESPERADOS
-DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14137
-URL:https://max2staff.github.io/sporting-live/#/partita/14137
+DESCRIPTION:Serie B · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14137
+URL:https://sportinglive.github.io/#/partita/14137
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14147@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261015T200000
 DTEND;TZID=Europe/Rome:20261015T210000
 SUMMARY:REAL GNECA MIAMI 2-1 DESPERADOS
-DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14147
-URL:https://max2staff.github.io/sporting-live/#/partita/14147
+DESCRIPTION:Serie B · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14147
+URL:https://sportinglive.github.io/#/partita/14147
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14161@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T213000
 DTEND;TZID=Europe/Rome:20261022T223000
 SUMMARY:SOCKS 1-2 DESPERADOS
-DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14161
-URL:https://max2staff.github.io/sporting-live/#/partita/14161
+DESCRIPTION:Serie B · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14161
+URL:https://sportinglive.github.io/#/partita/14161
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14177@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261029T220000
 DTEND;TZID=Europe/Rome:20261029T230000
 SUMMARY:F.C. BECK'S 4-2 DESPERADOS
-DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14177
-URL:https://max2staff.github.io/sporting-live/#/partita/14177
+DESCRIPTION:Serie B · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14177
+URL:https://sportinglive.github.io/#/partita/14177
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14183@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261103T213000
 DTEND;TZID=Europe/Rome:20261103T223000
 SUMMARY:EASY M&M 7-3 DESPERADOS
-DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14183
-URL:https://max2staff.github.io/sporting-live/#/partita/14183
+DESCRIPTION:Serie B · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14183
+URL:https://sportinglive.github.io/#/partita/14183
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14205@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261112T203000
 DTEND;TZID=Europe/Rome:20261112T213000
 SUMMARY:6 GOMME SCORZE - DESPERADOS
-DESCRIPTION:Serie B · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14205
-URL:https://max2staff.github.io/sporting-live/#/partita/14205
+DESCRIPTION:Serie B · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14205
+URL:https://sportinglive.github.io/#/partita/14205
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14217@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261118T203000
 DTEND;TZID=Europe/Rome:20261118T213000
 SUMMARY:MARCON C8 - DESPERADOS
-DESCRIPTION:Serie B · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14217
-URL:https://max2staff.github.io/sporting-live/#/partita/14217
+DESCRIPTION:Serie B · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14217
+URL:https://sportinglive.github.io/#/partita/14217
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14235@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261127T203000
 DTEND;TZID=Europe/Rome:20261127T213000
 SUMMARY:MCONOR PUB - DESPERADOS
-DESCRIPTION:Serie B · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14235
-URL:https://max2staff.github.io/sporting-live/#/partita/14235
+DESCRIPTION:Serie B · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14235
+URL:https://sportinglive.github.io/#/partita/14235
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14241@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261202T213000
 DTEND;TZID=Europe/Rome:20261202T223000
 SUMMARY:F.C. PELIGROS - DESPERADOS
-DESCRIPTION:Serie B · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14241
-URL:https://max2staff.github.io/sporting-live/#/partita/14241
+DESCRIPTION:Serie B · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14241
+URL:https://sportinglive.github.io/#/partita/14241
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14255@sportinglive
-DTSTAMP:20261104T125058Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261210T213000
 DTEND;TZID=Europe/Rome:20261210T223000
 SUMMARY:GOC FELLAS - DESPERADOS
-DESCRIPTION:Serie B · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14255
-URL:https://max2staff.github.io/sporting-live/#/partita/14255
+DESCRIPTION:Serie B · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14255
+URL:https://sportinglive.github.io/#/partita/14255
 END:VEVENT
 END:VCALENDAR

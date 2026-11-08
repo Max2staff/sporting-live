@@ -26,92 +26,92 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14809@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261013T200000
 DTEND;TZID=Europe/Rome:20261013T210000
 SUMMARY:TATANGA C5 4-8 BARCA B
-DESCRIPTION:Super League · giornata 1\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14809
-URL:https://max2staff.github.io/sporting-live/#/partita/14809
+DESCRIPTION:Super League · giornata 1\nhttps://sportinglive.github.io/#/pa
+ rtita/14809
+URL:https://sportinglive.github.io/#/partita/14809
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14825@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T213000
 DTEND;TZID=Europe/Rome:20261022T223000
 SUMMARY:BARCA B 5-12 LEVIX GROUP
-DESCRIPTION:Super League · giornata 2\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14825
-URL:https://max2staff.github.io/sporting-live/#/partita/14825
+DESCRIPTION:Super League · giornata 2\nhttps://sportinglive.github.io/#/pa
+ rtita/14825
+URL:https://sportinglive.github.io/#/partita/14825
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14837@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261029T213000
 DTEND;TZID=Europe/Rome:20261029T223000
 SUMMARY:BARCA B 7-4 F.C. DARDANIA
-DESCRIPTION:Super League · giornata 3\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14837
-URL:https://max2staff.github.io/sporting-live/#/partita/14837
+DESCRIPTION:Super League · giornata 3\nhttps://sportinglive.github.io/#/pa
+ rtita/14837
+URL:https://sportinglive.github.io/#/partita/14837
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14839@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261105T200000
 DTEND;TZID=Europe/Rome:20261105T210000
 SUMMARY:PRINCIPE 1846 6-5 BARCA B
-DESCRIPTION:Super League · giornata 4\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14839
-URL:https://max2staff.github.io/sporting-live/#/partita/14839
+DESCRIPTION:Super League · giornata 4\nhttps://sportinglive.github.io/#/pa
+ rtita/14839
+URL:https://sportinglive.github.io/#/partita/14839
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14849@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261112T200000
 DTEND;TZID=Europe/Rome:20261112T210000
 SUMMARY:BARCA B - BENVENUTI AL SUD
-DESCRIPTION:Super League · giornata 5\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14849
-URL:https://max2staff.github.io/sporting-live/#/partita/14849
+DESCRIPTION:Super League · giornata 5\nhttps://sportinglive.github.io/#/pa
+ rtita/14849
+URL:https://sportinglive.github.io/#/partita/14849
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14859@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261119T200000
 DTEND;TZID=Europe/Rome:20261119T210000
 SUMMARY:I PIÙ CALMI - BARCA B
-DESCRIPTION:Super League · giornata 6\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14859
-URL:https://max2staff.github.io/sporting-live/#/partita/14859
+DESCRIPTION:Super League · giornata 6\nhttps://sportinglive.github.io/#/pa
+ rtita/14859
+URL:https://sportinglive.github.io/#/partita/14859
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14869@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261126T200000
 DTEND;TZID=Europe/Rome:20261126T210000
 SUMMARY:BARCA B - CHAOS LEGACY
-DESCRIPTION:Super League · giornata 7\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14869
-URL:https://max2staff.github.io/sporting-live/#/partita/14869
+DESCRIPTION:Super League · giornata 7\nhttps://sportinglive.github.io/#/pa
+ rtita/14869
+URL:https://sportinglive.github.io/#/partita/14869
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14879@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261203T200000
 DTEND;TZID=Europe/Rome:20261203T210000
 SUMMARY:BARCA B - BOZKURT
-DESCRIPTION:Super League · giornata 8\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14879
-URL:https://max2staff.github.io/sporting-live/#/partita/14879
+DESCRIPTION:Super League · giornata 8\nhttps://sportinglive.github.io/#/pa
+ rtita/14879
+URL:https://sportinglive.github.io/#/partita/14879
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14818@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20270114T213000
 DTEND;TZID=Europe/Rome:20270114T223000
 SUMMARY:LEVIX GROUP - BARCA B
-DESCRIPTION:Super League · giornata 10\nhttps://max2staff.github.io/sporti
- ng-live/#/partita/14818
-URL:https://max2staff.github.io/sporting-live/#/partita/14818
+DESCRIPTION:Super League · giornata 10\nhttps://sportinglive.github.io/#/p
+ artita/14818
+URL:https://sportinglive.github.io/#/partita/14818
 END:VEVENT
 END:VCALENDAR

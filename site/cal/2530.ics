@@ -26,122 +26,122 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14635@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260915T213000
 DTEND;TZID=Europe/Rome:20260915T223000
 SUMMARY:APERITIVO LA CORUNA 4-4 AUTOSANDONA'
-DESCRIPTION:Serie A · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14635
-URL:https://max2staff.github.io/sporting-live/#/partita/14635
+DESCRIPTION:Serie A · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14635
+URL:https://sportinglive.github.io/#/partita/14635
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14643@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260922T213000
 DTEND;TZID=Europe/Rome:20260922T223000
 SUMMARY:AUTOSANDONA' 5-3 TATANGALAR
-DESCRIPTION:Serie A · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14643
-URL:https://max2staff.github.io/sporting-live/#/partita/14643
+DESCRIPTION:Serie A · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14643
+URL:https://sportinglive.github.io/#/partita/14643
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14655@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260928T203000
 DTEND;TZID=Europe/Rome:20260928T213000
 SUMMARY:AUTOSANDONA' 1-2 R.S.M. CARPENEDO
-DESCRIPTION:Serie A · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14655
-URL:https://max2staff.github.io/sporting-live/#/partita/14655
+DESCRIPTION:Serie A · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14655
+URL:https://sportinglive.github.io/#/partita/14655
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14677@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261008T213000
 DTEND;TZID=Europe/Rome:20261008T223000
 SUMMARY:ELYSIUM ENERGY GROUP 5-2 AUTOSANDONA'
-DESCRIPTION:Serie A · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14677
-URL:https://max2staff.github.io/sporting-live/#/partita/14677
+DESCRIPTION:Serie A · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14677
+URL:https://sportinglive.github.io/#/partita/14677
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14687@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261012T203000
 DTEND;TZID=Europe/Rome:20261012T213000
 SUMMARY:AUTOSANDONA' 1-2 F.C. PETTIMORTO
-DESCRIPTION:Serie A · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14687
-URL:https://max2staff.github.io/sporting-live/#/partita/14687
+DESCRIPTION:Serie A · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14687
+URL:https://sportinglive.github.io/#/partita/14687
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14701@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261019T213000
 DTEND;TZID=Europe/Rome:20261019T223000
 SUMMARY:LEVIX GROUP 2-3 AUTOSANDONA'
-DESCRIPTION:Serie A · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14701
-URL:https://max2staff.github.io/sporting-live/#/partita/14701
+DESCRIPTION:Serie A · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14701
+URL:https://sportinglive.github.io/#/partita/14701
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14717@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261027T213000
 DTEND;TZID=Europe/Rome:20261027T223000
 SUMMARY:IMPRESA EDILE GAVAGNIN 3-2 AUTOSANDONA'
-DESCRIPTION:Serie A · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14717
-URL:https://max2staff.github.io/sporting-live/#/partita/14717
+DESCRIPTION:Serie A · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14717
+URL:https://sportinglive.github.io/#/partita/14717
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14727@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261102T213000
 DTEND;TZID=Europe/Rome:20261102T223000
 SUMMARY:AUTOSANDONA' 5-3 NZ
-DESCRIPTION:Serie A · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14727
-URL:https://max2staff.github.io/sporting-live/#/partita/14727
+DESCRIPTION:Serie A · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14727
+URL:https://sportinglive.github.io/#/partita/14727
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14753@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261116T203000
 DTEND;TZID=Europe/Rome:20261116T213000
 SUMMARY:AUTOSANDONA' - DEAM TEAM
-DESCRIPTION:Serie A · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14753
-URL:https://max2staff.github.io/sporting-live/#/partita/14753
+DESCRIPTION:Serie A · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14753
+URL:https://sportinglive.github.io/#/partita/14753
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14775@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261125T203000
 DTEND;TZID=Europe/Rome:20261125T213000
 SUMMARY:THE HATEFUL 8 - AUTOSANDONA'
-DESCRIPTION:Serie A · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14775
-URL:https://max2staff.github.io/sporting-live/#/partita/14775
+DESCRIPTION:Serie A · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14775
+URL:https://sportinglive.github.io/#/partita/14775
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14787@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261203T200000
 DTEND;TZID=Europe/Rome:20261203T210000
 SUMMARY:AUTOSANDONA' - F.C. BRIGATA
-DESCRIPTION:Serie A · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14787
-URL:https://max2staff.github.io/sporting-live/#/partita/14787
+DESCRIPTION:Serie A · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14787
+URL:https://sportinglive.github.io/#/partita/14787
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14795@sportinglive
-DTSTAMP:20261103T124028Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261210T203000
 DTEND;TZID=Europe/Rome:20261210T213000
 SUMMARY:VENICE OUD - AUTOSANDONA'
-DESCRIPTION:Serie A · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14795
-URL:https://max2staff.github.io/sporting-live/#/partita/14795
+DESCRIPTION:Serie A · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14795
+URL:https://sportinglive.github.io/#/partita/14795
 END:VEVENT
 END:VCALENDAR

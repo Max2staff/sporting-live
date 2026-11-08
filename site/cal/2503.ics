@@ -26,132 +26,132 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14269@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260915T213000
 DTEND;TZID=Europe/Rome:20260915T223000
 SUMMARY:BUZ BEKISTAN 3-3 BOCA JUNIORS
-DESCRIPTION:Serie C · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14269
-URL:https://max2staff.github.io/sporting-live/#/partita/14269
+DESCRIPTION:Serie C · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14269
+URL:https://sportinglive.github.io/#/partita/14269
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14291@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260924T220000
 DTEND;TZID=Europe/Rome:20260924T230000
 SUMMARY:FACILE 0-1 BUZ BEKISTAN
-DESCRIPTION:Serie C · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14291
-URL:https://max2staff.github.io/sporting-live/#/partita/14291
+DESCRIPTION:Serie C · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14291
+URL:https://sportinglive.github.io/#/partita/14291
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14297@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260930T203000
 DTEND;TZID=Europe/Rome:20260930T213000
 SUMMARY:BUZ BEKISTAN 1-6 F.C. SCAVESAI
-DESCRIPTION:Serie C · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14297
-URL:https://max2staff.github.io/sporting-live/#/partita/14297
+DESCRIPTION:Serie C · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14297
+URL:https://sportinglive.github.io/#/partita/14297
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14311@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261006T203000
 DTEND;TZID=Europe/Rome:20261006T213000
 SUMMARY:JOGA OLMITO 3-3 BUZ BEKISTAN
-DESCRIPTION:Serie C · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14311
-URL:https://max2staff.github.io/sporting-live/#/partita/14311
+DESCRIPTION:Serie C · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14311
+URL:https://sportinglive.github.io/#/partita/14311
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14321@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261013T213000
 DTEND;TZID=Europe/Rome:20261013T223000
 SUMMARY:BUZ BEKISTAN 1-6 OCHO AR MOCHO
-DESCRIPTION:Serie C · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14321
-URL:https://max2staff.github.io/sporting-live/#/partita/14321
+DESCRIPTION:Serie C · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14321
+URL:https://sportinglive.github.io/#/partita/14321
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14335@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261019T213000
 DTEND;TZID=Europe/Rome:20261019T223000
 SUMMARY:U.S. TRIVIGNANO 3-2 BUZ BEKISTAN
-DESCRIPTION:Serie C · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14335
-URL:https://max2staff.github.io/sporting-live/#/partita/14335
+DESCRIPTION:Serie C · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14335
+URL:https://sportinglive.github.io/#/partita/14335
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14357@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261028T203000
 DTEND;TZID=Europe/Rome:20261028T213000
 SUMMARY:BUZ BEKISTAN 2-4 LA SERENISSIMA
-DESCRIPTION:Serie C · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14357
-URL:https://max2staff.github.io/sporting-live/#/partita/14357
+DESCRIPTION:Serie C · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14357
+URL:https://sportinglive.github.io/#/partita/14357
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14369@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261105T200000
 DTEND;TZID=Europe/Rome:20261105T210000
 SUMMARY:EDIT 3-2 BUZ BEKISTAN
-DESCRIPTION:Serie C · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14369
-URL:https://max2staff.github.io/sporting-live/#/partita/14369
+DESCRIPTION:Serie C · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14369
+URL:https://sportinglive.github.io/#/partita/14369
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14389@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261113T213000
 DTEND;TZID=Europe/Rome:20261113T223000
 SUMMARY:BUZ BEKISTAN - F.C. SPORTLIFE
-DESCRIPTION:Serie C · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14389
-URL:https://max2staff.github.io/sporting-live/#/partita/14389
+DESCRIPTION:Serie C · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14389
+URL:https://sportinglive.github.io/#/partita/14389
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14397@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261118T213000
 DTEND;TZID=Europe/Rome:20261118T223000
 SUMMARY:DEPORTIVO VIBORA - BUZ BEKISTAN
-DESCRIPTION:Serie C · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14397
-URL:https://max2staff.github.io/sporting-live/#/partita/14397
+DESCRIPTION:Serie C · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14397
+URL:https://sportinglive.github.io/#/partita/14397
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14411@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261124T213000
 DTEND;TZID=Europe/Rome:20261124T223000
 SUMMARY:BUZ BEKISTAN - F.C. ETTANERA
-DESCRIPTION:Serie C · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14411
-URL:https://max2staff.github.io/sporting-live/#/partita/14411
+DESCRIPTION:Serie C · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14411
+URL:https://sportinglive.github.io/#/partita/14411
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14421@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261130T213000
 DTEND;TZID=Europe/Rome:20261130T223000
 SUMMARY:BEVERLYAMARONE - BUZ BEKISTAN
-DESCRIPTION:Serie C · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14421
-URL:https://max2staff.github.io/sporting-live/#/partita/14421
+DESCRIPTION:Serie C · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14421
+URL:https://sportinglive.github.io/#/partita/14421
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14443@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261215T203000
 DTEND;TZID=Europe/Rome:20261215T213000
 SUMMARY:BUZ BEKISTAN - DIERRE VENETO
-DESCRIPTION:Serie C · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14443
-URL:https://max2staff.github.io/sporting-live/#/partita/14443
+DESCRIPTION:Serie C · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14443
+URL:https://sportinglive.github.io/#/partita/14443
 END:VEVENT
 END:VCALENDAR

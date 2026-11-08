@@ -26,132 +26,132 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14087@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260916T220000
 DTEND;TZID=Europe/Rome:20260916T230000
 SUMMARY:F.C. AMICONI 3-3 GOC FELLAS
-DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14087
-URL:https://max2staff.github.io/sporting-live/#/partita/14087
+DESCRIPTION:Serie B · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14087
+URL:https://sportinglive.github.io/#/partita/14087
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14109@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260924T203000
 DTEND;TZID=Europe/Rome:20260924T213000
 SUMMARY:GOC FELLAS 0-6 F.C. PELIGROS
-DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14109
-URL:https://max2staff.github.io/sporting-live/#/partita/14109
+DESCRIPTION:Serie B · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14109
+URL:https://sportinglive.github.io/#/partita/14109
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14115@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260930T220000
 DTEND;TZID=Europe/Rome:20260930T230000
 SUMMARY:GOC FELLAS 5-1 BROCCA JUNIORS
-DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14115
-URL:https://max2staff.github.io/sporting-live/#/partita/14115
+DESCRIPTION:Serie B · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14115
+URL:https://sportinglive.github.io/#/partita/14115
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14131@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261007T213000
 DTEND;TZID=Europe/Rome:20261007T223000
 SUMMARY:FORTITUDO HURRICANES 2-3 GOC FELLAS
-DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14131
-URL:https://max2staff.github.io/sporting-live/#/partita/14131
+DESCRIPTION:Serie B · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14131
+URL:https://sportinglive.github.io/#/partita/14131
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14143@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261014T203000
 DTEND;TZID=Europe/Rome:20261014T213000
 SUMMARY:GOC FELLAS 3-2 REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14143
-URL:https://max2staff.github.io/sporting-live/#/partita/14143
+DESCRIPTION:Serie B · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14143
+URL:https://sportinglive.github.io/#/partita/14143
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14159@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T210000
 DTEND;TZID=Europe/Rome:20261022T220000
 SUMMARY:REAL GNECA MIAMI 3-5 GOC FELLAS
-DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14159
-URL:https://max2staff.github.io/sporting-live/#/partita/14159
+DESCRIPTION:Serie B · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14159
+URL:https://sportinglive.github.io/#/partita/14159
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14171@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261028T213000
 DTEND;TZID=Europe/Rome:20261028T223000
 SUMMARY:GOC FELLAS 7-3 SOCKS
-DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14171
-URL:https://max2staff.github.io/sporting-live/#/partita/14171
+DESCRIPTION:Serie B · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14171
+URL:https://sportinglive.github.io/#/partita/14171
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14187@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261104T213000
 DTEND;TZID=Europe/Rome:20261104T223000
 SUMMARY:F.C. BECK'S 3-2 GOC FELLAS
-DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14187
-URL:https://max2staff.github.io/sporting-live/#/partita/14187
+DESCRIPTION:Serie B · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14187
+URL:https://sportinglive.github.io/#/partita/14187
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14195@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261110T203000
 DTEND;TZID=Europe/Rome:20261110T213000
 SUMMARY:GOC FELLAS - EASY M&M
-DESCRIPTION:Serie B · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14195
-URL:https://max2staff.github.io/sporting-live/#/partita/14195
+DESCRIPTION:Serie B · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14195
+URL:https://sportinglive.github.io/#/partita/14195
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14215@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261117T213000
 DTEND;TZID=Europe/Rome:20261117T223000
 SUMMARY:6 GOMME SCORZE - GOC FELLAS
-DESCRIPTION:Serie B · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14215
-URL:https://max2staff.github.io/sporting-live/#/partita/14215
+DESCRIPTION:Serie B · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14215
+URL:https://sportinglive.github.io/#/partita/14215
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14229@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261126T200000
 DTEND;TZID=Europe/Rome:20261126T210000
 SUMMARY:GOC FELLAS - MARCON C8
-DESCRIPTION:Serie B · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14229
-URL:https://max2staff.github.io/sporting-live/#/partita/14229
+DESCRIPTION:Serie B · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14229
+URL:https://sportinglive.github.io/#/partita/14229
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14249@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261204T203000
 DTEND;TZID=Europe/Rome:20261204T213000
 SUMMARY:MCONOR PUB - GOC FELLAS
-DESCRIPTION:Serie B · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14249
-URL:https://max2staff.github.io/sporting-live/#/partita/14249
+DESCRIPTION:Serie B · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14249
+URL:https://sportinglive.github.io/#/partita/14249
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14255@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261210T213000
 DTEND;TZID=Europe/Rome:20261210T223000
 SUMMARY:GOC FELLAS - DESPERADOS
-DESCRIPTION:Serie B · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14255
-URL:https://max2staff.github.io/sporting-live/#/partita/14255
+DESCRIPTION:Serie B · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14255
+URL:https://sportinglive.github.io/#/partita/14255
 END:VEVENT
 END:VCALENDAR

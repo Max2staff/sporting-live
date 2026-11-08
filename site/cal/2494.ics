@@ -26,132 +26,132 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14267@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260915T203000
 DTEND;TZID=Europe/Rome:20260915T213000
 SUMMARY:BEVERLYAMARONE 5-4 F.C. SCAVESAI
-DESCRIPTION:Serie C · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14267
-URL:https://max2staff.github.io/sporting-live/#/partita/14267
+DESCRIPTION:Serie C · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14267
+URL:https://sportinglive.github.io/#/partita/14267
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14283@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260922T203000
 DTEND;TZID=Europe/Rome:20260922T213000
 SUMMARY:JOGA OLMITO 3-6 BEVERLYAMARONE
-DESCRIPTION:Serie C · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14283
-URL:https://max2staff.github.io/sporting-live/#/partita/14283
+DESCRIPTION:Serie C · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14283
+URL:https://sportinglive.github.io/#/partita/14283
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14295@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260929T213000
 DTEND;TZID=Europe/Rome:20260929T223000
 SUMMARY:BEVERLYAMARONE 7-7 OCHO AR MOCHO
-DESCRIPTION:Serie C · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14295
-URL:https://max2staff.github.io/sporting-live/#/partita/14295
+DESCRIPTION:Serie C · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14295
+URL:https://sportinglive.github.io/#/partita/14295
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14315@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261007T203000
 DTEND;TZID=Europe/Rome:20261007T213000
 SUMMARY:U.S. TRIVIGNANO 4-1 BEVERLYAMARONE
-DESCRIPTION:Serie C · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14315
-URL:https://max2staff.github.io/sporting-live/#/partita/14315
+DESCRIPTION:Serie C · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14315
+URL:https://sportinglive.github.io/#/partita/14315
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14323@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261013T213000
 DTEND;TZID=Europe/Rome:20261013T223000
 SUMMARY:BEVERLYAMARONE 4-6 LA SERENISSIMA
-DESCRIPTION:Serie C · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14323
-URL:https://max2staff.github.io/sporting-live/#/partita/14323
+DESCRIPTION:Serie C · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14323
+URL:https://sportinglive.github.io/#/partita/14323
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14343@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T200000
 DTEND;TZID=Europe/Rome:20261022T210000
 SUMMARY:EDIT 5-2 BEVERLYAMARONE
-DESCRIPTION:Serie C · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14343
-URL:https://max2staff.github.io/sporting-live/#/partita/14343
+DESCRIPTION:Serie C · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14343
+URL:https://sportinglive.github.io/#/partita/14343
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14359@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261029T203000
 DTEND;TZID=Europe/Rome:20261029T213000
 SUMMARY:BEVERLYAMARONE 5-3 F.C. SPORTLIFE
-DESCRIPTION:Serie C · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14359
-URL:https://max2staff.github.io/sporting-live/#/partita/14359
+DESCRIPTION:Serie C · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14359
+URL:https://sportinglive.github.io/#/partita/14359
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14375@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261106T213000
 DTEND;TZID=Europe/Rome:20261106T223000
 SUMMARY:DEPORTIVO VIBORA 2-2 BEVERLYAMARONE
-DESCRIPTION:Serie C · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14375
-URL:https://max2staff.github.io/sporting-live/#/partita/14375
+DESCRIPTION:Serie C · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14375
+URL:https://sportinglive.github.io/#/partita/14375
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14387@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261113T203000
 DTEND;TZID=Europe/Rome:20261113T213000
 SUMMARY:BEVERLYAMARONE - F.C. ETTANERA
-DESCRIPTION:Serie C · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14387
-URL:https://max2staff.github.io/sporting-live/#/partita/14387
+DESCRIPTION:Serie C · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14387
+URL:https://sportinglive.github.io/#/partita/14387
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14399@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261119T200000
 DTEND;TZID=Europe/Rome:20261119T210000
 SUMMARY:BOCA JUNIORS - BEVERLYAMARONE
-DESCRIPTION:Serie C · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14399
-URL:https://max2staff.github.io/sporting-live/#/partita/14399
+DESCRIPTION:Serie C · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14399
+URL:https://sportinglive.github.io/#/partita/14399
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14409@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261124T203000
 DTEND;TZID=Europe/Rome:20261124T213000
 SUMMARY:DIERRE VENETO - BEVERLYAMARONE
-DESCRIPTION:Serie C · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14409
-URL:https://max2staff.github.io/sporting-live/#/partita/14409
+DESCRIPTION:Serie C · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14409
+URL:https://sportinglive.github.io/#/partita/14409
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14421@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261130T213000
 DTEND;TZID=Europe/Rome:20261130T223000
 SUMMARY:BEVERLYAMARONE - BUZ BEKISTAN
-DESCRIPTION:Serie C · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14421
-URL:https://max2staff.github.io/sporting-live/#/partita/14421
+DESCRIPTION:Serie C · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14421
+URL:https://sportinglive.github.io/#/partita/14421
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14441@sportinglive
-DTSTAMP:20261106T224104Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261214T213000
 DTEND;TZID=Europe/Rome:20261214T223000
 SUMMARY:FACILE - BEVERLYAMARONE
-DESCRIPTION:Serie C · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14441
-URL:https://max2staff.github.io/sporting-live/#/partita/14441
+DESCRIPTION:Serie C · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14441
+URL:https://sportinglive.github.io/#/partita/14441
 END:VEVENT
 END:VCALENDAR

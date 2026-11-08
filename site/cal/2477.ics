@@ -26,132 +26,132 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14091@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260917T203000
 DTEND;TZID=Europe/Rome:20260917T213000
 SUMMARY:REAL GNECA MIAMI 1-0 6 GOMME SCORZE
-DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14091
-URL:https://max2staff.github.io/sporting-live/#/partita/14091
+DESCRIPTION:Serie B · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14091
+URL:https://sportinglive.github.io/#/partita/14091
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14107@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260924T200000
 DTEND;TZID=Europe/Rome:20260924T210000
 SUMMARY:EASY M&M 1-0 REAL GNECA MIAMI
-DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14107
-URL:https://max2staff.github.io/sporting-live/#/partita/14107
+DESCRIPTION:Serie B · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14107
+URL:https://sportinglive.github.io/#/partita/14107
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14117@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261001T203000
 DTEND;TZID=Europe/Rome:20261001T213000
 SUMMARY:MARCON C8 3-1 REAL GNECA MIAMI
-DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14117
-URL:https://max2staff.github.io/sporting-live/#/partita/14117
+DESCRIPTION:Serie B · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14117
+URL:https://sportinglive.github.io/#/partita/14117
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14125@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261005T213000
 DTEND;TZID=Europe/Rome:20261005T223000
 SUMMARY:REAL GNECA MIAMI 1-2 MCONOR PUB
-DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14125
-URL:https://max2staff.github.io/sporting-live/#/partita/14125
+DESCRIPTION:Serie B · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14125
+URL:https://sportinglive.github.io/#/partita/14125
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14147@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261015T200000
 DTEND;TZID=Europe/Rome:20261015T210000
 SUMMARY:REAL GNECA MIAMI 2-1 DESPERADOS
-DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14147
-URL:https://max2staff.github.io/sporting-live/#/partita/14147
+DESCRIPTION:Serie B · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14147
+URL:https://sportinglive.github.io/#/partita/14147
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14159@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T210000
 DTEND;TZID=Europe/Rome:20261022T220000
 SUMMARY:REAL GNECA MIAMI 3-5 GOC FELLAS
-DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14159
-URL:https://max2staff.github.io/sporting-live/#/partita/14159
+DESCRIPTION:Serie B · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14159
+URL:https://sportinglive.github.io/#/partita/14159
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14167@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261027T203000
 DTEND;TZID=Europe/Rome:20261027T213000
 SUMMARY:F.C. AMICONI 6-0 REAL GNECA MIAMI
-DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14167
-URL:https://max2staff.github.io/sporting-live/#/partita/14167
+DESCRIPTION:Serie B · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14167
+URL:https://sportinglive.github.io/#/partita/14167
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14185@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261104T203000
 DTEND;TZID=Europe/Rome:20261104T213000
 SUMMARY:REAL GNECA MIAMI 3-1 BROCCA JUNIORS
-DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14185
-URL:https://max2staff.github.io/sporting-live/#/partita/14185
+DESCRIPTION:Serie B · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14185
+URL:https://sportinglive.github.io/#/partita/14185
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14197@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261110T213000
 DTEND;TZID=Europe/Rome:20261110T223000
 SUMMARY:FORTITUDO HURRICANES - REAL GNECA MIAMI
-DESCRIPTION:Serie B · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14197
-URL:https://max2staff.github.io/sporting-live/#/partita/14197
+DESCRIPTION:Serie B · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14197
+URL:https://sportinglive.github.io/#/partita/14197
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14213@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261117T213000
 DTEND;TZID=Europe/Rome:20261117T223000
 SUMMARY:REAL GNECA MIAMI - REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14213
-URL:https://max2staff.github.io/sporting-live/#/partita/14213
+DESCRIPTION:Serie B · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14213
+URL:https://sportinglive.github.io/#/partita/14213
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14233@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261126T203000
 DTEND;TZID=Europe/Rome:20261126T213000
 SUMMARY:REAL GNECA MIAMI - F.C. PELIGROS
-DESCRIPTION:Serie B · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14233
-URL:https://max2staff.github.io/sporting-live/#/partita/14233
+DESCRIPTION:Serie B · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14233
+URL:https://sportinglive.github.io/#/partita/14233
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14245@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261203T203000
 DTEND;TZID=Europe/Rome:20261203T213000
 SUMMARY:SOCKS - REAL GNECA MIAMI
-DESCRIPTION:Serie B · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14245
-URL:https://max2staff.github.io/sporting-live/#/partita/14245
+DESCRIPTION:Serie B · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14245
+URL:https://sportinglive.github.io/#/partita/14245
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14253@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261209T213000
 DTEND;TZID=Europe/Rome:20261209T223000
 SUMMARY:REAL GNECA MIAMI - F.C. BECK'S
-DESCRIPTION:Serie B · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14253
-URL:https://max2staff.github.io/sporting-live/#/partita/14253
+DESCRIPTION:Serie B · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14253
+URL:https://sportinglive.github.io/#/partita/14253
 END:VEVENT
 END:VCALENDAR

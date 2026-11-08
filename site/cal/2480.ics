@@ -26,132 +26,132 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14083@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260916T203000
 DTEND;TZID=Europe/Rome:20260916T213000
 SUMMARY:SOCKS 3-5 EASY M&M
-DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14083
-URL:https://max2staff.github.io/sporting-live/#/partita/14083
+DESCRIPTION:Serie B · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14083
+URL:https://sportinglive.github.io/#/partita/14083
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14101@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260923T203000
 DTEND;TZID=Europe/Rome:20260923T213000
 SUMMARY:F.C. BECK'S 2-0 SOCKS
-DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14101
-URL:https://max2staff.github.io/sporting-live/#/partita/14101
+DESCRIPTION:Serie B · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14101
+URL:https://sportinglive.github.io/#/partita/14101
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14119@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261001T213000
 DTEND;TZID=Europe/Rome:20261001T223000
 SUMMARY:6 GOMME SCORZE 1-5 SOCKS
-DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14119
-URL:https://max2staff.github.io/sporting-live/#/partita/14119
+DESCRIPTION:Serie B · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14119
+URL:https://sportinglive.github.io/#/partita/14119
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14135@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261008T220000
 DTEND;TZID=Europe/Rome:20261008T230000
 SUMMARY:SOCKS 5-2 MARCON C8
-DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14135
-URL:https://max2staff.github.io/sporting-live/#/partita/14135
+DESCRIPTION:Serie B · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14135
+URL:https://sportinglive.github.io/#/partita/14135
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14151@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261016T213000
 DTEND;TZID=Europe/Rome:20261016T223000
 SUMMARY:MCONOR PUB 2-0 SOCKS
-DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14151
-URL:https://max2staff.github.io/sporting-live/#/partita/14151
+DESCRIPTION:Serie B · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14151
+URL:https://sportinglive.github.io/#/partita/14151
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14161@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T213000
 DTEND;TZID=Europe/Rome:20261022T223000
 SUMMARY:SOCKS 1-2 DESPERADOS
-DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14161
-URL:https://max2staff.github.io/sporting-live/#/partita/14161
+DESCRIPTION:Serie B · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14161
+URL:https://sportinglive.github.io/#/partita/14161
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14171@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261028T213000
 DTEND;TZID=Europe/Rome:20261028T223000
 SUMMARY:GOC FELLAS 7-3 SOCKS
-DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14171
-URL:https://max2staff.github.io/sporting-live/#/partita/14171
+DESCRIPTION:Serie B · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14171
+URL:https://sportinglive.github.io/#/partita/14171
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14189@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261104T213000
 DTEND;TZID=Europe/Rome:20261104T223000
 SUMMARY:SOCKS 4-3 F.C. AMICONI
-DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14189
-URL:https://max2staff.github.io/sporting-live/#/partita/14189
+DESCRIPTION:Serie B · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14189
+URL:https://sportinglive.github.io/#/partita/14189
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14199@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261111T203000
 DTEND;TZID=Europe/Rome:20261111T213000
 SUMMARY:BROCCA JUNIORS - SOCKS
-DESCRIPTION:Serie B · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14199
-URL:https://max2staff.github.io/sporting-live/#/partita/14199
+DESCRIPTION:Serie B · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14199
+URL:https://sportinglive.github.io/#/partita/14199
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14211@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261117T203000
 DTEND;TZID=Europe/Rome:20261117T213000
 SUMMARY:SOCKS - FORTITUDO HURRICANES
-DESCRIPTION:Serie B · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14211
-URL:https://max2staff.github.io/sporting-live/#/partita/14211
+DESCRIPTION:Serie B · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14211
+URL:https://sportinglive.github.io/#/partita/14211
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14225@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261125T213000
 DTEND;TZID=Europe/Rome:20261125T223000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) - SOCKS
-DESCRIPTION:Serie B · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14225
-URL:https://max2staff.github.io/sporting-live/#/partita/14225
+DESCRIPTION:Serie B · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14225
+URL:https://sportinglive.github.io/#/partita/14225
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14245@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261203T203000
 DTEND;TZID=Europe/Rome:20261203T213000
 SUMMARY:SOCKS - REAL GNECA MIAMI
-DESCRIPTION:Serie B · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14245
-URL:https://max2staff.github.io/sporting-live/#/partita/14245
+DESCRIPTION:Serie B · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14245
+URL:https://sportinglive.github.io/#/partita/14245
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14263@sportinglive
-DTSTAMP:20261105T231400Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261217T203000
 DTEND;TZID=Europe/Rome:20261217T213000
 SUMMARY:F.C. PELIGROS - SOCKS
-DESCRIPTION:Serie B · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14263
-URL:https://max2staff.github.io/sporting-live/#/partita/14263
+DESCRIPTION:Serie B · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14263
+URL:https://sportinglive.github.io/#/partita/14263
 END:VEVENT
 END:VCALENDAR

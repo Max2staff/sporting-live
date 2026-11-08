@@ -26,92 +26,92 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14815@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261015T210000
 DTEND;TZID=Europe/Rome:20261015T220000
 SUMMARY:BOZKURT 8-8 I PIÙ CALMI
-DESCRIPTION:Super League · giornata 1\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14815
-URL:https://max2staff.github.io/sporting-live/#/partita/14815
+DESCRIPTION:Super League · giornata 1\nhttps://sportinglive.github.io/#/pa
+ rtita/14815
+URL:https://sportinglive.github.io/#/partita/14815
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14827@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T203000
 DTEND;TZID=Europe/Rome:20261022T213000
 SUMMARY:I PIÙ CALMI 12-6 F.C. DARDANIA
-DESCRIPTION:Super League · giornata 2\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14827
-URL:https://max2staff.github.io/sporting-live/#/partita/14827
+DESCRIPTION:Super League · giornata 2\nhttps://sportinglive.github.io/#/pa
+ rtita/14827
+URL:https://sportinglive.github.io/#/partita/14827
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14835@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261029T200000
 DTEND;TZID=Europe/Rome:20261029T210000
 SUMMARY:I PIÙ CALMI 17-4 BENVENUTI AL SUD
-DESCRIPTION:Super League · giornata 3\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14835
-URL:https://max2staff.github.io/sporting-live/#/partita/14835
+DESCRIPTION:Super League · giornata 3\nhttps://sportinglive.github.io/#/pa
+ rtita/14835
+URL:https://sportinglive.github.io/#/partita/14835
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14841@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261105T210000
 DTEND;TZID=Europe/Rome:20261105T220000
 SUMMARY:TATANGA C5 8-6 I PIÙ CALMI
-DESCRIPTION:Super League · giornata 4\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14841
-URL:https://max2staff.github.io/sporting-live/#/partita/14841
+DESCRIPTION:Super League · giornata 4\nhttps://sportinglive.github.io/#/pa
+ rtita/14841
+URL:https://sportinglive.github.io/#/partita/14841
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14851@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261112T210000
 DTEND;TZID=Europe/Rome:20261112T220000
 SUMMARY:CHAOS LEGACY - I PIÙ CALMI
-DESCRIPTION:Super League · giornata 5\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14851
-URL:https://max2staff.github.io/sporting-live/#/partita/14851
+DESCRIPTION:Super League · giornata 5\nhttps://sportinglive.github.io/#/pa
+ rtita/14851
+URL:https://sportinglive.github.io/#/partita/14851
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14859@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261119T200000
 DTEND;TZID=Europe/Rome:20261119T210000
 SUMMARY:I PIÙ CALMI - BARCA B
-DESCRIPTION:Super League · giornata 6\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14859
-URL:https://max2staff.github.io/sporting-live/#/partita/14859
+DESCRIPTION:Super League · giornata 6\nhttps://sportinglive.github.io/#/pa
+ rtita/14859
+URL:https://sportinglive.github.io/#/partita/14859
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14887@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261203T213000
 DTEND;TZID=Europe/Rome:20261203T223000
 SUMMARY:I PIÙ CALMI - LEVIX GROUP
-DESCRIPTION:Super League · giornata 8\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14887
-URL:https://max2staff.github.io/sporting-live/#/partita/14887
+DESCRIPTION:Super League · giornata 8\nhttps://sportinglive.github.io/#/pa
+ rtita/14887
+URL:https://sportinglive.github.io/#/partita/14887
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14889@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261210T200000
 DTEND;TZID=Europe/Rome:20261210T210000
 SUMMARY:PRINCIPE 1846 - I PIÙ CALMI
-DESCRIPTION:Super League · giornata 9\nhttps://max2staff.github.io/sportin
- g-live/#/partita/14889
-URL:https://max2staff.github.io/sporting-live/#/partita/14889
+DESCRIPTION:Super League · giornata 9\nhttps://sportinglive.github.io/#/pa
+ rtita/14889
+URL:https://sportinglive.github.io/#/partita/14889
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14810@sportinglive
-DTSTAMP:20261106T124638Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20270114T200000
 DTEND;TZID=Europe/Rome:20270114T210000
 SUMMARY:F.C. DARDANIA - I PIÙ CALMI
-DESCRIPTION:Super League · giornata 10\nhttps://max2staff.github.io/sporti
- ng-live/#/partita/14810
-URL:https://max2staff.github.io/sporting-live/#/partita/14810
+DESCRIPTION:Super League · giornata 10\nhttps://sportinglive.github.io/#/p
+ artita/14810
+URL:https://sportinglive.github.io/#/partita/14810
 END:VEVENT
 END:VCALENDAR

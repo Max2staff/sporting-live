@@ -26,132 +26,132 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:partita-14093@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260917T213000
 DTEND;TZID=Europe/Rome:20260917T223000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) 5-4 MARCON C8
-DESCRIPTION:Serie B · giornata 1\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14093
-URL:https://max2staff.github.io/sporting-live/#/partita/14093
+DESCRIPTION:Serie B · giornata 1\nhttps://sportinglive.github.io/#/partita
+ /14093
+URL:https://sportinglive.github.io/#/partita/14093
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14097@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20260921T200000
 DTEND;TZID=Europe/Rome:20260921T210000
 SUMMARY:6 GOMME SCORZE 1-3 REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 2\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14097
-URL:https://max2staff.github.io/sporting-live/#/partita/14097
+DESCRIPTION:Serie B · giornata 2\nhttps://sportinglive.github.io/#/partita
+ /14097
+URL:https://sportinglive.github.io/#/partita/14097
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14123@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261002T213000
 DTEND;TZID=Europe/Rome:20261002T223000
 SUMMARY:MCONOR PUB 5-6 REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 3\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14123
-URL:https://max2staff.github.io/sporting-live/#/partita/14123
+DESCRIPTION:Serie B · giornata 3\nhttps://sportinglive.github.io/#/partita
+ /14123
+URL:https://sportinglive.github.io/#/partita/14123
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14137@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261009T203000
 DTEND;TZID=Europe/Rome:20261009T213000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) 10-2 DESPERADOS
-DESCRIPTION:Serie B · giornata 4\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14137
-URL:https://max2staff.github.io/sporting-live/#/partita/14137
+DESCRIPTION:Serie B · giornata 4\nhttps://sportinglive.github.io/#/partita
+ /14137
+URL:https://sportinglive.github.io/#/partita/14137
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14143@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261014T203000
 DTEND;TZID=Europe/Rome:20261014T213000
 SUMMARY:GOC FELLAS 3-2 REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 5\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14143
-URL:https://max2staff.github.io/sporting-live/#/partita/14143
+DESCRIPTION:Serie B · giornata 5\nhttps://sportinglive.github.io/#/partita
+ /14143
+URL:https://sportinglive.github.io/#/partita/14143
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14163@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261022T220000
 DTEND;TZID=Europe/Rome:20261022T230000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) 0-5 F.C. AMICONI
-DESCRIPTION:Serie B · giornata 6\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14163
-URL:https://max2staff.github.io/sporting-live/#/partita/14163
+DESCRIPTION:Serie B · giornata 6\nhttps://sportinglive.github.io/#/partita
+ /14163
+URL:https://sportinglive.github.io/#/partita/14163
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14173@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261029T200000
 DTEND;TZID=Europe/Rome:20261029T210000
 SUMMARY:BROCCA JUNIORS 4-1 REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 7\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14173
-URL:https://max2staff.github.io/sporting-live/#/partita/14173
+DESCRIPTION:Serie B · giornata 7\nhttps://sportinglive.github.io/#/partita
+ /14173
+URL:https://sportinglive.github.io/#/partita/14173
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14181@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261103T203000
 DTEND;TZID=Europe/Rome:20261103T213000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) 4-6 FORTITUDO HURRICANES
-DESCRIPTION:Serie B · giornata 8\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14181
-URL:https://max2staff.github.io/sporting-live/#/partita/14181
+DESCRIPTION:Serie B · giornata 8\nhttps://sportinglive.github.io/#/partita
+ /14181
+URL:https://sportinglive.github.io/#/partita/14181
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14203@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261111T213000
 DTEND;TZID=Europe/Rome:20261111T223000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) - F.C. PELIGROS
-DESCRIPTION:Serie B · giornata 9\nhttps://max2staff.github.io/sporting-liv
- e/#/partita/14203
-URL:https://max2staff.github.io/sporting-live/#/partita/14203
+DESCRIPTION:Serie B · giornata 9\nhttps://sportinglive.github.io/#/partita
+ /14203
+URL:https://sportinglive.github.io/#/partita/14203
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14213@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261117T213000
 DTEND;TZID=Europe/Rome:20261117T223000
 SUMMARY:REAL GNECA MIAMI - REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 10\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14213
-URL:https://max2staff.github.io/sporting-live/#/partita/14213
+DESCRIPTION:Serie B · giornata 10\nhttps://sportinglive.github.io/#/partit
+ a/14213
+URL:https://sportinglive.github.io/#/partita/14213
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14225@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261125T213000
 DTEND;TZID=Europe/Rome:20261125T223000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) - SOCKS
-DESCRIPTION:Serie B · giornata 11\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14225
-URL:https://max2staff.github.io/sporting-live/#/partita/14225
+DESCRIPTION:Serie B · giornata 11\nhttps://sportinglive.github.io/#/partit
+ a/14225
+URL:https://sportinglive.github.io/#/partita/14225
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14239@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261202T203000
 DTEND;TZID=Europe/Rome:20261202T213000
 SUMMARY:F.C. BECK'S - REAL TURAN C8 (SEI RESTAURI)
-DESCRIPTION:Serie B · giornata 12\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14239
-URL:https://max2staff.github.io/sporting-live/#/partita/14239
+DESCRIPTION:Serie B · giornata 12\nhttps://sportinglive.github.io/#/partit
+ a/14239
+URL:https://sportinglive.github.io/#/partita/14239
 END:VEVENT
 BEGIN:VEVENT
 UID:partita-14251@sportinglive
-DTSTAMP:20261104T230935Z
+DTSTAMP:20261108T182401Z
 DTSTART;TZID=Europe/Rome:20261209T203000
 DTEND;TZID=Europe/Rome:20261209T213000
 SUMMARY:REAL TURAN C8 (SEI RESTAURI) - EASY M&M
-DESCRIPTION:Serie B · giornata 13\nhttps://max2staff.github.io/sporting-li
- ve/#/partita/14251
-URL:https://max2staff.github.io/sporting-live/#/partita/14251
+DESCRIPTION:Serie B · giornata 13\nhttps://sportinglive.github.io/#/partit
+ a/14251
+URL:https://sportinglive.github.io/#/partita/14251
 END:VEVENT
 END:VCALENDAR

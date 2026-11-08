@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-06T13:46:14+01:00",
+ "aggiornato": "2026-11-08T12:46:37+01:00",
  "idgirone": 425,
  "squadre": [
   {
@@ -70,9 +70,9 @@
     "v": 6,
     "n": 0,
     "p": 1,
-    "gf": 20,
+    "gf": 21,
     "gs": 11,
-    "dr": 9
+    "dr": 10
    },
    {
     "squadraId": 2532,
@@ -188,8 +188,8 @@
     "n": 1,
     "p": 5,
     "gf": 17,
-    "gs": 23,
-    "dr": -6
+    "gs": 24,
+    "dr": -7
    },
    {
     "squadraId": 2536,
@@ -889,7 +889,7 @@
    "ora": "21:00",
    "casaId": 2534,
    "ospiteId": 2540,
-   "golCasa": 2,
+   "golCasa": 3,
    "golOspite": 1,
    "giocata": true,
    "tavolino": false

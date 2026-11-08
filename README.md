@@ -17,7 +17,7 @@ Spec: `docs/superpowers/specs/2026-10-10-sporting-live-design.md`.
 2. Settings → Pages → Source: **GitHub Actions**.
 3. Settings → Actions → General → Workflow permissions: **Read and write**.
 4. Fai il push di `main`: il primo run parte da solo.
-5. Verifica l'URL: al termine del run il sito è su `https://<utente>.github.io/sporting-live/`.
+5. Verifica l'URL: al termine del run il sito è su `https://sportinglive.github.io/`.
 
 Se il primo run fallisce a `configure-pages`, Pages non era ancora abilitato: abilitalo e rilancia il workflow.
 

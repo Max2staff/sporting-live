@@ -81,7 +81,7 @@ spiegazioni: nel file vero non vanno scritti):
    - quattro record **AAAA** (facoltativi): `2606:50c0:8000::153`,
      `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`;
    - se vuoi anche `www`: un record **CNAME** da `www` verso
-     `max2staff.github.io`.
+     `sportinglive.github.io`.
 3. Nel repository crea il file `site/CNAME` con dentro una sola riga:
    `sportinglive.it`.
 4. Cambia l'indirizzo del sito: `SITO_URL` in `scraper/config.py` e i due

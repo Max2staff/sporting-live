@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { percorsoAnonimo, conta } from '../visite.js';
+import { percorsoAnonimo, conta, leggiProvenienza } from '../visite.js';
 
 test('percorsoAnonimo: nessun dato personale', () => {
   assert.equal(percorsoAnonimo({ vista: 'partite', params: [] }), '/partite');
@@ -47,4 +47,25 @@ test('conta non invia: config vuota o assente, localhost, DNT, codice non valido
     assert.equal(conta(rotta, cfg, env), false);
     assert.equal(inviati.length, 0);
   }
+});
+
+test('provenienza da QR: inviata solo con la prima pagina e tolta dall\'indirizzo', () => {
+  const sostituiti = [];
+  const hist = { state: null, replaceState: (_s, _t, u) => sostituiti.push(u) };
+  assert.equal(leggiProvenienza({ search: '?da=segreteria', pathname: '/sporting-live/', hash: '#/partite' }, hist), 'segreteria');
+  assert.deepEqual(sostituiti, ['/sporting-live/#/partite']);
+  const { inviati, env } = ambiente();
+  conta(rotta, { goatcounter: 'sportinglive' }, env);
+  conta(rotta, { goatcounter: 'sportinglive' }, env);
+  assert.match(inviati[0], /&r=qr-segreteria&/);
+  assert.doesNotMatch(inviati[1], /&r=/);
+});
+
+test('provenienza non valida o assente: niente referrer', () => {
+  const hist = { state: null, replaceState: () => {} };
+  assert.equal(leggiProvenienza({ search: '?da=<script>', pathname: '/', hash: '' }, hist), null);
+  assert.equal(leggiProvenienza({ search: '', pathname: '/', hash: '' }, hist), null);
+  const { inviati, env } = ambiente();
+  conta(rotta, { goatcounter: 'sportinglive' }, env);
+  assert.doesNotMatch(inviati[0], /&r=/);
 });

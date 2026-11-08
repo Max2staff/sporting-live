@@ -1,7 +1,9 @@
 """Genera il poster A4 (2480x3508, 300 dpi) con QR code verso il sito, da appendere ai campi.
 
-Uso: .venv/bin/python scripts/poster.py
-Scrive docs/poster/poster-a4.png e docs/poster/poster-a4.pdf (dallo stesso PNG).
+Uso: .venv/bin/python scripts/poster.py [luogo]
+Senza argomenti scrive docs/poster/poster-a4.png e .pdf.
+Con un luogo (es. `segreteria`) il QR punta a ...?da=segreteria, così GoatCounter conta
+quante persone arrivano da quel poster; scrive docs/poster/poster-a4-<luogo>.png e .pdf.
 """
 from __future__ import annotations
 
@@ -66,7 +68,7 @@ def sfondo() -> Image.Image:
     return tela
 
 
-def costruisci() -> Image.Image:
+def costruisci(da: str | None = None) -> Image.Image:
     tela = sfondo()
     d = ImageDraw.Draw(tela)
 
@@ -93,7 +95,7 @@ def costruisci() -> Image.Image:
     centrato(d, by0 + (by1 - by0 - f_cta.size) // 2 - 14, "INQUADRA CON LA FOTOCAMERA", f_cta, (6, 14, 34, 255))
 
     # QR su riquadro bianco arrotondato (zona di rispetto di 4 moduli inclusa nell'immagine QR)
-    qr = qr_immagine(config.SITO_URL)
+    qr = qr_immagine(config.SITO_URL + (f"?da={da}" if da else ""))
     pad = 40
     tile = qr.width + 2 * pad
     tx, ty = (L - tile) // 2, by1 + 50
@@ -117,9 +119,14 @@ def costruisci() -> Image.Image:
 
 
 def main() -> int:
+    da = sys.argv[1] if len(sys.argv) > 1 else None
+    if da is not None and not da.replace("-", "").isalnum():
+        print("luogo non valido: solo lettere, numeri e trattini")
+        return 1
     USCITA.mkdir(parents=True, exist_ok=True)
-    im = costruisci().convert("RGB")
-    png, pdf = USCITA / "poster-a4.png", USCITA / "poster-a4.pdf"
+    im = costruisci(da).convert("RGB")
+    nome = f"poster-a4-{da}" if da else "poster-a4"
+    png, pdf = USCITA / f"{nome}.png", USCITA / f"{nome}.pdf"
     im.save(png, "PNG", optimize=True, dpi=(300, 300))
     im.save(pdf, "PDF", resolution=300)
     for f in (png, pdf):

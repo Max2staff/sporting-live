@@ -14,7 +14,7 @@ import * as preferite from './views/preferite.js';
 import * as intro from './views/intro.js';
 import * as cercaVista from './views/cerca.js';
 import * as vantaggiVista from './views/vantaggi.js';
-import { conta } from './visite.js';
+import { conta, leggiProvenienza } from './visite.js';
 import { introDaMostrare, azzeraSceltaArchivio, fotografiaContesto, ripristinaContesto } from './contesto.js';
 import { passoDa, madre, mostraIndietro } from './indietro.js';
 
@@ -176,6 +176,7 @@ document.addEventListener('visibilitychange', () => {
 
 async function avvia() {
   applicaTema();
+  leggiProvenienza();
   try {
     indice = await caricaIndice();
     ultimoCaricamento = Date.now();

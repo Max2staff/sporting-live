@@ -36,6 +36,11 @@ Conta le pagine viste senza cookie e senza dati personali. Gratis.
    `{ "goatcounter": "sportinglive" }`. Chiedi a Claude, lo fa lui.
 4. Le visite si leggono entrando nel tuo spazio su goatcounter.com.
 
+**Quante persone arrivano da un poster.** Il poster `docs/poster/poster-a4-segreteria.pdf`
+ha un QR con l'etichetta `segreteria`: chi lo inquadra compare in GoatCounter tra le
+provenienze (Referrers) come `qr-segreteria`, solo alla prima pagina vista. Per un altro
+luogo: `.venv/bin/python scripts/poster.py bar` crea `poster-a4-bar.pdf` (provenienza `qr-bar`).
+
 ## 3. Vantaggi (sponsor)
 
 La voce "Vantaggi" compare nell'app solo quando c'è almeno un'offerta valida.

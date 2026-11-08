@@ -2,8 +2,9 @@ name: aggiorna-e-pubblica
 
 on:
   schedule:
-    - cron: "*/30 18-23 * * 1-5"   # serate feriali: 20:00-01:30 (ora legale) / 19:00-00:30 (ora solare)
-    - cron: "0 5 * * *"            # mattino: 07:00 (ora legale) / 06:00 (ora solare)
+    # orari in UTC (in Italia +1 d'inverno, +2 d'estate); GitHub può partire con qualche minuto di ritardo
+    - cron: "0 */2 * * *"           # ogni 2 ore, tutti i giorni: i dati ufficiali escono a orari variabili
+    - cron: "*/30 18-23 * * 1-5"   # in più, serate feriali ogni 30 minuti: è quando finiscono le partite
   push:
     branches: [main]
     paths: ["stagioni.json", "alias.json", "scraper/**", "site/**", "!site/data/**", "contenuti/**", "scripts/**", ".github/workflows/**"]
@@ -53,6 +54,16 @@ jobs:
           git config user.email sporting-live-bot@users.noreply.github.com
           git add scraper/cache build/raw site/data site/s site/cal
           git diff --cached --quiet || (git commit -m "chore: aggiornamento dati [skip ci]" && git pull --rebase --autostash origin main && git push)
+      - name: Tieni vivi gli aggiornamenti programmati
+        # GitHub spegne le esecuzioni programmate dopo 60 giorni senza modifiche al repo (es. pausa estiva):
+        # se l'ultima modifica ha più di 45 giorni, registra una modifica vuota.
+        if: github.event_name == 'schedule'
+        run: |
+          ultima=$(git log -1 --format=%ct)
+          if [ $(( $(date +%s) - ultima )) -gt $(( 45 * 86400 )) ]; then
+            git commit --allow-empty -m "chore: mantieni attivi gli aggiornamenti [skip ci]"
+            git pull --rebase origin main && git push
+          fi
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

@@ -10,14 +10,14 @@
 
 **Spec:** `docs/superpowers/specs/2026-10-10-sporting-live-design.md`
 
-**Codice da riusare:** l'app SOCKS in `/Users/massimilianogriletti/Documents/Socks_Calciotto` (NON modificarla). Da lì si copiano `scraper/parse.py`, le fixture HTML e i test del parser.
+**Codice da riusare:** l'app SOCKS in `~/Documents/Socks_Calciotto` (NON modificarla). Da lì si copiano `scraper/parse.py`, le fixture HTML e i test del parser.
 
 ## Global Constraints
 
 - Python: ogni modulo inizia con `from __future__ import annotations`; deve girare su 3.9 e 3.12.
 - Nessun framework JS, nessun bundler, nessun web font esterno; moduli ES caricati direttamente.
 - Nessun dato personale raccolto dagli utenti; preferiti e tema solo in localStorage, ogni accesso a localStorage dentro try/catch.
-- Scraper educato: User-Agent `SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)` (indirizzo da confermare con l'utente prima della pubblicazione), pausa 0,5 s tra richieste, 3 tentativi, timeout 20 s.
+- Scraper educato: User-Agent `SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: https://sportinglive.github.io/)` (indirizzo da confermare con l'utente prima della pubblicazione), pausa 0,5 s tra richieste, 3 tentativi, timeout 20 s.
 - Identità visiva: blu notte `#01213b`, azzurro `#00579e`, arancione `#ff4e00`, grigi `#455a64`/`#eceff1`; tema chiaro e scuro.
 - Larghezza massima contenuto 640 px; tap target ≥ 44 px; nessuno scroll orizzontale di pagina.
 - Testi dell'interfaccia in italiano.
@@ -47,8 +47,8 @@
 - [ ] **Step 1: Copiare parser, fixture e test dall'app SOCKS**
 
 ```bash
-cd /Users/massimilianogriletti/Documents/Sporting_Live
-S=/Users/massimilianogriletti/Documents/Socks_Calciotto
+cd ~/Documents/Sporting_Live
+S=~/Documents/Socks_Calciotto
 mkdir -p scraper/tests/fixtures
 cp $S/scraper/parse.py scraper/parse.py
 cp $S/scraper/tests/conftest.py scraper/tests/conftest.py
@@ -141,7 +141,7 @@ Spec: `docs/superpowers/specs/2026-10-10-sporting-live-design.md`.
 - [ ] **Step 3: Creare il venv e lanciare i test del parser**
 
 ```bash
-cd /Users/massimilianogriletti/Documents/Sporting_Live
+cd ~/Documents/Sporting_Live
 python3 -m venv .venv && source .venv/bin/activate && pip install -q -r scraper/requirements.txt
 python -m pytest -q
 ```
@@ -191,7 +191,7 @@ def test_user_agent_identificabile():
 from __future__ import annotations
 
 BASE = "https://www.campionatisportingclub.it/"
-USER_AGENT = "SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)"
+USER_AGENT = "SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: https://sportinglive.github.io/)"
 PAUSA_S = 0.5
 TIMEOUT_S = 20
 TENTATIVI = 3
@@ -2196,7 +2196,7 @@ import { leggiTema, impostaTema } from '../tema.js';
 import { card } from './comuni.js';
 
 export const VERSIONE = '1.0.0';
-const EMAIL = 'massimiliano.griletti@gmail.com';   // da confermare con l'utente prima della pubblicazione
+const EMAIL = '<email>';   // da confermare con l'utente prima della pubblicazione
 
 export async function render({ indice }) {
   const t = leggiTema();
@@ -2324,8 +2324,8 @@ self.addEventListener('fetch', (e) => {
 
 - [ ] **Step 1: Scaricare le fixture dei gironi non ancora coperti** (HTML reale, dati non fidati: solo file di test, mai eseguiti)
 ```bash
-cd /Users/massimilianogriletti/Documents/Sporting_Live
-UA="SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)"
+cd ~/Documents/Sporting_Live
+UA="SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: https://sportinglive.github.io/)"
 B=https://www.campionatisportingclub.it/campionati0gironigiornatepartite_
 curl -sL -A "$UA" "${B}classifica.php?idgirone=425" -o scraper/tests/fixtures/classifica_425_serie_a.html; sleep 1
 curl -sL -A "$UA" "${B}calendario.php?idgirone=426" -o scraper/tests/fixtures/calendario_426_c5.html; sleep 1

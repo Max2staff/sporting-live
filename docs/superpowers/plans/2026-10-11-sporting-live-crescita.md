@@ -19,7 +19,7 @@
 - URL assoluti solo da `SITO_URL` (`scraper/config.py`) o `indice.sito`. Mai URL `max2staff.github.io` scritti a mano altrove.
 - Il sito ufficiale va trattato con educazione: UA del config, `PAUSA_S` tra richieste, edizioni d'archivio lette una sola volta.
 - Ogni commit: messaggio in italiano con prefisso `feat:`/`fix:`/`test:`/`chore:`/`docs:` e ultima riga `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
-- Git solo come `git -C /Users/massimilianogriletti/Documents/Sporting_Live ...`; mai git in altre cartelle. Branch `main`, NON fare push (lo fa il controller alla fine). `git add` per percorso.
+- Git solo come `git -C ~/Documents/Sporting_Live ...`; mai git in altre cartelle. Branch `main`, NON fare push (lo fa il controller alla fine). `git add` per percorso.
 - Python locale: se `pytest`/`bs4`/`PIL`/`qrcode` mancano, crea (una volta) un venv in `.venv/` (`python3 -m venv .venv && .venv/bin/pip install -r scraper/requirements.txt pytest`) e usa `.venv/bin/python -m pytest -q`. `.venv/` va in `.gitignore`.
 - Verifica visiva con `scripts/screenshot.sh OUT ROTTA [GIRONE] [TEMA]` (env `LARGHEZZA`, `INTRO`); rifare una volta lo scatto se mostra "Caricamento…" o è grigio. Screenshot mai committati.
 

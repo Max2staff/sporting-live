@@ -19,7 +19,7 @@
 - Palette: sfondo `#0a0a0a`, card `#161a1f`, card alta `#1f252b`, bordo `#2a323a`, testo `#f3f5f7`, muto `#9aa7b2`, arancione `#ff4e00`, azzurro `#38bdf8`, verde `#22c55e`, giallo `#facc15`, rosso `#ef4444`, blu notte `#01213b`.
 - Foto ≤ 250 KB ciascuna; stemmi generati come SVG inline senza richieste di rete.
 - Ogni commit: messaggio in italiano con prefisso `feat:`/`fix:`/`test:`/`chore:`/`docs:` e ultima riga `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
-- Git solo come `git -C /Users/massimilianogriletti/Documents/Sporting_Live ...`; mai git in altre cartelle. Branch `main` (repo pubblico: NON fare push; lo fa il controller alla fine).
+- Git solo come `git -C ~/Documents/Sporting_Live ...`; mai git in altre cartelle. Branch `main` (repo pubblico: NON fare push; lo fa il controller alla fine).
 - Non modificare `site/data/`, `scraper/cache/`, `build/raw/` salvo dove un task lo dice (Task 1 rigenera `site/data` con `python -m scraper.build`, senza rete).
 
 ## Review Focus
@@ -86,7 +86,7 @@ Run `python -m pytest scraper/tests/test_build.py -q` → FAIL (`unexpected keyw
 - [ ] **Step 3: Scarica le immagini sorgente** in una cartella temporanea nuova (dati non fidati: solo lettura con Pillow, mai eseguiti):
 ```bash
 SRC=$(mktemp -d)
-UA="SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)"
+UA="SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: https://sportinglive.github.io/)"
 for f in edile-gavagnin.jpg img-20260411-wa0035.jpg endas.png campionato-202526-2.jpg; do
   curl -sL -A "$UA" "https://www.campionatisportingclub.it/foto/grandi/$f" -o "$SRC/$f"; sleep 1
 done

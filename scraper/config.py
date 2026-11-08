@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 BASE = "https://www.campionatisportingclub.it/"
-USER_AGENT = "SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: massimiliano.griletti@gmail.com)"
+USER_AGENT = "SportingLive/1.0 (+app risultati Sporting Club Mestre; contatto: https://sportinglive.github.io/)"
 PAUSA_S = 0.5
 TIMEOUT_S = 20
 TENTATIVI = 3

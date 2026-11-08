@@ -12,14 +12,19 @@ function passo1() {
   return schermo('premiazione', 1, `
     <img src="icons/icon.svg" alt="" width="64" height="64">
     <h1>Sporting <b>Live</b></h1>
-    <p>Tutti i campionati dello Sporting Club Mestre in tasca: risultati, classifiche, marcatori e statistiche, aggiornati ogni sera.</p>
-    <a class="bottone" href="#/intro/2" data-avanti>Inizia</a>`);
+    <p>Risultati e classifiche di tutti i campionati dello Sporting Club Mestre, aggiornati ogni sera.</p>
+    <ul class="intro-cosa">
+      <li><b>Partite</b> del giorno con i risultati e i marcatori</li>
+      <li><b>Classifiche</b> e calendario di ogni girone</li>
+      <li><b>Giocatori</b>: capocannonieri, MVP e statistiche</li>
+    </ul>
+    <a class="bottone" href="#/intro/2" data-avanti>Scegli il tuo campionato</a>`);
 }
 
 function passo2(indice) {
   const corrente = leggiGirone(indice);
   return schermo('campo', 2, `
-    <h1>Il tuo <b>campionato</b></h1>
+    <h1>Il tuo campionato</h1>
     <p>Scegli categoria e girone: lo ritrovi sempre in alto per cambiarlo.</p>
     ${indice.campionati.map(c => `<div class="camp-card"><h2>${esc(c.nome)}</h2><div class="chips">${c.gironi.map(g => `<button class="chip${g.slug === corrente ? ' attivo' : ''}" aria-pressed="${g.slug === corrente}" data-girone="${esc(g.slug)}">${esc(g.nome)}</button>`).join('')}</div></div>`).join('')}`);
 }
@@ -29,7 +34,7 @@ function passo3(indice) {
   const g = gironi(indice).find(x => x.slug === slug);
   const squadre = indice.squadre.filter(s => s.girone === slug && s.nome.trim().toUpperCase() !== 'RIPOSO').sort((a, b) => a.nome.localeCompare(b.nome));
   return schermo('campo', 3, `
-    <h1>La tua <b>squadra</b></h1>
+    <h1>La tua squadra</h1>
     <p>${g ? esc(`${g.campionato.nome} · ${g.nome}`) : ''}. Tocca la tua squadra (anche più di una): la vedrai per prima.</p>
     <div class="griglia-squadre">${squadre.map(s => `<button class="squadra-scelta" data-squadra="${Number(s.id)}" aria-pressed="${èPreferita(s.id)}">${stemmaHTML(s, 48)}<span>${esc(s.nome)}</span></button>`).join('')}</div>
     <button class="bottone" data-fine>Fatto</button>`);

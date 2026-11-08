@@ -22,16 +22,19 @@ export const card = (titolo, corpo, cls = '') => `<section class="card ${cls}">$
 export const vuoto = (msg) => `<p class="vuoto">${esc(msg)}</p>`;
 export const linkSquadra = (indice, id) => `<a href="#/squadra/${id}" class="sq">${esc(nomeSquadra(indice, id))}</a>`;
 
+// Riga partita "da tabellone": a sinistra stato (orario, Finale, data), poi le due squadre una sotto l'altra con i gol accanto.
 export function rigaPartita(p, indice, { evidenzia = false, mostraData = false } = {}) {
-  const risultato = p.giocata ? `<span class="ris ${evidenzia ? 'evid' : ''}">${p.golCasa}<i>-</i>${p.golOspite}</span>` : `<span class="ora">${esc(p.ora || '--:--')}</span>`;
   const casaPref = èPreferita(p.casaId), ospPref = èPreferita(p.ospiteId);
-  return `<div class="partita ${p.tavolino ? 'tavolino' : ''}">
-    <a class="partita-link" href="#/partita/${p.id}" aria-label="Partita: ${esc(nomeSquadra(indice, p.casaId))} - ${esc(nomeSquadra(indice, p.ospiteId))}"></a>
-    <div class="quando">${mostraData ? `<small>${esc(p.data ? p.data.slice(8, 10) + '/' + p.data.slice(5, 7) : 'n.d.')}</small>` : ''}${risultato}</div>
+  const g = p.giocata, gc = Number(p.golCasa), go = Number(p.golOspite);
+  const data = mostraData ? `<small>${esc(p.data ? p.data.slice(8, 10) + '/' + p.data.slice(5, 7) : 'n.d.')}</small>` : '';
+  const stato = g ? `${data}<span class="fin">${p.tavolino ? 'Tav.' : 'Finale'}</span>` : `${data}<span class="ora">${esc(p.ora || '--:--')}</span>`;
+  const lato = (id, pref, gol, vince) => `<div class="riga ${pref ? 'pref' : ''} ${g && vince ? 'vince' : ''}">${stemmaHTML(squadraDa(indice, id), 24)}<span class="nome-sq">${esc(nomeSquadra(indice, id))}</span>${g ? `<b class="gol">${esc(gol)}</b>` : ''}${stellaHTML(id, nomeSquadra(indice, id), pref)}</div>`;
+  return `<div class="partita ${p.tavolino ? 'tavolino' : ''} ${g ? 'giocata' : ''} ${evidenzia && g ? 'evid' : ''}">
+    <a class="partita-link" href="#/partita/${p.id}" aria-label="Partita: ${esc(nomeSquadra(indice, p.casaId))} - ${esc(nomeSquadra(indice, p.ospiteId))}${g ? ` ${gc}-${go}` : ''}"></a>
+    <div class="quando">${stato}</div>
     <div class="squadre">
-      <div class="riga ${casaPref ? 'pref' : ''}">${stemmaHTML(squadraDa(indice, p.casaId), 24)}<span>${esc(nomeSquadra(indice, p.casaId))}</span>${stellaHTML(p.casaId, nomeSquadra(indice, p.casaId), casaPref)}</div>
-      <div class="riga ${ospPref ? 'pref' : ''}">${stemmaHTML(squadraDa(indice, p.ospiteId), 24)}<span>${esc(nomeSquadra(indice, p.ospiteId))}</span>${stellaHTML(p.ospiteId, nomeSquadra(indice, p.ospiteId), ospPref)}</div>
+      ${lato(p.casaId, casaPref, p.golCasa, gc > go)}
+      ${lato(p.ospiteId, ospPref, p.golOspite, go > gc)}
     </div>
-    <div class="extra">${p.tavolino ? '<span class="badge">tav.</span>' : ''}${p.tabellino ? '<span class="badge accento">tabellino</span>' : ''}</div>
   </div>`;
 }

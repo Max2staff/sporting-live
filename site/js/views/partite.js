@@ -1,30 +1,32 @@
-import { esc, formattaData, formattaDataLunga } from '../util.js';
+import { esc, daISO, formattaDataLunga } from '../util.js';
 import { DA_DEFINIRE, giorniConPartite, giornoIniziale, partiteDelGiorno, raggruppaPerGirone, partitePreferite } from '../giorni.js';
 import { leggiPreferiti } from '../preferiti.js';
 import { stemmaHTML } from '../stemma.js';
 import { TUTTI, leggiGirone, gironi, gironiVisibili } from '../contesto.js';
 import { capolista, capocannoniere, ultimaGiornata, gironiDaIniziare } from '../evidenza.js';
-import { rigaPartita, collegaStelle, nomeSquadra, squadraDa, card, vuoto, heroHTML } from './comuni.js';
+import { rigaPartita, collegaStelle, nomeSquadra, squadraDa, card, vuoto } from './comuni.js';
 import { inArchivio } from '../archivio.js';
 import { barraContesto, collegaContesto, categorieHTML, collegaCategorie } from './contesto-ui.js';
 
+const GG = ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab'];
+const MM = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'];
+
+// Fila di giorni da scorrere col dito: il giorno scelto è centrato, "Oggi" ha il suo nome.
 function selettoreGiorno(giorni, giorno, oggi, haDaDefinire) {
-  const i = giorni.indexOf(giorno);
-  const prev = i > 0 ? giorni[i - 1] : null, next = i >= 0 && i < giorni.length - 1 ? giorni[i + 1] : null;
-  const titolo = giorno === DA_DEFINIRE ? 'Da definire' : (giorno === oggi ? 'Oggi' : formattaDataLunga(giorno));
-  return `<div class="giorno">
-    ${prev ? `<a class="freccia" href="#/partite/${prev}" aria-label="giorno precedente">‹</a>` : '<span class="freccia off" aria-hidden="true">‹</span>'}
-    <label class="titolo"><span>${esc(titolo)}</span>${giorno !== DA_DEFINIRE ? `<small>${esc(formattaData(giorno))}</small>` : ''}
-      <select aria-label="Scegli il giorno">${giorni.map(g => `<option value="${g}" ${g === giorno ? 'selected' : ''}>${formattaData(g)}${g === oggi ? ' (oggi)' : ''}</option>`).join('')}${haDaDefinire ? `<option value="${DA_DEFINIRE}" ${giorno === DA_DEFINIRE ? 'selected' : ''}>da definire</option>` : ''}</select>
-    </label>
-    ${next ? `<a class="freccia" href="#/partite/${next}" aria-label="giorno successivo">›</a>` : '<span class="freccia off" aria-hidden="true">›</span>'}
-  </div>`;
+  const voce = (g) => {
+    const attivo = g === giorno;
+    if (g === DA_DEFINIRE) return `<a class="giorno-voce${attivo ? ' attivo' : ''}" href="#/partite/${DA_DEFINIRE}"${attivo ? ' aria-current="date"' : ''}><span>Senza</span><b>?</b><small>data</small></a>`;
+    const d = daISO(g);
+    const sopra = g === oggi ? 'Oggi' : GG[d.getDay()];
+    return `<a class="giorno-voce${attivo ? ' attivo' : ''}${g === oggi ? ' oggi' : ''}" href="#/partite/${g}"${attivo ? ' aria-current="date"' : ''} aria-label="${esc(formattaDataLunga(g))}"><span>${sopra}</span><b>${d.getDate()}</b><small>${MM[d.getMonth()]}</small></a>`;
+  };
+  return `<nav class="giorni" aria-label="Scegli il giorno">${giorni.map(voce).join('')}${haDaDefinire ? voce(DA_DEFINIRE) : ''}</nav>`;
 }
 
 function bloccoPreferite(indice, partite, oggi) {
   if (inArchivio()) return '';
   const pref = leggiPreferiti();
-  if (!pref.length) return card('Le mie squadre', '<p class="muto">Tocca la stellina accanto a una squadra per vederla qui.</p>');
+  if (!pref.length) return '<p class="suggerimento">Tocca la ☆ accanto a una squadra: la ritrovi qui in cima, con l\'ultima e la prossima partita.</p>';
   const r = partitePreferite(indice.partite, pref, oggi);
   if (!r.length) return '';
   return card('Le mie squadre', r.map(x => `<div class="mia">
@@ -72,27 +74,32 @@ export async function render({ indice, rotta, oggi, carica }) {
   const haDaDefinire = partite.some(p => !p.data);
   const param = rotta.params[0];
   const giorno = (param && (giorni.includes(param) || param === DA_DEFINIRE) ? param : null) || giornoIniziale(giorni, oggi) || (haDaDefinire ? DA_DEFINIRE : null);
-  const hero = heroHTML({ foto: 'campo', classe: 'hero-home', contenuto: `
-    <div class="contesto-riga">${barraContesto(indice, { tutti: true })}</div>
+  const titolo = !giorno ? 'Nessuna partita in calendario' : giorno === DA_DEFINIRE ? 'Partite da definire' : giorno === oggi ? `Oggi, ${formattaDataLunga(giorno)}` : formattaDataLunga(giorno);
+  const testa = `<section class="testa-home">
+    <div class="contesto-riga">${barraContesto(indice, { tutti: true })}${scelto !== TUTTI ? `<a class="link-calendario" href="#/classifiche/${esc(scelto)}/calendario">Calendario</a>` : ''}</div>
     ${categorieHTML(indice)}
-    ${giorno ? selettoreGiorno(giorni, giorno, oggi, haDaDefinire) : '<h1>Nessuna partita in calendario</h1>'}
-    ${scelto !== TUTTI ? `<a class="link-calendario" href="#/classifiche/${esc(scelto)}/calendario">Calendario completo ›</a>` : ''}` });
-  if (!giorno) return hero + bloccoInizio(indice, visibili);
+    ${giorno ? selettoreGiorno(giorni, giorno, oggi, haDaDefinire) : ''}
+    <h1 class="titolo-giorno">${esc(titolo.charAt(0).toUpperCase() + titolo.slice(1))}</h1>
+  </section>`;
+  if (!giorno) return testa + bloccoInizio(indice, visibili);
   const gruppi = raggruppaPerGirone(partiteDelGiorno(partite, giorno), indice);
-  return `${hero}
-    ${bloccoInizio(indice, visibili)}
-    ${bloccoPreferite(indice, partite, oggi)}
-    ${await inEvidenza(indice, scelto, carica, visibili)}
-    ${gruppi.length ? gruppi.map(g => `<section class="card piena">
-      <a class="intest-girone" href="#/classifiche/${esc(g.girone.slug)}"><span>${esc(g.campionato)} · <b>${esc(g.girone.nome)}</b></span><span class="freccia-piccola">classifica ›</span></a>
+  const pref = bloccoPreferite(indice, partite, oggi);
+  const mieInCima = pref && !pref.startsWith('<p');
+  return `${testa}
+    ${mieInCima ? pref : ''}
+    ${gruppi.length ? gruppi.map(g => `<section class="card piena girone-giorno">
+      <a class="intest-girone" href="#/classifiche/${esc(g.girone.slug)}"><span>${esc(g.campionato)} <b>${esc(g.girone.nome)}</b></span><span class="freccia-piccola">Classifica</span></a>
       ${g.partite.map(p => rigaPartita(p, indice, { evidenzia: giorno === oggi })).join('')}
-    </section>`).join('') : vuoto('Nessuna partita in questo giorno.')}`;
+    </section>`).join('') : vuoto('Nessuna partita in questo giorno.')}
+    ${mieInCima ? '' : pref}
+    ${await inEvidenza(indice, scelto, carica, visibili)}
+    ${bloccoInizio(indice, visibili)}`;
 }
 
 export function dopo(ctx, root) {
   const ridisegna = async () => { root.innerHTML = await render(ctx); dopo(ctx, root); };
-  const sel = root.querySelector('.giorno select');
-  if (sel) sel.onchange = () => ctx.naviga(`#/partite/${sel.value}`);
+  const fila = root.querySelector('.giorni'), att = fila?.querySelector('.attivo');
+  if (fila && att) fila.scrollLeft = att.offsetLeft - (fila.clientWidth - att.offsetWidth) / 2;
   collegaStelle(root, ridisegna);
   const cambio = () => { if (ctx.rotta.params.length) ctx.naviga('#/partite'); else ctx.nuovoPasso(); };
   collegaContesto(root, ctx.indice, { tutti: true, onCambio: cambio });

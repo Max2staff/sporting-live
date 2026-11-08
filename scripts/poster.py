@@ -20,11 +20,10 @@ IMG = RADICE / "site" / "img"
 USCITA = RADICE / "docs" / "poster"
 L, A = 2480, 3508
 LANCZOS = getattr(Image, "Resampling", Image).LANCZOS
-ARANCIO = (255, 78, 0, 255)
-CIELO = (56, 189, 248, 255)
+ACCENTO = (200, 240, 49, 255)   # lime del marchio
 BIANCO = (255, 255, 255, 255)
 CHIARO = (226, 232, 244, 255)
-NERO = (0, 0, 0, 255)
+NERO = (11, 18, 32, 255)        # blu inchiostro
 
 
 def font(px: int) -> ImageFont.FreeTypeFont:
@@ -60,7 +59,7 @@ def sfondo() -> Image.Image:
     d = ImageDraw.Draw(velo)
     for y in range(H):
         t = y / (H - 1)
-        d.line([(0, y), (L, y)], fill=(round(10 * (1 - t)), round(22 * (1 - t)), round(54 * (1 - t)), round(200 + 55 * t ** 1.5)))
+        d.line([(0, y), (L, y)], fill=(11, 18, 32, round(200 + 55 * t ** 1.5)))
     top = Image.alpha_composite(im.convert("RGBA"), velo)
     tela = Image.new("RGBA", (L, A), NERO)
     tela.alpha_composite(top, (0, 0))
@@ -80,16 +79,16 @@ def costruisci() -> Image.Image:
     tela.alpha_composite(icona, (L // 2 - 170, 110))
     x = (L - w_tot) / 2
     d.text((x, y_t + 80), "Sporting ", font=f_titolo, fill=BIANCO)
-    d.text((x + w_sp, y_t + 80), "Live", font=f_titolo, fill=ARANCIO)
+    d.text((x + w_sp, y_t + 80), "Live", font=f_titolo, fill=BIANCO)
 
     righe = ("Risultati, classifiche e marcatori", "di tutti i campionati, sul telefono")
     f_sotto = adatta(d, righe[1], L - 240, 108)
     for i, riga in enumerate(righe):
         centrato(d, 850 + i * 132, riga, f_sotto, CHIARO)
 
-    # fascia azzurra con l'invito all'azione
+    # fascia lime con l'invito all'azione
     by0, by1 = 1160, 1370
-    d.rectangle((0, by0, L, by1), fill=CIELO)
+    d.rectangle((0, by0, L, by1), fill=ACCENTO)
     f_cta = adatta(d, "INQUADRA CON LA FOTOCAMERA", L - 200, 130)
     centrato(d, by0 + (by1 - by0 - f_cta.size) // 2 - 14, "INQUADRA CON LA FOTOCAMERA", f_cta, (6, 14, 34, 255))
 
@@ -106,11 +105,11 @@ def costruisci() -> Image.Image:
     y_u = ty + tile + 55
     f_url = adatta(d, url_vis, L - 300, 130)
     centrato(d, y_u, url_vis, f_url, BIANCO)
-    centrato(d, y_u + 165, "Gratis  ·  senza registrazione  ·  senza scaricare nulla", font(78), CIELO)
+    centrato(d, y_u + 165, "Gratis  ·  senza registrazione  ·  senza scaricare nulla", font(78), ACCENTO)
 
     # organizzatori in basso, come testo (i loghi disponibili sono a bassa risoluzione)
     yo = A - 330
-    d.line((L // 2 - 300, yo - 60, L // 2 + 300, yo - 60), fill=ARANCIO, width=8)
+    d.line((L // 2 - 300, yo - 60, L // 2 + 300, yo - 60), fill=ACCENTO, width=8)
     centrato(d, yo, "Campionati organizzati da", font(70), CHIARO)
     f_org = adatta(d, "Sporting Club Mestre  ·  Endas Venezia", L - 300, 110)
     centrato(d, yo + 100, "Sporting Club Mestre  ·  Endas Venezia", f_org, BIANCO)

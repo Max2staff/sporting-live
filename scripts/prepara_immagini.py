@@ -37,18 +37,18 @@ def logo(src: Path, dst: Path, box: tuple[int, int, int, int] | None = None, lat
 
 
 def og(foto_src: Path, dst: Path) -> None:
-    """Immagine di anteprima 1200x630: foto velata (blu notte -> nero), icona, titolo e sottotitolo."""
+    """Immagine di anteprima 1200x630: foto velata blu inchiostro, icona, titolo e sottotitolo."""
     L, A = 1200, 630
     im = Image.open(foto_src).convert("RGB")
     sc = max(L / im.width, A / im.height)
     im = im.resize((round(im.width * sc), round(im.height * sc)), LANCZOS)
     im = im.crop(((im.width - L) // 2, (im.height - A) // 2, (im.width - L) // 2 + L, (im.height - A) // 2 + A))
-    # velo: gradiente verticale blu notte -> nero, opacita' alta per far leggere il testo
+    # velo: blu inchiostro, opacita' alta per far leggere il testo
     velo = Image.new("RGBA", (L, A))
     d = ImageDraw.Draw(velo)
     for y in range(A):
         t = y / (A - 1)
-        d.line([(0, y), (L, y)], fill=(round(10 * (1 - t)), round(22 * (1 - t)), round(54 * (1 - t)), round(205 + 40 * t)))
+        d.line([(0, y), (L, y)], fill=(11, 18, 32, round(205 + 40 * t)))
     tela = Image.alpha_composite(im.convert("RGBA"), velo)
     icona = Image.open(ICONA).convert("RGBA").resize((200, 200), LANCZOS)
     tela.alpha_composite(icona, (90, 115))
@@ -56,9 +56,7 @@ def og(foto_src: Path, dst: Path) -> None:
     f_titolo = ImageFont.truetype(str(FONT_BOLD), 112)
     f_sotto = ImageFont.truetype(str(FONT_BOLD), 36)
     x, y = 330, 118
-    d.text((x, y), "Sporting ", font=f_titolo, fill=(255, 255, 255, 255))
-    d.text((x + d.textlength("Sporting ", font=f_titolo), y), "Live", font=f_titolo, fill=(255, 78, 0, 255))
-    d.rectangle((x + 4, y + 150, x + 164, y + 156), fill=(255, 78, 0, 255))
+    d.text((x, y), "Sporting Live", font=f_titolo, fill=(255, 255, 255, 255))
     for i, riga in enumerate(("Risultati, classifiche e marcatori", "dei campionati Sporting Club Mestre")):
         d.text((90, 400 + i * 56), riga, font=f_sotto, fill=(226, 232, 244, 255))
     dst.parent.mkdir(parents=True, exist_ok=True)

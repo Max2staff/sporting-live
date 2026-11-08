@@ -14,10 +14,12 @@ from PIL import Image, ImageDraw, ImageFont
 from .stemma import FONT_BOLD
 
 LATO = 1080
-VERSIONE_LAYOUT = "2"          # da cambiare quando cambia il disegno: forza la rigenerazione
+VERSIONE_LAYOUT = "3"          # da cambiare quando cambia il disegno: forza la rigenerazione
 MAX_MARCATORI = 6
 _GIORNI = ["lun", "mar", "mer", "gio", "ven", "sab", "dom"]   # date.weekday()
-ARANCIO, AZZURRO = (255, 78, 0), (56, 189, 248)
+ACCENTO = (200, 240, 49)                     # lime del marchio
+INCHIOSTRO, INCHIOSTRO_2 = (11, 18, 32), (19, 29, 46)
+ICONA = Path(__file__).resolve().parent.parent / "site" / "icons" / "icon-512.png"
 _BIANCO, _GRIGIO = (255, 255, 255), (170, 184, 198)
 
 
@@ -121,13 +123,8 @@ def _taglia(testo: str, font, max_w: int) -> str:
 
 
 def _sfondo() -> Image.Image:
-    top, bot = (10, 10, 10), (1, 33, 59)
     verticale = Image.linear_gradient("L").resize((LATO, LATO))
-    im = Image.composite(Image.new("RGB", (LATO, LATO), bot), Image.new("RGB", (LATO, LATO), top), verticale)
-    fascia = Image.linear_gradient("L").rotate(90).resize((LATO, 16))      # nero a destra, bianco a sinistra
-    fascia = fascia.transpose(Image.FLIP_LEFT_RIGHT)
-    im.paste(Image.composite(Image.new("RGB", (LATO, 16), AZZURRO), Image.new("RGB", (LATO, 16), ARANCIO), fascia), (0, 0))
-    return im
+    return Image.composite(Image.new("RGB", (LATO, LATO), INCHIOSTRO_2), Image.new("RGB", (LATO, LATO), INCHIOSTRO), verticale)
 
 
 def _logo(squadra: dict, px: int, stemmi_dir: Path | None) -> Image.Image | None:
@@ -170,7 +167,7 @@ def immagine_risultato(partita: dict, stemmi_dir: Path | None = None) -> bytes:
     gol = f"{partita['golCasa']}-{partita['golOspite']}"
     d.text((cx, y_gol), gol, font=_adatta(gol, 240, 340), fill=_BIANCO, anchor="mm")
     if partita.get("tavolino"):
-        d.text((cx, y_tav), "A TAVOLINO", font=_font(32), fill=ARANCIO, anchor="mm")
+        d.text((cx, y_tav), "A TAVOLINO", font=_font(32), fill=ACCENTO, anchor="mm")
 
     # nomi squadre
     for sq, c in ((casa, c_casa), (osp, c_osp)):
@@ -200,20 +197,22 @@ def immagine_risultato(partita: dict, stemmi_dir: Path | None = None) -> bytes:
             y += 48
         if resto:
             n = sum(max(1, len(m)) for _, m in resto)
-            d.text((c, y), f"+{n}", font=f_m, fill=AZZURRO, anchor="mm")
+            d.text((c, y), f"+{n}", font=f_m, fill=ACCENTO, anchor="mm")
 
     # MVP
     mig = ((partita.get("tabellino") or {}).get("migliore") or {}).get("nome")
     if mig:
         testo = f"★ MVP {_nome_breve(mig)}"
-        d.text((cx, 955), testo, font=_adatta(testo, 42, 980), fill=ARANCIO, anchor="mm")
+        d.text((cx, 955), testo, font=_adatta(testo, 42, 980), fill=ACCENTO, anchor="mm")
 
-    # logo
+    # marchio: icona + "Sporting Live"
     f_logo = _font(40)
-    a, b = "Sporting ", "Live"
-    w = _larghezza(a + b, f_logo)
-    d.text((cx - w / 2, 1030), a, font=f_logo, fill=_BIANCO, anchor="lm")
-    d.text((cx - w / 2 + _larghezza(a, f_logo), 1030), b, font=f_logo, fill=ARANCIO, anchor="lm")
+    testo = "Sporting Live"
+    icona = Image.open(ICONA).convert("RGBA").resize((56, 56), Image.LANCZOS)
+    w = 56 + 16 + _larghezza(testo, f_logo)
+    x0 = round(cx - w / 2)
+    im.paste(icona, (x0, 1030 - 28), icona)
+    d.text((x0 + 72, 1030), testo, font=f_logo, fill=_BIANCO, anchor="lm")
 
     buf = io.BytesIO()
     im.save(buf, "JPEG", quality=82, optimize=True)

@@ -1,4 +1,4 @@
-export const VISTE = ['partite', 'partita', 'classifiche', 'squadra', 'giocatori', 'giocatore', 'info', 'intro', 'cerca', 'vantaggi'];
+export const VISTE = ['partite', 'partita', 'classifiche', 'squadra', 'giocatori', 'giocatore', 'info', 'intro', 'preferite', 'cerca', 'vantaggi'];
 
 function decodifica(p) {
   try { return decodeURIComponent(p); } catch { return p; }

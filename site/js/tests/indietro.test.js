@@ -30,3 +30,8 @@ test('tasto visibile nei dettagli sempre, altrove solo se c\'è cronologia', () 
   assert.equal(mostraIndietro('partite', 3), true);
   assert.equal(mostraIndietro('intro', 3), false);
 });
+
+test('le mie squadre: tasto indietro sempre visibile, madre = Partite', () => {
+  assert.equal(mostraIndietro('preferite', 0), true);
+  assert.equal(madre('preferite'), '#/partite');
+});

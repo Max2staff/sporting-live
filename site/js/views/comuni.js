@@ -8,7 +8,14 @@ export const iconaStella = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d=
 export const stellaHTML = (id, nome, attiva = èPreferita(id)) => inArchivio() ? '' : `<button class="stella ${attiva ? 'attiva' : ''}" data-squadra="${id}" aria-label="Preferita: ${esc(nome)}" aria-pressed="${attiva}">${iconaStella}</button>`;
 export function collegaStelle(root, onToggle) {
   root.querySelectorAll('.stella[data-squadra]').forEach(b => {
-    b.onclick = (e) => { e.preventDefault(); e.stopPropagation(); togglePreferito(b.dataset.squadra); onToggle(); };
+    b.onclick = (e) => {
+      e.preventDefault(); e.stopPropagation();
+      togglePreferito(b.dataset.squadra);
+      const on = èPreferita(b.dataset.squadra);
+      // tutte le stelline della stessa squadra nella pagina cambiano subito (piena = preferita)
+      root.querySelectorAll(`.stella[data-squadra="${b.dataset.squadra}"]`).forEach(x => { x.classList.toggle('attiva', on); x.setAttribute('aria-pressed', String(on)); });
+      onToggle();
+    };
   });
 }
 export function squadraDa(indice, id) {
@@ -28,7 +35,7 @@ export function rigaPartita(p, indice, { evidenzia = false, mostraData = false }
   const g = p.giocata, gc = Number(p.golCasa), go = Number(p.golOspite);
   const data = mostraData ? `<small>${esc(p.data ? p.data.slice(8, 10) + '/' + p.data.slice(5, 7) : 'n.d.')}</small>` : '';
   const stato = g ? `${data}<span class="fin">${p.tavolino ? 'Tav.' : 'Finale'}</span>` : `${data}<span class="ora">${esc(p.ora || '--:--')}</span>`;
-  const lato = (id, pref, gol, vince) => `<div class="riga ${pref ? 'pref' : ''} ${g && vince ? 'vince' : ''}">${stemmaHTML(squadraDa(indice, id), 24)}<span class="nome-sq">${esc(nomeSquadra(indice, id))}</span>${g ? `<b class="gol">${esc(gol)}</b>` : ''}${stellaHTML(id, nomeSquadra(indice, id), pref)}</div>`;
+  const lato = (id, pref, gol, vince) => `<div class="riga ${pref ? 'pref' : ''} ${g && vince ? 'vince' : ''}">${stellaHTML(id, nomeSquadra(indice, id), pref)}${stemmaHTML(squadraDa(indice, id), 24)}<span class="nome-sq">${esc(nomeSquadra(indice, id))}</span>${g ? `<b class="gol">${esc(gol)}</b>` : ''}</div>`;
   return `<div class="partita ${p.tavolino ? 'tavolino' : ''} ${g ? 'giocata' : ''} ${evidenzia && g ? 'evid' : ''}">
     <a class="partita-link" href="#/partita/${p.id}" aria-label="Partita: ${esc(nomeSquadra(indice, p.casaId))} - ${esc(nomeSquadra(indice, p.ospiteId))}${g ? ` ${gc}-${go}` : ''}"></a>
     <div class="quando">${stato}</div>

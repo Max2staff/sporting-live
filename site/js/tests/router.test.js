@@ -67,3 +67,7 @@ test('prefissaLink su html: non tocca data-href né attributi simili', () => {
   assert.match(r, / href="#\/a\/e1\/y"/);
   assert.match(r, /data-href="#\/z"/);
 });
+
+test('rotta le mie squadre', () => {
+  assert.deepEqual(analizza('#/preferite'), { vista: 'preferite', params: [], edizione: null });
+});

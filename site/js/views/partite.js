@@ -26,10 +26,10 @@ function selettoreGiorno(giorni, giorno, oggi, haDaDefinire) {
 function bloccoPreferite(indice, partite, oggi) {
   if (inArchivio()) return '';
   const pref = leggiPreferiti();
-  if (!pref.length) return '<p class="suggerimento">Tocca la ☆ accanto a una squadra: la ritrovi qui in cima, con l\'ultima e la prossima partita.</p>';
+  if (!pref.length) return '<a class="suggerimento" href="#/preferite"><span>Tocca la ☆ accanto a una squadra per seguirla: la ritrovi qui in cima.</span><b>Scegli le tue squadre</b></a>';
   const r = partitePreferite(indice.partite, pref, oggi);
   if (!r.length) return '';
-  return card('Le mie squadre', r.map(x => `<div class="mia">
+  return card('', `<div class="mie-testa"><h3>Le mie squadre</h3><a href="#/preferite" class="link-tap">Modifica</a></div>` + r.map(x => `<div class="mia">
       <a href="#/squadra/${Number(x.squadraId)}" class="mia-nome">${stemmaHTML(squadraDa(indice, x.squadraId), 32)}${esc(nomeSquadra(indice, x.squadraId))}</a>
       ${x.ultima ? `<div class="mia-riga"><small>ultima</small>${rigaPartita(x.ultima, indice, { mostraData: true })}</div>` : ''}
       ${x.prossima ? `<div class="mia-riga"><small>prossima</small>${rigaPartita(x.prossima, indice, { mostraData: true })}</div>` : ''}

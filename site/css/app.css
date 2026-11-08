@@ -463,7 +463,7 @@ body { background: var(--sfondo); }
 .squadre .riga .nome-sq { color: var(--muto); font-weight: 500; }
 .partita:not(.giocata) .squadre .riga .nome-sq, .squadre .riga.vince .nome-sq { color: var(--testo); font-weight: 700; }
 .squadre .riga.pref .nome-sq { color: var(--accento-forte); font-weight: 800; }
-.squadre .riga .stella { min-width: 36px; min-height: 36px; margin: -4px 0; }
+.squadre .riga .stella { min-width: 36px; min-height: 36px; margin: -4px -6px -4px -10px; }
 .squadre .riga .stella svg { width: 18px; height: 18px; }
 .gol { min-width: 1.6em; text-align: right; font-size: 1.2rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--muto); }
 .riga.vince .gol { color: var(--testo); }
@@ -475,10 +475,28 @@ body { background: var(--sfondo); }
 .suggerimento { margin: var(--s-2) 0 var(--s-4); padding: var(--s-3) var(--s-4); border-radius: var(--r-md); border: 1px dashed var(--bordo); color: var(--muto); font-size: .88rem; }
 .stemma.pallino { flex: none; }
 .mia-riga .partita { padding-left: 0; padding-right: 0; }
-.squadre .riga .stella { color: var(--bordo); }
-.squadre .riga .stella.attiva { color: var(--accento); }
 .hero::before { background: linear-gradient(180deg, rgba(11,18,32,.80) 0%, rgba(11,18,32,.94) 100%); }
 .intro-cosa { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
 .intro-cosa li { padding: var(--s-3) var(--s-4); border-radius: var(--r-md); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); color: rgba(255,255,255,.85); font-size: .95rem; }
 .intro-cosa b { color: #fff; }
 .intro-schermo::before { background: linear-gradient(180deg, rgba(11,18,32,.30) 0%, rgba(11,18,32,.60) 40%, rgba(11,18,32,.97) 72%); }
+
+/* Stellina come Diretta: accanto al nome, vuota = non seguita, piena = preferita */
+.stella { color: var(--muto); }
+.stella.attiva { color: var(--accento); }
+.partita { padding-left: var(--s-2); }
+.titolo-pagina { font-size: 1.45rem; font-weight: 800; letter-spacing: -.015em; margin: var(--s-3) 0; }
+.riepilogo-pref .muto { margin-bottom: var(--s-2); }
+.pref-scelte { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.pref-scelta { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--r-full); background: var(--accento-tint); font-weight: 700; font-size: .86rem; }
+.gruppo-pref { margin-top: var(--s-3); }
+.gruppo-pref h3.intest-girone { margin: 0; text-transform: none; letter-spacing: 0; font-weight: 500; }
+.riga-pref { display: flex; align-items: center; gap: var(--s-2); padding: 2px var(--s-3) 2px var(--s-1); border-top: 1px solid var(--bordo); min-height: 52px; }
+.riga-pref:first-of-type { border-top: 0; }
+.riga-pref a { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; min-height: 44px; display: flex; align-items: center; }
+.riga-pref[hidden], .gruppo-pref[hidden] { display: none; }
+.mie-testa { display: flex; align-items: center; justify-content: space-between; }
+.mie-testa h3 { margin: 0; }
+.mie-testa a { color: var(--link); font-weight: 700; font-size: .9rem; }
+a.suggerimento { display: flex; flex-direction: column; gap: 4px; color: var(--muto); }
+a.suggerimento b { color: var(--link); }

@@ -10,6 +10,7 @@ import * as squadra from './views/squadra.js';
 import * as giocatori from './views/giocatori.js';
 import * as giocatore from './views/giocatore.js';
 import * as info from './views/info.js';
+import * as preferite from './views/preferite.js';
 import * as intro from './views/intro.js';
 import * as cercaVista from './views/cerca.js';
 import * as vantaggiVista from './views/vantaggi.js';
@@ -17,7 +18,7 @@ import { conta } from './visite.js';
 import { introDaMostrare, azzeraSceltaArchivio, fotografiaContesto, ripristinaContesto } from './contesto.js';
 import { passoDa, madre, mostraIndietro } from './indietro.js';
 
-const VISTE = { partite, partita, classifiche, squadra, giocatori, giocatore, info, intro, cerca: cercaVista, vantaggi: vantaggiVista };
+const VISTE = { partite, partita, classifiche, squadra, giocatori, giocatore, info, intro, preferite, cerca: cercaVista, vantaggi: vantaggiVista };
 const TAB = [['partite', 'Partite', 'M4 4h16v16H4z M4 9h16 M9 4v16'], ['classifiche', 'Classifiche', 'M5 20h14 M8 20V10 M12 20V4 M16 20v-7'],
   ['giocatori', 'Giocatori', 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 20a8 8 0 0 1 16 0'], ['info', 'Info', 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z M12 16v-5 M12 8h.01']];
 const TAB_VANTAGGI = ['vantaggi', 'Vantaggi', 'M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z M7.5 7.5h.01'];

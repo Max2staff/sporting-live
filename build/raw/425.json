@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-10T17:10:02+01:00",
+ "aggiornato": "2026-11-12T11:05:36+01:00",
  "idgirone": 425,
  "squadre": [
   {
@@ -65,14 +65,14 @@
     "squadraId": 2534,
     "nome": "ELYSIUM ENERGY GROUP",
     "pos": 1,
-    "pt": 18,
-    "g": 7,
-    "v": 6,
+    "pt": 21,
+    "g": 8,
+    "v": 7,
     "n": 0,
     "p": 1,
-    "gf": 21,
-    "gs": 11,
-    "dr": 10
+    "gf": 27,
+    "gs": 12,
+    "dr": 15
    },
    {
     "squadraId": 2532,
@@ -105,13 +105,13 @@
     "nome": "THE HATEFUL 8",
     "pos": 4,
     "pt": 15,
-    "g": 7,
+    "g": 8,
     "v": 5,
     "n": 0,
-    "p": 2,
-    "gf": 32,
-    "gs": 21,
-    "dr": 11
+    "p": 3,
+    "gf": 33,
+    "gs": 27,
+    "dr": 6
    },
    {
     "squadraId": 2533,
@@ -973,9 +973,9 @@
    "ora": "20:30",
    "casaId": 2539,
    "ospiteId": 2534,
-   "golCasa": null,
-   "golOspite": null,
-   "giocata": false,
+   "golCasa": 1,
+   "golOspite": 6,
+   "giocata": true,
    "tavolino": false
   },
   {
@@ -13101,6 +13101,212 @@
    "migliore": {
     "squadraId": 2540,
     "nome": "GRANDESSO GIOVANNI"
+   },
+   "completo": true
+  },
+  "14747": {
+   "marcatori": [
+    {
+     "squadraId": 2539,
+     "nome": "DALLA BELLA MATTIA",
+     "minuto": 42
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PROTO RICCARDO",
+     "minuto": 6
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "minuto": 15
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PICCINO LORENZO",
+     "minuto": 24
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PICCINO LORENZO",
+     "minuto": 31
+    },
+    {
+     "squadraId": 2534,
+     "nome": "ZENNARO FRANCESCO",
+     "minuto": 33
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "minuto": 42
+    }
+   ],
+   "formazioni": [
+    {
+     "squadraId": 2539,
+     "nome": "MORON DAVIDE",
+     "numero": 1,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "CARCAGNI LORENZO",
+     "numero": 1,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "ZAMARA FILIPPO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PICCINO LORENZO",
+     "numero": 2,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "ZENNARO NICOLO'",
+     "numero": 3,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PULZELLA SERGIO",
+     "numero": 3,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "BAZZACCO ELIA",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "KHALISSI ALESSANDRO",
+     "numero": 4,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "BALLARIN ALVISE",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "PROTO RICCARDO",
+     "numero": 5,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "DALLA BELLA MATTIA",
+     "numero": 6,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "CREGLIA ALESSIO",
+     "numero": 6,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "NARDO NICOLO'",
+     "numero": 7,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MELNYCHUK NAZAR",
+     "numero": 7,
+     "voto": 7.0,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "RICUCCI ALESSANDRO",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "GASORE IVAN",
+     "numero": 8,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2539,
+     "nome": "ZANCHI ENRICO",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "MUSTALI EDISON",
+     "numero": 9,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "ZENNARO FRANCESCO",
+     "numero": 10,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    },
+    {
+     "squadraId": 2534,
+     "nome": "CONTE RICCARDO",
+     "numero": 11,
+     "voto": null,
+     "ammonito": false,
+     "espulso": false
+    }
+   ],
+   "migliore": {
+    "squadraId": 2539,
+    "nome": "DALLA BELLA MATTIA"
    },
    "completo": true
   }
